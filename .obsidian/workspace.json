@@ -23,28 +23,12 @@
             "id": "7aad5350e0527228",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React.js/Recoil.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e86a19ef02ff24aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Folder structure.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Folder structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Folder structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Folder structure.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,40 +162,52 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e86a19ef02ff24aa",
+  "active": "7aad5350e0527228",
   "lastOpenFiles": [
-    "Pasted image 20230914135239.png",
-    "React.js/Recoil.md",
-    "Folder structure.md",
+    "Next.js/Server Component.md",
+    "Next.js/Caching Data.md",
+    "Next.js/Font (Doing).md",
+    "Next.js/Images.md",
+    "Next.js/Server Actions.md",
+    "Next.js/Revalidating.md",
+    "Pasted image 20230914222912.png",
+    "Next.js/Data Fetching.md",
+    "Next.js/Edge and Node.js Runtimes.md",
+    "Pasted image 20230914222132.png",
+    "Next.js/Static and Dynamic rendering.md",
+    "Pasted image 20230914222056.png",
+    "Next.js/Internationalization.md",
+    "Next.js/Middleware.md",
+    "Next.js/Route Handlers.md",
+    "Pasted image 20230914221936.png",
+    "Pasted image 20230914221926.png",
+    "Pasted image 20230914221915.png",
+    "Next.js/Intercepting Routes.md",
+    "Pasted image 20230914221814.png",
+    "Pasted image 20230914221804.png",
+    "Pasted image 20230914221752.png",
+    "Pasted image 20230914221741.png",
+    "Next.js/Parallel Routes.md",
+    "Next.js/Error Handling.md",
+    "Next.js/Loading UI and Streaming.md",
+    "Next.js/Dynamic Routes.md",
+    "Next.js/Defining route.md",
+    "Next.js/Route Groups.md",
     "CSS/CSS Position.md",
     "CSS/CSS Display.md",
-    "CSS/CSS란?.md",
-    "paradigm.md",
-    "README.md",
-    "JavaScript/Surveying JS.md",
-    "JavaScript/What is JavaScript.md",
+    "React.js/Recoil.md",
     "React.js/Redux.md",
-    "JavaScript/TC39.md",
+    "!note.md",
+    "Next.js/Linking and Navigating.md",
+    "Folder structure.md",
     "Untitled.canvas",
-    "JavaScript/this.md",
-    "`this`.md",
-    "React.js.md",
     "HTML",
-    "JavaScript.md",
-    "HTML.md",
-    "CSS.md",
     "Sevelte.js",
     "React.js",
     "TypeScript",
     "JavaScript",
     "HTML",
     "CSS",
-    "Next.js",
-    "Frontend developer.md",
-    "Runtime Environment.md",
-    "Next.js.md",
-    "Svelte.js.md",
-    "Runtime En.md",
-    "TypeScript.md"
+    "Next.js"
   ]
 }

@@ -89,3 +89,5 @@ export async function GET(request: NextRequest) {
 만약 데이터를 재검증하는 도중에 에러가 발생했다면, 마지막으로 성공적으로 생성된 데이터가 캐시로부터 재공될 것이다. 다음 요청에 Next.js는 데이터 재검증을 재시도 할 것이다.
 
 ---
+
+#Nextjs 

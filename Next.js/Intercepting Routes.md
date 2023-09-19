@@ -99,3 +99,5 @@ export default Layout;
 ![[Pasted image 20230914221814.png]]
 
 위 화면을 보게 된다.
+
+#Nextjs 

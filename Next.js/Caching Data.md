@@ -176,3 +176,5 @@ export const revalidate = 60 // revalidate this segment every 60 seconds
 - **Good to know:**
     - page, layout과 컴포넌트 안에서 이루어지는 요청이 모두 `revalidate` 주기가 설정된 상태라면, 세가지 중 가장 작은 값이 사용된다.
     - Advanced: `fetchCache` 를 `only-cache` 또는 `force-cache` 로 설정하여 모든 `fetch` 요청에 대한 캐시 설정을 할 수 있다.
+
+#Nextjs 

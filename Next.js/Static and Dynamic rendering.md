@@ -45,3 +45,5 @@ Next.js 에서 라우트는 정적 또는 동적으로 렌더될 수 있다.
 동적 데이터 fetche는 `cache` 옵션을 `no-store` 또는 `revalidate` 를 0으로 설정해 캐쉬를 하지 않도록 설정하는 것을 의미한다.
 
 한 레이아웃 또는 페이지에서의 모든 `fetch` 요청에 관한 설정은 segment config 객체를 통해 설정할 수 있다.
+
+#Nextjs 

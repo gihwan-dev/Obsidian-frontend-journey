@@ -310,3 +310,6 @@ export const fetchCache = 'auto';
 export const runtime = 'nodejs';
 export const preferredRegion = 'auto';
 ```
+
+
+#Nextjs 

@@ -204,3 +204,5 @@ export default function Layout({ params, dashboard, login }) {
 ![[Pasted image 20230914221549.png]]
 
 ---
+
+#Nextjs 

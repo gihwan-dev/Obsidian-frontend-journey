@@ -13,22 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CSS/CSS Position.md",
+                "file": "Next.js/Linking and Navigating.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "7aad5350e0527228",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Next.js/Linking and Navigating.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Next.js/Linking and Navigating.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Next.js/Linking and Navigating.md"
+              }
             }
           },
           {
@@ -142,6 +137,14 @@
               "state": {
                 "sortOrder": "frequency"
               }
+            }
+          },
+          {
+            "id": "c58977f6920ccfc4",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
             }
           }
         ]
@@ -159,47 +162,49 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7aad5350e0527228",
+  "active": "e46f916ce0cbf2a1",
   "lastOpenFiles": [
-    "Next.js/Server Component.md",
-    "Next.js/Caching Data.md",
-    "Next.js/Font (Doing).md",
-    "Next.js/Images.md",
-    "Next.js/Server Actions.md",
-    "Next.js/Revalidating.md",
-    "Pasted image 20230914222912.png",
-    "Next.js/Data Fetching.md",
-    "Next.js/Edge and Node.js Runtimes.md",
-    "Pasted image 20230914222132.png",
+    "Next.js/Page and Layout.md",
+    "Next.js/Defining route.md",
+    "JavaScript/Surveying JS.md",
+    "Folder structure.md",
+    "React.js/Redux.md",
+    "React.js/Recoil.md",
+    "CSS/CSS란?.md",
+    "CSS/CSS Position.md",
+    "CSS/CSS Display.md",
+    "Excalidraw/Drawing 2023-09-19 14.26.57.excalidraw.md",
+    "JavaScript/What is JavaScript.md",
+    "JavaScript/this.md",
+    "JavaScript/TC39.md",
     "Next.js/Static and Dynamic rendering.md",
-    "Pasted image 20230914222056.png",
-    "Next.js/Internationalization.md",
-    "Next.js/Middleware.md",
+    "Next.js/Server Component.md",
+    "Next.js/Server Actions.md",
     "Next.js/Route Handlers.md",
+    "Next.js/Route Groups.md",
+    "Next.js/Revalidating.md",
+    "Next.js/Parallel Routes.md",
+    "Next.js/Middleware.md",
+    "Next.js/Loading UI and Streaming.md",
+    "Next.js/Linking and Navigating.md",
+    "Next.js/Internationalization.md",
+    "Next.js/Intercepting Routes.md",
+    "Next.js/Images.md",
+    "Pasted image 20230919143113.png",
+    "Pasted image 20230919143103.png",
+    "Pasted image 20230919143054.png",
+    "Pasted image 20230919143042.png",
+    "Excalidraw",
+    "Pasted image 20230914222912.png",
+    "Pasted image 20230914222132.png",
+    "Pasted image 20230914222056.png",
     "Pasted image 20230914221936.png",
     "Pasted image 20230914221926.png",
     "Pasted image 20230914221915.png",
-    "Next.js/Intercepting Routes.md",
-    "Pasted image 20230914221814.png",
-    "Pasted image 20230914221804.png",
-    "Pasted image 20230914221752.png",
-    "Pasted image 20230914221741.png",
-    "Next.js/Parallel Routes.md",
-    "Next.js/Error Handling.md",
-    "Next.js/Loading UI and Streaming.md",
-    "Next.js/Dynamic Routes.md",
-    "Next.js/Defining route.md",
-    "Next.js/Route Groups.md",
-    "CSS/CSS Position.md",
-    "CSS/CSS Display.md",
-    "React.js/Recoil.md",
-    "React.js/Redux.md",
-    "!note.md",
-    "Next.js/Linking and Navigating.md",
-    "Folder structure.md",
     "Untitled.canvas",
     "HTML",
     "Sevelte.js",

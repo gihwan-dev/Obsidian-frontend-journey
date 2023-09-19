@@ -81,3 +81,5 @@ export default function Page({ params }: { params: { slug: string } }) {
 
 ![[Pasted image 20230914220406.png]]
 > [!note] 추후에 TypeScript plugin을 통해 자동으로 완료될 수 있다.
+
+#Nextjs 

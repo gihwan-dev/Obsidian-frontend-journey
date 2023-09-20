@@ -58,7 +58,6 @@ export async function generateStaticParams() {
 ---
 
 ## Optional Catch-all Segments
-
 Catch-all 세그먼트는 다음과 같은 표기법을 통해 선택적으로 만들어질 수 있다.: `[[...folderName]]` .
 
 예를들어 `app/shop/[[...slug]]/page.js` 는 `/shop` 뿐만 아니라 `/shop/clothes` , `/shop/clothes/tops` 등과 매치한다.

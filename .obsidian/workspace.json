@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Next.js/Linking and Navigating.md",
+                "file": "Next.js/Loading UI and Streaming.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Next.js/Linking and Navigating.md",
+                "file": "Next.js/Loading UI and Streaming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Next.js/Linking and Navigating.md",
+                "file": "Next.js/Loading UI and Streaming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Next.js/Linking and Navigating.md"
+                "file": "Next.js/Loading UI and Streaming.md"
               }
             }
           },
@@ -168,6 +168,13 @@
   },
   "active": "e46f916ce0cbf2a1",
   "lastOpenFiles": [
+    "React.js/Suspense.md",
+    "Next.js/Loading UI and Streaming.md",
+    "Next.js/Error Handling.md",
+    "Next.js/Dynamic Routes.md",
+    "Next.js/Route Groups.md",
+    "Next.js/Linking and Navigating.md",
+    "React.js/Server Component.md",
     "Next.js/Page and Layout.md",
     "Next.js/Defining route.md",
     "JavaScript/Surveying JS.md",
@@ -185,15 +192,8 @@
     "Next.js/Server Component.md",
     "Next.js/Server Actions.md",
     "Next.js/Route Handlers.md",
-    "Next.js/Route Groups.md",
     "Next.js/Revalidating.md",
     "Next.js/Parallel Routes.md",
-    "Next.js/Middleware.md",
-    "Next.js/Loading UI and Streaming.md",
-    "Next.js/Linking and Navigating.md",
-    "Next.js/Internationalization.md",
-    "Next.js/Intercepting Routes.md",
-    "Next.js/Images.md",
     "Pasted image 20230919143113.png",
     "Pasted image 20230919143103.png",
     "Pasted image 20230919143054.png",

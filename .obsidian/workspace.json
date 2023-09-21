@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Next.js/Loading UI and Streaming.md",
+                "file": "Next.js/Parallel Routes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Next.js/Loading UI and Streaming.md",
+                "file": "Next.js/Parallel Routes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Next.js/Loading UI and Streaming.md",
+                "file": "Next.js/Parallel Routes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Next.js/Loading UI and Streaming.md"
+                "file": "Next.js/Parallel Routes.md"
               }
             }
           },
@@ -168,9 +168,9 @@
   },
   "active": "e46f916ce0cbf2a1",
   "lastOpenFiles": [
-    "React.js/Suspense.md",
-    "Next.js/Loading UI and Streaming.md",
     "Next.js/Error Handling.md",
+    "Next.js/Loading UI and Streaming.md",
+    "React.js/Suspense.md",
     "Next.js/Dynamic Routes.md",
     "Next.js/Route Groups.md",
     "Next.js/Linking and Navigating.md",

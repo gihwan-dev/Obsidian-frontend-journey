@@ -13,7 +13,6 @@ Parallel Routing은 또한 한 슬롯에 대해 특정한 조건에 기반해 re
 ![[Pasted image 20230914221315.png]]
 
 ---
-
 ## Convention
 
 Parallel route는 named slot 을 통해 생성될 수 있다. Slot은 `@folder` 와 같이 정의 되며, 같은 level의 레이아웃에 prop으로서 전달된다.
@@ -45,7 +44,6 @@ export default function Layout(props: {
 - `children` 은 폴더에 map 할 필요 없는 명확한 slot 이다. 즉 `app/page.js` 는 `app/@children/page.js` 와 같다는 의미다.
 
 ---
-
 ## Unmatched Routes
 
 기본적으로 content는 현 URL에 일치하는 slot 안에 render된다.
@@ -53,7 +51,6 @@ export default function Layout(props: {
 일치하지 않는 slot의 경우에는 라우팅 기술과 폴더 구조에 따라 다르게 render한다.
 
 ### `default.js`
-
 현 URL에 맞는 슬롯의 활성화 상태를 복구할 수 없을때 Next.js는 `defualt.js` 파일 render한다.
 
 다음과 같은 폴더 구조를 생각해보자. `@team` slot은 `settings` 를 가진다. 하지만 `@analytics` 는 가지고 있지 않다.
@@ -64,11 +61,9 @@ export default function Layout(props: {
 
 ![[Pasted image 20230914221402.png]]
 ### Soft Navigation
-
 Soft navigation - Next.js 는 slot의 이전 활성화 상태를 Render 한다. 현 URL과 일치하지 않더라도 그렇게 한다.
 
 ### Hard Navigation
-
 Hard navigation - full page reload 를 요구하는 네비게이션의 경우에 Next.js 는 부합하지 않는 slot에 `defualt.js` 파일을 render 하는것을 시도한다. 만약 할 수 없다면 404가 render 된다.
 
 이해를 위해 따로 코드를 실행해 보았다. 일단 다음과 같은 폴더 구조를 가진다고 가정해본다:
@@ -79,7 +74,7 @@ Hard navigation - full page reload 를 요구하는 네비게이션의 경우에
 
 우선 `app` 과 `analytics` 와 `team` 은 모두 `/` 의 루트 라우트 경로를 가진다 하지만 `/setting` 로 방문하게 되면 app 과 team 은 layout.tsx 파일에서 정의했기에 렌더링 해야 하지만 URL에 매치하지 않기 때문에 404 페이지를 띄우게 된다.
 
-이러한 경우에 URL에 매치하지 않는 경우를 위해 defualt.tsx 파일에 매치하지 않을 때 띄우 UI를 정의하면 URL에 매치하지 않는 페이지들이 default로 설정된 페이지를 띄워주게 된다.
+이러한 경우에 URL에 매치하지 않는 경우를 위해 defualt.tsx 파일에 매치하지 않을 때 띄울 UI를 정의하면 URL에 매치하지 않는 페이지들이 default로 설정된 페이지를 띄워주게 된다.
 
 즉 다음과 같은 화면을 띄우게 된다 다음은 `/setting` 을 방문한 페이지의 렌더링 화면이다.
 
@@ -107,11 +102,9 @@ export default async function Layout(props: {
 유저가 `@authModal/login` 으로 즉 `/login` 으로 네비게이트 하면, `loginSegments` 는 문자열 `"login"` 을 값으로 가지게 된다.
 
 ---
-
-## Exmaples
+## Examples
 
 ### Modals
-
 Parallel Routing 은 모달창을 띄우기 위해 사용될 수 있다.
 
 ![[Pasted image 20230914221458.png]]
@@ -156,7 +149,6 @@ export default function Default() {
 ```
 
 ### Dismissing a modal
-
 만약 모달이 클라이언트 네비게이션을 통해 초기화 되었다면 ex) `<Link href='/login'>`, `router.back()` 를 호출해서 모달창을 닫을 수 있다. 또는 `Link` 컴포넌트를 사용해도 된다.
 
 ```tsx

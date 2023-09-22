@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Next.js/Parallel Routes.md",
+                "file": "Algorithm/2619. Array Prototype Last.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Next.js/Parallel Routes.md",
+                "file": "Algorithm/2619. Array Prototype Last.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Next.js/Parallel Routes.md",
+                "file": "Algorithm/2619. Array Prototype Last.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Next.js/Parallel Routes.md"
+                "file": "Algorithm/2619. Array Prototype Last.md"
               }
             }
           },
@@ -168,6 +168,10 @@
   },
   "active": "e46f916ce0cbf2a1",
   "lastOpenFiles": [
+    "Algorithm/2618. Check if Object Instance of Class.md",
+    "Algorithm/2619. Array Prototype Last.md",
+    "Next.js/Parallel Routes.md",
+    "Algorithm",
     "Next.js/Error Handling.md",
     "Next.js/Loading UI and Streaming.md",
     "React.js/Suspense.md",
@@ -191,9 +195,6 @@
     "Next.js/Static and Dynamic rendering.md",
     "Next.js/Server Component.md",
     "Next.js/Server Actions.md",
-    "Next.js/Route Handlers.md",
-    "Next.js/Revalidating.md",
-    "Next.js/Parallel Routes.md",
     "Pasted image 20230919143113.png",
     "Pasted image 20230919143103.png",
     "Pasted image 20230919143054.png",

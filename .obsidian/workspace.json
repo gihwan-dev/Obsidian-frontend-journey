@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/2619. Array Prototype Last.md",
+                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/2619. Array Prototype Last.md",
+                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/2619. Array Prototype Last.md",
+                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/2619. Array Prototype Last.md"
+                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md"
               }
             }
           },
@@ -168,8 +168,9 @@
   },
   "active": "e46f916ce0cbf2a1",
   "lastOpenFiles": [
-    "Algorithm/2618. Check if Object Instance of Class.md",
     "Algorithm/2619. Array Prototype Last.md",
+    "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
+    "Algorithm/2618. Check if Object Instance of Class.md",
     "Next.js/Parallel Routes.md",
     "Algorithm",
     "Next.js/Error Handling.md",
@@ -194,7 +195,6 @@
     "JavaScript/TC39.md",
     "Next.js/Static and Dynamic rendering.md",
     "Next.js/Server Component.md",
-    "Next.js/Server Actions.md",
     "Pasted image 20230919143113.png",
     "Pasted image 20230919143103.png",
     "Pasted image 20230919143054.png",

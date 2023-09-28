@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a17bb1945fcaac60",
+        "id": "d340479f2b80f13b",
         "type": "tabs",
         "children": [
           {
-            "id": "e46f916ce0cbf2a1",
+            "id": "2e273fe804460c77",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
+                "file": "Folder structure.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
+                "file": "Folder structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
+                "file": "Folder structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md"
+                "file": "Folder structure.md"
               }
             }
           },
@@ -166,13 +166,18 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e46f916ce0cbf2a1",
+  "active": "2e273fe804460c77",
   "lastOpenFiles": [
-    "Folder structure.md",
-    "Next.js/Parallel Routes.md",
     "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
+    "JavaScript/Surveying JS.md",
+    "JavaScript/What is JavaScript.md",
+    "JavaScript/TC39.md",
+    "Folder structure.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
     "Algorithm/2619. Array Prototype Last.md",
     "Algorithm/2618. Check if Object Instance of Class.md",
+    "Next.js/Parallel Routes.md",
     "Algorithm",
     "Next.js/Error Handling.md",
     "Next.js/Loading UI and Streaming.md",
@@ -183,18 +188,14 @@
     "React.js/Server Component.md",
     "Next.js/Page and Layout.md",
     "Next.js/Defining route.md",
-    "JavaScript/Surveying JS.md",
     "React.js/Redux.md",
     "React.js/Recoil.md",
     "CSS/CSS란?.md",
     "CSS/CSS Position.md",
     "CSS/CSS Display.md",
     "Excalidraw/Drawing 2023-09-19 14.26.57.excalidraw.md",
-    "JavaScript/What is JavaScript.md",
     "JavaScript/this.md",
-    "JavaScript/TC39.md",
     "Next.js/Static and Dynamic rendering.md",
-    "Next.js/Server Component.md",
     "Pasted image 20230919143113.png",
     "Pasted image 20230919143103.png",
     "Pasted image 20230919143054.png",
@@ -206,7 +207,6 @@
     "Pasted image 20230914221936.png",
     "Pasted image 20230914221926.png",
     "Pasted image 20230914221915.png",
-    "Untitled.canvas",
     "HTML",
     "Sevelte.js",
     "React.js",

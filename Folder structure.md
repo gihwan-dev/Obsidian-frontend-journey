@@ -34,7 +34,7 @@
 
 루트 디렉터리에서 다음 코드를 실행한다.
 ```bash
-mkdir -p src/{hooks,layouts,utils,assets,config,lib,services,test,components,features,stores,types}
+mkdir -p src/{hooks,layouts,pages,utils,assets,config,lib,services,test,components,features,stores,types}
 ```
 
 알아둬야할 세가지 중요한 점:

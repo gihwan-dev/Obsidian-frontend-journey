@@ -1,4 +1,8 @@
 {
   "accentColor": "",
-  "baseFontSize": 19
+  "baseFontSize": 15,
+  "cssTheme": "AnuPpuccin",
+  "enabledCssSnippets": [
+    "color-extend"
+  ]
 }

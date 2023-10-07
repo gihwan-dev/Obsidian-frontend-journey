@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Surveying JS.md",
+                "file": "Algorithm/14499 주사위 굴리기 <백준>.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Surveying JS.md",
+                "file": "Algorithm/14499 주사위 굴리기 <백준>.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Surveying JS.md",
+                "file": "Algorithm/14499 주사위 굴리기 <백준>.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Surveying JS.md"
+                "file": "Algorithm/14499 주사위 굴리기 <백준>.md"
               }
             }
           },
@@ -168,6 +168,12 @@
   },
   "active": "2e273fe804460c77",
   "lastOpenFiles": [
+    "JavaScript/Surveying JS.md",
+    "Untitled 3.canvas",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "README.md",
     "JavaScript/Prototype.md",
     "Algorithm/14499 주사위 굴리기 <백준>.md",
     "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
@@ -185,11 +191,8 @@
     "Next.js/Pasted image 20230929163304.png",
     "Next.js/Pasted image 20230929163250.png",
     "Next.js/Pasted image 20230929162802.png",
-    "JavaScript/Surveying JS.md",
     "JavaScript/What is JavaScript.md",
     "JavaScript/TC39.md",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
     "Next.js/Parallel Routes.md",
     "Algorithm",
     "Next.js/Error Handling.md",
@@ -201,8 +204,6 @@
     "React.js/Server Component.md",
     "Next.js/Page and Layout.md",
     "Next.js/Defining route.md",
-    "React.js/Redux.md",
-    "React.js/Recoil.md",
     "Pasted image 20230919143113.png",
     "Pasted image 20230919143103.png",
     "Pasted image 20230919143054.png",

@@ -13,9 +13,27 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/14499 주사위 굴리기 <백준>.md",
+                "file": "JavaScript/Prototype.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "bcc026750264d15c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "a335a4694466454a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/LRU Drawing.md"
               }
             }
           }
@@ -85,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/14499 주사위 굴리기 <백준>.md",
+                "file": "JavaScript/Prototype.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/14499 주사위 굴리기 <백준>.md",
+                "file": "JavaScript/Prototype.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/14499 주사위 굴리기 <백준>.md"
+                "file": "JavaScript/Prototype.md"
               }
             }
           },
@@ -168,14 +186,25 @@
   },
   "active": "2e273fe804460c77",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20231008183048.png",
+    "JavaScript/Prototype drawing.md",
+    "JavaScript/Prototype.md",
+    "Next.js/Pasted image 20231008181738.png",
+    "Next.js/Pasted image 20231008180820.png",
+    "JavaScript/TC39.md",
     "JavaScript/Surveying JS.md",
+    "Algorithm/146.  LRU Cache.md",
+    "JavaScript/Map.md",
+    "Algorithm/Least recently used (LRU).md",
+    "Next.js/Pasted image 20231008154323.png",
+    "Excalidraw/LRU Drawing.md",
+    "Untitled.md",
+    "Algorithm/14499 주사위 굴리기 <백준>.md",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "README.md",
-    "JavaScript/Prototype.md",
-    "Algorithm/14499 주사위 굴리기 <백준>.md",
     "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
     "Algorithm/12100 2048(Easy) <백준>.md",
     "Algorithm/13460 구슬탈출 2 <백준>.md",
@@ -192,22 +221,12 @@
     "Next.js/Pasted image 20230929163250.png",
     "Next.js/Pasted image 20230929162802.png",
     "JavaScript/What is JavaScript.md",
-    "JavaScript/TC39.md",
     "Next.js/Parallel Routes.md",
     "Algorithm",
     "Next.js/Error Handling.md",
     "Next.js/Loading UI and Streaming.md",
     "React.js/Suspense.md",
-    "Next.js/Dynamic Routes.md",
-    "Next.js/Route Groups.md",
-    "Next.js/Linking and Navigating.md",
-    "React.js/Server Component.md",
-    "Next.js/Page and Layout.md",
-    "Next.js/Defining route.md",
     "Pasted image 20230919143113.png",
-    "Pasted image 20230919143103.png",
-    "Pasted image 20230919143054.png",
-    "Pasted image 20230919143042.png",
     "Excalidraw",
     "HTML",
     "Sevelte.js",

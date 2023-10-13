@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/3197 백조의 호수 <백준> -실패.md",
+                "file": "Algorithm/2933 미네랄 <백준> -실패.md",
                 "mode": "source",
                 "source": false
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/3197 백조의 호수 <백준> -실패.md",
+                "file": "Algorithm/2933 미네랄 <백준> -실패.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/3197 백조의 호수 <백준> -실패.md",
+                "file": "Algorithm/2933 미네랄 <백준> -실패.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/3197 백조의 호수 <백준> -실패.md"
+                "file": "Algorithm/2933 미네랄 <백준> -실패.md"
               }
             }
           },
@@ -199,9 +199,10 @@
   },
   "active": "b5a0825c54f8062c",
   "lastOpenFiles": [
+    "Algorithm/3197 백조의 호수 <백준> -실패.md",
+    "Algorithm/2933 미네랄 <백준> -실패.md",
     "Next.js/Pasted image 20231012205628.png",
     "Algorithm/1655 가운데를 말해요 <백준>.md",
-    "Algorithm/3197 백조의 호수 <백준> -실패.md",
     "Algorithm/1655 가운데를 말해요 <백준> view.md",
     "Next.js/Pasted image 20231012161113.png",
     "JavaScript/Prototype.md",
@@ -222,7 +223,6 @@
     "Algorithm/146.  LRU Cache.md",
     "JavaScript/Map.md",
     "Algorithm/Least recently used (LRU).md",
-    "Next.js/Pasted image 20231008154323.png",
     "Untitled.md",
     "Algorithm/14499 주사위 굴리기 <백준>.md",
     "Untitled 3.canvas",

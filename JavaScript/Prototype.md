@@ -204,6 +204,34 @@ const me = new Person('Lee');
 console.log(me.constructor === Person); // true
 ```
 
+하지만 리터럴 표기법에 의한 객체 생성 박식과 같이 명시적으로 `new`연산자와 함께 생성자 함수를 호출하여 인스턴스를 생성하지 않는 객체 생성 방식도 있다
+
+리터럴 표기법에 의해 생성된 객체도 물론 프로토타입이 존재한다. 하지만 리터럴 포기법에 의해 생성된 객체의 경우 프로토타입의 `constructor` 프로퍼티가 가리키는 생성자 함수가 반드시 객체를 생성한 생성자 함수라고 단정할 수 없다.
+
+`Object`생성자 함수는 생성자 함수에 인수를 전달하지 않거나 `undefined 또는 null`을 인수로 전달하면 `OrdinaryObjectCreate(추상연산)`을 호출하여 `Object.prototype`을 `프로토타입`으로 갖는 빈 객체를 생성한다.
+
+> [!info] 추상 연산(abstract operation)
+> 추상 연산은 `ECMAScript` 사양에서 내부 동작의 구현 알고리즘을 표현한 것이다. 함수와 유사한 의사 코드라고 이해하면 된다.
+
+```js
+// let obj = new Object();
+console.log(obj); // {}
+
+// 인스턴스 -> Foo.prototype -> Object.prototype 순으로 프로토타입 체인이 생성
+class Foo extends Object {}
+new Foo(); // Foo {}
+
+obj = new Object(123);
+console.log(obj); // Number {123}
+
+obj = new Object('123');
+console.log(obj); // String {"123"}
+```
+
+이처럼 `Object` 생성자 함수 호출과 객체 리터럴의 평가는 추상 연산 `OrdinaryObjectCreate`를 호출하여 객체를 생성하는 점에서 동일하나 `new.target`의 확인이나 프로퍼티를 추가하는 처리 등 세부 내용은 다르다.
+
+리터럴 표기법에 의해 생성된 객체도 상속을 위해 프로토타입이 필요하다. 따라서 리터럴 표기법에 의해 생성된 객체도 가상적인 생성자 함수를 갖는다. 프로토타입은 생성자 함수와 더불어 생성되며 `prototype`, `contrctor` 프로퍼티에 의해 연결되어 있기 때문이다. 다시 말해, **프로토타입과 생성자 함수는 단독으로 존재할 수 없고 언제나 쌍(pair)로 존재한다.**
+## 프로토타입의 생성 시점
 
 
 ## 참조

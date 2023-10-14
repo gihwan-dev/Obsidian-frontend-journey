@@ -25,18 +25,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/2933 미네랄 <백준> -실패.md",
+                "file": "JavaScript/Prototype.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "bcc026750264d15c",
+            "id": "f9e5bb606ec88c76",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "excalidraw",
+              "state": {
+                "file": "Algorithm/9376 탈옥 <백준> drawing.md"
+              }
             }
           },
           {
@@ -79,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Nextjs",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -116,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/2933 미네랄 <백준> -실패.md",
+                "file": "JavaScript/Prototype.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/2933 미네랄 <백준> -실패.md",
+                "file": "JavaScript/Prototype.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/2933 미네랄 <백준> -실패.md"
+                "file": "JavaScript/Prototype.md"
               }
             }
           },
@@ -199,46 +201,45 @@
   },
   "active": "b5a0825c54f8062c",
   "lastOpenFiles": [
+    "JavaScript/Prototype drawing.md",
+    "JavaScript/Prototype.md",
+    "Algorithm/9376 탈옥 <백준> - 실패.md",
+    "Next.js/Pasted image 20231014162813.png",
+    "Algorithm/9376 탈옥 <백준> drawing.md",
+    "Next.js/Pasted image 20231014162724.png",
+    "Next.js/Pasted image 20231014162421.png",
+    "Next.js/Pasted image 20231014162400.png",
+    "Next.js/Pasted image 20231014162341.png",
+    "Next.js/Pasted image 20231014161056.png",
+    "Next.js/Pasted image 20231014160301.png",
+    "Next.js/Font (Doing).md",
+    "Next.js/Images.md",
+    "Next.js/Error Handling.md",
+    "Next.js/Edge and Node.js Runtimes.md",
+    "Next.js/Dynamic Routes.md",
+    "Next.js/Defining route.md",
+    "Next.js/Data Fetching.md",
+    "Next.js/Caching Data.md",
+    "JavaScript/Map.md",
+    "JavaScript/Array.md",
+    "JavaScript/Object.md",
     "Algorithm/3197 백조의 호수 <백준> -실패.md",
+    "Algorithm/3190 뱀 <백준>.md",
     "Algorithm/2933 미네랄 <백준> -실패.md",
     "Next.js/Pasted image 20231012205628.png",
     "Algorithm/1655 가운데를 말해요 <백준>.md",
     "Algorithm/1655 가운데를 말해요 <백준> view.md",
     "Next.js/Pasted image 20231012161113.png",
-    "JavaScript/Prototype.md",
     "Next.js/Pasted image 20231010164910.png",
-    "JavaScript/Prototype drawing.md",
-    "Next.js/Pasted image 20231010163933.png",
-    "Next.js/Data Fetching.md",
-    "Next.js/Caching Data.md",
-    "Next.js/Pasted image 20231009150545.png",
     "JavaScript/Surveying JS.md",
     "Excalidraw/LRU Drawing.md",
-    "Next.js/Pasted image 20231009145443.png",
-    "Next.js/Pasted image 20231009145425.png",
-    "Next.js/Pasted image 20231008183048.png",
-    "Next.js/Pasted image 20231008181738.png",
-    "Next.js/Pasted image 20231008180820.png",
     "JavaScript/TC39.md",
     "Algorithm/146.  LRU Cache.md",
-    "JavaScript/Map.md",
     "Algorithm/Least recently used (LRU).md",
-    "Untitled.md",
-    "Algorithm/14499 주사위 굴리기 <백준>.md",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "README.md",
-    "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
-    "Algorithm/12100 2048(Easy) <백준>.md",
-    "Algorithm/13460 구슬탈출 2 <백준>.md",
-    "Algorithm/3190 뱀 <백준>.md",
-    "Algorithm/2619. Array Prototype Last.md",
-    "Algorithm/2618. Check if Object Instance of Class.md",
-    "JavaScript/Object.md",
-    "JavaScript/Array.md",
-    "Folder structure.md",
     "Algorithm",
     "Excalidraw",
     "HTML",

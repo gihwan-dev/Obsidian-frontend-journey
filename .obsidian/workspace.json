@@ -8,51 +8,28 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2e273fe804460c77",
+            "id": "71727e8312cc48f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/1655 가운데를 말해요 <백준>.md",
+                "file": "Algorithm/2636. Promise Pool <leetCode>.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b5a0825c54f8062c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Prototype.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f9e5bb606ec88c76",
+            "id": "7f7b5f0d6f804892",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Algorithm/9376 탈옥 <백준> drawing.md"
-              }
-            }
-          },
-          {
-            "id": "a335a4694466454a",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/LRU Drawing.md"
+                "file": "Algorithm/6087 레이저 통신 <백준> drawing.md"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Prototype.md",
+                "file": "Algorithm/2636. Promise Pool <leetCode>.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Prototype.md",
+                "file": "Algorithm/2636. Promise Pool <leetCode>.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Prototype.md"
+                "file": "Algorithm/2636. Promise Pool <leetCode>.md"
               }
             }
           },
@@ -199,19 +176,30 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b5a0825c54f8062c",
+  "active": "71727e8312cc48f1",
   "lastOpenFiles": [
-    "JavaScript/Prototype drawing.md",
     "JavaScript/Prototype.md",
+    "Algorithm/2636. Promise Pool <leetCode>.md",
+    "Next.js/Pasted image 20231016172421.png",
+    "JavaScript/Prototype drawing.md",
+    "Algorithm/6087 레이저 통신 <백준> drawing.md",
+    "Algorithm/6087 레이저 통신 <백준>.md",
+    "Next.js/Pasted image 20231016153613.png",
+    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 drawing.md",
+    "Next.js/Pasted image 20231016151804.png",
+    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 <백준> - 실패.md",
+    "Next.js/Pasted image 20231016094932.png",
+    "Next.js/Pasted image 20231016094802.png",
+    "Next.js/Pasted image 20231016094206.png",
+    "Next.js/Pasted image 20231016093846.png",
+    "Next.js/Pasted image 20231015201621.png",
+    "Next.js/Pasted image 20231015200428.png",
+    "Next.js/Pasted image 20231015200314.png",
     "Algorithm/9376 탈옥 <백준> - 실패.md",
-    "Next.js/Pasted image 20231014162813.png",
     "Algorithm/9376 탈옥 <백준> drawing.md",
-    "Next.js/Pasted image 20231014162724.png",
-    "Next.js/Pasted image 20231014162421.png",
-    "Next.js/Pasted image 20231014162400.png",
-    "Next.js/Pasted image 20231014162341.png",
-    "Next.js/Pasted image 20231014161056.png",
-    "Next.js/Pasted image 20231014160301.png",
+    "Excalidraw/LRU Drawing.md",
+    "Algorithm/1655 가운데를 말해요 <백준>.md",
+    "Algorithm/Untitled.md",
     "Next.js/Font (Doing).md",
     "Next.js/Images.md",
     "Next.js/Error Handling.md",
@@ -226,16 +214,6 @@
     "Algorithm/3197 백조의 호수 <백준> -실패.md",
     "Algorithm/3190 뱀 <백준>.md",
     "Algorithm/2933 미네랄 <백준> -실패.md",
-    "Next.js/Pasted image 20231012205628.png",
-    "Algorithm/1655 가운데를 말해요 <백준>.md",
-    "Algorithm/1655 가운데를 말해요 <백준> view.md",
-    "Next.js/Pasted image 20231012161113.png",
-    "Next.js/Pasted image 20231010164910.png",
-    "JavaScript/Surveying JS.md",
-    "Excalidraw/LRU Drawing.md",
-    "JavaScript/TC39.md",
-    "Algorithm/146.  LRU Cache.md",
-    "Algorithm/Least recently used (LRU).md",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",

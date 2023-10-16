@@ -18935,11 +18935,11 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"seed": 253288628,
-			"version": 310,
-			"versionNonce": 1664554892,
+			"version": 394,
+			"versionNonce": 2008877964,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1697270780611,
+			"updated": 1697367122700,
 			"link": null,
 			"locked": false,
 			"points": [

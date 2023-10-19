@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/2636. Promise Pool <leetCode>.md",
+                "file": "Algorithm/18111 마인크래프트 <백준>.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/2636. Promise Pool <leetCode>.md",
+                "file": "Algorithm/18111 마인크래프트 <백준>.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/2636. Promise Pool <leetCode>.md",
+                "file": "Algorithm/18111 마인크래프트 <백준>.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/2636. Promise Pool <leetCode>.md"
+                "file": "Algorithm/18111 마인크래프트 <백준>.md"
               }
             }
           },
@@ -178,8 +178,11 @@
   },
   "active": "71727e8312cc48f1",
   "lastOpenFiles": [
-    "JavaScript/Prototype.md",
+    "Algorithm/18111 마인크래프트 <백준> drawing.md",
+    "Algorithm/18111 마인크래프트 <백준>.md",
+    "Algorithm/Untitled 1.md",
     "Algorithm/2636. Promise Pool <leetCode>.md",
+    "JavaScript/Prototype.md",
     "Next.js/Pasted image 20231016172421.png",
     "JavaScript/Prototype drawing.md",
     "Algorithm/6087 레이저 통신 <백준> drawing.md",
@@ -199,7 +202,6 @@
     "Algorithm/9376 탈옥 <백준> drawing.md",
     "Excalidraw/LRU Drawing.md",
     "Algorithm/1655 가운데를 말해요 <백준>.md",
-    "Algorithm/Untitled.md",
     "Next.js/Font (Doing).md",
     "Next.js/Images.md",
     "Next.js/Error Handling.md",
@@ -212,8 +214,6 @@
     "JavaScript/Array.md",
     "JavaScript/Object.md",
     "Algorithm/3197 백조의 호수 <백준> -실패.md",
-    "Algorithm/3190 뱀 <백준>.md",
-    "Algorithm/2933 미네랄 <백준> -실패.md",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",

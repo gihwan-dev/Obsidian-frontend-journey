@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/18111 마인크래프트 <백준>.md",
+                "file": "JavaScript/Airbnb style guide.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/18111 마인크래프트 <백준>.md",
+                "file": "JavaScript/Airbnb style guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/18111 마인크래프트 <백준>.md",
+                "file": "JavaScript/Airbnb style guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/18111 마인크래프트 <백준>.md"
+                "file": "JavaScript/Airbnb style guide.md"
               }
             }
           },
@@ -178,15 +178,27 @@
   },
   "active": "71727e8312cc48f1",
   "lastOpenFiles": [
-    "Algorithm/18111 마인크래프트 <백준> drawing.md",
-    "Algorithm/18111 마인크래프트 <백준>.md",
-    "Algorithm/Untitled 1.md",
+    "Algorithm/1655 가운데를 말해요 <백준>.md",
+    "JavaScript/Airbnb style guide.md",
+    "Algorithm/1655 가운데를 말해요 <백준> view.md",
+    "Algorithm/2618. Check if Object Instance of Class.md",
+    "Algorithm/2619. Array Prototype Last.md",
     "Algorithm/2636. Promise Pool <leetCode>.md",
+    "Algorithm/2933 미네랄 <백준> -실패.md",
+    "Algorithm/18111 마인크래프트 <백준>.md",
+    "Algorithm/배달의민족 - 우아한 테크코스 5기 - javascript-onboarding.md",
+    "Algorithm/18111 마인크래프트 <백준> drawing.md",
+    "Algorithm/14499 주사위 굴리기 <백준>.md",
+    "Algorithm/13460 구슬탈출 2 <백준>.md",
+    "Algorithm/12100 2048(Easy) <백준>.md",
+    "Algorithm/9376 탈옥 <백준> - 실패.md",
+    "Algorithm/6087 레이저 통신 <백준>.md",
+    "Algorithm/3197 백조의 호수 <백준> -실패.md",
+    "Algorithm/Untitled 1.md",
     "JavaScript/Prototype.md",
     "Next.js/Pasted image 20231016172421.png",
     "JavaScript/Prototype drawing.md",
     "Algorithm/6087 레이저 통신 <백준> drawing.md",
-    "Algorithm/6087 레이저 통신 <백준>.md",
     "Next.js/Pasted image 20231016153613.png",
     "Algorithm/6549 히스토그램에서 가장 큰 직사각형 drawing.md",
     "Next.js/Pasted image 20231016151804.png",
@@ -198,22 +210,10 @@
     "Next.js/Pasted image 20231015201621.png",
     "Next.js/Pasted image 20231015200428.png",
     "Next.js/Pasted image 20231015200314.png",
-    "Algorithm/9376 탈옥 <백준> - 실패.md",
     "Algorithm/9376 탈옥 <백준> drawing.md",
     "Excalidraw/LRU Drawing.md",
-    "Algorithm/1655 가운데를 말해요 <백준>.md",
     "Next.js/Font (Doing).md",
     "Next.js/Images.md",
-    "Next.js/Error Handling.md",
-    "Next.js/Edge and Node.js Runtimes.md",
-    "Next.js/Dynamic Routes.md",
-    "Next.js/Defining route.md",
-    "Next.js/Data Fetching.md",
-    "Next.js/Caching Data.md",
-    "JavaScript/Map.md",
-    "JavaScript/Array.md",
-    "JavaScript/Object.md",
-    "Algorithm/3197 백조의 호수 <백준> -실패.md",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",

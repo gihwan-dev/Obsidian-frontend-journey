@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Airbnb style guide.md",
+                "file": "JavaScript/Generator.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Airbnb style guide.md",
+                "file": "JavaScript/Generator.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Airbnb style guide.md",
+                "file": "JavaScript/Generator.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Airbnb style guide.md"
+                "file": "JavaScript/Generator.md"
               }
             }
           },
@@ -178,8 +178,9 @@
   },
   "active": "71727e8312cc48f1",
   "lastOpenFiles": [
-    "Algorithm/1655 가운데를 말해요 <백준>.md",
     "JavaScript/Airbnb style guide.md",
+    "JavaScript/Generator.md",
+    "Algorithm/1655 가운데를 말해요 <백준>.md",
     "Algorithm/1655 가운데를 말해요 <백준> view.md",
     "Algorithm/2618. Check if Object Instance of Class.md",
     "Algorithm/2619. Array Prototype Last.md",
@@ -213,7 +214,6 @@
     "Algorithm/9376 탈옥 <백준> drawing.md",
     "Excalidraw/LRU Drawing.md",
     "Next.js/Font (Doing).md",
-    "Next.js/Images.md",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",

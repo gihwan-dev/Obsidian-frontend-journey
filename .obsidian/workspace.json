@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Generator.md",
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5845b9a9531976d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Jest/Using Matchers.md",
                 "mode": "source",
                 "source": false
               }
@@ -29,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Generator.md",
+                "file": "Jest/Using Matchers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Generator.md",
+                "file": "Jest/Using Matchers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Generator.md"
+                "file": "Jest/Using Matchers.md"
               }
             }
           },
@@ -176,10 +189,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "71727e8312cc48f1",
+  "active": "5845b9a9531976d4",
   "lastOpenFiles": [
-    "JavaScript/Airbnb style guide.md",
+    "Untitled 1.md",
+    "Jest/Using Matchers.md",
+    "Jest",
+    "README.md",
+    "Untitled 1.canvas",
+    "Untitled.md",
+    "Untitled.canvas",
+    "paradigm.md",
+    "Folder structure.md",
     "JavaScript/Generator.md",
+    "JavaScript/Untitled.md",
+    "JavaScript/Airbnb style guide.md",
     "Algorithm/1655 가운데를 말해요 <백준>.md",
     "Algorithm/1655 가운데를 말해요 <백준> view.md",
     "Algorithm/2618. Check if Object Instance of Class.md",
@@ -198,12 +221,8 @@
     "Algorithm/Untitled 1.md",
     "JavaScript/Prototype.md",
     "Next.js/Pasted image 20231016172421.png",
-    "JavaScript/Prototype drawing.md",
-    "Algorithm/6087 레이저 통신 <백준> drawing.md",
     "Next.js/Pasted image 20231016153613.png",
-    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 drawing.md",
     "Next.js/Pasted image 20231016151804.png",
-    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 <백준> - 실패.md",
     "Next.js/Pasted image 20231016094932.png",
     "Next.js/Pasted image 20231016094802.png",
     "Next.js/Pasted image 20231016094206.png",
@@ -211,13 +230,8 @@
     "Next.js/Pasted image 20231015201621.png",
     "Next.js/Pasted image 20231015200428.png",
     "Next.js/Pasted image 20231015200314.png",
-    "Algorithm/9376 탈옥 <백준> drawing.md",
-    "Excalidraw/LRU Drawing.md",
-    "Next.js/Font (Doing).md",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
     "Algorithm",
     "Excalidraw",
     "HTML",
@@ -226,7 +240,6 @@
     "TypeScript",
     "JavaScript",
     "HTML",
-    "CSS",
-    "Next.js"
+    "CSS"
   ]
 }

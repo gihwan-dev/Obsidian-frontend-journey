@@ -25,9 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Jest/Using Matchers.md",
+                "file": "대학교/데이터베이스.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "9b1e696a087f8255",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md"
               }
             }
           },
@@ -42,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -92,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -108,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Jest/Using Matchers.md",
+                "file": "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Jest/Using Matchers.md",
+                "file": "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Jest/Using Matchers.md"
+                "file": "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md"
               }
             }
           },
@@ -189,10 +200,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5845b9a9531976d4",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
-    "Untitled 1.md",
+    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
+    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md",
+    "대학교/데이터베이스.md",
     "Jest/Using Matchers.md",
+    "대학교",
+    "Untitled 1.md",
     "Jest",
     "README.md",
     "Untitled 1.canvas",
@@ -217,9 +232,6 @@
     "Algorithm/12100 2048(Easy) <백준>.md",
     "Algorithm/9376 탈옥 <백준> - 실패.md",
     "Algorithm/6087 레이저 통신 <백준>.md",
-    "Algorithm/3197 백조의 호수 <백준> -실패.md",
-    "Algorithm/Untitled 1.md",
-    "JavaScript/Prototype.md",
     "Next.js/Pasted image 20231016172421.png",
     "Next.js/Pasted image 20231016153613.png",
     "Next.js/Pasted image 20231016151804.png",
@@ -229,7 +241,6 @@
     "Next.js/Pasted image 20231016093846.png",
     "Next.js/Pasted image 20231015201621.png",
     "Next.js/Pasted image 20231015200428.png",
-    "Next.js/Pasted image 20231015200314.png",
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Algorithm",
@@ -239,7 +250,6 @@
     "React.js",
     "TypeScript",
     "JavaScript",
-    "HTML",
-    "CSS"
+    "HTML"
   ]
 }

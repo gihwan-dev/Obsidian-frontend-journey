@@ -15,4 +15,5 @@
 - Svelte 정리
 - Typescript 정리
 - Algorithm 문제 정리
+- Jest 정리
 

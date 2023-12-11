@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "JavaScript/History API.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -58,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Nextjs",
+                "query": "[\"kanban-plugin\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -156,13 +156,21 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "d1039bcdc3a76fc0",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,37 +186,37 @@
   },
   "active": "9b1e696a087f8255",
   "lastOpenFiles": [
-    "JavaScript/Promise.md",
-    "JavaScript/Map.md",
-    "JavaScript/Array.md",
-    "JavaScript/WeakMap.md",
-    "JavaScript/History API.md",
-    "JavaScript/Airbnb style guide.md",
-    "JavaScript/Generator.md",
     "JavaScript/Object.md",
-    "JavaScript/this.md",
-    "JavaScript/throw.md",
+    "JavaScript/Prototype.md",
     "JavaScript/What is JavaScript.md",
-    "React.js/useRef.md",
-    "Design/디자인 요소.md",
-    "Untitled.md",
-    "Design",
-    "Folder structure.md",
-    "paradigm.md",
-    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md",
-    "Excalidraw/11-10외주.excalidraw.md",
-    "Excalidraw/Drawing 2023-09-19 14.26.57.excalidraw.md",
-    "README.md",
-    "대학교/데이터베이스.md",
-    "2023-11-04.md",
-    "Untitled.canvas",
-    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 <백준> - 실패.md",
-    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 drawing.md",
+    "JavaScript/WeakMap.md",
+    "JavaScript/Prototype drawing.md",
+    "JavaScript/History API.md",
+    "JavaScript/Map.md",
+    "JavaScript/Generator.md",
+    "JavaScript/Array.md",
     "Algorithm/3197 백조의 호수 <백준> -실패.md",
-    "Algorithm/2933 미네랄 <백준> -실패.md",
+    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 drawing.md",
+    "Algorithm/2619. Array Prototype Last.md",
+    "Algorithm/12100 2048(Easy) <백준>.md",
+    "CSS/CSS Display.md",
+    "Algorithm/2636. Promise Pool <leetCode>.md",
+    "Algorithm/2618. Check if Object Instance of Class.md",
+    "Algorithm/1655 가운데를 말해요 <백준> view.md",
+    "Algorithm/146.  LRU Cache.md",
+    "Algorithm/1655 가운데를 말해요 <백준>.md",
+    "Design/디자인 요소.md",
+    "대학교/데이터베이스.md",
+    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md",
+    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
+    "Folder structure.md",
+    "Untitled Kanban.md",
+    "some job.md",
+    "asdf.md",
+    "Design",
+    "Untitled.canvas",
     "Untitled 3.canvas",
     "이미지저장소",
-    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
     "대학교",
     "Jest",
     "Untitled 1.canvas",

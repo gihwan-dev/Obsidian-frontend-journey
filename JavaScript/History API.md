@@ -9,9 +9,8 @@ history.back();
 
 history.forward();
 ```
-
 ### 히스토리에서 특정 포인트로 이동
-```js
+```javascript
 history.go(-1);
 
 history.go(1);

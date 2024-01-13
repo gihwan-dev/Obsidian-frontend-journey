@@ -5,7 +5,10 @@
     "fontSize": 16,
     "emojiStyle": "none",
     "iconColor": null,
-    "recentlyUsedIcons": [],
+    "recentlyUsedIcons": [
+      "RiImageLine",
+      "RiSchoolLine"
+    ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
     "extraMargin": {
@@ -19,5 +22,7 @@
     "iconInFrontmatterEnabled": false,
     "iconsBackgroundCheckEnabled": false,
     "iconsInNotesEnabled": true
-  }
+  },
+  "대학교": "RiSchoolLine",
+  "이미지저장소": "RiImageLine"
 }

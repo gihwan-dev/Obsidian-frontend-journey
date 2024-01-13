@@ -11427,7 +11427,7 @@
             "containerId": null,
             "originalText": "JSON",
             "lineHeight": 1.5682862358092613,
-            "baseline": 80
+            "baseline": 81
           },
           {
             "type": "line",
@@ -18085,7 +18085,7 @@
             "containerId": null,
             "originalText": "DNS",
             "lineHeight": 1.5723270440251587,
-            "baseline": 76
+            "baseline": 77
           },
           {
             "type": "line",
@@ -18596,7 +18596,7 @@
             "containerId": null,
             "originalText": "Application\nserver",
             "lineHeight": 1.3499999999999994,
-            "baseline": 33
+            "baseline": 34
           }
         ],
         "id": "GykdBN9l2F7PlPJRH8Iog",
@@ -18807,7 +18807,7 @@
             "containerId": null,
             "originalText": "server",
             "lineHeight": 1.320687725575955,
-            "baseline": 18
+            "baseline": 19
           }
         ],
         "id": "ey-piowCVjn2rimd5b1AI",
@@ -18943,7 +18943,7 @@
             "containerId": null,
             "originalText": "Multi Instance",
             "lineHeight": 1.3218415496714844,
-            "baseline": 18
+            "baseline": 19
           }
         ],
         "id": "5a9oE7cUyFx8ZkipQgpzv",
@@ -19530,7 +19530,7 @@
             "containerId": null,
             "originalText": "Relational DB",
             "lineHeight": 1.350000000000001,
-            "baseline": 15
+            "baseline": 16
           }
         ],
         "id": "a4ONudRwlBs5u0X_D92Sj",
@@ -20990,7 +20990,7 @@
             "containerId": null,
             "originalText": "}",
             "lineHeight": 1.2232416316348487,
-            "baseline": 28
+            "baseline": 29
           },
           {
             "type": "text",
@@ -21075,7 +21075,7 @@
             "containerId": null,
             "originalText": "Columnar DB",
             "lineHeight": 1.3420772212688767,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -21430,7 +21430,7 @@
             "containerId": null,
             "originalText": "Graph DB",
             "lineHeight": 1.3499999999999999,
-            "baseline": 16
+            "baseline": 17
           },
           {
             "type": "line",
@@ -22534,7 +22534,7 @@
             "containerId": null,
             "originalText": "Stack\nStorage",
             "lineHeight": 1.3500000000000014,
-            "baseline": 33
+            "baseline": 34
           }
         ],
         "id": "l11XXEtuH7VAHXTnoIRgo",
@@ -23118,7 +23118,7 @@
             "containerId": null,
             "originalText": "Key",
             "lineHeight": 1.3499999999999988,
-            "baseline": 5
+            "baseline": 6
           },
           {
             "type": "text",
@@ -23158,7 +23158,7 @@
             "containerId": null,
             "originalText": "Key",
             "lineHeight": 1.3499999999999988,
-            "baseline": 5
+            "baseline": 6
           },
           {
             "type": "text",
@@ -23198,7 +23198,7 @@
             "containerId": null,
             "originalText": "Value",
             "lineHeight": 1.3499999999999952,
-            "baseline": 5
+            "baseline": 6
           },
           {
             "type": "text",
@@ -23238,7 +23238,7 @@
             "containerId": null,
             "originalText": "Value",
             "lineHeight": 1.3499999999999952,
-            "baseline": 5
+            "baseline": 6
           },
           {
             "type": "text",
@@ -23282,7 +23282,7 @@
             "containerId": null,
             "originalText": "Cache",
             "lineHeight": 1.269574560630744,
-            "baseline": 19
+            "baseline": 20
           }
         ],
         "id": "ZgLPeoqYM7CmTDuL2-tS9",
@@ -23910,7 +23910,7 @@
             "containerId": null,
             "originalText": "Auth &\n IAM",
             "lineHeight": 1.3328788279541297,
-            "baseline": 44
+            "baseline": 45
           }
         ],
         "id": "3JJukq09bmhWp8SSJYeUM",
@@ -25186,7 +25186,7 @@
             "containerId": null,
             "originalText": "Message Q",
             "lineHeight": 1.3500000000000016,
-            "baseline": 16
+            "baseline": 17
           }
         ],
         "id": "5Qeohk9y3qCsv_SCok9Rn",
@@ -25424,7 +25424,7 @@
             "containerId": null,
             "originalText": "Pipeline",
             "lineHeight": 1.2999999999999996,
-            "baseline": 21
+            "baseline": 22
           }
         ],
         "id": "snRaXhrK-FhswOprzc9Gb",
@@ -25777,7 +25777,7 @@
             "containerId": null,
             "originalText": "cloud",
             "lineHeight": 1.3499999999999974,
-            "baseline": 18
+            "baseline": 19
           }
         ],
         "id": "2oNGvHDeEp4Xwjw7DzbND",
@@ -26130,7 +26130,7 @@
             "containerId": null,
             "originalText": "CDN",
             "lineHeight": 1.2257881191819515,
-            "baseline": 28
+            "baseline": 29
           },
           {
             "type": "line",

@@ -8,28 +8,41 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9b1e696a087f8255",
+            "id": "7f7b5f0d6f804892",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/History API.md",
-                "mode": "preview",
+                "file": "Folder structure.md",
+                "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "7f7b5f0d6f804892",
+            "id": "49c1a48f9b7726a5",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Algorithm/6087 레이저 통신 <백준> drawing.md"
+                "file": "React.js/Push Notification.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bcce191f75ebd827",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "이미지저장소/Pasted image 20230914135239.png"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/History API.md",
+                "file": "React.js/Push Notification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/History API.md",
+                "file": "React.js/Push Notification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/History API.md"
+                "file": "React.js/Push Notification.md"
               }
             }
           },
@@ -145,7 +158,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           },
@@ -170,7 +185,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 216.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,35 +200,37 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9b1e696a087f8255",
+  "active": "43ead79288b9a627",
   "lastOpenFiles": [
-    "JavaScript/Object.md",
-    "JavaScript/Prototype.md",
+    "elixir",
+    "React.js/Push Notification.md",
+    "이미지저장소/Pasted image 20230914135239.png",
+    "Folder structure.md",
+    "JavaScript/Map.md",
+    "JavaScript/History API.md",
+    "JavaScript/Airbnb style guide.md",
+    "JavaScript/Array.md",
+    "JavaScript/this.md",
     "JavaScript/What is JavaScript.md",
     "JavaScript/WeakMap.md",
+    "JavaScript/throw.md",
+    "JavaScript/TC39.md",
+    "JavaScript/Surveying JS.md",
+    "JavaScript/Prototype.md",
     "JavaScript/Prototype drawing.md",
-    "JavaScript/History API.md",
-    "JavaScript/Map.md",
+    "JavaScript/Promise.md",
+    "JavaScript/Object.md",
     "JavaScript/Generator.md",
-    "JavaScript/Array.md",
-    "Algorithm/3197 백조의 호수 <백준> -실패.md",
-    "Algorithm/6549 히스토그램에서 가장 큰 직사각형 drawing.md",
-    "Algorithm/2619. Array Prototype Last.md",
-    "Algorithm/12100 2048(Easy) <백준>.md",
-    "CSS/CSS Display.md",
-    "Algorithm/2636. Promise Pool <leetCode>.md",
+    "paradigm.md",
+    "README.md",
+    "asdf.md",
+    "2023-12-11.md",
     "Algorithm/2618. Check if Object Instance of Class.md",
-    "Algorithm/1655 가운데를 말해요 <백준> view.md",
     "Algorithm/146.  LRU Cache.md",
     "Algorithm/1655 가운데를 말해요 <백준>.md",
-    "Design/디자인 요소.md",
-    "대학교/데이터베이스.md",
-    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md",
+    "이미지저장소/Pasted image 20230914215437.png",
+    "Algorithm/6087 레이저 통신 <백준> drawing.md",
     "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
-    "Folder structure.md",
-    "Untitled Kanban.md",
-    "some job.md",
-    "asdf.md",
     "Design",
     "Untitled.canvas",
     "Untitled 3.canvas",
@@ -227,8 +245,6 @@
     "Next.js/Pasted image 20231016094802.png",
     "Next.js/Pasted image 20231016094206.png",
     "Next.js/Pasted image 20231016093846.png",
-    "Next.js/Pasted image 20231015201621.png",
-    "Next.js/Pasted image 20231015200428.png",
     "Untitled 2.canvas",
     "Algorithm",
     "Excalidraw",

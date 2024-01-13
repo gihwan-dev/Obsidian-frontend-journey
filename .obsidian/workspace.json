@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/Push Notification.md",
+                "file": "elixir/엘릭서를 왜 사용해야 하는가.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React.js/Push Notification.md",
+                "file": "elixir/엘릭서를 왜 사용해야 하는가.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React.js/Push Notification.md",
+                "file": "elixir/엘릭서를 왜 사용해야 하는가.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React.js/Push Notification.md"
+                "file": "elixir/엘릭서를 왜 사용해야 하는가.md"
               }
             }
           },
@@ -200,14 +200,18 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "43ead79288b9a627",
+  "active": "49c1a48f9b7726a5",
   "lastOpenFiles": [
-    "elixir",
+    "JavaScript/Promise.md",
+    "elixir/엘릭서를 왜 사용해야 하는가.md",
+    "JavaScript/History API.md",
+    "Excalidraw/LRU Drawing.md",
     "React.js/Push Notification.md",
+    "Excalidraw/Untitled.md",
+    "elixir",
     "이미지저장소/Pasted image 20230914135239.png",
     "Folder structure.md",
     "JavaScript/Map.md",
-    "JavaScript/History API.md",
     "JavaScript/Airbnb style guide.md",
     "JavaScript/Array.md",
     "JavaScript/this.md",
@@ -218,7 +222,6 @@
     "JavaScript/Surveying JS.md",
     "JavaScript/Prototype.md",
     "JavaScript/Prototype drawing.md",
-    "JavaScript/Promise.md",
     "JavaScript/Object.md",
     "JavaScript/Generator.md",
     "paradigm.md",
@@ -227,9 +230,7 @@
     "2023-12-11.md",
     "Algorithm/2618. Check if Object Instance of Class.md",
     "Algorithm/146.  LRU Cache.md",
-    "Algorithm/1655 가운데를 말해요 <백준>.md",
     "이미지저장소/Pasted image 20230914215437.png",
-    "Algorithm/6087 레이저 통신 <백준> drawing.md",
     "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
     "Design",
     "Untitled.canvas",
@@ -250,7 +251,6 @@
     "Excalidraw",
     "HTML",
     "Sevelte.js",
-    "React.js",
-    "TypeScript"
+    "React.js"
   ]
 }

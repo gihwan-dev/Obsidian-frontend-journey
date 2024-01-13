@@ -45,4 +45,3 @@ history.back(); // alerts "location: http://example.com/example.html, state: nul
 history.go(2); // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"
 
 ```
-

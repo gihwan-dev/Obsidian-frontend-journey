@@ -36,6 +36,10 @@
 ```bash
 mkdir -p src/{hooks,layouts,pages,utils,assets,config,lib,services,test,components,features,stores,types}
 ```
+**Next.js**
+```bash
+mkdir -p src/{hooks,utils,assets,config,lib,services,test,components,features,stores,types}
+```
 
 알아둬야할 세가지 중요한 점:
 - **Pages** 폴더는 그 자체로 이미 모듈화 되어 있다. 중요한것은 페이지 안의 로직은 최소한으로 유지되어야 한다.

@@ -11,24 +11,18 @@
             "id": "7f7b5f0d6f804892",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Folder structure.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2024-01-15 20.12.09.excalidraw.md"
               }
             }
           },
           {
-            "id": "49c1a48f9b7726a5",
+            "id": "eb8b97fbe21cf411",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "elixir/엘릭서를 왜 사용해야 하는가.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -41,8 +35,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "elixir/엘릭서를 왜 사용해야 하는가.md",
+                "file": "Excalidraw/Drawing 2024-01-15 20.12.09.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "elixir/엘릭서를 왜 사용해야 하는가.md",
+                "file": "Excalidraw/Drawing 2024-01-15 20.12.09.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "elixir/엘릭서를 왜 사용해야 하는가.md"
+                "file": "Excalidraw/Drawing 2024-01-15 20.12.09.excalidraw.md"
               }
             }
           },
@@ -200,17 +193,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "49c1a48f9b7726a5",
+  "active": "7f7b5f0d6f804892",
   "lastOpenFiles": [
-    "JavaScript/Promise.md",
-    "elixir/엘릭서를 왜 사용해야 하는가.md",
-    "JavaScript/History API.md",
-    "Excalidraw/LRU Drawing.md",
-    "React.js/Push Notification.md",
+    "Excalidraw/Drawing 2023-09-19 14.26.57.excalidraw.md",
+    "Excalidraw/11-10외주.excalidraw.md",
+    "Excalidraw/Drawing 2024-01-15 20.12.09.excalidraw.md",
     "Excalidraw/Untitled.md",
-    "elixir",
-    "이미지저장소/Pasted image 20230914135239.png",
+    "Excalidraw/LRU Drawing.md",
     "Folder structure.md",
+    "이미지저장소/Pasted image 20230914135239.png",
+    "Excalidraw/B.sori IA.canvas",
+    "elixir/엘릭서를 왜 사용해야 하는가.md",
+    "JavaScript/Promise.md",
+    "JavaScript/History API.md",
+    "React.js/Push Notification.md",
+    "elixir",
     "JavaScript/Map.md",
     "JavaScript/Airbnb style guide.md",
     "JavaScript/Array.md",
@@ -227,9 +224,6 @@
     "paradigm.md",
     "README.md",
     "asdf.md",
-    "2023-12-11.md",
-    "Algorithm/2618. Check if Object Instance of Class.md",
-    "Algorithm/146.  LRU Cache.md",
     "이미지저장소/Pasted image 20230914215437.png",
     "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
     "Design",

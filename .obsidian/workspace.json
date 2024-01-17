@@ -18,6 +18,26 @@
             }
           },
           {
+            "id": "93e9062cf747e517",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/link-sharing.md"
+              }
+            }
+          },
+          {
+            "id": "521afb9ff217e14a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Kanban.md"
+              }
+            }
+          },
+          {
             "id": "eb8b97fbe21cf411",
             "type": "leaf",
             "state": {
@@ -35,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -101,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/dnd-project-structure.md",
+                "file": "Excalidraw/Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/dnd-project-structure.md",
+                "file": "Excalidraw/Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/dnd-project-structure.md"
+                "file": "Excalidraw/Kanban.md"
               }
             }
           },
@@ -193,11 +214,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7f7b5f0d6f804892",
+  "active": "521afb9ff217e14a",
   "lastOpenFiles": [
+    "Excalidraw/link-sharing.md",
+    "Excalidraw/Kanban.md",
+    "Excalidraw/dnd-project-structure.md",
     "Excalidraw/taesung_project_structure.md",
     "Excalidraw/LRU Drawing.md",
-    "Excalidraw/dnd-project-structure.md",
     "Excalidraw/11-10외주.excalidraw.md",
     "Excalidraw/Untitled.md",
     "Folder structure.md",
@@ -222,8 +245,6 @@
     "JavaScript/Object.md",
     "JavaScript/Generator.md",
     "paradigm.md",
-    "README.md",
-    "asdf.md",
     "이미지저장소/Pasted image 20230914215437.png",
     "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
     "Design",

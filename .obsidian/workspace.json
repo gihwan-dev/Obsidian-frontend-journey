@@ -31,9 +31,23 @@
             "id": "521afb9ff217e14a",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Kanban.md"
+                "file": "JavaScript/Node.js Reactor Pattern.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b99ec43a07282eb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Node.js Reactor Pattern.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -56,7 +70,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -122,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Kanban.md",
+                "file": "JavaScript/Node.js Reactor Pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Kanban.md",
+                "file": "JavaScript/Node.js Reactor Pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Kanban.md"
+                "file": "JavaScript/Node.js Reactor Pattern.md"
               }
             }
           },
@@ -214,16 +228,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "521afb9ff217e14a",
+  "active": "b99ec43a07282eb6",
   "lastOpenFiles": [
-    "Excalidraw/link-sharing.md",
-    "Excalidraw/Kanban.md",
+    "Next.js/Pasted image 20240126124950.png",
+    "Excalidraw/node.js reactor pattern.md",
+    "JavaScript/Node.js Reactor Pattern.md",
+    "JavaScript/Surveying JS.md",
+    "JavaScript/What is JavaScript.md",
+    "Excalidraw/11-10외주.excalidraw.md",
     "Excalidraw/dnd-project-structure.md",
+    "Excalidraw/Kanban.md",
+    "JavaScript/Prototype drawing.md",
+    "JavaScript/WeakMap.md",
+    "elixir/Untitled.md",
+    "Folder structure.md",
+    "Excalidraw/link-sharing.md",
     "Excalidraw/taesung_project_structure.md",
     "Excalidraw/LRU Drawing.md",
-    "Excalidraw/11-10외주.excalidraw.md",
     "Excalidraw/Untitled.md",
-    "Folder structure.md",
     "이미지저장소/Pasted image 20230914135239.png",
     "Excalidraw/B.sori IA.canvas",
     "elixir/엘릭서를 왜 사용해야 하는가.md",
@@ -235,16 +257,8 @@
     "JavaScript/Airbnb style guide.md",
     "JavaScript/Array.md",
     "JavaScript/this.md",
-    "JavaScript/What is JavaScript.md",
-    "JavaScript/WeakMap.md",
     "JavaScript/throw.md",
     "JavaScript/TC39.md",
-    "JavaScript/Surveying JS.md",
-    "JavaScript/Prototype.md",
-    "JavaScript/Prototype drawing.md",
-    "JavaScript/Object.md",
-    "JavaScript/Generator.md",
-    "paradigm.md",
     "이미지저장소/Pasted image 20230914215437.png",
     "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
     "Design",

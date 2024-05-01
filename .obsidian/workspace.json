@@ -45,7 +45,107 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Node.js Reactor Pattern.md",
+                "file": "Folder structure.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "50e53952ff241071",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Object.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "855b2dabb3b500b1",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "JavaScript/Object.create().md"
+              }
+            }
+          },
+          {
+            "id": "96041bec80dd3578",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "JavaScript/Object.call().md"
+              }
+            }
+          },
+          {
+            "id": "313fe558751c6218",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "JavaScript/Object.create().md"
+              }
+            }
+          },
+          {
+            "id": "d2c35a10f6b6bdd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Next.js/SSR vs CSR 선택 기준.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8f9f2e4cd04a8cc3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Folder structure.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "46a622554675b834",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Next.js/Route Handlers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "abfadabe6885204c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/컴파운드 패턴 블로그.md"
+              }
+            }
+          },
+          {
+            "id": "7601119af7b413b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Test/React Testing Library.md",
                 "mode": "source",
                 "source": false
               }
@@ -70,7 +170,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -136,7 +236,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Node.js Reactor Pattern.md",
+                "file": "Test/React Testing Library.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +253,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Node.js Reactor Pattern.md",
+                "file": "Test/React Testing Library.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +276,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Node.js Reactor Pattern.md"
+                "file": "Test/React Testing Library.md"
               }
             }
           },
@@ -228,37 +328,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b99ec43a07282eb6",
+  "active": "7601119af7b413b6",
   "lastOpenFiles": [
-    "Next.js/Pasted image 20240126124950.png",
-    "Excalidraw/node.js reactor pattern.md",
-    "JavaScript/Node.js Reactor Pattern.md",
-    "JavaScript/Surveying JS.md",
-    "JavaScript/What is JavaScript.md",
-    "Excalidraw/11-10외주.excalidraw.md",
-    "Excalidraw/dnd-project-structure.md",
-    "Excalidraw/Kanban.md",
-    "JavaScript/Prototype drawing.md",
-    "JavaScript/WeakMap.md",
-    "elixir/Untitled.md",
-    "Folder structure.md",
-    "Excalidraw/link-sharing.md",
-    "Excalidraw/taesung_project_structure.md",
-    "Excalidraw/LRU Drawing.md",
+    "Excalidraw/브랜치 전략.md",
+    "Excalidraw/컴파운드 패턴 블로그.md",
+    "Next.js/Route Handlers.md",
     "Excalidraw/Untitled.md",
+    "Excalidraw/Untitled 1.md",
+    "Algorithm/완전탐색.md",
+    "Algorithm/Untitled.md",
+    "Next.js/Route Groups.md",
+    "Next.js/Server Actions.md",
+    "Next.js/Static and Dynamic rendering.md",
+    "Next.js/SSR vs CSR 선택 기준.md",
+    "Next.js/Edge and Node.js Runtimes.md",
+    "Next.js/Internationalization.md",
+    "Next.js/Intercepting Routes.md",
+    "Next.js/Linking and Navigating.md",
+    "Next.js/Loading UI and Streaming.md",
+    "Next.js/Middleware.md",
+    "Next.js/Data Fetching.md",
+    "React.js/How React Work?.md",
+    "JavaScript/React render function.md",
+    "Excalidraw/dnd-project-structure.md",
+    "JavaScript/Object.create().md",
+    "JavaScript/Surveying JS.md",
+    "JavaScript/throw.md",
+    "JavaScript/Hidden Class.md",
+    "JavaScript/Object.call().md",
+    "Next.js/Pasted image 20240126124950.png",
     "이미지저장소/Pasted image 20230914135239.png",
     "Excalidraw/B.sori IA.canvas",
-    "elixir/엘릭서를 왜 사용해야 하는가.md",
-    "JavaScript/Promise.md",
-    "JavaScript/History API.md",
-    "React.js/Push Notification.md",
     "elixir",
-    "JavaScript/Map.md",
-    "JavaScript/Airbnb style guide.md",
-    "JavaScript/Array.md",
-    "JavaScript/this.md",
-    "JavaScript/throw.md",
-    "JavaScript/TC39.md",
     "이미지저장소/Pasted image 20230914215437.png",
     "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
     "Design",
@@ -266,7 +367,7 @@
     "Untitled 3.canvas",
     "이미지저장소",
     "대학교",
-    "Jest",
+    "Test",
     "Untitled 1.canvas",
     "Next.js/Pasted image 20231016172421.png",
     "Next.js/Pasted image 20231016153613.png",
@@ -274,7 +375,6 @@
     "Next.js/Pasted image 20231016094932.png",
     "Next.js/Pasted image 20231016094802.png",
     "Next.js/Pasted image 20231016094206.png",
-    "Next.js/Pasted image 20231016093846.png",
     "Untitled 2.canvas",
     "Algorithm",
     "Excalidraw",

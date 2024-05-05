@@ -2,6 +2,7 @@
 
 ---
 ----
+
 `posision` 프로퍼티는 어떤 요소의 position 종류를 정의하기 위해 사용된다(static, relative, fixed, absolute or sticky).
 
 ----

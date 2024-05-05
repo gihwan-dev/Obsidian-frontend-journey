@@ -32,7 +32,7 @@
 
 # 테스트 코드를 작성하는 일은 개발 이후 남은 귀찮은 일을 하는게 아닌 소프트웨어를 작성하는 프로세스의 일부다.
 
-## RTL에서 중요한 점
+## RTL 에서 중요한 점
 어떤 요소를 찾는데 사용하는 쿼리에 대한 우선순위가 있다. 유저의 행동을 중요하게 생각하기 때문이다. 다음 링크를 참고하자.
 https://testing-library.com/docs/queries/about/#priority
 
@@ -40,3 +40,21 @@ https://testing-library.com/docs/queries/about/#priority
 
 `getByRole`의 role 에 대한 자료는 다음 링크에서 확인할 수 있다.
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+
+## 테스트 코드 작성
+1. 어떤 동작의 흐름에 따른 테스트를 한다. 예를 들어 다음과 같다:
+	- button click flow
+	- checkbox flow
+2. 인터페이스를 기준으로 테스트 코드를 작성한다.
+
+### 어떤 경우에 유닛 테스트가 적절한가?
+케밥 케이스를 타이틀 케이스로 변경해주는 유닛 테스트를 작성 해 보았다. 그러나 이런 함수의 경우에는 버튼 클릭에 대한 기능 테스트에서 확인될 수 있다.
+
+좀 더 복잡한 경우의 기능 테스트에서 유닛 테스트는 다음의 경우에 도움이 된다:
+- 가능한 모든 엣지 케이스를 테스트 하고 싶은 경우.
+- 어떤 이유로 기능 테스트가 실패하는지 알고싶을 때도 유용하다.
+
+어떤 소프트웨어의 기능의 수준이 너무 높아서 진단하기 어려운 경우에 유닛 테스트를 작성하면 진단에 유용하다.
+
+## Eslint, Prettier
+`vitest`, `RTL` 에 대한 플러그인이 있다. Best Practice에 따라 테스트를 할 수 있게 도와준다.

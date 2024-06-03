@@ -1,4 +1,6 @@
 {
   "attachmentFolderPath": "Next.js",
-  "promptDelete": false
+  "promptDelete": false,
+  "spellcheck": false,
+  "autoPairMarkdown": false
 }

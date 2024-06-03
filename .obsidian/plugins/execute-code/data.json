@@ -2,7 +2,7 @@
   "timeout": 10000,
   "allowInput": true,
   "wslMode": false,
-  "nodePath": "/opt/homebrew/bin/node",
+  "nodePath": "/Users/choegihwan/.nvm/versions/node/v18.20.1/bin/node",
   "nodeArgs": "",
   "jsFileExtension": "js",
   "jsInject": "",

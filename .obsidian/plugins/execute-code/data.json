@@ -1,4 +1,5 @@
 {
+  "lastOpenLanguageTab": "rust",
   "timeout": 10000,
   "allowInput": true,
   "wslMode": false,
@@ -56,7 +57,7 @@
   "powershellFileExtension": "ps1",
   "powershellInject": "$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding",
   "powershellEncoding": "latin1",
-  "cargoPath": "cargo",
+  "cargoPath": "/Users/choegihwan/.cargo/bin/cargo",
   "cargoEvalArgs": "",
   "rustInject": "",
   "cppRunner": "cling",

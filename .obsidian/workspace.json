@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "48fbecfca6158fbe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rust/2. 추리 게임.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "함수형프로그래밍/map, filter, reduce.md",
+                "file": "Rust/2. 추리 게임.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "함수형프로그래밍/map, filter, reduce.md",
+                "file": "Rust/2. 추리 게임.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "함수형프로그래밍/map, filter, reduce.md"
+                "file": "Rust/2. 추리 게임.md"
               }
             }
           },
@@ -178,11 +191,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d75ec9df1936bd80",
+  "active": "48fbecfca6158fbe",
   "lastOpenFiles": [
+    "Rust/1. 시작해보기.md",
+    "Rust/2. 추리 게임.md",
+    "Rust/서문.md",
+    "이력서 멘토링.md",
+    "Rust",
+    "함수형프로그래밍/map, filter, reduce.md",
     "함수형프로그래밍/제너레이터와 이터레이터.md",
     "React.js/리액트에서 클린코드란 무엇일까?.md",
-    "함수형프로그래밍/map, filter, reduce.md",
     "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "이미지저장소/포인터 영역.md",
     "함수형프로그래밍",
@@ -203,10 +221,6 @@
     "Algorithm/완전탐색.md",
     "Algorithm/3190 뱀 <백준>.md",
     "Algorithm/2636. Promise Pool <leetCode>.md",
-    "Excalidraw/브랜치 전략.md",
-    "Excalidraw/컴파운드 패턴 블로그.md",
-    "Next.js/Route Handlers.md",
-    "Excalidraw/Untitled.md",
     "Next.js/Pasted image 20240126124950.png",
     "이미지저장소/Pasted image 20230914135239.png",
     "Excalidraw/B.sori IA.canvas",
@@ -229,7 +243,6 @@
     "Untitled 2.canvas",
     "Algorithm",
     "Excalidraw",
-    "HTML",
-    "Sevelte.js"
+    "HTML"
   ]
 }

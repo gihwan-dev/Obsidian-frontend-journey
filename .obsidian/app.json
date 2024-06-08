@@ -2,5 +2,6 @@
   "attachmentFolderPath": "Next.js",
   "promptDelete": false,
   "spellcheck": false,
-  "autoPairMarkdown": false
+  "autoPairMarkdown": false,
+  "alwaysUpdateLinks": true
 }

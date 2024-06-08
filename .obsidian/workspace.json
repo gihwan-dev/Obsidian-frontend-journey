@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
+                "file": "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b7e65b617b6916a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "콜아웃 리스트.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
+                "file": "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
+                "file": "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md"
+                "file": "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md"
               }
             }
           },
@@ -181,8 +193,17 @@
   },
   "active": "8d5551dfb725c182",
   "lastOpenFiles": [
+    "Rust/9. 에러 처리.md",
+    "Rust/14. 카고와 crates.io 더 알아보기.md",
+    "Rust/8. 일반적인 컬렉션.md",
+    "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md",
     "Rust/6. 열거형과 패턴 매칭.md",
     "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
+    "Next.js/Pasted image 20240608161304.png",
+    "Rust/17. 러스트의 객체 지향 프로그래밍 기능.md",
+    "Rust/15. 포인터를 따라가서 값 얻기.md",
+    "Algorithm/146.  LRU Cache.md",
+    "콜아웃 리스트.md",
     "Rust/5. 구조체로 연관된 데이터 구조화하기.md",
     "Rust/4. 소유권 이해하기.md",
     "Rust/3. 일반적인 프로그래밍 개념.md",
@@ -205,15 +226,7 @@
     "Rust/서문.md",
     "이력서 멘토링.md",
     "Rust",
-    "함수형프로그래밍/map, filter, reduce.md",
-    "함수형프로그래밍/제너레이터와 이터레이터.md",
-    "React.js/리액트에서 클린코드란 무엇일까?.md",
-    "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
-    "이미지저장소/포인터 영역.md",
     "함수형프로그래밍",
-    "Test/React Testing Library.md",
-    "CSS/CSS Position.md",
-    "CSS/CSS Display.md",
     "Next.js/Pasted image 20240126124950.png",
     "이미지저장소/Pasted image 20230914135239.png",
     "Excalidraw/B.sori IA.canvas",
@@ -227,7 +240,6 @@
     "대학교",
     "Test",
     "Untitled 1.canvas",
-    "Next.js/Pasted image 20231016172421.png",
     "Untitled 2.canvas",
     "Algorithm",
     "Excalidraw",

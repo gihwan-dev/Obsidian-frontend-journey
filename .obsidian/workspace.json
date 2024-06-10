@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md",
+                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"kanban-plugin\"]",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md",
+                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md",
+                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md"
+                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md"
               }
             }
           },
@@ -193,20 +193,22 @@
   },
   "active": "0c81285cd13c3654",
   "lastOpenFiles": [
-    "Rust/12. IO 프로젝트) 커맨드 라인 프로그램 만들기.md",
+    "Rust/16. 겁 없는 동시성.md",
+    "Rust/15. 스마트 포인터.md",
+    "Rust/14. 카고와 crates.io 더 알아보기.md",
     "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md",
+    "Algorithm/기능개발.md",
+    "콜아웃 리스트.md",
+    "Rust/12. IO 프로젝트) 커맨드 라인 프로그램 만들기.md",
     "Rust/11. 자동화 테스트 작성하기.md",
     "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md",
     "Rust/9. 에러 처리.md",
-    "Rust/14. 카고와 crates.io 더 알아보기.md",
     "Rust/8. 일반적인 컬렉션.md",
     "Rust/6. 열거형과 패턴 매칭.md",
     "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
     "Next.js/Pasted image 20240608161304.png",
     "Rust/17. 러스트의 객체 지향 프로그래밍 기능.md",
-    "Rust/15. 포인터를 따라가서 값 얻기.md",
     "Algorithm/146.  LRU Cache.md",
-    "콜아웃 리스트.md",
     "Rust/5. 구조체로 연관된 데이터 구조화하기.md",
     "Rust/4. 소유권 이해하기.md",
     "Rust/3. 일반적인 프로그래밍 개념.md",
@@ -220,8 +222,6 @@
     "Next.js/Data Fetching.md",
     "Next.js/Caching Data.md",
     "Drawing string 일부를 참조하는 문자열 슬라이스.excalidraw.md",
-    "string 일부를 참조하는 문자열 슬라이스.excalidraw.md",
-    "Drawing.md",
     "Next.js/Pasted image 20240607120625.png",
     "Next.js/Pasted image 20240607120324.png",
     "Next.js/Pasted image 20240607115800.png",

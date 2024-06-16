@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/18. 패턴과 매칭.md",
+                "file": "Rust/19. 고급 기능.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1f0eb30a21ac78e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rust-wasm/1. 웹 어셈블리란?.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/18. 패턴과 매칭.md",
+                "file": "Rust-wasm/1. 웹 어셈블리란?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust/18. 패턴과 매칭.md",
+                "file": "Rust-wasm/1. 웹 어셈블리란?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/18. 패턴과 매칭.md"
+                "file": "Rust-wasm/1. 웹 어셈블리란?.md"
               }
             }
           },
@@ -191,10 +203,17 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "8d5551dfb725c182",
+  "active": "1f0eb30a21ac78e8",
   "lastOpenFiles": [
-    "Rust/17. 러스트의 객체 지향 프로그래밍 기능.md",
+    "Rust-wasm/S-expressions.md",
+    "콜아웃 리스트.md",
+    "Rust-wasm/1. 웹 어셈블리란?.md",
+    "S-expressions.md",
+    "Rust-wasm",
+    "Rust/Untitled.md",
     "Rust/18. 패턴과 매칭.md",
+    "Rust/19. 고급 기능.md",
+    "Rust/17. 러스트의 객체 지향 프로그래밍 기능.md",
     "Rust/11. 자동화 테스트 작성하기.md",
     "Rust/8. 일반적인 컬렉션.md",
     "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
@@ -206,7 +225,6 @@
     "Rust/14. 카고와 crates.io 더 알아보기.md",
     "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md",
     "Algorithm/기능개발.md",
-    "콜아웃 리스트.md",
     "Rust/12. IO 프로젝트) 커맨드 라인 프로그램 만들기.md",
     "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md",
     "Rust/9. 에러 처리.md",
@@ -215,13 +233,8 @@
     "Rust/4. 소유권 이해하기.md",
     "Rust/3. 일반적인 프로그래밍 개념.md",
     "Rust/1. 시작해보기.md",
-    "Rust/2. 추리 게임.md",
-    "Excalidraw/Drawing 2024-06-07 17.27.48.excalidraw.md",
     "Next.js/Pasted image 20240607172712.png",
-    "string 일부를 참조하는 문자열 슬라이스.md",
     "Next.js/Pasted image 20240607172646.png",
-    "Excalidraw/Drawing 2024-06-07 12.03.34.excalidraw.md",
-    "Next.js/Data Fetching.md",
     "Next.js/Pasted image 20240607120625.png",
     "Next.js/Pasted image 20240607120324.png",
     "Next.js/Pasted image 20240607115800.png",
@@ -242,7 +255,6 @@
     "Untitled 1.canvas",
     "Untitled 2.canvas",
     "Algorithm",
-    "Excalidraw",
-    "HTML"
+    "Excalidraw"
   ]
 }

@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d340479f2b80f13b",
+        "id": "2a5695742170a4d2",
         "type": "tabs",
         "children": [
           {
-            "id": "8d5551dfb725c182",
+            "id": "b15adc3725c852df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/19. 고급 기능.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1f0eb30a21ac78e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust-wasm/1. 웹 어셈블리란?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b7e65b617b6916a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "콜아웃 리스트.md",
+                "file": "일기/24.05.12.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust-wasm/1. 웹 어셈블리란?.md",
+                "file": "일기/24.05.12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust-wasm/1. 웹 어셈블리란?.md",
+                "file": "일기/24.05.12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust-wasm/1. 웹 어셈블리란?.md"
+                "file": "일기/24.05.12.md"
               }
             }
           },
@@ -203,16 +178,29 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "1f0eb30a21ac78e8",
+  "active": "b15adc3725c852df",
   "lastOpenFiles": [
-    "Rust-wasm/S-expressions.md",
+    "이미지저장소/포인터 영역.md",
+    "Rust/19. 고급 기능.md",
+    "Untitled",
+    "git-book/분산 환경에서의 Git.md",
+    "git-book",
+    "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
+    "Frontend/프론트엔드 개발환경에서 CI-CD 구성.md",
+    "토스",
+    "Rust-wasm/3. Hello, World!.md",
+    "Frontend",
+    "Rust-wasm/2. 셋업.md",
+    "Rust-wasm/4. 구현하기.md",
+    "이력서 멘토링.md",
     "콜아웃 리스트.md",
+    "Next.js/Pasted image 20240617113405.png",
     "Rust-wasm/1. 웹 어셈블리란?.md",
+    "Rust-wasm/S-expressions.md",
     "S-expressions.md",
     "Rust-wasm",
     "Rust/Untitled.md",
     "Rust/18. 패턴과 매칭.md",
-    "Rust/19. 고급 기능.md",
     "Rust/17. 러스트의 객체 지향 프로그래밍 기능.md",
     "Rust/11. 자동화 테스트 작성하기.md",
     "Rust/8. 일반적인 컬렉션.md",
@@ -224,15 +212,7 @@
     "Rust/15. 스마트 포인터.md",
     "Rust/14. 카고와 crates.io 더 알아보기.md",
     "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md",
-    "Algorithm/기능개발.md",
-    "Rust/12. IO 프로젝트) 커맨드 라인 프로그램 만들기.md",
-    "Rust/10. 제네릭 타입, 트레이트, 라이프타임.md",
-    "Rust/9. 에러 처리.md",
     "Next.js/Pasted image 20240608161304.png",
-    "Algorithm/146.  LRU Cache.md",
-    "Rust/4. 소유권 이해하기.md",
-    "Rust/3. 일반적인 프로그래밍 개념.md",
-    "Rust/1. 시작해보기.md",
     "Next.js/Pasted image 20240607172712.png",
     "Next.js/Pasted image 20240607172646.png",
     "Next.js/Pasted image 20240607120625.png",
@@ -245,16 +225,11 @@
     "Excalidraw/B.sori IA.canvas",
     "elixir",
     "이미지저장소/Pasted image 20230914215437.png",
-    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.png",
     "Design",
     "Untitled.canvas",
     "Untitled 3.canvas",
     "이미지저장소",
-    "대학교",
-    "Test",
     "Untitled 1.canvas",
-    "Untitled 2.canvas",
-    "Algorithm",
-    "Excalidraw"
+    "Untitled 2.canvas"
   ]
 }

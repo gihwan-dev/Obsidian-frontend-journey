@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "일기/24.05.12.md",
+                "file": "코드잇 스프린트 단기심화/TailwindCSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "일기/24.05.12.md",
+                "file": "코드잇 스프린트 단기심화/TailwindCSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "일기/24.05.12.md",
+                "file": "코드잇 스프린트 단기심화/TailwindCSS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "일기/24.05.12.md"
+                "file": "코드잇 스프린트 단기심화/TailwindCSS.md"
               }
             }
           },
@@ -180,6 +181,9 @@
   },
   "active": "b15adc3725c852df",
   "lastOpenFiles": [
+    "일기/24.05.12.md",
+    "코드잇 스프린트 단기심화/TailwindCSS.md",
+    "코드잇 스프린트 단기심화",
     "이미지저장소/포인터 영역.md",
     "Rust/19. 고급 기능.md",
     "Untitled",
@@ -210,8 +214,6 @@
     "HashMap.md",
     "Rust/16. 겁 없는 동시성.md",
     "Rust/15. 스마트 포인터.md",
-    "Rust/14. 카고와 crates.io 더 알아보기.md",
-    "Rust/13. 함수형 언어의 특성) 반복자와 클로저.md",
     "Next.js/Pasted image 20240608161304.png",
     "Next.js/Pasted image 20240607172712.png",
     "Next.js/Pasted image 20240607172646.png",
@@ -228,7 +230,6 @@
     "Design",
     "Untitled.canvas",
     "Untitled 3.canvas",
-    "이미지저장소",
     "Untitled 1.canvas",
     "Untitled 2.canvas"
   ]

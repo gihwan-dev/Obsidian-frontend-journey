@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
+                "file": "일기/24.05.12.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
+                "file": "일기/24.05.12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
+                "file": "일기/24.05.12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md"
+                "file": "일기/24.05.12.md"
               }
             }
           },
@@ -180,6 +180,7 @@
   },
   "active": "b15adc3725c852df",
   "lastOpenFiles": [
+    "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
     "Rust/6. 열거형과 패턴 매칭.md",
     "Rust/5. 구조체로 연관된 데이터 구조화하기.md",
     "코드잇 스프린트 단기심화/TailwindCSS.md",
@@ -209,7 +210,6 @@
     "Rust/17. 러스트의 객체 지향 프로그래밍 기능.md",
     "Rust/11. 자동화 테스트 작성하기.md",
     "Rust/8. 일반적인 컬렉션.md",
-    "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
     "HashMap.md",
     "Rust/16. 겁 없는 동시성.md",
     "Rust/15. 스마트 포인터.md",

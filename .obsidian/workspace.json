@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ce5ec9e0ff80e5ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "일기/24.05.12.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +191,7 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "b15adc3725c852df",
+  "active": "ce5ec9e0ff80e5ed",
   "lastOpenFiles": [
     "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
     "Rust/6. 열거형과 패턴 매칭.md",

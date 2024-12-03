@@ -32,9 +32,21 @@
               "icon": "lucide-file",
               "title": "Release Notes 1.7.6"
             }
+          },
+          {
+            "id": "987c2ab2f56693ed",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5,
-    "collapsed": true
+    "width": 353.5
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -210,7 +221,7 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "a24ce87d616f7790",
+  "active": "987c2ab2f56693ed",
   "lastOpenFiles": [
     "일기/24.05.12.md",
     "대학교/데이터베이스.md",

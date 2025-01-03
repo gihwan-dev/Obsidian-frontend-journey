@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4b91284e0d2e8397",
+        "id": "90b238bd7df6ab9e",
         "type": "tabs",
         "children": [
           {
-            "id": "6d04f1042e99424d",
+            "id": "15db9886575a5010",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Prototype.md",
+                "file": "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prototype"
+              "title": "타입스크립트 개념과 원리 그리고 응용"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hash",
+                "query": "깊은 복사",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,12 +185,22 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "5f112b166eece261",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
@@ -207,47 +217,49 @@
       "command-palette:Open command palette": false,
       "publish:Publish changes...": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "6d04f1042e99424d",
+  "active": "15db9886575a5010",
   "lastOpenFiles": [
-    "JavaScript/Node.js Reactor Pattern.md",
-    "JavaScript/What is JavaScript.md",
-    "JavaScript/WeakMap.md",
-    "JavaScript/this.md",
-    "JavaScript/throw.md",
-    "Excalidraw/Prototype drawing.png",
-    "Excalidraw/React render function.md",
-    "Excalidraw/Prototype drawing.md",
-    "JavaScript/Prototype.md",
-    "JavaScript/Object.create().md",
-    "JavaScript/Object.md",
-    "JavaScript/Object.call().md",
-    "JavaScript/Map.md",
+    "Next.js/Pasted image 20250103095507.png",
+    "Next.js/Pasted image 20250103095456.png",
+    "Next.js/Pasted image 20250103095442.png",
+    "Next.js/Pasted image 20250103095425.png",
+    "Next.js/Pasted image 20250103095412.png",
+    "Next.js/Pasted image 20250103095401.png",
+    "Next.js/Pasted image 20250103095224.png",
+    "Next.js/Pasted image 20250103095203.png",
+    "Next.js/Pasted image 20250103095141.png",
+    "Next.js/Pasted image 20250103095124.png",
+    "Next.js/Pasted image 20250103095110.png",
     "JavaScript/History API.md",
-    "JavaScript/Hidden Class.md",
-    "JavaScript/Generator.md",
-    "JavaScript/Array.md",
-    "JavaScript/Airbnb style guide.md",
-    "Browser/BNF.md",
-    "Excalidraw/Drawing 2024-12-04 17.56.27.excalidraw.md",
-    "Next.js/Pasted Image 20241204175643_043.png",
-    "Browser/열린 요소.md",
-    "Browser/자바스크립트 엔진.md",
-    "Browser/컴포지터 스레드는 메인 스레드와 상관없이 새로운 합성 프레임을 만들 수 있다.md",
-    "Browser/크롬 렌더링 가속화.md",
-    "Browser/탐색 미리 로드.md",
-    "Browser/파싱 일반.md",
-    "Browser/페인팅.md",
-    "이미지저장소/Pasted image 20241128151051.png",
-    "이미지저장소/Pasted image 20241128151015.png",
-    "Next.js/Pasted Image 20241204134320_351.png",
-    "Next.js/Pasted Image 20241204132357_831.png",
-    "Next.js/Pasted Image 20241204112818_261.png",
-    "Excalidraw/Life of a Pixel 예제 모음.png",
-    "Next.js/Pasted Image 20241204092822_490.png",
-    "Next.js/Pasted Image 20241204092220_500.png",
+    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
+    "TypeScript",
+    "JavaScript/Location API.md",
+    "JavaScript/History.md",
+    "JavaScript/DOM.md",
+    "JavaScript/ResizeObserver.md",
+    "JavaScript/Web Socket.md",
+    "JavaScript/Service Workers API.md",
+    "JavaScript/Web Workers API.md",
+    "JavaScript/Web Storage API.md",
+    "JavaScript/Map, Set, WeakMap, WeakSet.md",
+    "JavaScript/Array.prototype.sort.md",
+    "JavaScript/불변성.md",
+    "JavaScript/call, apply와 데코레이터, 포워딩.md",
+    "JavaScript/Iterator.md",
+    "JavaScript/Proxy와 Reflect.md",
+    "JavaScript/Object.call().md",
+    "JavaScript/모듈 시스템.md",
+    "Browser/Safe Browsing.md",
+    "Browser/Service Workers.md",
+    "Browser/SGML.md",
+    "Browser/동적 변경.md",
+    "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
+    "HTML/<template> 태그.md",
+    "Network/TLS.md",
     "Untitled",
     "Chrome University",
     "코드잇 스프린트 단기심화",
@@ -257,7 +269,6 @@
     "Frontend",
     "Rust-wasm",
     "Rust",
-    "함수형프로그래밍",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vue/Reactivity in Depth.md",
+                "file": "Vue/Reactivity in Depth(번역).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reactivity in Depth"
+              "title": "Reactivity in Depth(번역)"
             }
           }
         ]
@@ -225,7 +225,7 @@
   "active": "15db9886575a5010",
   "lastOpenFiles": [
     "README.md",
-    "Vue/Reactivity in Depth.md",
+    "Vue/Reactivity in Depth(번역).md",
     "FSD/FSD.md",
     "Vue",
     "FSD/Features.md",

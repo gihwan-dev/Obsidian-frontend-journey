@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b5c7fdc15e76dd50",
+        "id": "3cef026d977dd81f",
         "type": "tabs",
         "children": [
           {
-            "id": "efad447d05e19b45",
+            "id": "c191ecf51dab2521",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Excalidraw/dnd-project-structure.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "dnd-project-structure"
+              "title": "New tab"
             }
           }
         ]
@@ -91,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 353.5,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -150,11 +147,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Excalidraw/dnd-project-structure.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of dnd-project-structure"
+              "title": "Outline"
             }
           },
           {
@@ -223,14 +218,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "efad447d05e19b45",
+  "active": "c191ecf51dab2521",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-01-31 10.34.09.excalidraw.md",
-    "Excalidraw/Drawing 2025-01-31 10.33.59.excalidraw.md",
+    "Excalidraw/dnd-project-structure.md",
     "Excalidraw/Drawing 2025-01-31 10.20.05.excalidraw.md",
-    "Excalidraw/Drawing 2025-01-31 10.20.54.excalidraw.md",
     "Excalidraw/Drawing 2025-01-31 10.19.58.excalidraw.md",
     "Excalidraw/Drawing 2025-01-31 09.59.12.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.34.09.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.33.59.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.20.54.excalidraw.md",
     "Excalidraw/Drawing 2025-01-03 09.06.54.excalidraw.md",
     "Excalidraw/Drawing 2024-12-23 21.16.20.excalidraw.md",
     "Excalidraw/Drawing 2024-12-17 09.49.11.excalidraw.png",
@@ -260,7 +256,6 @@
     "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
     "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
     "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
-    "README.md",
     "Vue",
     "FSD",
     "TypeScript",

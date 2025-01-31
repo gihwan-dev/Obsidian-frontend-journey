@@ -224,8 +224,9 @@
   },
   "active": "15db9886575a5010",
   "lastOpenFiles": [
-    "FSD/FSD.md",
+    "README.md",
     "Vue/Reactivity in Depth.md",
+    "FSD/FSD.md",
     "Vue",
     "FSD/Features.md",
     "FSD/Entities 와 Features의 규칙 정하기.md",
@@ -262,7 +263,6 @@
     "JavaScript/Object.call().md",
     "JavaScript/모듈 시스템.md",
     "Browser/Safe Browsing.md",
-    "Browser/Service Workers.md",
     "Chrome University",
     "코드잇 스프린트 단기심화",
     "W3C Recommendation",

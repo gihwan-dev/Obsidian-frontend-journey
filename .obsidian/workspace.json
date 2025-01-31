@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ecad52c50dba7041",
+        "id": "f16fc07969f26982",
         "type": "tabs",
         "children": [
           {
-            "id": "92b5bce9f963000d",
+            "id": "cd4c309195ab203e",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "이미지저장소/logo.png"
-              },
-              "icon": "lucide-image",
-              "title": "logo"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -148,11 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "이미지저장소/logo.png"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of logo"
+              "title": "Outline"
             }
           },
           {
@@ -221,13 +217,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0c81285cd13c3654",
+  "active": "cd4c309195ab203e",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-01-31 10.20.54.excalidraw.md",
+    "Excalidraw/Prototype drawing.png",
+    "Excalidraw/link-sharing.md",
+    "Excalidraw/JavaScrpit GC.md",
+    "Excalidraw/JavaScrpit GC.png",
+    "Excalidraw/event loop.png",
+    "Excalidraw/event loop.md",
+    "Excalidraw/Drawing 2025-01-31 10.20.05.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.19.58.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 09.59.12.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-23 21.16.20.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-17 09.49.11.excalidraw.png",
+    "Excalidraw/Drawing 2024-12-04 17.56.27.excalidraw.md",
+    "Excalidraw/Drawing 2024-11-28 10.58.36.excalidraw.md",
+    "Excalidraw/Drawing 2024-08-22 23.06.16.excalidraw.png",
+    "Excalidraw/Drawing 2024-08-22 23.06.16.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 12.03.34.excalidraw.png",
+    "Excalidraw/Drawing 2024-06-07 12.03.34.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 11.53.58.excalidraw.png",
+    "Excalidraw/Drawing 2024-06-07 11.53.58.excalidraw.md",
+    "Next.js/Caching Data.md",
     "이미지저장소/logo.png",
     "Frontend/나만의 FE 컨벤션.md",
     "Vue/Reactivity in Depth(번역).md",
     "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
-    "Excalidraw/Drawing 2025-01-31 09.59.12.excalidraw.md",
     "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
     "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
     "Next.js/Pasted image 20250131095328.png",
@@ -239,29 +255,8 @@
     "FSD/Entities 와 Features의 규칙 정하기.md",
     "FSD/Entities.md",
     "Entities.md",
-    "Next.js/Pasted image 20250121131110.png",
     "FSD",
-    "Next.js/Pasted image 20250103095507.png",
-    "Next.js/Pasted image 20250103095456.png",
-    "Next.js/Pasted image 20250103095442.png",
-    "Next.js/Pasted image 20250103095425.png",
-    "Next.js/Pasted image 20250103095412.png",
-    "Next.js/Pasted image 20250103095401.png",
-    "Next.js/Pasted image 20250103095224.png",
-    "JavaScript/History API.md",
     "TypeScript",
-    "JavaScript/Location API.md",
-    "JavaScript/History.md",
-    "JavaScript/DOM.md",
-    "JavaScript/ResizeObserver.md",
-    "JavaScript/Web Socket.md",
-    "JavaScript/Service Workers API.md",
-    "JavaScript/Web Workers API.md",
-    "JavaScript/Web Storage API.md",
-    "JavaScript/Map, Set, WeakMap, WeakSet.md",
-    "JavaScript/Array.prototype.sort.md",
-    "JavaScript/불변성.md",
-    "JavaScript/call, apply와 데코레이터, 포워딩.md",
     "Chrome University",
     "코드잇 스프린트 단기심화",
     "W3C Recommendation",

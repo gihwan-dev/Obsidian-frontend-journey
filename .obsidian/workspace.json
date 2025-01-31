@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f16fc07969f26982",
+        "id": "b5c7fdc15e76dd50",
         "type": "tabs",
         "children": [
           {
-            "id": "cd4c309195ab203e",
+            "id": "efad447d05e19b45",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Vue/Reactivity in Depth(번역).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Reactivity in Depth(번역)"
             }
           }
         ]
@@ -87,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 353.5,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -146,9 +151,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Vue/Reactivity in Depth(번역).md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Reactivity in Depth(번역)"
             }
           },
           {
@@ -217,7 +224,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cd4c309195ab203e",
+  "active": "efad447d05e19b45",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2025-01-31 10.20.54.excalidraw.md",
     "Excalidraw/Prototype drawing.png",

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d5f5c3d597547b7d",
+        "id": "36d1018e3f99ee26",
         "type": "tabs",
         "children": [
           {
-            "id": "f7316214c5ee1a5b",
+            "id": "c75f896da3653dde",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -150,9 +150,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Vue/Reactivity in Depth(번역).md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Reactivity in Depth(번역)"
             }
           },
           {
@@ -200,12 +202,11 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 216.5,
-    "collapsed": true
+    "width": 216.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -222,14 +223,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f7316214c5ee1a5b",
+  "active": "c75f896da3653dde",
   "lastOpenFiles": [
+    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
+    "Excalidraw/Drawing 2025-01-31 09.59.12.excalidraw.md",
+    "Vue/Reactivity in Depth(번역).md",
     "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
     "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
     "Next.js/Pasted image 20250131095328.png",
     "Next.js/Pasted image 20250131095318.png",
-    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
-    "Vue/Reactivity in Depth(번역).md",
     "README.md",
     "FSD/FSD.md",
     "Vue",

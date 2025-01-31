@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
+                "file": "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "타입스크립트 개념과 원리 그리고 응용"
+              "title": "안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅"
             }
           }
         ]
@@ -224,6 +224,7 @@
   },
   "active": "15db9886575a5010",
   "lastOpenFiles": [
+    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
     "Vue/Reactivity in Depth(번역).md",
     "README.md",
     "FSD/FSD.md",
@@ -233,7 +234,6 @@
     "FSD/Entities.md",
     "Entities.md",
     "Next.js/Pasted image 20250121131110.png",
-    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
     "FSD",
     "Next.js/Pasted image 20250103095507.png",
     "Next.js/Pasted image 20250103095456.png",

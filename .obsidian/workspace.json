@@ -11,10 +11,12 @@
             "id": "92b5bce9f963000d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "image",
+              "state": {
+                "file": "이미지저장소/logo.png"
+              },
+              "icon": "lucide-image",
+              "title": "logo"
             }
           }
         ]
@@ -146,9 +148,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "이미지저장소/logo.png"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of logo"
             }
           },
           {
@@ -217,8 +221,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "92b5bce9f963000d",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
+    "이미지저장소/logo.png",
     "Frontend/나만의 FE 컨벤션.md",
     "Vue/Reactivity in Depth(번역).md",
     "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
@@ -257,7 +262,6 @@
     "JavaScript/Array.prototype.sort.md",
     "JavaScript/불변성.md",
     "JavaScript/call, apply와 데코레이터, 포워딩.md",
-    "JavaScript/Iterator.md",
     "Chrome University",
     "코드잇 스프린트 단기심화",
     "W3C Recommendation",

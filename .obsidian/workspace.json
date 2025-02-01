@@ -13,12 +13,48 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/DOM.md",
+                "file": "JavaScript/이벤트 루프.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DOM"
+              "title": "이벤트 루프"
+            }
+          },
+          {
+            "id": "96ffad16109217b2",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2024-12-09 11.50.48.excalidraw"
+            }
+          },
+          {
+            "id": "734b5bd99ea14196",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2024-12-09 11.50.48.excalidraw"
+            }
+          },
+          {
+            "id": "0865e3c5fff298d2",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2024-12-09 11.50.48.excalidraw"
             }
           }
         ]
@@ -200,9 +236,26 @@
   },
   "active": "a1d8963f6a4851c6",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20250201122346.png",
+    "JavaScript/클로저.md",
+    "JavaScript/이벤트 루프.md",
+    "Next.js/Pasted image 20250201122236.png",
+    "Next.js/Pasted image 20250201122216.png",
+    "JavaScript/실행 컨텍스트.md",
+    "Next.js/Pasted image 20250201122111.png",
+    "Next.js/Pasted image 20250201122100.png",
+    "Next.js/Pasted image 20250201121708.png",
+    "Next.js/Pasted image 20250201121659.png",
+    "Next.js/Pasted image 20250201121650.png",
+    "Next.js/Pasted image 20250201121630.png",
+    "Next.js/Pasted image 20250201121615.png",
+    "Next.js/Pasted image 20250201121606.png",
+    "JavaScript/자바스크립트 메모리 구조 및 가비지 컬렉션.md",
+    "Browser/JavaScript engine pipeline.md",
+    "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
+    "JavaScript/DOM.md",
     "JavaScript/Location API.md",
     "JavaScript/Javascript GC.md",
-    "Next.js/Pasted image 20250201115349.png",
     "JavaScript/Prototype.md",
     "JavaScript/Node.js Reactor Pattern.md",
     "JavaScript/Web Storage API.md",
@@ -219,24 +272,8 @@
     "Browser/속성 선택자.md",
     "Excalidraw/2 + 3 + 1을 분석해보자.md",
     "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
-    "Frontend/프론트엔드 개발환경에서 CI-CD 구성.md",
-    "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
-    "Frontend/나만의 FE 컨벤션.md",
-    "FSD/FSD.md",
-    "FSD/Features.md",
-    "FSD/Entities 와 Features의 규칙 정하기.md",
-    "FSD/Entities.md",
-    "Excalidraw/Object.call().png",
-    "Excalidraw/Object.create().png",
-    "이미지저장소/Pasted image 20250131095328.png",
-    "Excalidraw/Kanban.png",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
-    "이미지저장소/logo.png",
-    "이미지저장소/Pasted image 20241129174717.png",
-    "이미지저장소/Pasted image 20241129174641.png",
-    "이미지저장소/Pasted image 20241129174624.png",
-    "이미지저장소/Pasted image 20241129174558.png",
     "Vue",
     "TypeScript",
     "Network",

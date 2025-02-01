@@ -766,21 +766,21 @@ function getX(o) {
 
 `JSC(JavaScriptComfilor)`에서 이 함수를 실행시키면 다음의 바이트코드를 생성한다:
 
-![[Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md#^group=oamJpglHGHatJvPYWSOAZ]]
+![[Pasted image 20250201120214.png]]
 
 첫번째 `get_by_id` 명령어는 첫 번째 인자(`arg1`)에서 `'x'` 속성을 로드하여 그 결과를 `loc0`에 저장한다. 두 번째 병령어는 `loc0`에 저장된 값을 반환한다.
 
 JSC는 또한 `get_by_id` 명령어에 두 개의 초기화되지 않은 슬롯으로 구성된 인라인 캐시를 내장한다.
 
-![[Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md#^group=Jln_KNoXQTHfLHalbgeIW]]
+![[Pasted image 20250201120229.png]]
 
 이제 `getX`를 `{ x: 'a' }` 객체와 함께 호출했다고 가정해보자. 우리가 배운대로, 이 객체는 `'x'` 프로퍼티의 `Shapes`를 가지고 있고 `Shapes`에는 오프셋과 `x`와 관련된 어트리뷰트들이 저장되어 있다. 처음으로 함수를 실행 할 때, `get_by_id` 명령은 `'x'` 프로퍼티를 찾는다.
 
-![[Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md#^group=Xh6jmRgyrKFN1fpPPOxI4]]
+![[Pasted image 20250201120248.png]]
 
 `get_by_id`에 내장된 IC(Inline Cache)는 어트리뷰트가 발견된 `Shape`와 `offset`을 기억한다:
 
-![[Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md#^group=Xh6jmRgyrKFN1fpPPOxI4]]
+![[Pasted image 20250201120301.png]]
 
 이후 발생하는 연속적인 호출에, IC는 `Shape`만 비교한다. 만약 이전과 같은 `Shape`라면, 기억하고 있는 `offset`에서 값만 가져오면 된다.
 
@@ -797,11 +797,9 @@ const array = [
 
 엔진은 배열 길이 (`1`)을 저장하고, `length` 프로퍼티에 대한 어트리뷰트와 `offset`을 포함하는`Shape`를 가리킨다.
 
-![[Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md#^group=ppjUOgzaEyQTC5JIm6Ldj]]
-
 이는 객체에서의 최적화와 비슷하다. 그럼 배열의 값들은 어디에 저장될까?
 
-![[Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md#^group=oIoHGMM1PYU5NTeWQv_tE]]
+![[Pasted image 20250201120441.png]]
 
 모든 배열은 모든 배열 인덱스 속성 값들을 포함하는 별도의 **요소 백업 저장소(element backing store)** 를 가지고 있다. JavaScript 엔진은 일반적으로 모든 배열 요소가 wratable, enumerable, configurable하기 때문에 배열 요소에 대한 속성 어트리뷰트를 저장할 필요가 없다.
 

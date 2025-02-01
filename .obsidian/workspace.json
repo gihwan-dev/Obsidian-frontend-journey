@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/이벤트 루프.md",
+                "file": "JavaScript/모듈 시스템.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "이벤트 루프"
+              "title": "모듈 시스템"
             }
           },
           {
@@ -236,20 +236,19 @@
   },
   "active": "a1d8963f6a4851c6",
   "lastOpenFiles": [
+    "JavaScript/이벤트 루프.md",
+    "Next.js/Pasted image 20250201123330.png",
+    "Next.js/Pasted image 20250201123322.png",
+    "Next.js/Pasted image 20250201123312.png",
+    "Next.js/Pasted image 20250201123259.png",
+    "Next.js/Pasted image 20250201123243.png",
+    "Next.js/Pasted image 20250201123232.png",
+    "Next.js/Pasted image 20250201123228.png",
     "Next.js/Pasted image 20250201122346.png",
     "JavaScript/클로저.md",
-    "JavaScript/이벤트 루프.md",
     "Next.js/Pasted image 20250201122236.png",
     "Next.js/Pasted image 20250201122216.png",
     "JavaScript/실행 컨텍스트.md",
-    "Next.js/Pasted image 20250201122111.png",
-    "Next.js/Pasted image 20250201122100.png",
-    "Next.js/Pasted image 20250201121708.png",
-    "Next.js/Pasted image 20250201121659.png",
-    "Next.js/Pasted image 20250201121650.png",
-    "Next.js/Pasted image 20250201121630.png",
-    "Next.js/Pasted image 20250201121615.png",
-    "Next.js/Pasted image 20250201121606.png",
     "JavaScript/자바스크립트 메모리 구조 및 가비지 컬렉션.md",
     "Browser/JavaScript engine pipeline.md",
     "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",

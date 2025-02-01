@@ -22,27 +22,25 @@
             }
           },
           {
-            "id": "a24ce87d616f7790",
+            "id": "2fdc29a23ccd09ca",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.6"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
-            "id": "987c2ab2f56693ed",
+            "id": "f1bcb4ae23328dd0",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "excalidraw",
               "state": {
-                "currentVersion": "1.7.7"
+                "file": "Excalidraw/taesung_project_structure.md"
               },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
+              "icon": "excalidraw-icon",
+              "title": "taesung_project_structure"
             }
           }
         ],
@@ -77,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hash",
+                "query": "tag:#excalidraw",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,7 +199,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -218,44 +216,46 @@
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "publish:Publish changes...": false
+      "publish:Publish changes...": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "987c2ab2f56693ed",
+  "active": "f1bcb4ae23328dd0",
   "lastOpenFiles": [
-    "일기/24.05.12.md",
-    "대학교/데이터베이스.md",
-    "대학교/Drawing 2023-10-31 02.15.45.excalidraw.md",
-    "코드잇 스프린트 단기심화/TailwindCSS.md",
-    "W3C Recommendation/W3C Recommendation ARIA in HTML 번역.md",
-    "이력서 멘토링.md",
-    "Folder structure.md",
-    "S-expressions.md",
-    "Test/React Testing Library.md",
+    "Excalidraw/node.js reactor pattern.md",
+    "Excalidraw/LRU Drawing.md",
+    "Excalidraw/link-sharing.md",
+    "Excalidraw/Kanban.md",
+    "Excalidraw/esm vs commonjs.md",
+    "Excalidraw/Drawing 2025-01-15 19.39.08.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-04 22.36.16.excalidraw.md",
     "Excalidraw/Drawing 2024-08-22 23.06.16.excalidraw.md",
-    "Untitled.md",
-    "Rust/7. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기.md",
-    "Rust/6. 열거형과 패턴 매칭.md",
-    "Rust/5. 구조체로 연관된 데이터 구조화하기.md",
-    "코드잇 스프린트 단기심화",
-    "이미지저장소/포인터 영역.md",
-    "Rust/19. 고급 기능.md",
-    "W3C Recommendation",
-    "git-book/분산 환경에서의 Git.md",
-    "git-book",
-    "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
-    "Frontend/프론트엔드 개발환경에서 CI-CD 구성.md",
-    "토스",
-    "Rust-wasm/3. Hello, World!.md",
-    "Frontend",
-    "Rust-wasm/2. 셋업.md",
-    "Rust-wasm/4. 구현하기.md",
+    "Excalidraw/Drawing 2025-01-04 22.36.09.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 17.27.48.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 12.03.34.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 11.53.58.excalidraw.md",
+    "Excalidraw/dnd-project-structure.md",
+    "Excalidraw/컴파운드 패턴 블로그.md",
+    "Excalidraw/브랜치 전략.md",
+    "Excalidraw/11-10외주.excalidraw.md",
     "콜아웃 리스트.md",
+    "Drawing.md",
+    "Drawing string 일부를 참조하는 문자열 슬라이스.excalidraw.md",
+    "Folder structure.md",
+    "string 일부를 참조하는 문자열 슬라이스.md",
+    "Untitled.canvas",
+    "string 일부를 참조하는 문자열 슬라이스.excalidraw.md",
+    "S-expressions.md",
+    "README.md",
+    "paradigm.md",
+    "이력서 멘토링.md",
+    "코드잇 스프린트 단기심화",
+    "W3C Recommendation",
+    "git-book",
+    "토스",
+    "Frontend",
     "Next.js/Pasted image 20240617113405.png",
-    "Rust-wasm/1. 웹 어셈블리란?.md",
-    "Rust-wasm/S-expressions.md",
     "Rust-wasm",
-    "Rust/Untitled.md",
     "Next.js/Pasted image 20240608161304.png",
     "Next.js/Pasted image 20240607172712.png",
     "Next.js/Pasted image 20240607172646.png",
@@ -270,7 +270,6 @@
     "elixir",
     "이미지저장소/Pasted image 20230914215437.png",
     "Design",
-    "Untitled.canvas",
     "Untitled 3.canvas",
     "Untitled 1.canvas",
     "Untitled 2.canvas"

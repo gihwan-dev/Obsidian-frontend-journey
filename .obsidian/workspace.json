@@ -35,30 +35,18 @@
             "id": "f1bcb4ae23328dd0",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/taesung_project_structure.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "taesung_project_structure"
-            }
-          },
-          {
-            "id": "492aad719916155a",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "함수형프로그래밍/map, filter, reduce.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "map, filter, reduce"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -234,10 +222,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "492aad719916155a",
+  "active": "f1bcb4ae23328dd0",
   "lastOpenFiles": [
-    "Excalidraw/taesung_project_structure.md",
+    "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
+    "함수형프로그래밍/제너레이터와 이터레이터.md",
+    "Excalidraw/하향식 파서.md",
+    "Excalidraw/Life of a Pixel 예제 모음.md",
+    "Excalidraw/Kanban.png",
+    "Excalidraw/Kanban.md",
     "conflict-files-obsidian-git.md",
+    "Excalidraw/taesung_project_structure.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "이미지저장소/logo.png",
@@ -249,7 +243,6 @@
     "이미지저장소/Pasted image 20241129174505.png",
     "이미지저장소/Pasted image 20241129174430.png",
     "이미지저장소/Pasted image 20241129121103.png",
-    "이미지저장소/Pasted image 20241129115341.png",
     "Vue/Reactivity in Depth(번역).md",
     "Vue",
     "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
@@ -272,11 +265,6 @@
     "JavaScript/Map, Set, WeakMap, WeakSet.md",
     "JavaScript/Location API.md",
     "JavaScript/Javascript GC.md",
-    "JavaScript/Iterator.md",
-    "JavaScript/DOM.md",
-    "JavaScript/Array.prototype.sort.md",
-    "HTML/HTML 파서.md",
-    "HTML/HTML 토큰 상태 목록.md",
     "HTML",
     "FSD",
     "Browser",

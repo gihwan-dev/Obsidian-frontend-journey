@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6be3417b28a7105f",
+        "id": "7f954349c478a561",
         "type": "tabs",
         "children": [
           {
-            "id": "2e75e1d9dee1818a",
+            "id": "a1d8963f6a4851c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Browser/Worklets.md",
+                "file": "JavaScript/DOM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Worklets"
+              "title": "DOM"
             }
           }
         ]
@@ -198,8 +198,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e75e1d9dee1818a",
+  "active": "a1d8963f6a4851c6",
   "lastOpenFiles": [
+    "JavaScript/Location API.md",
+    "JavaScript/Javascript GC.md",
+    "Next.js/Pasted image 20250201115349.png",
+    "JavaScript/Prototype.md",
+    "JavaScript/Node.js Reactor Pattern.md",
+    "JavaScript/Web Storage API.md",
+    "Excalidraw/JavaScrpit GC.md",
+    "JavaScript/What is JavaScript.md",
+    "JavaScript/Airbnb style guide.md",
+    "JavaScript/Array.prototype.sort.md",
+    "JavaScript/Map, Set, WeakMap, WeakSet.md",
+    "JavaScript/Web Socket.md",
+    "JavaScript/throw.md",
+    "Browser/Worklets.md",
     "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
     "Browser/스타일 계산.md",
     "Browser/속성 선택자.md",
@@ -212,20 +226,6 @@
     "FSD/Features.md",
     "FSD/Entities 와 Features의 규칙 정하기.md",
     "FSD/Entities.md",
-    "HTML/<template> 태그.md",
-    "HTML/HTML 토큰 상태 목록.md",
-    "HTML/HTML 파서.md",
-    "JavaScript/What is JavaScript.md",
-    "JavaScript/Web Workers API.md",
-    "JavaScript/Web Socket.md",
-    "JavaScript/Web Storage API.md",
-    "JavaScript/WeakMap.md",
-    "JavaScript/Map, Set, WeakMap, WeakSet.md",
-    "JavaScript/Node.js Reactor Pattern.md",
-    "JavaScript/Airbnb style guide.md",
-    "JavaScript/Array.prototype.sort.md",
-    "JavaScript/call, apply와 데코레이터, 포워딩.md",
-    "JavaScript/DOM.md",
     "Excalidraw/Object.call().png",
     "Excalidraw/Object.create().png",
     "이미지저장소/Pasted image 20250131095328.png",
@@ -237,7 +237,6 @@
     "이미지저장소/Pasted image 20241129174641.png",
     "이미지저장소/Pasted image 20241129174624.png",
     "이미지저장소/Pasted image 20241129174558.png",
-    "이미지저장소/Pasted image 20241129174532.png",
     "Vue",
     "TypeScript",
     "Network",

@@ -11,7 +11,7 @@
 
 메이저 GC는 전체 힙에서 가비지를 수집한다.
 
-![[Excalidraw/JavaScrpit GC.md#^group=r94DdhLycKElIogtsayYb]]
+![[Pasted image 20250201115349.png]]
 
 ### Marking
 

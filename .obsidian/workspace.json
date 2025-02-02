@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3cef026d977dd81f",
+        "id": "cdba087675eb3d24",
         "type": "tabs",
         "children": [
           {
-            "id": "c191ecf51dab2521",
+            "id": "b620007ea067aee3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -36,7 +36,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -87,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5,
-    "collapsed": true
+    "width": 353.5
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -147,7 +147,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-list",
               "title": "Outline"
             }
@@ -218,7 +222,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c191ecf51dab2521",
+  "active": "b620007ea067aee3",
   "lastOpenFiles": [
     "Excalidraw/dnd-project-structure.md",
     "Excalidraw/Drawing 2025-01-31 10.20.05.excalidraw.md",

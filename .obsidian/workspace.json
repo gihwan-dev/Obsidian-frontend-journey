@@ -11,10 +11,14 @@
             "id": "b620007ea067aee3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "conflict-files-obsidian-git"
             }
           }
         ]
@@ -148,12 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of conflict-files-obsidian-git"
             }
           },
           {
@@ -224,6 +229,9 @@
   },
   "active": "b620007ea067aee3",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Excalidraw/esm vs commonjs.md",
+    "Excalidraw/Kanban.png",
     "Excalidraw/dnd-project-structure.md",
     "Excalidraw/Drawing 2025-01-31 10.20.05.excalidraw.md",
     "Excalidraw/Drawing 2025-01-31 10.19.58.excalidraw.md",
@@ -255,11 +263,8 @@
     "Excalidraw/event loop.png",
     "Excalidraw/event loop.md",
     "Next.js/Caching Data.md",
-    "이미지저장소/logo.png",
     "Frontend/나만의 FE 컨벤션.md",
     "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
-    "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
-    "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
     "Vue",
     "FSD",
     "TypeScript",

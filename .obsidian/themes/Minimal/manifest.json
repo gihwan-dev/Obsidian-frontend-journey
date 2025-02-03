@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
 	"name": "Minimal",
 	"version": "7.7.18",
@@ -7,13 +6,3 @@
 	"authorUrl": "https://twitter.com/kepano",
 	"fundingUrl": "https://www.buymeacoffee.com/kepano"
 }
-=======
-{
-	"name": "Minimal",
-	"version": "7.7.18",
-	"minAppVersion": "1.6.1",
-	"author": "@kepano",
-	"authorUrl": "https://twitter.com/kepano",
-	"fundingUrl": "https://www.buymeacoffee.com/kepano"
-}
->>>>>>> 03de202963c2173f8b73b7a5694a6876b5650745

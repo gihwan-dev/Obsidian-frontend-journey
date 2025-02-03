@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FSD/FSD Tutorial.md",
+                "file": "FSD/FSD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FSD Tutorial"
+              "title": "FSD"
             }
           }
         ]
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FSD/FSD Tutorial.md",
+                "file": "FSD/FSD.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of FSD Tutorial"
+              "title": "Outline of FSD"
             }
           },
           {
@@ -229,10 +229,13 @@
   },
   "active": "192363c0b4a7f57d",
   "lastOpenFiles": [
+    "FSD/Entities.md",
+    "FSD/Features.md",
+    "FSD/Entities 와 Features의 규칙 정하기.md",
+    "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250203083939.png",
     "Next.js/Pasted image 20250203083900.png",
     "Next.js/Pasted image 20250203083401.png",
-    "FSD/FSD Tutorial.md",
     "conflict-files-obsidian-git.md",
     "Excalidraw/esm vs commonjs.md",
     "Excalidraw/Kanban.png",
@@ -260,11 +263,8 @@
     "Excalidraw/Drawing 2024-06-07 17.27.48.excalidraw.png",
     "Excalidraw/Drawing 2024-06-07 17.27.48.excalidraw.md",
     "Vue/Reactivity in Depth(번역).md",
-    "Excalidraw/Prototype drawing.png",
     "Excalidraw/link-sharing.md",
     "Excalidraw/JavaScrpit GC.md",
-    "Excalidraw/event loop.md",
-    "Next.js/Caching Data.md",
     "Vue",
     "FSD",
     "TypeScript",

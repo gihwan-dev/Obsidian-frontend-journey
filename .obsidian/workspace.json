@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b8b2964e521e2f29",
+        "id": "dff993968403ae74",
         "type": "tabs",
         "children": [
           {
-            "id": "cd3f18fc721e6eb9",
+            "id": "2b32ef0b18cc3719",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FSD/FSD Tutorial.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "FSD Tutorial"
+              "title": "New tab"
             }
           }
         ]
@@ -152,13 +148,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FSD/FSD Tutorial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of FSD Tutorial"
+              "title": "Outline"
             }
           },
           {
@@ -227,8 +222,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cd3f18fc721e6eb9",
+  "active": "2b32ef0b18cc3719",
   "lastOpenFiles": [
+    "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250204082023.png",
     "Next.js/Pasted image 20250204075608.png",
     "FSD/FSD.md",
@@ -245,7 +241,6 @@
     "Next.js/Pasted image 20250201123228.png",
     "Next.js/Pasted image 20250201122346.png",
     "JavaScript/클로저.md",
-    "Next.js/Pasted image 20250201122236.png",
     "JavaScript/실행 컨텍스트.md",
     "JavaScript/자바스크립트 메모리 구조 및 가비지 컬렉션.md",
     "Browser/JavaScript engine pipeline.md",

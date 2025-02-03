@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "7b28842cef6e1c85",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.4"
-            }
-          },
-          {
             "id": "96ffad16109217b2",
             "type": "leaf",
             "state": {
@@ -69,8 +57,7 @@
               "title": "Drawing 2024-12-09 11.50.48.excalidraw"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -141,8 +128,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5,
-    "collapsed": true
+    "width": 353.5
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -202,13 +188,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FSD/FSD.md",
+                "file": "JavaScript/모듈 시스템.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of FSD"
+              "title": "Outline of 모듈 시스템"
             }
           },
           {
@@ -277,8 +263,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b28842cef6e1c85",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
+    "publish.css",
     "JavaScript/이벤트 루프.md",
     "Next.js/Pasted image 20250201123330.png",
     "Next.js/Pasted image 20250201123322.png",
@@ -324,11 +311,6 @@
     "TypeScript",
     "Chrome University",
     "코드잇 스프린트 단기심화",
-    "W3C Recommendation",
-    "git-book",
-    "토스",
-    "Frontend",
-    "Rust-wasm",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

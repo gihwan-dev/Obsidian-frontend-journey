@@ -4,20 +4,33 @@
     "type": "split",
     "children": [
       {
+<<<<<<< HEAD
         "id": "7f954349c478a561",
         "type": "tabs",
         "children": [
           {
             "id": "a1d8963f6a4851c6",
+=======
+        "id": "61f3ee0bde20edf2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "192363c0b4a7f57d",
+>>>>>>> 03de202963c2173f8b73b7a5694a6876b5650745
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "JavaScript/모듈 시스템.md",
+=======
+                "file": "FSD/FSD.md",
+>>>>>>> 03de202963c2173f8b73b7a5694a6876b5650745
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "모듈 시스템"
             }
           },
@@ -55,6 +68,9 @@
               },
               "icon": "excalidraw-icon",
               "title": "Drawing 2024-12-09 11.50.48.excalidraw"
+=======
+              "title": "FSD"
+>>>>>>> 03de202963c2173f8b73b7a5694a6876b5650745
             }
           }
         ]
@@ -76,7 +92,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -88,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#excalidraw",
+                "query": "깊은 복사",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,6 +124,20 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "9eaa9f9691b29daa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Browser/How Blinks works.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "How Blinks works"
             }
           }
         ]
@@ -172,9 +203,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "FSD/FSD.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of FSD"
             }
           },
           {
@@ -197,8 +233,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -210,14 +246,23 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "5f112b166eece261",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 216.5,
-    "collapsed": true
+    "width": 216.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,7 +273,9 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "publish:Publish changes...": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+<<<<<<< HEAD
       "obsidian-excalidraw-plugin:Create new drawing": true,
       "publish:Publish changes...": false,
       "obsidian-git:Open Git source control": false
@@ -277,12 +324,63 @@
     "TypeScript",
     "Network",
     "HTML",
+=======
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "192363c0b4a7f57d",
+  "lastOpenFiles": [
+    "FSD/Entities.md",
+    "FSD/Features.md",
+    "FSD/Entities 와 Features의 규칙 정하기.md",
+    "FSD/FSD Tutorial.md",
+    "Next.js/Pasted image 20250203083939.png",
+    "Next.js/Pasted image 20250203083900.png",
+    "Next.js/Pasted image 20250203083401.png",
+    "conflict-files-obsidian-git.md",
+    "Excalidraw/esm vs commonjs.md",
+    "Excalidraw/Kanban.png",
+    "Excalidraw/dnd-project-structure.md",
+    "Excalidraw/Drawing 2025-01-31 10.20.05.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.19.58.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 09.59.12.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.34.09.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.33.59.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-31 10.20.54.excalidraw.md",
+    "Excalidraw/Drawing 2025-01-03 09.06.54.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-23 21.16.20.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-17 09.49.11.excalidraw.png",
+    "Excalidraw/Drawing 2024-12-17 09.49.11.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.png",
+    "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
+    "Excalidraw/Drawing 2024-12-04 17.56.27.excalidraw.md",
+    "Excalidraw/Drawing 2024-11-28 10.58.36.excalidraw.md",
+    "Excalidraw/Drawing 2024-08-22 23.06.16.excalidraw.png",
+    "Excalidraw/Drawing 2024-08-22 23.06.16.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 12.03.34.excalidraw.png",
+    "Excalidraw/Drawing 2024-06-07 12.03.34.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 11.53.58.excalidraw.png",
+    "Excalidraw/Drawing 2024-06-07 11.53.58.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-07 17.27.48.excalidraw.png",
+    "Excalidraw/Drawing 2024-06-07 17.27.48.excalidraw.md",
+    "Vue/Reactivity in Depth(번역).md",
+    "Excalidraw/link-sharing.md",
+    "Excalidraw/JavaScrpit GC.md",
+    "Vue",
+>>>>>>> 03de202963c2173f8b73b7a5694a6876b5650745
     "FSD",
-    "Browser",
-    "3D",
-    "Untitled.canvas",
+    "TypeScript",
+    "Chrome University",
     "코드잇 스프린트 단기심화",
+    "W3C Recommendation",
+    "git-book",
+    "토스",
+    "Frontend",
+    "Rust-wasm",
     "Excalidraw/B.sori IA.canvas",
+    "Untitled.canvas",
     "Untitled 3.canvas",
     "Untitled 1.canvas",
     "Untitled 2.canvas"

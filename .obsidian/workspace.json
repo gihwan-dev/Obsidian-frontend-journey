@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "FSD Tutorial"
             }
+          },
+          {
+            "id": "c921829870f290e6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -152,13 +165,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FSD/FSD Tutorial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of FSD Tutorial"
+              "title": "Outline"
             }
           },
           {
@@ -227,7 +239,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "192363c0b4a7f57d",
+  "active": "c921829870f290e6",
   "lastOpenFiles": [
     "Next.js/Pasted image 20250203083939.png",
     "Next.js/Pasted image 20250203083900.png",

@@ -5,7 +5,7 @@
 
 작은 앱이기에, 과도한 분리는 지양한다. 전체 앱의 구성이 3 계층으로 나뉠거라 예상된다: **App**, **Pages**, **Shared** 이다.
 
-## 페이지 목록
+### 페이지 목록
 
 위 스크린샷을 보고 우리는 다음과 같은 페이지들이 존재할거라 예상할 수 있다:
 - Home (article feed)
@@ -32,7 +32,7 @@ FSD에서는 페이지가 다른 페이지를 참조할 수 없다. 즉, 페이�
 
 같은 계층에서는 임포트할 수 없다.
 
-## 피드 자세히 보기
+### 피드 자세히 보기
 
 ![[Pasted image 20250203083900.png]]
 익명 유저가 볼 수 있는 화면
@@ -68,7 +68,7 @@ sign-in 링크는 헤더의 한 부분이며 모든 페이지에서 공통된다
 	- 페이지네이션 기능
 - 📂 `model/`: 현재 페이지와 아티클들의 클라이언트 사이드 저장소
 
-## 일반적인 코드 재사용
+### 일반적인 코드 재사용
 
 대부분의 페이지들은 의도가 매우 다르다. 그러나 전체 앱에서 재사용 되는 것들이 있다. - 예를들어, UI 디자인 언어에 따라 구성된 UI 킷 또는 같은 인증 방식을 사용하는 REST API 기반의 백엔드 컨벤션 등이 있다. *Slice*는 독립적으로 구성되도록 의도되었기 때문에, 코드의 재사용은 더 낮은 계층인 **Shared**에서 이루어진다.
 
@@ -80,4 +80,126 @@ sign-in 링크는 헤더의 한 부분이며 모든 페이지에서 공통된다
 - 📂 `config/` — 환경 변수를 파싱하는 코드
 - 📂 `i18n/` — 언어 지원과 관련된 설정
 - 📂 `router/` — 라우팅 기본 요소와 라우트 상수
+
+이는 *Shared*에 있는 *segment*의 몇가지 이름의 예제일 뿐이다. 추가적으로 생성하거나, 이 이름을 사용하지 않아도 된다. 중요한 한가지는 새로운 *segment*를 생성할 때 그 이름이 **목적(why)** 을 서술해야지 **본질(what)** 을 서술해서는 안된다. "components", "hooks", "moddals"와 같은 이름은 파일이 무엇(what)인지를 말하기 때문에 내가 원하는 코드를 찾는데 도움이 되지 않는다. 이런 이름은 연관없는 코드의 응집도를 높이고 리팩토링시 영향받는 코드의 영역을 넓히게 된다. 이는 코드 리뷰와 테스트를 어렵게 만들 뿐 아니라, 팀원이 코드를 찾기 위해 전체 폴더를 뒤져보게 만든다.
+
+### 엄격한 퍼블릭 API 정의하기
+
+FSD의 문맥에서 *public API*란 프로젝트 내부의 *slice*와 *segment*에 다른 모듈에서 어떤 부분을 임포트 할 수 있는지 선언하는 것을 의미한다. 예를들어 *slice*에 있는 어떤 부분을 `index.js`로 부터 re-exporting 해서 *public API*를 명시할 수 있다. 이는 외부와의 관계가 유지되는한, 슬라이스 내부의 코드를 자유롭게 리팩토링 할 수 있게 해준다.
+
+우리의 *slice*/*segment*는 다음과 같을 수 있다:
+```text
+📂 pages/
+  📂 feed/
+    📄 index
+  📂 sign-in/
+    📄 index
+  📂 article-read/
+    📄 index
+  📁 …
+📂 shared/
+  📂 ui/
+    📄 index
+  📂 api/
+    📄 index
+  📁 …
+```
+
+`pages/feed`나 `shared/ui`와 같은 폴더의 내부 구조는 해당 폴더들만 알고 있어야 하며, 다른 파일들은 이러한 폴더들의 내부 구조에 의존해서는 안된다. 즉,`index`를 통해서 원하는 모듈을 임포트 해야 한다.
+
+### UI에서 재사용되는 큰 블록들
+
+이전에 우리는 헤더가 모든 페이지에서 재사용됨을 상기했다. 모든 페이지에서 새로 만드는 것은 실용적이지 않다. 우리는 이미 코드 재사용을 위한 *Shared* 계층을 가지고 있지만, 큰 UI 블록을 *Shared*에 넣는 것에는 한 가지 주의사항이 있다 -- *Shared* 계층은 그 위의 계층들에 대해 알아서는 안된다는 점이다.
+
+*Shared*와 *Pages*사이에는 세 가지 다른 계층이 있다: *Entities*, *Features*, *Widgets*이다. 몇몇 프로젝트들은 이러한 계층에 이미 어떤 코드를 작성해 뒀을 수 있고, 이는 우리가 *Shared*에 재사용 가능한 블록을 둘 수 없음을 의미한다. *Shared*에 헤더를 두게 되면 *Shared*에서 *Entities*나 *Features*의 기능을 가져와 써야하는 상황이 올 수 있기 때문이다(유저 프로필 정보 등). 이를 위해 *Widgets* 계층이 필요하다.
+
+우리의 경우 헤더는 아주 간단하다 -- 정적 로고와 네비게이션만 가지고 있다. 네비게이션은 유저가 로그인 되어 있는지, 아닌지에 대한 API 요청을 만들어야 한다. 하지만 이는 `api` 세그먼트에서 임포트해서 다룰 수 있으니 아직은 헤더를 *Shared*에 두자.
+
+### 페이지의 폼을 자세히 들여다보기
+
+게시글 수정 페이지를 자세히 들여다보자:
+![[Pasted image 20250204075608.png]]
+
+별거 없지만, 아직 살펴보지 않은 몇몇 개발 단계에서 살펴봐야할 특징들이 있다 -- 양식 유효성 검증, 에러 상태, 데이터 지속성 등이다.
+
+만약 이러한 페이지를 만든다고 가정하자. 우리는 *Shared*의 `ui` 세그먼트에서 인풋, 버튼을 가져와 이 페이지의 `ui`세그먼트에서 양식을 만들고, `api`세그먼트에 새로운 article을 생성하는 요청을 발생시키는 함수를 만들것이다.
+
+요청을 보내기 전에 검증하기 위해 우리는 유요성 검증 스키마가 필요하다. 이 스키마를 두기 좋은 위치는 `model` 세그먼트인데 이는 스키마가 데이터 모델이기 때문이다. 여기서 우리는 에러 메세지를 생성하고 이를 `ui` 세그먼트의 다른 컴포넌트에서 보여줄것이다.
+
+유저 경험을 향상시키기 위해, 우리는 입력값에 지속성을 더해줄것이다. 이러한 작업 또한 `model` 세그먼트에서 이루어진다.
+
+### 요약
+
+우리는 지금가지 몇몇 페이지를 검토했고 앱의 구조를 미리 그려봤다:
+1. *Shared layer*
+	1. `ui`에 재사용 가능한 컴포넌트를 포함시킨다.
+	2. `api`에 원시적인 백엔드 요청 함수(래퍼같은)를 포함시킨다.
+	3. 요구사항, 필요에 따라 추가한다.
+2. *Pages layer* -- 각 페이지 마다 별도의 *slice*를 가진다
+	1. `ui`에 페이지 컴포넌트와 페이지에서 사용되는 부분들의 컴포넌트가 포함된다.
+	2. `api`에 특정한 목적의 요청 함수가 포함된다.
+	3. `model`에는 클라이언트 사이트 스토리지가 포함된다.
+
+## Part 2. In code
+
+이제 계획을 세웠으니 실전으로 들어가보자. `React`와 `Remix`를 사용한다.
+
+이 프로젝트를 위함 템플릿이 준비되어 있다: [https://github.com/feature-sliced/tutorial-conduit/tree/clean](https://github.com/feature-sliced/tutorial-conduit/tree/clean)
+
+`npm install`을 통해 의존성을 설치하고 `npm run dev`를 입력해 개발 서버를 실행하자. http://localhost:3000 을 열면 빈 앱을 볼 수 있다.
+
+### 페이지 구성하기
+모든 빈 페이지 컴포넌트를 만드는 것부터 시작하자. 아래 코드를 실행시켜보자.
+
+```text
+npx fsd pages feed sign-in article-read article-edit profile settings --segments ui
+```
+
+이는 모든 페이지에 `pages/<name>/ui`와 index 파일을 생성한다.
+
+### 피드 페이지 연결하기
+
+피드 페이지에 루트 라우트를 연결하자. `pages/feed/ui`에 `FeedPage.tsx` 파일을 성생하고 다음과 같은 코드를 넣자:
+
+```tsx
+// pages/feed/ui/FeedPage.tsx
+export function FeedPage() {
+  return (
+    <div className="home-page">
+      <div className="banner">
+        <div className="container">
+          <h1 className="logo-font">conduit</h1>
+          <p>A place to share your knowledge.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+그리고 이 컴포넌트를 re-export 해서 페이지의 public API를 생성하자:
+```tsx
+// pages/feed/index.ts
+export { FeedPage } from "./ui/FeedPage";
+```
+
+이제 이를 루트 라우트에 연결하자. `remix`에서 라우팅은 파일 기반이다. 그리고 라우트 파일은 `app/routes` 폴더에 위치해야 한다.
+
+```tsx
+// app/routes/_index.tsx
+import type { MetaFunction } from "@remix-run/node";
+import { FeedPage } from "pages/feed";
+
+export const meta: MetaFunction = () => {
+	return [{ title: "Conduit" }];
+};
+
+export default FeedPage;
+```
+
+이제 개발 서버를 다시 보면 다음과 같은 배너를 볼 수 있다!
+
+![[Pasted image 20250204082023.png]]
+
+### API 클라이언트
 

@@ -203,3 +203,43 @@ export default FeedPage;
 
 ### API 클라이언트
 
+백엔드와의 요청을 간편화 하기 위해 API 클라이언트를 *Shared*에 만들자. `api`와 `config`라는 두 세그먼트를 생성한다:
+```text
+npx fsd shared --segments api config
+```
+
+그리고 `shared/config/backend.ts`를 생성한다:
+```ts
+// shared/config/backend.ts
+export const backendBaseUrl = "https://api.realworld.io/api";
+```
+
+```ts
+// shared/config/index.ts
+export { backendBaseUrl } from "./backend";
+```
+
+대부분의 현실 프로젝트에서는 OpenAPI 명세를 제공하기 때문에, 자동 타입 생성이라는 편리함을 누릴 수 있다. 우리는 `openapi-fetch` 패키지를 사용할것이다.
+
+다음과 같은 커맨드를 통해 최신 API 타입을 생성하자:
+
+```text
+npm run generate-api-types
+```
+
+이는 `shared/api/v1.d.ts` 라는 파일을 생성할 것이다. 우리는 이 파일을 사용해 타입 API 클라이언트를 `shared/api/client.ts`에 생성할 것이다:
+```ts
+// shared/api/client.ts
+import createClient from "openapi-fetch";
+
+import { backendBaseUrl } from "shared-config";
+import type { paths } from "./v1";
+
+export const { GET, POST, PUT, DELETE } = createClient<paths>({ baseUrl: backendBaseUrl });
+```
+
+```ts
+// shared/api/index.ts
+export { GET, POST, PUT, DELETE } from "./client";
+```
+

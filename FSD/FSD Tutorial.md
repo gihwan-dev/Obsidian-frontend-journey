@@ -243,3 +243,29 @@ export const { GET, POST, PUT, DELETE } = createClient<paths>({ baseUrl: backend
 export { GET, POST, PUT, DELETE } from "./client";
 ```
 
+### 피드의 실제 데이터
+
+이제 백엔드에 요청을 보내 그 응답으로 피드에 기사를 추가할 수 있다. 먼저 기사 미리보기 컴포넌트를 구현해보자.
+
+`pages/feed/ui/ArticlePreview.tsx`를 생성하고 다음 코드를 추가하자:
+```tsx
+// pages/feed/ui/ArticlePreview.tsx
+export function ActiclePreview({ article }) { /* TODO */ }
+```
+
+우리는 타입스크립트를 사용하고 있기 때문에 타입 정의된 객체를 정의하는게 좋다. `v1.d.ts` 파일을 보면 `components["schemas"]["Article"]` 스키마를 볼 수 있다. *Shared*에 다음과 같은 데이터 모델을 만들어서 익스포트 해보자:
+
+```ts
+// shared/api/models.ts
+import type { components } from "./v1";
+
+export type Article = components["schemas"]["Article"];
+```
+
+```ts
+// shared/api/index.ts
+exoprt { GET, POST, PUT, DELETE } from "./client";
+
+export type { Article } from "./models";
+```
+

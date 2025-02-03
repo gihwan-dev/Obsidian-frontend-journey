@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "7b28842cef6e1c85",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
+          },
+          {
             "id": "96ffad16109217b2",
             "type": "leaf",
             "state": {
@@ -57,7 +69,8 @@
               "title": "Drawing 2024-12-09 11.50.48.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -128,7 +141,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 353.5,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -260,11 +274,10 @@
       "publish:Publish changes...": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": true,
-      "publish:Publish changes...": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a1d8963f6a4851c6",
+  "active": "7b28842cef6e1c85",
   "lastOpenFiles": [
     "JavaScript/이벤트 루프.md",
     "Next.js/Pasted image 20250201123330.png",

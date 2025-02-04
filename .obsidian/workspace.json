@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "dff993968403ae74",
+        "id": "aef5ebb1cd3e85f1",
         "type": "tabs",
         "children": [
           {
-            "id": "2b32ef0b18cc3719",
+            "id": "b517b54df9d86e43",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FSD/FSD Tutorial.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "FSD Tutorial"
+              "title": "New tab"
             }
           }
         ]
@@ -152,13 +148,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FSD/FSD Tutorial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of FSD Tutorial"
+              "title": "Outline"
             }
           },
           {
@@ -227,7 +222,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2b32ef0b18cc3719",
+  "active": "b517b54df9d86e43",
   "lastOpenFiles": [
     "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250204082023.png",

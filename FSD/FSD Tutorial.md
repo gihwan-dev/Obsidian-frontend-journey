@@ -269,3 +269,137 @@ exoprt { GET, POST, PUT, DELETE } from "./client";
 export type { Article } from "./models";
 ```
 
+이제 ArticlePreview 컴포넌트로 돌아가서 데이터를 표현해보자. 아래 같이 수정한다:
+```tsx
+// pages/feed/ui/ArticlePreview.tsx
+import { Link } from "@remix-run/react";
+import type { Article } from "shared/api";
+
+interface ArticlePreviewProps {
+  article: Article;
+}
+
+export function ArticlePreview({ article }: ArticlePreviewProps) {
+  return (
+    <div className="article-preview">
+      <div className="article-meta">
+        <Link to={`/profile/${article.author.username}`} prefetch="intent">
+          <img src={article.author.image} alt="" />
+        </Link>
+        <div className="info">
+          <Link
+            to={`/profile/${article.author.username}`}
+            className="author"
+            prefetch="intent"
+          >
+            {article.author.username}
+          </Link>
+          <span className="date" suppressHydrationWarning>
+            {new Date(article.createdAt).toLocaleDateString(undefined, {
+              dateStyle: "long",
+            })}
+          </span>
+        </div>
+        <button className="btn btn-outline-primary btn-sm pull-xs-right">
+          <i className="ion-heart"></i> {article.favoritesCount}
+        </button>
+      </div>
+      <Link
+        to={`/article/${article.slug}`}
+        className="preview-link"
+        prefetch="intent"
+      >
+        <h1>{article.title}</h1>
+        <p>{article.description}</p>
+        <span>Read more...</span>
+        <ul className="tag-list">
+          {article.tagList.map((tag) => (
+            <li key={tag} className="tag-default tag-pill tag-outline">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </Link>
+    </div>
+  );
+}
+```
+
+좋아요 버튼은 아직 아무것도 하지 않는다. 이후에 좋아요 기능을 구현할 때 수정할 예정이다.
+
+이제 우리는 기사들을 불러와서 카드에 렌더링 해줄 수 있게 되었다. `Remix`에서 fetching은 *loader*(서버사이드)를 통해 이루어진다. *loader*는 페이지를 대신해서 API와 상호작용하므로, 이를 페이지의 *segment*에 둘것이다.
+
+```tsx
+// pages/feed/api/loader.ts
+import { json } from "@remix-run/node";
+
+import { GET } from "shared/api";
+
+export const loader = async () => {
+  const { data: articles, error, response } = await GET("/articles");
+
+  if (error !== undefined) {
+    throw json(error, { status: response.status });
+  }
+
+  return json({ articles });
+};
+```
+
+이를 페이지에 연결하기 위해, `loader`라는 이름으로 라우트 파일에서 export 해주어야 한다:
+
+```ts
+// pages/feed/index.ts
+export { FeedPage } from "./ui/FeedPage";
+export { loader } from "./api/loader";
+```
+
+```ts
+// app/routes/_index.tsx
+import type { MetaFunction } from "@remix-run/node";
+import { FeedPage } from "pages/feed";
+
+export { loader } from "pages/feed";
+
+export const meta: MetaFunction = () => {
+  return [{ title: "Conduit" }];
+};
+
+export default FeedPage;
+```
+
+그리고 마지막 단계는 이 카드를 피드에서 렌더링 하는 것이다. `FeedPage`를 아래와 같이 수정하자:
+
+```tsx
+// pages/feed/ui/FeedPage.tsx
+import { useLoaderData } from "@remix-run/react";
+
+import type { loader } from "../api/loader";
+import { ArticlePreview } from "./ArticlePreview";
+
+export function FeedPage() {
+  const { articles } = useLoaderData<typeof loader>();
+
+  return (
+    <div className="home-page">
+      <div className="banner">
+        <div className="container">
+          <h1 className="logo-font">conduit</h1>
+          <p>A place to share your knowledge.</p>
+        </div>
+      </div>
+
+      <div className="container page">
+        <div className="row">
+          <div className="col-md-9">
+            {articles.articles.map((article) => (
+              <ArticlePreview key={article.slug} article={article} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+

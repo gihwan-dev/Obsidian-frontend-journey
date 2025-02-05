@@ -847,3 +847,51 @@ export type { Article } from "./models";
 export { createUserSession, getUserFromSession, requireUser } from "./auth.server";
 ```
 
+이제 백엔드에 회원가입 요청을 보내는 코드를 작성해보자. `pages/sign-in/api`에 `register.ts`파일을 생성하고 다음 코드를 작성한다:
+```ts
+// pages/sign-in/api/register.ts
+
+import { json, type ActionFunctionArgs } from "@remix-run/node";
+
+import { POST, createUserSession } from "shared/api";
+
+export const register = async ({ request }: ActionFunctionArgs) => {
+  const formData = await request.formData();
+  const username = formData.get("username")?.toString() ?? "";
+  const email = formData.get("email")?.toString() ?? "";
+  const password = formData.get("password")?.toString() ?? "";
+
+  const { data, error } = await POST("/users", {
+    body: { user: { email, password, username } },
+  });
+
+  if (error) {
+    return json({ error }, { status: 400 });
+  } else {
+    return createUserSession({
+      request: request,
+      user: data.user,
+      redirectTo: "/",
+    });
+  }
+};
+```
+
+```ts
+// pages/sign-in/index.ts
+
+export { RegisterPage } from './ui/RegisterPage';
+export { register } from './api/register';
+```
+
+거의 다됐다. 이제 회원가입 페이지를 `/register` 라우트에 연결하기만 하면 된다. `register.tsx`파일을 `app/routes`에 생성하자.
+
+```ts
+// app/routes/register.tsx
+
+import { RegisterPage, register } from "pages/sign-in";
+
+export { register as action };
+
+export default RegisterPage;
+```

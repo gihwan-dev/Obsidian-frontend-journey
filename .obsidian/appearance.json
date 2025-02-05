@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-  "theme": "obsidian"
-=======
   "accentColor": "",
   "baseFontSize": 15,
   "cssTheme": "AnuPpuccin",
   "enabledCssSnippets": [
     "color-extend"
   ],
-  "theme": "moonstone"
->>>>>>> c8f97318ffc11f245f7886ff51a2d6a4a5c8f4eb
+  "theme": "obsidian"
 }

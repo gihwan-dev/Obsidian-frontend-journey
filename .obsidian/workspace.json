@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7f954349c478a561",
+        "id": "aef5ebb1cd3e85f1",
         "type": "tabs",
         "children": [
           {
-            "id": "a1d8963f6a4851c6",
+            "id": "b517b54df9d86e43",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,6 +19,7 @@
               },
               "icon": "lucide-file",
               "title": "FSD Tutorial"
+<<<<<<< HEAD
             }
           },
           {
@@ -55,6 +56,8 @@
               },
               "icon": "excalidraw-icon",
               "title": "Drawing 2024-12-09 11.50.48.excalidraw"
+=======
+>>>>>>> c8f97318ffc11f245f7886ff51a2d6a4a5c8f4eb
             }
           }
         ]
@@ -267,15 +270,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
+<<<<<<< HEAD
   "active": "a1d8963f6a4851c6",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
+=======
+  "active": "b517b54df9d86e43",
+  "lastOpenFiles": [
+>>>>>>> c8f97318ffc11f245f7886ff51a2d6a4a5c8f4eb
     "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250204082023.png",
     "Next.js/Pasted image 20250204075608.png",
     "FSD/FSD.md",
+<<<<<<< HEAD
     "FSD/Entities.md",
     "FSD/Entities 와 Features의 규칙 정하기.md",
+=======
+    "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
+>>>>>>> c8f97318ffc11f245f7886ff51a2d6a4a5c8f4eb
     "JavaScript/모듈 시스템.md",
     "publish.css",
     "JavaScript/이벤트 루프.md",
@@ -291,7 +303,6 @@
     "JavaScript/실행 컨텍스트.md",
     "JavaScript/자바스크립트 메모리 구조 및 가비지 컬렉션.md",
     "Browser/JavaScript engine pipeline.md",
-    "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
     "JavaScript/DOM.md",
     "JavaScript/Location API.md",
     "JavaScript/Javascript GC.md",
@@ -306,6 +317,12 @@
     "JavaScript/Web Socket.md",
     "JavaScript/throw.md",
     "Browser/Worklets.md",
+<<<<<<< HEAD
+=======
+    "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
+    "Browser/스타일 계산.md",
+    "Browser/속성 선택자.md",
+>>>>>>> c8f97318ffc11f245f7886ff51a2d6a4a5c8f4eb
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",

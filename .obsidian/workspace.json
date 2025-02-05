@@ -11,10 +11,14 @@
             "id": "b517b54df9d86e43",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "FSD/FSD Tutorial.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "FSD Tutorial"
             }
           }
         ]
@@ -148,12 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "FSD/FSD Tutorial.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of FSD Tutorial"
             }
           },
           {

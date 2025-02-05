@@ -747,3 +747,103 @@ export function RegisterPage() {
 }
 ```
 
+고쳐야할 깨진 임포트가 있다. 이는 세그먼트와 관려이 있기 때문에 다음과 같이 생성한다:
+```text
+npx fsd pages sign-in -s api
+```
+
+회원가입 백엔드 부분을 구현하기 전에, `Remix`가 세션을 처리하기 위한 인프라 코드가 필요하다. *Shared*에 위치시켜 다른 페이지들도 재사용 가능하게 하자.
+
+아래 코드를 `shared/api/auth.server.ts`에 생성하자. `Remix`에 한정적인 코드니 잘 몰라도 괜찮다:
+```tsx
+// shared/api/auth.server.ts
+
+import { createCookieSessionStorage, redirect } from "@remix-run/node";
+import invariant from "tiny-invariant";
+
+import type { User } from "./models";
+
+invariant(
+  process.env.SESSION_SECRET,
+  "SESSION_SECRET must be set for authentication to work",
+);
+
+const sessionStorage = createCookieSessionStorage<{
+  user: User;
+}>({
+  cookie: {
+    name: "__session",
+    httpOnly: true,
+    path: "/",
+    sameSite: "lax",
+    secrets: [process.env.SESSION_SECRET],
+    secure: process.env.NODE_ENV === "production",
+  },
+});
+
+export async function createUserSession({
+  request,
+  user,
+  redirectTo,
+}: {
+  request: Request;
+  user: User;
+  redirectTo: string;
+}) {
+  const cookie = request.headers.get("Cookie");
+  const session = await sessionStorage.getSession(cookie);
+
+  session.set("user", user);
+
+  return redirect(redirectTo, {
+    headers: {
+      "Set-Cookie": await sessionStorage.commitSession(session, {
+        maxAge: 60 * 60 * 24 * 7, // 7 days
+      }),
+    },
+  });
+}
+
+export async function getUserFromSession(request: Request) {
+  const cookie = request.headers.get("Cookie");
+  const session = await sessionStorage.getSession(cookie);
+
+  return session.get("user") ?? null;
+}
+
+export async function requireUser(request: Request) {
+  const user = await getUserFromSession(request);
+
+  if (user === null) {
+    throw redirect("/login");
+  }
+
+  return user;
+}
+```
+
+`User` 모델을 다음과 같이 `models.ts`파일에서 익스포트 해준다:
+```tsx
+// shared/api/models.ts
+
+import type { components } from "./v1";
+
+export type Article = components["schemas"]["Article"];
+export type User = components["schemas"]["User"];
+```
+
+이 코드가 동작하기 전에, `SESSION_SECRET` 환경 변수를 설정해줘야 한다. `.env`파일을 생성하고 아래와 같이 랜덤 문자열을 `SESSION_SECRET`에 할당해주자:
+```env
+// .env
+SESSION_SECRET=asldfjeiavmcnslkdjfleqweadsf
+```
+
+그리고 이제 이 함수를 위한 퍼블릭 API를 만들어주자:
+```ts
+export { GET, POST, PUT, DELETE } from "./client";
+
+export type { Article } from "./models";
+
+export { createUserSession, getUserFromSession, requireUser } from "./auth.server";
+```
+

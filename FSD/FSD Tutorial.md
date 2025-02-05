@@ -405,3 +405,345 @@ export function FeedPage() {
 
 ### 태그를 사용한 필터링
 
+우리는 태그들을 백엔드에서 받아오고 선택된 태그를 클라이언트 스토어에 저장해야 한다. loader에서 또 다른 요청을 보내보자. 이번에는 편의성 함수인 `promiseHash`를 사용해보자.
+
+`pages/feed/api/loader.rs`파일을 다음과 같이 업데이트 한다:
+```tsx
+// pages/feed/api/loader.ts
+
+import { json } from "@remix-run/node";
+import type { FetchResponse } from "openapi-fetch";
+import { promiseHash } from "remix-utils/promise";
+
+import { GET } from "shared/api";
+
+async function throwAnyErrors<T, O, Media extends `${string}/${string}`>(
+  responsePromise: Promise<FetchResponse<T, O, Media>>,
+) {
+  const { data, error, response } = await responsePromise;
+
+  if (error !== undefined) {
+    throw json(error, { status: response.status });
+  }
+
+  return data as NonNullable<typeof data>;
+}
+
+export const loader = async () => {
+  return json(
+    await promiseHash({
+      articles: throwAnyErrors(GET("/articles")),
+      tags: throwAnyErrors(GET("/tags")),
+    }),
+  );
+};
+```
+
+`throwAnyErrors`라는 함수를 통해 에러를 핸들링 하고 있다. 이 함수는 상당히 유용하고, 나중에 재사용될 수 있지만 지금은 여기에 두자.
+
+이제 태그의 리스트를 렌더링하고, 상호작용 가능하게 만들어보자. 태그를 클릭하면 선택되어야 한다. 선택된 태그를 관리하기 위해 URL search parameter를 사용한다.
+
+`pages/feed/ui/FeedPage.tsx`파일을 다음과 같이 업데이트 하자:
+```tsx
+// pages/feed/ui/FeedPage.tsx
+
+import { Form, useLoaderData } from "@remix-run/react";
+import { ExistingSearchParams } from "remix-utils/existing-search-params";
+
+import type { loader } from "../api/loader";
+import { ArticlePreview } from "./ArticlePreview";
+
+export function FeedPage() {
+  const { articles, tags } = useLoaderData<typeof loader>();
+
+  return (
+    <div className="home-page">
+      <div className="banner">
+        <div className="container">
+          <h1 className="logo-font">conduit</h1>
+          <p>A place to share your knowledge.</p>
+        </div>
+      </div>
+
+      <div className="container page">
+        <div className="row">
+          <div className="col-md-9">
+            {articles.articles.map((article) => (
+              <ArticlePreview key={article.slug} article={article} />
+            ))}
+          </div>
+
+          <div className="col-md-3">
+            <div className="sidebar">
+              <p>Popular Tags</p>
+
+              <Form>
+                <ExistingSearchParams exclude={["tag"]} />
+                <div className="tag-list">
+                  {tags.tags.map((tag) => (
+                    <button
+                      key={tag}
+                      name="tag"
+                      value={tag}
+                      className="tag-pill tag-default"
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+} 
+```
+
+이제 `loader`에서 `tag` 서치 파라미터를 사용해야 한다. `pages/feed/api/loader.ts` 파일을 아래와 같이 수정하자:
+```tsx
+// pages/feed/api/loader.ts
+
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import type { FetchResponse } from "openapi-fetch";
+import { promiseHash } from "remix-utils/promise";
+
+import { GET } from "shared/api";
+
+async function throwAnyErrors<T, O, Media extends `${string}/${string}`>(
+  responsePromise: Promise<FetchResponse<T, O, Media>>,
+) {
+  const { data, error, response } = await responsePromise;
+
+  if (error !== undefined) {
+    throw json(error, { status: response.status });
+  }
+
+  return data as NonNullable<typeof data>;
+}
+
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const url = new URL(request.url);
+  const selectedTag = url.searchParams.get("tag") ?? undefined;
+
+  return json(
+    await promiseHash({
+      articles: throwAnyErrors(
+        GET("/articles", { params: { query: { tag: selectedTag } } }),
+      ),
+      tags: throwAnyErrors(GET("/tags")),
+    }),
+  );
+};
+```
+
+### 페이지네이션
+
+
+유사항 방식으로 페이지네이션도 구현할 수 있다. 다음과 같이 작성하자:
+```tsx
+// pages/feed/api/loader.ts
+
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import type { FetchResponse } from "openapi-fetch";
+import { promiseHash } from "remix-utils/promise";
+
+import { GET } from "shared/api";
+
+async function throwAnyErrors<T, O, Media extends `${string}/${string}`>(
+  responsePromise: Promise<FetchResponse<T, O, Media>>,
+) {
+  const { data, error, response } = await responsePromise;
+
+  if (error !== undefined) {
+    throw json(error, { status: response.status });
+  }
+
+  return data as NonNullable<typeof data>;
+}
+
+/** Amount of articles on one page. */
+export const LIMIT = 20;
+
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const url = new URL(request.url);
+  const selectedTag = url.searchParams.get("tag") ?? undefined;
+  const page = parseInt(url.searchParams.get("page") ?? "", 10);
+
+  return json(
+    await promiseHash({
+      articles: throwAnyErrors(
+        GET("/articles", {
+          params: {
+            query: {
+              tag: selectedTag,
+              limit: LIMIT,
+              offset: !Number.isNaN(page) ? page * LIMIT : undefined,
+            },
+          },
+        }),
+      ),
+      tags: throwAnyErrors(GET("/tags")),
+    }),
+  );
+};
+```
+
+```tsx
+// pages/feed/ui/FeedPage.tsx
+
+import { Form, useLoaderData, useSearchParams } from "@remix-run/react";
+import { ExistingSearchParams } from "remix-utils/existing-search-params";
+
+import { LIMIT, type loader } from "../api/loader";
+import { ArticlePreview } from "./ArticlePreview";
+
+export function FeedPage() {
+  const [searchParams] = useSearchParams();
+  const { articles, tags } = useLoaderData<typeof loader>();
+  const pageAmount = Math.ceil(articles.articlesCount / LIMIT);
+  const currentPage = parseInt(searchParams.get("page") ?? "1", 10);
+
+  return (
+    <div className="home-page">
+      <div className="banner">
+        <div className="container">
+          <h1 className="logo-font">conduit</h1>
+          <p>A place to share your knowledge.</p>
+        </div>
+      </div>
+
+      <div className="container page">
+        <div className="row">
+          <div className="col-md-9">
+            {articles.articles.map((article) => (
+              <ArticlePreview key={article.slug} article={article} />
+            ))}
+
+            <Form>
+              <ExistingSearchParams exclude={["page"]} />
+              <ul className="pagination">
+                {Array(pageAmount)
+                  .fill(null)
+                  .map((_, index) =>
+                    index + 1 === currentPage ? (
+                      <li key={index} className="page-item active">
+                        <span className="page-link">{index + 1}</span>
+                      </li>
+                    ) : (
+                      <li key={index} className="page-item">
+                        <button
+                          className="page-link"
+                          name="page"
+                          value={index + 1}
+                        >
+                          {index + 1}
+                        </button>
+                      </li>
+                    ),
+                  )}
+              </ul>
+            </Form>
+          </div>
+
+          <div className="col-md-3">
+            <div className="sidebar">
+              <p>Popular Tags</p>
+
+              <Form>
+                <ExistingSearchParams exclude={["tag", "page"]} />
+                <div className="tag-list">
+                  {tags.tags.map((tag) => (
+                    <button
+                      key={tag}
+                      name="tag"
+                      value={tag}
+                      className="tag-pill tag-default"
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+이제 인증을 구현해보자.
+
+### 인증
+
+인증은 두 가지 페이지를 가진다. 하나는 로그인 다른 하나는 등록이다. 이 둘은 거의 동일하기 때문에 같은 *slice*에 함께 있어도 괜찮다. `sign-in` 이라는 동일한 *slice*에 두고 코드를 재사용 할 수 있도록 하자.
+
+`RegisterPage.tsx` 파일을 `ui` 세그먼트 안에 만들고 다음의 코드를 작성한다:
+```tsx
+// pages/sign-in/ui/RegisterPage.tsx
+
+import { Form, Link, useActionData } from "@remix-run/react";
+
+import type { register } from "../api/register";
+
+export function RegisterPage() {
+  const registerData = useActionData<typeof register>();
+
+  return (
+    <div className="auth-page">
+      <div className="container page">
+        <div className="row">
+          <div className="col-md-6 offset-md-3 col-xs-12">
+            <h1 className="text-xs-center">Sign up</h1>
+            <p className="text-xs-center">
+              <Link to="/login">Have an account?</Link>
+            </p>
+
+            {registerData?.error && (
+              <ul className="error-messages">
+                {registerData.error.errors.body.map((error) => (
+                  <li key={error}>{error}</li>
+                ))}
+              </ul>
+            )}
+
+            <Form method="post">
+              <fieldset className="form-group">
+                <input
+                  className="form-control form-control-lg"
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                />
+              </fieldset>
+              <fieldset className="form-group">
+                <input
+                  className="form-control form-control-lg"
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                />
+              </fieldset>
+              <fieldset className="form-group">
+                <input
+                  className="form-control form-control-lg"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </fieldset>
+              <button className="btn btn-lg btn-primary pull-xs-right">
+                Sign up
+              </button>
+            </Form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+

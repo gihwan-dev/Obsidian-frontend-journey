@@ -895,3 +895,235 @@ export { register as action };
 
 export default RegisterPage;
 ```
+
+이제 http://localhost:3000/register 에서 유저를 생성할 수 있어야 한다.
+
+유사한 방식으로 로그인 페이지도 구현할 수 있다:
+```tsx
+// pages/sign-in/api/sign-in.ts
+
+import { json, type ActionFunctionArgs } from "@remix-run/node";
+
+import { POST, createUserSession } from "shared/api";
+
+export const signIn = async ({ request }: ActionFunctionArgs) => {
+  const formData = await request.formData();
+  const email = formData.get("email")?.toString() ?? "";
+  const password = formData.get("password")?.toString() ?? "";
+
+  const { data, error } = await POST("/users/login", {
+    body: { user: { email, password } },
+  });
+
+  if (error) {
+    return json({ error }, { status: 400 });
+  } else {
+    return createUserSession({
+      request: request,
+      user: data.user,
+      redirectTo: "/",
+    });
+  }
+};
+```
+
+```tsx
+// pages/sign-in/ui/SignInPage.tsx
+
+import { Form, Link, useActionData } from "@remix-run/react";
+
+import type { signIn } from "../api/sign-in";
+
+export function SignInPage() {
+  const signInData = useActionData<typeof signIn>();
+
+  return (
+    <div className="auth-page">
+      <div className="container page">
+        <div className="row">
+          <div className="col-md-6 offset-md-3 col-xs-12">
+            <h1 className="text-xs-center">Sign in</h1>
+            <p className="text-xs-center">
+              <Link to="/register">Need an account?</Link>
+            </p>
+
+            {signInData?.error && (
+              <ul className="error-messages">
+                {signInData.error.errors.body.map((error) => (
+                  <li key={error}>{error}</li>
+                ))}
+              </ul>
+            )}
+
+            <Form method="post">
+              <fieldset className="form-group">
+                <input
+                  className="form-control form-control-lg"
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                />
+              </fieldset>
+              <fieldset className="form-group">
+                <input
+                  className="form-control form-control-lg"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                />
+              </fieldset>
+              <button className="btn btn-lg btn-primary pull-xs-right">
+                Sign in
+              </button>
+            </Form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+```tsx
+// pages/sign-in/index.ts
+
+export { RegisterPage } from './ui/RegisterPage';
+export { register } from './api/register';
+export { SignInPage } from './ui/SignInPage';
+export { signIn } from './api/sign-in';
+```
+
+```tsx
+// app/routes/login.tsx
+
+import { SignInPage, signIn } from "pages/sign-in";
+
+export { signIn as action };
+
+export default SignInPage;
+```
+
+### 헤더
+
+Part1에서 얘기한것처럼, 헤더는 보통 위젯이나 *Shared*에 위치한다. 우리는 *Shared*에 놓으려 한다. 간단한 기능만을 하기 때문이다. 헤더를 생성할 폴더를 만들자:
+```text
+npx fsd shared ui
+```
+
+이제 `shared/ui/Header.tsx` 파일을 생성하고 다음 내용을 채워넣자:
+```tsx
+// shared/ui/Header.tsx
+
+import { useContext } from "react";
+import { Link, useLocation } from "@remix-run/react";
+
+import { CurrentUser } from "../api/currentUser";
+
+export function Header() {
+  const currentUser = useContext(CurrentUser);
+  const { pathname } = useLocation();
+
+  return (
+    <nav className="navbar navbar-light">
+      <div className="container">
+        <Link className="navbar-brand" to="/" prefetch="intent">
+          conduit
+        </Link>
+        <ul className="nav navbar-nav pull-xs-right">
+          <li className="nav-item">
+            <Link
+              prefetch="intent"
+              className={`nav-link ${pathname == "/" ? "active" : ""}`}
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
+          {currentUser == null ? (
+            <>
+              <li className="nav-item">
+                <Link
+                  prefetch="intent"
+                  className={`nav-link ${pathname == "/login" ? "active" : ""}`}
+                  to="/login"
+                >
+                  Sign in
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  prefetch="intent"
+                  className={`nav-link ${pathname == "/register" ? "active" : ""}`}
+                  to="/register"
+                >
+                  Sign up
+                </Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="nav-item">
+                <Link
+                  prefetch="intent"
+                  className={`nav-link ${pathname == "/editor" ? "active" : ""}`}
+                  to="/editor"
+                >
+                  <i className="ion-compose"></i>&nbsp;New Article{" "}
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  prefetch="intent"
+                  className={`nav-link ${pathname == "/settings" ? "active" : ""}`}
+                  to="/settings"
+                >
+                  {" "}
+                  <i className="ion-gear-a"></i>&nbsp;Settings{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  prefetch="intent"
+                  className={`nav-link ${pathname.includes("/profile") ? "active" : ""}`}
+                  to={`/profile/${currentUser.username}`}
+                >
+                  {currentUser.image && (
+                    <img
+                      width={25}
+                      height={25}
+                      src={currentUser.image}
+                      className="user-pic"
+                      alt=""
+                    />
+                  )}
+                  {currentUser.username}
+                </Link>
+              </li>
+            </>
+          )}
+        </ul>
+      </div>
+    </nav>
+  );
+}
+```
+
+이 컴포넌트를 `shared/ui`에서 재 익스포트 한다:
+```ts
+// shared/ui/index.ts
+
+export { Header } from "./Header";
+```
+
+헤더는 `shared/api`에서 생성된 컨텍스트에 의존하고 있다. 이 또한 만들어 보자:
+```tsx
+// shared/api/currentUser.ts
+
+import { createContext } from "react";
+
+import type { User } from "./models";
+
+export const CurrentUser = createContext<User | null>(null);
+```
+

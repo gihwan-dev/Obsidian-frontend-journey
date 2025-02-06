@@ -20,42 +20,6 @@
               "icon": "lucide-file",
               "title": "FSD Tutorial"
             }
-          },
-          {
-            "id": "96ffad16109217b2",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2024-12-09 11.50.48.excalidraw"
-            }
-          },
-          {
-            "id": "734b5bd99ea14196",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2024-12-09 11.50.48.excalidraw"
-            }
-          },
-          {
-            "id": "0865e3c5fff298d2",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2024-12-09 11.50.48.excalidraw"
-            }
           }
         ]
       }
@@ -269,8 +233,10 @@
   },
   "active": "b517b54df9d86e43",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Next.js/Pasted image 20250206090718.png",
+    "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
     "FSD/FSD Tutorial.md",
+    "conflict-files-obsidian-git.md",
     "Next.js/Pasted image 20250204082023.png",
     "Next.js/Pasted image 20250204075608.png",
     "FSD/FSD.md",
@@ -304,7 +270,6 @@
     "JavaScript/Map, Set, WeakMap, WeakSet.md",
     "JavaScript/Web Socket.md",
     "JavaScript/throw.md",
-    "Browser/Worklets.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",

@@ -1127,3 +1127,319 @@ import type { User } from "./models";
 export const CurrentUser = createContext<User | null>(null);
 ```
 
+```ts
+// shared/api/index.ts
+
+export { GET, POST, PUT, DELETE } from "./client";
+
+export type { Article } from "./models";
+
+export { createUserSession, getUserFromSession, requireUser } from "./auth.server";
+export { CurrentUser } from "./currentUser";
+```
+
+이제 헤더를 페이지에 추가해보자. 우리는 이 헤더가 모든 페이지에 나타나길 원한다. 루트 라우트에 추가하고 `outlet`을 `CurrentUser` 컨텍스트 프로바이더로 감싸주자. 또한 `loader`를 추가해서 쿠키에서 현재 유저에 대한 정보를 얻을 수 있도록 하자. 아래 코드를 `app/root.tsx`에 추가하자:
+```tsx
+// app/root.tsx
+
+import { cssBundleHref } from "@remix-run/css-bundle";
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useLoaderData,
+} from "@remix-run/react";
+
+import { Header } from "shared/ui";
+import { getUserFromSession, CurrentUser } from "shared/api";
+
+export const links: LinksFunction = () => [
+  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+];
+
+export const loader = ({ request }: LoaderFunctionArgs) =>
+  getUserFromSession(request);
+
+export default function App() {
+  const user = useLoaderData<typeof loader>();
+
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta />
+        <Links />
+        <link
+          href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link
+          href="//fonts.googleapis.com/css?family=Titillium+Web:700|Source+Serif+Pro:400,700|Merriweather+Sans:400,700|Source+Sans+Pro:400,300,600,700,300italic,400italic,600italic,700italic"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link rel="stylesheet" href="//demo.productionready.io/main.css" />
+        <style>{`
+          button {
+            border: 0;
+          }
+        `}</style>
+      </head>
+      <body>
+        <CurrentUser.Provider value={user}>
+          <Header />
+          <Outlet />
+        </CurrentUser.Provider>
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
+  );
+}
+```
+
+이 시점에, 다음과 같은 화면을 볼 수 있어야 한다:
+![[Pasted image 20250206090718.png]]
+
+### 탭
+이제 우리는 인정 상태를 불러올 수 있게 되었다. 이제 탭을 구현하고, 좋아요 기능을 구현해보자. 이제 우리는 새로운 양식이 필요하다. 그런데 페이지의 파일이 너무 커지고 있다. 그러니 이 폼을 가까운 인접한 곳에서 구현하자. `Tabs.tsx`, `PopularTags.tsx`, `Pagination.tsx` 파일을 `pages/feed/ui`에 생성하고 아래 내용을 넣자:
+```tsx
+// pages/feed/ui/Tbas.tsx
+
+import { useContext } from "react";
+import { Form, useSearchParams } from "@remix-run/react";
+
+import { CurrentUser } from "shared/api";
+
+export function Tabs() {
+  const [searchParams] = useSearchParams();
+  const currentUser = useContext(CurrentUser);
+
+  return (
+    <Form>
+      <div className="feed-toggle">
+        <ul className="nav nav-pills outline-active">
+          {currentUser !== null && (
+            <li className="nav-item">
+              <button
+                name="source"
+                value="my-feed"
+                className={`nav-link ${searchParams.get("source") === "my-feed" ? "active" : ""}`}
+              >
+                Your Feed
+              </button>
+            </li>
+          )}
+          <li className="nav-item">
+            <button
+              className={`nav-link ${searchParams.has("tag") || searchParams.has("source") ? "" : "active"}`}
+            >
+              Global Feed
+            </button>
+          </li>
+          {searchParams.has("tag") && (
+            <li className="nav-item">
+              <span className="nav-link active">
+                <i className="ion-pound"></i> {searchParams.get("tag")}
+              </span>
+            </li>
+          )}
+        </ul>
+      </div>
+    </Form>
+  );
+}
+```
+
+```tsx
+// pages/feed/ui/PopularTags.tsx
+
+import { Form, useLoaderData } from "@remix-run/react";
+import { ExistingSearchParams } from "remix-utils/existing-search-params";
+
+import type { loader } from "../api/loader";
+
+export function PopularTags() {
+  const { tags } = useLoaderData<typeof loader>();
+
+  return (
+    <div className="sidebar">
+      <p>Popular Tags</p>
+
+      <Form>
+        <ExistingSearchParams exclude={["tag", "page", "source"]} />
+        <div className="tag-list">
+          {tags.tags.map((tag) => (
+            <button
+              key={tag}
+              name="tag"
+              value={tag}
+              className="tag-pill tag-default"
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+      </Form>
+    </div>
+  );
+}
+```
+
+```tsx
+// pages/feed/ui/Pagination.tsx
+
+import { Form, useLoaderData, useSearchParams } from "@remix-run/react";
+import { ExistingSearchParams } from "remix-utils/existing-search-params";
+
+import { LIMIT, type loader } from "../api/loader";
+
+export function Pagination() {
+  const [searchParams] = useSearchParams();
+  const { articles } = useLoaderData<typeof loader>();
+  const pageAmount = Math.ceil(articles.articlesCount / LIMIT);
+  const currentPage = parseInt(searchParams.get("page") ?? "1", 10);
+
+  return (
+    <Form>
+      <ExistingSearchParams exclude={["page"]} />
+      <ul className="pagination">
+        {Array(pageAmount)
+          .fill(null)
+          .map((_, index) =>
+            index + 1 === currentPage ? (
+              <li key={index} className="page-item active">
+                <span className="page-link">{index + 1}</span>
+              </li>
+            ) : (
+              <li key={index} className="page-item">
+                <button className="page-link" name="page" value={index + 1}>
+                  {index + 1}
+                </button>
+              </li>
+            ),
+          )}
+      </ul>
+    </Form>
+  );
+}
+```
+
+이제 우리는 피드 페이지를 간결하게 유지할 수 있게 되었다:
+```tsx
+// pages/feed/ui/FeedPage.tsx
+
+import { useLoaderData } from "@remix-run/react";
+
+import type { loader } from "../api/loader";
+import { ArticlePreview } from "./ArticlePreview";
+import { Tabs } from "./Tabs";
+import { PopularTags } from "./PopularTags";
+import { Pagination } from "./Pagination";
+
+export function FeedPage() {
+  const { articles } = useLoaderData<typeof loader>();
+
+  return (
+    <div className="home-page">
+      <div className="banner">
+        <div className="container">
+          <h1 className="logo-font">conduit</h1>
+          <p>A place to share your knowledge.</p>
+        </div>
+      </div>
+
+      <div className="container page">
+        <div className="row">
+          <div className="col-md-9">
+            <Tabs />
+
+            {articles.articles.map((article) => (
+              <ArticlePreview key={article.slug} article={article} />
+            ))}
+
+            <Pagination />
+          </div>
+
+          <div className="col-md-3">
+            <PopularTags />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+그리고 `loader`함수를 위한 공간도 마련해주자:
+```ts
+// pages/feed/api/loader.ts
+
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import type { FetchResponse } from "openapi-fetch";
+import { promiseHash } from "remix-utils/promise";
+
+import { GET, requireUser } from "shared/api";
+
+async function throwAnyErrors<T, O, Media extends `${string}/${string}`>(
+  responsePromise: Promise<FetchResponse<T, O, Media>>,
+) {
+  /* unchanged */
+}
+
+/** Amount of articles on one page. */
+export const LIMIT = 20;
+
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const url = new URL(request.url);
+  const selectedTag = url.searchParams.get("tag") ?? undefined;
+  const page = parseInt(url.searchParams.get("page") ?? "", 10);
+
+  if (url.searchParams.get("source") === "my-feed") {
+    const userSession = await requireUser(request);
+
+    return json(
+      await promiseHash({
+        articles: throwAnyErrors(
+          GET("/articles/feed", {
+            params: {
+              query: {
+                limit: LIMIT,
+                offset: !Number.isNaN(page) ? page * LIMIT : undefined,
+              },
+            },
+            headers: { Authorization: `Token ${userSession.token}` },
+          }),
+        ),
+        tags: throwAnyErrors(GET("/tags")),
+      }),
+    );
+  }
+
+  return json(
+    await promiseHash({
+      articles: throwAnyErrors(
+        GET("/articles", {
+          params: {
+            query: {
+              tag: selectedTag,
+              limit: LIMIT,
+              offset: !Number.isNaN(page) ? page * LIMIT : undefined,
+            },
+          },
+        }),
+      ),
+      tags: throwAnyErrors(GET("/tags")),
+    }),
+  );
+};
+```
+
+ㅇㅍ

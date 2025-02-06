@@ -1442,4 +1442,143 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 };
 ```
 
-ㅇㅍ
+피드 페이지를 떠나기전에, 게시글 좋아요 기능을 추가해보자. `ArticlePreview.tsx`파일을 다음과 같이 수정하자:
+```tsx
+// pages/feed/ui/ArticlePreview.tsx
+
+import { Form, Link } from "@remix-run/react";
+import type { Article } from "shared/api";
+
+interface ArticlePreviewProps {
+  article: Article;
+}
+
+export function ArticlePreview({ article }: ArticlePreviewProps) {
+  return (
+    <div className="article-preview">
+      <div className="article-meta">
+        <Link to={`/profile/${article.author.username}`} prefetch="intent">
+          <img src={article.author.image} alt="" />
+        </Link>
+        <div className="info">
+          <Link
+            to={`/profile/${article.author.username}`}
+            className="author"
+            prefetch="intent"
+          >
+            {article.author.username}
+          </Link>
+          <span className="date" suppressHydrationWarning>
+            {new Date(article.createdAt).toLocaleDateString(undefined, {
+              dateStyle: "long",
+            })}
+          </span>
+        </div>
+        <Form
+          method="post"
+          action={`/article/${article.slug}`}
+          preventScrollReset
+        >
+          <button
+            name="_action"
+            value={article.favorited ? "unfavorite" : "favorite"}
+            className={`btn ${article.favorited ? "btn-primary" : "btn-outline-primary"} btn-sm pull-xs-right`}
+          >
+            <i className="ion-heart"></i> {article.favoritesCount}
+          </button>
+        </Form>
+      </div>
+      <Link
+        to={`/article/${article.slug}`}
+        className="preview-link"
+        prefetch="intent"
+      >
+        <h1>{article.title}</h1>
+        <p>{article.description}</p>
+        <span>Read more...</span>
+        <ul className="tag-list">
+          {article.tagList.map((tag) => (
+            <li key={tag} className="tag-default tag-pill tag-outline">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </Link>
+    </div>
+  );
+}
+```
+
+이 코드는 `POST` 요청을 `/article/:slug`로 `_action=favorite` 마크와 함께 보낸다. 아직 동작하지 않는다.
+
+### 기사 읽기
+먼저 데이터가 필요하다. `loader`를 만들어보자:
+```bash
+npx fsd pages article-read -s api
+```
+
+```ts
+// pages/article-read/api/loader.ts
+
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import invariant from "tiny-invariant";
+import type { FetchResponse } from "openapi-fetch";
+import { promiseHash } from "remix-utils/promise";
+
+import { GET, getUserFromSession } from "shared/api";
+
+async function throwAnyErrors<T, O, Media extends `${string}/${string}`>(
+  responsePromise: Promise<FetchResponse<T, O, Media>>,
+) {
+  const { data, error, response } = await responsePromise;
+
+  if (error !== undefined) {
+    throw json(error, { status: response.status });
+  }
+
+  return data as NonNullable<typeof data>;
+}
+
+export const loader = async ({ request, params }: LoaderFunctionArgs) => {
+  invariant(params.slug, "Expected a slug parameter");
+  const currentUser = await getUserFromSession(request);
+  const authorization = currentUser
+    ? { Authorization: `Token ${currentUser.token}` }
+    : undefined;
+
+  return json(
+    await promiseHash({
+      article: throwAnyErrors(
+        GET("/articles/{slug}", {
+          params: {
+            path: { slug: params.slug },
+          },
+          headers: authorization,
+        }),
+      ),
+      comments: throwAnyErrors(
+        GET("/articles/{slug}/comments", {
+          params: {
+            path: { slug: params.slug },
+          },
+          headers: authorization,
+        }),
+      ),
+    }),
+  );
+};
+```
+
+```ts
+// pages/article-read/index.ts
+
+export { loader } from "./api/loader";
+```
+
+이제 `/article/:slug` 형태의 라우트를  추가해보자. `article.$slug.tsx` 라우트 파일을 생성해 만들 수 있다:
+```tsx
+// app/routes/article.$slug.tsx
+
+export { loader } from "pages/article-read";
+```
+

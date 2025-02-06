@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "aef5ebb1cd3e85f1",
+        "id": "db743abae07109b0",
         "type": "tabs",
         "children": [
           {
-            "id": "b517b54df9d86e43",
+            "id": "80f081f28a698d41",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FSD/FSD Tutorial.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "FSD Tutorial"
+              "title": "New tab"
             }
           }
         ]
@@ -231,11 +227,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b517b54df9d86e43",
+  "active": "80f081f28a698d41",
   "lastOpenFiles": [
+    "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250206090718.png",
     "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
-    "FSD/FSD Tutorial.md",
     "conflict-files-obsidian-git.md",
     "Next.js/Pasted image 20250204082023.png",
     "Next.js/Pasted image 20250204075608.png",
@@ -252,7 +248,6 @@
     "Next.js/Pasted image 20250201123243.png",
     "Next.js/Pasted image 20250201123232.png",
     "Next.js/Pasted image 20250201123228.png",
-    "Next.js/Pasted image 20250201122346.png",
     "JavaScript/클로저.md",
     "JavaScript/실행 컨텍스트.md",
     "JavaScript/자바스크립트 메모리 구조 및 가비지 컬렉션.md",

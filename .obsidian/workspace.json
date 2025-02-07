@@ -11,10 +11,14 @@
             "id": "f0ab48572d768b03",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Frontend/나만의 FE 컨벤션.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "나만의 FE 컨벤션"
             }
           }
         ]
@@ -88,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5,
-    "collapsed": true
+    "width": 353.5
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -151,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Frontend/나만의 FE 컨벤션.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 나만의 FE 컨벤션"
             }
           },
           {
@@ -226,8 +230,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "feb1188d76b68e6b",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
+    "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
+    "Algorithm/2619. Array Prototype Last.md",
+    "Algorithm/146.  LRU Cache.md",
+    "Algorithm/1655 가운데를 말해요 <백준>.md",
+    "Next.js/Caching Data.md",
+    "Rust/15. 스마트 포인터.md",
     "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
     "FSD/FSD Tutorial.md",
     "conflict-files-obsidian-git.md",
@@ -259,12 +269,6 @@
     "JavaScript/Web Storage API.md",
     "Excalidraw/JavaScrpit GC.md",
     "JavaScript/What is JavaScript.md",
-    "JavaScript/Airbnb style guide.md",
-    "JavaScript/Array.prototype.sort.md",
-    "JavaScript/Map, Set, WeakMap, WeakSet.md",
-    "JavaScript/Web Socket.md",
-    "JavaScript/throw.md",
-    "Browser/Worklets.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",

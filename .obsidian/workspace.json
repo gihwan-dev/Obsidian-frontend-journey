@@ -209,12 +209,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 216.5,
-    "collapsed": true
+    "width": 216.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -231,8 +230,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "80f081f28a698d41",
+  "active": "feb1188d76b68e6b",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20250210083809.png",
     "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250206090718.png",
     "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",

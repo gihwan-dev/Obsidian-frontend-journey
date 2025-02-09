@@ -11,10 +11,14 @@
             "id": "80f081f28a698d41",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "FSD/FSD Tutorial.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "FSD Tutorial"
             }
           }
         ]

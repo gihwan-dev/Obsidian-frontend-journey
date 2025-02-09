@@ -1582,3 +1582,56 @@ export { loader } from "./api/loader";
 export { loader } from "pages/article-read";
 ```
 
+페이지 그자체는 세개의 메인 블록으로 구성되어 있다 -- 기사 헤더와 기사 본문 그리고 댓글 섹션. 이것들은 페이지에 대한 요약을 제공한다:
+```tsx
+// pages/article-read/ui/ArticleReadPage.tsx
+
+import { useLoaderData } from "@remix-run/react";
+
+import type { loader } from "../api/loader";
+import { ArticleMeta } from "./ArticleMeta";
+import { Comments } from "./Comments";
+
+export function ArticleReadPage() {
+  const { article } = useLoaderData<typeof loader>();
+
+  return (
+    <div className="article-page">
+      <div className="banner">
+        <div className="container">
+          <h1>{article.article.title}</h1>
+
+          <ArticleMeta />
+        </div>
+      </div>
+
+      <div className="container page">
+        <div className="row article-content">
+          <div className="col-md-12">
+            <p>{article.article.body}</p>
+            <ul className="tag-list">
+              {article.article.tagList.map((tag) => (
+                <li className="tag-default tag-pill tag-outline" key={tag}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div className="article-actions">
+          <ArticleMeta />
+        </div>
+
+        <div className="row">
+          <Comments />
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+`ArticleMeta`와 `Comments` 를 보자. 이 두 컴포넌트는 게시글 좋아요, 코멘트 남기기와 같은 쓰기 동작을 포함하고 있다. 이들이 동작하게 하기 위해서는 백엔드 파트를 구현해야 한다. 

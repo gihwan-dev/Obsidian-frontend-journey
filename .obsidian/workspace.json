@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d7215e6047b7cab5",
+        "id": "4d8296f9ad3277f1",
         "type": "tabs",
         "children": [
           {
-            "id": "f0ab48572d768b03",
+            "id": "b03e863003344d3f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Frontend/나만의 FE 컨벤션.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "나만의 FE 컨벤션"
+              "title": "New tab"
             }
           }
         ]
@@ -154,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Frontend/나만의 FE 컨벤션.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 나만의 FE 컨벤션"
+              "title": "Outline"
             }
           },
           {

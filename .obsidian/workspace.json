@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4d8296f9ad3277f1",
+        "id": "3342d26dc2f9f64f",
         "type": "tabs",
         "children": [
           {
-            "id": "b03e863003344d3f",
+            "id": "e6c918393c23b630",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데이터 시각화/데이터 시각화 교과서/Untitled.md",
+                "file": "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "시각적 속성"
             }
           }
         ]
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터 시각화/데이터 시각화 교과서/Untitled.md",
+                "file": "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of 시각적 속성"
             }
           },
           {
@@ -231,9 +231,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b03e863003344d3f",
+  "active": "e6c918393c23b630",
   "lastOpenFiles": [
-    "데이터 시각화/데이터 시각화 교과서/Untitled.md",
+    "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
+    "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
+    "데이터 시각화/데이터 시각화란?.md",
+    "데이터 시각화/데이터 시각화 교과서",
+    "데이터 시각화/데이터 시각화 교과서/2장 - 읽는 데이터에서 보는 데이터로.md",
     "데이터 시각화/데이터 시각화 교과서",
     "데이터 시각화",
     "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
@@ -268,16 +272,12 @@
     "JavaScript/Location API.md",
     "JavaScript/Javascript GC.md",
     "JavaScript/Prototype.md",
-    "JavaScript/Node.js Reactor Pattern.md",
-    "JavaScript/Web Storage API.md",
-    "Excalidraw/JavaScrpit GC.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",
     "TypeScript",
     "Network",
     "HTML",
-    "FSD",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

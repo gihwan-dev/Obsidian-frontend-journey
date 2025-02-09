@@ -11,10 +11,14 @@
             "id": "b03e863003344d3f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "데이터 시각화/데이터 시각화 교과서/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled"
             }
           }
         ]
@@ -150,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "데이터 시각화/데이터 시각화 교과서/Untitled.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Untitled"
             }
           },
           {
@@ -207,7 +212,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 216.5
+    "width": 216.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,8 +231,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0c81285cd13c3654",
+  "active": "b03e863003344d3f",
   "lastOpenFiles": [
+    "데이터 시각화/데이터 시각화 교과서/Untitled.md",
+    "데이터 시각화/데이터 시각화 교과서",
+    "데이터 시각화",
     "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
     "Algorithm/2619. Array Prototype Last.md",
     "Algorithm/146.  LRU Cache.md",
@@ -262,7 +271,6 @@
     "JavaScript/Node.js Reactor Pattern.md",
     "JavaScript/Web Storage API.md",
     "Excalidraw/JavaScrpit GC.md",
-    "JavaScript/What is JavaScript.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",
@@ -270,8 +278,6 @@
     "Network",
     "HTML",
     "FSD",
-    "TypeScript",
-    "Chrome University",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

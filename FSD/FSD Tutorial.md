@@ -2238,3 +2238,28 @@ export function parseAsArticle(data: FormData) {
 }
 ```
 
+약간 반복이 많고 길지만, 사람이 읽을 수 있는 오류 메시지를 위해 지불해야 하는 대가이다. Zod 스키마가 될 수 있지만, 그렇게 되면 프론트엔드에서 오류 메시지를 렌더링해야 하고, 이 폼에는 그런 복잡성이 필요하지 않다.
+
+마지막 남은 한 단계는 페이지, 액션, 로더를 라우트와 연결하는 것이다. 생성과 수정 모두 한 번에 작업했기 때문에 `editor._index.tsx`와 `editor.$slug.tsx` 모두에서 익스포트 해야한다:
+```ts
+// pages/article-edit/index.ts
+
+export { ArticleEditPage } from "./ui/ArticleEditPage";
+export { loader } from "./api/loader";
+export { action } from "./api/action";
+```
+
+```ts
+// app/routes/editor._index.tsx, app/routes/editor.$slug.tsx
+
+import { ArticleEditPage } from "pages/article-edit";
+
+export { loader, action } from "pages/article-edit";
+
+export default ArticleEditPage;
+```
+
+이제 끝났다. 이제 다음과 같은 화면을 볼 수 있다.
+
+![[Pasted image 20250210090952.png]]
+

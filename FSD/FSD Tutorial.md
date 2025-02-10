@@ -2114,4 +2114,127 @@ export function TagsInput({
 }
 ```
 
-이제 API 부분을 시작해보자. 
+이제 API 부분을 시작해보자. 로더는 URL을 보고, 게시글 슬러그를 포함하고 있다면 해당 게시글 데이터를 반환해야 하고, 그렇지 않다면 아무것도 반환하지 않아야 한다:
+```ts
+// pages/article-edit/api/loader.ts
+
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import type { FetchResponse } from "openapi-fetch";
+
+import { GET, requireUser } from "shared/api";
+
+async function throwAnyErrors<T, O, Media extends `${string}/${string}`>(
+  responsePromise: Promise<FetchResponse<T, O, Media>>,
+) {
+  const { data, error, response } = await responsePromise;
+
+  if (error !== undefined) {
+    throw json(error, { status: response.status });
+  }
+
+  return data as NonNullable<typeof data>;
+}
+
+export const loader = async ({ params, request }: LoaderFunctionArgs) => {
+  const currentUser = await requireUser(request);
+
+  if (!params.slug) {
+    return { article: null };
+  }
+
+  return throwAnyErrors(
+    GET("/articles/{slug}", {
+      params: { path: { slug: params.slug } },
+      headers: { Authorization: `Token ${currentUser.token}` },
+    }),
+  );
+};
+```
+
+액션은 새로운 필드 값들을 받고, 데이터 스키마를 바탕으로 실행한 후, 모든 필드가 옳바르다면 이 변경사항을 백엔드에 보낸다:
+```ts
+// pages/article-edit/api/action.ts
+
+import { json, redirect, type ActionFunctionArgs } from "@remix-run/node";
+
+import { POST, PUT, requireUser } from "shared/api";
+import { parseAsArticle } from "../model/parseAsArticle";
+
+export const action = async ({ request, params }: ActionFunctionArgs) => {
+  try {
+    const { body, description, title, tags } = parseAsArticle(
+      await request.formData(),
+    );
+    const tagList = tags?.split(",") ?? [];
+
+    const currentUser = await requireUser(request);
+    const payload = {
+      body: {
+        article: {
+          title,
+          description,
+          body,
+          tagList,
+        },
+      },
+      headers: { Authorization: `Token ${currentUser.token}` },
+    };
+
+    const { data, error } = await (params.slug
+      ? PUT("/articles/{slug}", {
+          params: { path: { slug: params.slug } },
+          ...payload,
+        })
+      : POST("/articles", payload));
+
+    if (error) {
+      return json({ errors: error }, { status: 422 });
+    }
+
+    return redirect(`/article/${data.article.slug ?? ""}`);
+  } catch (errors) {
+    return json({ errors }, { status: 400 });
+  }
+};
+```
+
+스키마는 `FormData`를 위한 파싱 함수 역할도 수행하는데, 이를 통해 깨끗한 필드들을 편리하게 얻거나 마지막에 처리할 오류들을 던질 수 있다:
+```ts
+// pages/article-edit/model/parseAsArticle.ts
+
+export function parseAsArticle(data: FormData) {
+  const errors = [];
+
+  const title = data.get("title");
+  if (typeof title !== "string" || title === "") {
+    errors.push("Give this article a title");
+  }
+
+  const description = data.get("description");
+  if (typeof description !== "string" || description === "") {
+    errors.push("Describe what this article is about");
+  }
+
+  const body = data.get("body");
+  if (typeof body !== "string" || body === "") {
+    errors.push("Write the article itself");
+  }
+
+  const tags = data.get("tags");
+  if (typeof tags !== "string") {
+    errors.push("The tags must be a string");
+  }
+
+  if (errors.length > 0) {
+    throw errors;
+  }
+
+  return { title, description, body, tags: data.get("tags") ?? "" } as {
+    title: string;
+    description: string;
+    body: string;
+    tags: string;
+  };
+}
+```
+

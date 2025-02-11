@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b12ccd631cad4715",
+        "id": "40dde327e39700ec",
         "type": "tabs",
         "children": [
           {
-            "id": "8d78a8725fa1c490",
+            "id": "23baeca0b702dd68",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Frontend/낮은 결합도와 높은 응집력(번역).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "낮은 결합도와 높은 응집력(번역)"
+              "title": "New tab"
             }
           }
         ]
@@ -154,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Frontend/낮은 결합도와 높은 응집력(번역).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 낮은 결합도와 높은 응집력(번역)"
+              "title": "Outline"
             }
           },
           {
@@ -229,31 +224,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d78a8725fa1c490",
+  "active": "23baeca0b702dd68",
   "lastOpenFiles": [
+    "Frontend/낮은 결합도와 높은 응집력(번역).md",
+    "Next.js/Pasted image 20250211093344.png",
+    "Next.js/Pasted image 20250211093256.png",
+    "Next.js/Pasted image 20250211093056.png",
+    "Next.js/Pasted image 20250211092954.png",
     "Next.js/Pasted image 20250211092200.png",
     "Next.js/Pasted image 20250211092149.png",
     "Next.js/Pasted image 20250211091604.png",
     "Next.js/Pasted image 20250211091342.png",
     "Frontend/Cohesion and Coupling - the difference(번역).md",
-    "Frontend/낮은 결합도와 높은 응집력(번역).md",
     "FSD/Layers.md",
     "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250210090952.png",
     "Next.js/Pasted image 20250210083809.png",
-    "Next.js/Pasted image 20250206090718.png",
     "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
     "conflict-files-obsidian-git.md",
-    "Next.js/Pasted image 20250204082023.png",
-    "Next.js/Pasted image 20250204075608.png",
     "FSD/FSD.md",
     "FSD/Entities.md",
     "FSD/Entities 와 Features의 규칙 정하기.md",
     "JavaScript/모듈 시스템.md",
     "publish.css",
     "JavaScript/이벤트 루프.md",
-    "Next.js/Pasted image 20250201123330.png",
-    "Next.js/Pasted image 20250201123322.png",
     "JavaScript/클로저.md",
     "JavaScript/실행 컨텍스트.md",
     "JavaScript/자바스크립트 메모리 구조 및 가비지 컬렉션.md",

@@ -1582,3 +1582,684 @@ export { loader } from "./api/loader";
 export { loader } from "pages/article-read";
 ```
 
+페이지 그자체는 세개의 메인 블록으로 구성되어 있다 -- 기사 헤더와 기사 본문 그리고 댓글 섹션. 이것들은 페이지에 대한 요약을 제공한다:
+```tsx
+// pages/article-read/ui/ArticleReadPage.tsx
+
+import { useLoaderData } from "@remix-run/react";
+
+import type { loader } from "../api/loader";
+import { ArticleMeta } from "./ArticleMeta";
+import { Comments } from "./Comments";
+
+export function ArticleReadPage() {
+  const { article } = useLoaderData<typeof loader>();
+
+  return (
+    <div className="article-page">
+      <div className="banner">
+        <div className="container">
+          <h1>{article.article.title}</h1>
+
+          <ArticleMeta />
+        </div>
+      </div>
+
+      <div className="container page">
+        <div className="row article-content">
+          <div className="col-md-12">
+            <p>{article.article.body}</p>
+            <ul className="tag-list">
+              {article.article.tagList.map((tag) => (
+                <li className="tag-default tag-pill tag-outline" key={tag}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div className="article-actions">
+          <ArticleMeta />
+        </div>
+
+        <div className="row">
+          <Comments />
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+`ArticleMeta`와 `Comments` 를 보자. 이 두 컴포넌트는 게시글 좋아요, 코멘트 남기기와 같은 쓰기 동작을 포함하고 있다. 이들이 동작하게 하기 위해서는 백엔드 파트를 구현해야 한다. 페이지의 `api` 세그먼트에 `action.ts`를 만들자:
+```ts
+// pages/article-read/api/action.ts
+
+import { redirect, type ActionFunctionArgs } from "@remix-run/node";
+import { namedAction } from "remix-utils/named-action";
+import { redirectBack } from "remix-utils/redirect-back";
+import invariant from "tiny-invariant";
+
+import { DELETE, POST, requireUser } from "shared/api";
+
+export const action = async ({ request, params }: ActionFunctionArgs) => {
+  const currentUser = await requireUser(request);
+
+  const authorization = { Authorization: `Token ${currentUser.token}` };
+
+  const formData = await request.formData();
+
+  return namedAction(formData, {
+    async delete() {
+      invariant(params.slug, "Expected a slug parameter");
+      await DELETE("/articles/{slug}", {
+        params: { path: { slug: params.slug } },
+        headers: authorization,
+      });
+      return redirect("/");
+    },
+    async favorite() {
+      invariant(params.slug, "Expected a slug parameter");
+      await POST("/articles/{slug}/favorite", {
+        params: { path: { slug: params.slug } },
+        headers: authorization,
+      });
+      return redirectBack(request, { fallback: "/" });
+    },
+    async unfavorite() {
+      invariant(params.slug, "Expected a slug parameter");
+      await DELETE("/articles/{slug}/favorite", {
+        params: { path: { slug: params.slug } },
+        headers: authorization,
+      });
+      return redirectBack(request, { fallback: "/" });
+    },
+    async createComment() {
+      invariant(params.slug, "Expected a slug parameter");
+      const comment = formData.get("comment");
+      invariant(typeof comment === "string", "Expected a comment parameter");
+      await POST("/articles/{slug}/comments", {
+        params: { path: { slug: params.slug } },
+        headers: { ...authorization, "Content-Type": "application/json" },
+        body: { comment: { body: comment } },
+      });
+      return redirectBack(request, { fallback: "/" });
+    },
+    async deleteComment() {
+      invariant(params.slug, "Expected a slug parameter");
+      const commentId = formData.get("id");
+      invariant(typeof commentId === "string", "Expected an id parameter");
+      const commentIdNumeric = parseInt(commentId, 10);
+      invariant(
+        !Number.isNaN(commentIdNumeric),
+        "Expected a numeric id parameter",
+      );
+      await DELETE("/articles/{slug}/comments/{id}", {
+        params: { path: { slug: params.slug, id: commentIdNumeric } },
+        headers: authorization,
+      });
+      return redirectBack(request, { fallback: "/" });
+    },
+    async followAuthor() {
+      const authorUsername = formData.get("username");
+      invariant(
+        typeof authorUsername === "string",
+        "Expected a username parameter",
+      );
+      await POST("/profiles/{username}/follow", {
+        params: { path: { username: authorUsername } },
+        headers: authorization,
+      });
+      return redirectBack(request, { fallback: "/" });
+    },
+    async unfollowAuthor() {
+      const authorUsername = formData.get("username");
+      invariant(
+        typeof authorUsername === "string",
+        "Expected a username parameter",
+      );
+      await DELETE("/profiles/{username}/follow", {
+        params: { path: { username: authorUsername } },
+        headers: authorization,
+      });
+      return redirectBack(request, { fallback: "/" });
+    },
+  });
+};
+```
+
+*slice*와 라우트에서 익스포트를 하자:
+```ts
+// pages/article-read/index.ts
+
+export { ArticleReadPage } from "./ui/ArticleReadPage";
+export { loader } from "./api/loader";
+export { action } from "./api/action";
+```
+
+```tsx
+// app/routes/article.$slug.tsx
+
+import { ArticleReadPage } from "pages/article-read";
+
+export { loader, action } from "pages/article-read";
+
+export default ArticleReadPage;
+```
+
+아직 게시글 읽기 페이지의 좋아요 버튼을 구현하지 않았다. 아래 코드를 `ArticleMeta.tsx` 파일에 적는다:
+```tsx
+// pages/article-read/ui/ArticleMeta.tsx
+
+import { Form, Link, useLoaderData } from "@remix-run/react";
+import { useContext } from "react";
+
+import { CurrentUser } from "shared/api";
+import type { loader } from "../api/loader";
+
+export function ArticleMeta() {
+  const currentUser = useContext(CurrentUser);
+  const { article } = useLoaderData<typeof loader>();
+
+  return (
+    <Form method="post">
+      <div className="article-meta">
+        <Link
+          prefetch="intent"
+          to={`/profile/${article.article.author.username}`}
+        >
+          <img src={article.article.author.image} alt="" />
+        </Link>
+
+        <div className="info">
+          <Link
+            prefetch="intent"
+            to={`/profile/${article.article.author.username}`}
+            className="author"
+          >
+            {article.article.author.username}
+          </Link>
+          <span className="date">{article.article.createdAt}</span>
+        </div>
+
+        {article.article.author.username == currentUser?.username ? (
+          <>
+            <Link
+              prefetch="intent"
+              to={`/editor/${article.article.slug}`}
+              className="btn btn-sm btn-outline-secondary"
+            >
+              <i className="ion-edit"></i> Edit Article
+            </Link>
+            &nbsp;&nbsp;
+            <button
+              name="_action"
+              value="delete"
+              className="btn btn-sm btn-outline-danger"
+            >
+              <i className="ion-trash-a"></i> Delete Article
+            </button>
+          </>
+        ) : (
+          <>
+            <input
+              name="username"
+              value={article.article.author.username}
+              type="hidden"
+            />
+            <button
+              name="_action"
+              value={
+                article.article.author.following
+                  ? "unfollowAuthor"
+                  : "followAuthor"
+              }
+              className={`btn btn-sm ${article.article.author.following ? "btn-secondary" : "btn-outline-secondary"}`}
+            >
+              <i className="ion-plus-round"></i>
+              &nbsp;{" "}
+              {article.article.author.following
+                ? "Unfollow"
+                : "Follow"}{" "}
+              {article.article.author.username}
+            </button>
+            &nbsp;&nbsp;
+            <button
+              name="_action"
+              value={article.article.favorited ? "unfavorite" : "favorite"}
+              className={`btn btn-sm ${article.article.favorited ? "btn-primary" : "btn-outline-primary"}`}
+            >
+              <i className="ion-heart"></i>
+              &nbsp; {article.article.favorited
+                ? "Unfavorite"
+                : "Favorite"}{" "}
+              Post{" "}
+              <span className="counter">
+                ({article.article.favoritesCount})
+              </span>
+            </button>
+          </>
+        )}
+      </div>
+    </Form>
+  );
+}
+```
+
+```tsx
+// pages/article-read/ui/Comment.tsx
+
+import { useContext } from "react";
+import { Form, Link, useLoaderData } from "@remix-run/react";
+
+import { CurrentUser } from "shared/api";
+import type { loader } from "../api/loader";
+
+export function Comments() {
+  const { comments } = useLoaderData<typeof loader>();
+  const currentUser = useContext(CurrentUser);
+
+  return (
+    <div className="col-xs-12 col-md-8 offset-md-2">
+      {currentUser !== null ? (
+        <Form
+          preventScrollReset={true}
+          method="post"
+          className="card comment-form"
+        >
+          <div className="card-block">
+            <textarea
+              required
+              className="form-control"
+              name="comment"
+              placeholder="Write a comment..."
+              rows={3}
+            ></textarea>
+          </div>
+          <div className="card-footer">
+            <img
+              src={currentUser.image}
+              className="comment-author-img"
+              alt=""
+            />
+            <button
+              className="btn btn-sm btn-primary"
+              name="_action"
+              value="createComment"
+            >
+              Post Comment
+            </button>
+          </div>
+        </Form>
+      ) : (
+        <div className="row">
+          <div className="col-xs-12 col-md-8 offset-md-2">
+            <p>
+              <Link to="/login">Sign in</Link>
+              &nbsp; or &nbsp;
+              <Link to="/register">Sign up</Link>
+              &nbsp; to add comments on this article.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {comments.comments.map((comment) => (
+        <div className="card" key={comment.id}>
+          <div className="card-block">
+            <p className="card-text">{comment.body}</p>
+          </div>
+
+          <div className="card-footer">
+            <Link
+              to={`/profile/${comment.author.username}`}
+              className="comment-author"
+            >
+              <img
+                src={comment.author.image}
+                className="comment-author-img"
+                alt=""
+              />
+            </Link>
+            &nbsp;
+            <Link
+              to={`/profile/${comment.author.username}`}
+              className="comment-author"
+            >
+              {comment.author.username}
+            </Link>
+            <span className="date-posted">{comment.createdAt}</span>
+            {comment.author.username === currentUser?.username && (
+              <span className="mod-options">
+                <Form method="post" preventScrollReset={true}>
+                  <input type="hidden" name="id" value={comment.id} />
+                  <button
+                    name="_action"
+                    value="deleteComment"
+                    style={{
+                      border: "none",
+                      outline: "none",
+                      backgroundColor: "transparent",
+                    }}
+                  >
+                    <i className="ion-trash-a"></i>
+                  </button>
+                </Form>
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+이제 게시글 좋아요 버튼이 정상적으로 동작해야 한다.
+
+![[Pasted image 20250210083809.png]]
+
+### 게시글 수정
+
+이 페이지가 구현할 마지막 페이지다. 이 페이지에서 흥미로운점은 유효성 검증이 있다는 것이다.
+
+페이지 자체인 `article-edit/ui/ArticleEditPage.tsx`는 간단하다:
+```tsx
+// pages/article-edit-/ui/ArticleEditPage.tsx
+
+import { Form, useLoaderData } from "@remix-run/react";
+
+import type { loader } from "../api/loader";
+import { TagsInput } from "./TagsInput";
+import { FormErrors } from "./FormErrors";
+
+export function ArticleEditPage() {
+  const article = useLoaderData<typeof loader>();
+
+  return (
+    <div className="editor-page">
+      <div className="container page">
+        <div className="row">
+          <div className="col-md-10 offset-md-1 col-xs-12">
+            <FormErrors />
+
+            <Form method="post">
+              <fieldset>
+                <fieldset className="form-group">
+                  <input
+                    type="text"
+                    className="form-control form-control-lg"
+                    name="title"
+                    placeholder="Article Title"
+                    defaultValue={article.article?.title}
+                  />
+                </fieldset>
+                <fieldset className="form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="description"
+                    placeholder="What's this article about?"
+                    defaultValue={article.article?.description}
+                  />
+                </fieldset>
+                <fieldset className="form-group">
+                  <textarea
+                    className="form-control"
+                    name="body"
+                    rows={8}
+                    placeholder="Write your article (in markdown)"
+                    defaultValue={article.article?.body}
+                  ></textarea>
+                </fieldset>
+                <fieldset className="form-group">
+                  <TagsInput
+                    name="tags"
+                    defaultValue={article.article?.tagList ?? []}
+                  />
+                </fieldset>
+
+                <button className="btn btn-lg pull-xs-right btn-primary">
+                  Publish Article
+                </button>
+              </fieldset>
+            </Form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+이 페이지는 현재 기사를 불러와서 상응하는 폼 필드에 값을 전달한다. 흥미로운 부분은 `FormErrors` 이다. 이 컴포넌트는 유효성 검증 결과를 전달받아 이를 유저에게 보여준다:
+```tsx
+import { useActionData } from "@remix-run/react";
+import type { action } from "../api/action";
+
+export function FormErrors() {
+  const actionData = useActionData<typeof action>();
+
+  return actionData?.errors != null ? (
+    <ul className="error-messages">
+      {actionData.errors.map((error) => (
+        <li key={error}>{error}</li>
+      ))}
+    </ul>
+  ) : null;
+}
+```
+
+여기서 우리는 액션이 `errors` 필드를 반환 한다는것을 알 수 있다.
+
+다음은 태그 입력이다:
+```tsx
+// pages/article-edit/ui/TagsInput.tsx
+
+import { useEffect, useRef, useState } from "react";
+
+export function TagsInput({
+  name,
+  defaultValue,
+}: {
+  name: string;
+  defaultValue?: Array<string>;
+}) {
+  const [tagListState, setTagListState] = useState(defaultValue ?? []);
+
+  function removeTag(tag: string): void {
+    const newTagList = tagListState.filter((t) => t !== tag);
+    setTagListState(newTagList);
+  }
+
+  const tagsInput = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    tagsInput.current && (tagsInput.current.value = tagListState.join(","));
+  }, [tagListState]);
+
+  return (
+    <>
+      <input
+        type="text"
+        className="form-control"
+        id="tags"
+        name={name}
+        placeholder="Enter tags"
+        defaultValue={tagListState.join(",")}
+        onChange={(e) =>
+          setTagListState(e.target.value.split(",").filter(Boolean))
+        }
+      />
+      <div className="tag-list">
+        {tagListState.map((tag) => (
+          <span className="tag-default tag-pill" key={tag}>
+            <i
+              className="ion-close-round"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) =>
+                [" ", "Enter"].includes(e.key) && removeTag(tag)
+              }
+              onClick={() => removeTag(tag)}
+            ></i>{" "}
+            {tag}
+          </span>
+        ))}
+      </div>
+    </>
+  );
+}
+```
+
+이제 API 부분을 시작해보자. 로더는 URL을 보고, 게시글 슬러그를 포함하고 있다면 해당 게시글 데이터를 반환해야 하고, 그렇지 않다면 아무것도 반환하지 않아야 한다:
+```ts
+// pages/article-edit/api/loader.ts
+
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import type { FetchResponse } from "openapi-fetch";
+
+import { GET, requireUser } from "shared/api";
+
+async function throwAnyErrors<T, O, Media extends `${string}/${string}`>(
+  responsePromise: Promise<FetchResponse<T, O, Media>>,
+) {
+  const { data, error, response } = await responsePromise;
+
+  if (error !== undefined) {
+    throw json(error, { status: response.status });
+  }
+
+  return data as NonNullable<typeof data>;
+}
+
+export const loader = async ({ params, request }: LoaderFunctionArgs) => {
+  const currentUser = await requireUser(request);
+
+  if (!params.slug) {
+    return { article: null };
+  }
+
+  return throwAnyErrors(
+    GET("/articles/{slug}", {
+      params: { path: { slug: params.slug } },
+      headers: { Authorization: `Token ${currentUser.token}` },
+    }),
+  );
+};
+```
+
+액션은 새로운 필드 값들을 받고, 데이터 스키마를 바탕으로 실행한 후, 모든 필드가 옳바르다면 이 변경사항을 백엔드에 보낸다:
+```ts
+// pages/article-edit/api/action.ts
+
+import { json, redirect, type ActionFunctionArgs } from "@remix-run/node";
+
+import { POST, PUT, requireUser } from "shared/api";
+import { parseAsArticle } from "../model/parseAsArticle";
+
+export const action = async ({ request, params }: ActionFunctionArgs) => {
+  try {
+    const { body, description, title, tags } = parseAsArticle(
+      await request.formData(),
+    );
+    const tagList = tags?.split(",") ?? [];
+
+    const currentUser = await requireUser(request);
+    const payload = {
+      body: {
+        article: {
+          title,
+          description,
+          body,
+          tagList,
+        },
+      },
+      headers: { Authorization: `Token ${currentUser.token}` },
+    };
+
+    const { data, error } = await (params.slug
+      ? PUT("/articles/{slug}", {
+          params: { path: { slug: params.slug } },
+          ...payload,
+        })
+      : POST("/articles", payload));
+
+    if (error) {
+      return json({ errors: error }, { status: 422 });
+    }
+
+    return redirect(`/article/${data.article.slug ?? ""}`);
+  } catch (errors) {
+    return json({ errors }, { status: 400 });
+  }
+};
+```
+
+스키마는 `FormData`를 위한 파싱 함수 역할도 수행하는데, 이를 통해 깨끗한 필드들을 편리하게 얻거나 마지막에 처리할 오류들을 던질 수 있다:
+```ts
+// pages/article-edit/model/parseAsArticle.ts
+
+export function parseAsArticle(data: FormData) {
+  const errors = [];
+
+  const title = data.get("title");
+  if (typeof title !== "string" || title === "") {
+    errors.push("Give this article a title");
+  }
+
+  const description = data.get("description");
+  if (typeof description !== "string" || description === "") {
+    errors.push("Describe what this article is about");
+  }
+
+  const body = data.get("body");
+  if (typeof body !== "string" || body === "") {
+    errors.push("Write the article itself");
+  }
+
+  const tags = data.get("tags");
+  if (typeof tags !== "string") {
+    errors.push("The tags must be a string");
+  }
+
+  if (errors.length > 0) {
+    throw errors;
+  }
+
+  return { title, description, body, tags: data.get("tags") ?? "" } as {
+    title: string;
+    description: string;
+    body: string;
+    tags: string;
+  };
+}
+```
+
+약간 반복이 많고 길지만, 사람이 읽을 수 있는 오류 메시지를 위해 지불해야 하는 대가이다. Zod 스키마가 될 수 있지만, 그렇게 되면 프론트엔드에서 오류 메시지를 렌더링해야 하고, 이 폼에는 그런 복잡성이 필요하지 않다.
+
+마지막 남은 한 단계는 페이지, 액션, 로더를 라우트와 연결하는 것이다. 생성과 수정 모두 한 번에 작업했기 때문에 `editor._index.tsx`와 `editor.$slug.tsx` 모두에서 익스포트 해야한다:
+```ts
+// pages/article-edit/index.ts
+
+export { ArticleEditPage } from "./ui/ArticleEditPage";
+export { loader } from "./api/loader";
+export { action } from "./api/action";
+```
+
+```ts
+// app/routes/editor._index.tsx, app/routes/editor.$slug.tsx
+
+import { ArticleEditPage } from "pages/article-edit";
+
+export { loader, action } from "pages/article-edit";
+
+export default ArticleEditPage;
+```
+
+이제 끝났다. 이제 다음과 같은 화면을 볼 수 있다.
+
+![[Pasted image 20250210090952.png]]
+

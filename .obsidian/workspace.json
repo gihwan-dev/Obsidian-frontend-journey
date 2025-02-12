@@ -11,10 +11,14 @@
             "id": "23baeca0b702dd68",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Frontend/응딥도와 결합도 - 그 차이.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "응딥도와 결합도 - 그 차이"
             }
           }
         ]
@@ -150,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Frontend/응딥도와 결합도 - 그 차이.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 응딥도와 결합도 - 그 차이"
             }
           },
           {
@@ -227,6 +232,7 @@
   "active": "23baeca0b702dd68",
   "lastOpenFiles": [
     "Frontend/낮은 결합도와 높은 응집력(번역).md",
+    "Frontend/응딥도와 결합도 - 그 차이.md",
     "Next.js/Pasted image 20250211093344.png",
     "Next.js/Pasted image 20250211093256.png",
     "Next.js/Pasted image 20250211093056.png",

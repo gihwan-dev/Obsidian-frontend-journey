@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "40dde327e39700ec",
+        "id": "eb627df4d2bcb910",
         "type": "tabs",
         "children": [
           {
-            "id": "23baeca0b702dd68",
+            "id": "f77c19ec36ce4aa8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Frontend/응딥도와 결합도 - 그 차이.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "응딥도와 결합도 - 그 차이"
+              "title": "New tab"
             }
           }
         ]
@@ -154,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Frontend/응딥도와 결합도 - 그 차이.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 응딥도와 결합도 - 그 차이"
+              "title": "Outline"
             }
           },
           {
@@ -208,7 +203,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -229,10 +224,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "23baeca0b702dd68",
+  "active": "f77c19ec36ce4aa8",
   "lastOpenFiles": [
-    "Frontend/낮은 결합도와 높은 응집력(번역).md",
-    "Frontend/응딥도와 결합도 - 그 차이.md",
+    "Programming General/응딥도와 결합도 - 그 차이(번역).md",
+    "Programming General/낮은 결합도와 높은 응집력(번역).md",
+    "Programming General/Separation of Concerns in ORM.md",
+    "Programming General/Cohesion and Coupling - the difference(번역).md",
+    "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
+    "Frontend/안전한 프론트엔드 서비스 및 SSR 서버 운영을 위한 오류 감지 시스템과 디버깅.md",
+    "Frontend/나만의 FE 컨벤션.md",
+    "Programming General",
     "Next.js/Pasted image 20250211093344.png",
     "Next.js/Pasted image 20250211093256.png",
     "Next.js/Pasted image 20250211093056.png",
@@ -241,7 +242,6 @@
     "Next.js/Pasted image 20250211092149.png",
     "Next.js/Pasted image 20250211091604.png",
     "Next.js/Pasted image 20250211091342.png",
-    "Frontend/Cohesion and Coupling - the difference(번역).md",
     "FSD/Layers.md",
     "FSD/FSD Tutorial.md",
     "Next.js/Pasted image 20250210090952.png",
@@ -264,10 +264,6 @@
     "JavaScript/Prototype.md",
     "JavaScript/Node.js Reactor Pattern.md",
     "JavaScript/Web Storage API.md",
-    "Excalidraw/JavaScrpit GC.md",
-    "JavaScript/What is JavaScript.md",
-    "JavaScript/Airbnb style guide.md",
-    "JavaScript/Array.prototype.sort.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",
@@ -276,7 +272,6 @@
     "HTML",
     "FSD",
     "TypeScript",
-    "Chrome University",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

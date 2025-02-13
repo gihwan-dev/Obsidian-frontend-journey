@@ -11,10 +11,14 @@
             "id": "f77c19ec36ce4aa8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "FSD/Layers.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Layers"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "깊은 복사",
+                "query": "tag:#bang",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -211,6 +215,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-kanban:Create new board": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -220,19 +226,18 @@
       "command-palette:Open command palette": false,
       "publish:Publish changes...": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": true,
       "obsidian-git:Open Git source control": false
     }
   },
   "active": "f77c19ec36ce4aa8",
   "lastOpenFiles": [
+    "Programming General/응집도와 결합도 - 차이점.md",
+    "Programming General/낮은 결합도와 높은 응집도.md",
+    "Programming General/ORM에서의 관심사 분리.md",
     "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "데이터 시각화/데이터 시각화 교과서",
     "데이터 시각화",
-    "Programming General/응집도와 결합도 - 차이점.md",
-    "Programming General/낮은 결합도와 높은 응집도.md",
-    "Programming General/ORM에서의 관심사 분리.md",
     "Next.js/Pasted image 20250212215919.png",
     "Next.js/Pasted image 20250212215856.png",
     "Next.js/Pasted image 20250212215731.png",

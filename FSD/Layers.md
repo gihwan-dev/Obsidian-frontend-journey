@@ -1,0 +1,1 @@
+*Layers*는 FSD 조직적 계층(organisational hierarchy)의 첫 번째 수준이다. 계층의 목적은 코드가

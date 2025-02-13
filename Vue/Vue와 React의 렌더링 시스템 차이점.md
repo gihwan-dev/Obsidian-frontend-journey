@@ -563,3 +563,218 @@ export default {
 ```
 
 이러한 설계는 Vue가 반응형 값을 안전하게 관리하면서도, 필요할 때 값을 쉽게 변경할 수 있도록 해줍니다. ref.value를 통한 접근은 약간 장황해 보일 수 있지만, 이는 의도적인 설계로, 반응형 값의 변경을 명시적으로 만들어 코드의 예측 가능성을 높여줍니다.
+
+> 만약에 ref.value.a.b를 computed로 감싸면 어떻게 되는거야? 이 경우 반응형으로 동작하지 못할거 같은데?
+
+아주 좋은 질문입니다! ref.value.a.b와 같은 중첩된 참조를 computed로 감싸는 경우를 자세히 살펴보겠습니다.
+
+먼저 예시 코드로 상황을 만들어보겠습니다:
+
+```javascript
+const data = ref({
+  a: {
+    b: 1
+  }
+})
+
+// computed로 중첩된 값 참조
+const computedB = computed(() => data.value.a.b)
+```
+
+이 경우 실제로는 반응형이 정상적으로 동작합니다! 그 이유를 단계별로 설명해드리겠습니다:
+
+1. ref의 내부 동작
+```javascript
+const data = ref({...})
+// 이때 ref 내부에서는 다음과 같은 일이 일어납니다:
+// 1. value getter가 호출될 때 track(data, 'value') 실행
+// 2. value 프로퍼티가 객체일 경우 reactive()로 자동 래핑됨
+```
+
+2. computed의 실행 과정
+```javascript
+computed(() => {
+  // 1. data.value 접근 시 ref의 track 동작
+  // 2. value가 반환될 때 이미 reactive로 래핑된 객체가 반환됨
+  // 3. .a.b 접근 시 reactive 객체의 get 트랩이 동작하여 각각 추적됨
+  return data.value.a.b
+})
+```
+
+이것이 동작하는 구체적인 예시를 보겠습니다:
+
+```javascript
+const data = ref({
+  a: {
+    b: 1
+  }
+})
+
+const computedB = computed(() => data.value.a.b)
+
+// 이런 모든 변경사항이 computedB에 반영됩니다
+data.value.a.b = 2  // 동작함
+data.value.a = { b: 3 }  // 동작함
+data.value = { a: { b: 4 } }  // 동작함
+
+// 반응형이 동작하지 않는 경우는:
+let extracted = data.value.a
+extracted.b = 5  // 이렇게 하면 반응형 연결이 끊어집니다
+```
+
+하지만 주의해야 할 몇 가지 엣지 케이스가 있습니다:
+
+1. 구조 분해 할당을 사용할 경우:
+```javascript
+const data = ref({
+  a: {
+    b: 1
+  }
+})
+
+// 이렇게 하면 반응형이 깨집니다!
+const { a } = data.value
+const computedB = computed(() => a.b)  // 반응형 동작 안 함
+```
+
+2. 중간 참조를 변수에 저장할 경우:
+```javascript
+const data = ref({
+  a: {
+    b: 1
+  }
+})
+
+// 이것도 반응형이 깨집니다!
+const aObj = data.value.a
+const computedB = computed(() => aObj.b)  // 반응형 동작 안 함
+```
+
+이러한 문제를 해결하기 위한 안전한 패턴들이 있습니다:
+
+1. 전체 참조 경로를 computed 내에서 유지하기:
+```javascript
+// 안전한 방법
+const computedB = computed(() => data.value.a.b)
+```
+
+2. toRef를 사용하여 특정 경로를 참조하기:
+```javascript
+// 이것도 안전합니다
+const bRef = toRef(() => data.value.a.b)
+const computedB = computed(() => bRef.value)
+```
+
+이러한 이해를 바탕으로, Vue3에서 복잡한 중첩 구조를 다룰 때는 다음과 같은 원칙을 따르는 것이 좋습니다:
+
+1. 가능한 한 전체 참조 경로를 유지하기
+2. 중간 참조를 저장해야 할 경우 toRef나 computed를 사용하기
+3. 구조 분해 할당이 필요한 경우 toRefs를 사용하기
+
+이렇게 하면 반응형 시스템의 모든 이점을 안전하게 활용할 수 있습니다.
+
+> 만약에 그럼 다음과 같은 경우는?
+> 
+> A 컴포넌트에서 B 컴포넌트로 ref.a.b를 전달함 B 컴포넌트에서 전달받은 props를 computed로 감쌈
+> 
+> 이 경우도 정상 동작하나?
+
+아주 좋은 질문입니다! props로 전달되는 ref의 동작을 이해하기 위해, 구체적인 예시를 통해 살펴보겠습니다. 여러 가지 시나리오를 단계별로 분석해보겠습니다.
+
+먼저 기본적인 컴포넌트 구조를 살펴보겠습니다:
+
+```javascript
+// ParentComponent.vue
+const data = ref({
+  a: {
+    b: 1
+  }
+})
+
+<template>
+  <ChildComponent :propB="data.a.b" />
+  <!-- 또는 -->
+  <ChildComponent :propData="data" />
+</template>
+
+// ChildComponent.vue
+const props = defineProps(['propB'])
+// 또는
+const props = defineProps(['propData'])
+
+const computedValue = computed(() => props.propB)
+// 또는
+const computedValue = computed(() => props.propData.a.b)
+```
+
+여기서 중요한 점은 Vue의 props 시스템이 어떻게 동작하는지 이해하는 것입니다. Vue는 props를 전달할 때 다음과 같은 규칙을 따릅니다:
+
+1. 단순 값(primitive) 전달의 경우:
+```javascript
+// ParentComponent.vue
+<ChildComponent :propB="data.a.b" />
+
+// ChildComponent.vue
+const computedValue = computed(() => props.propB)
+```
+이 경우, props는 단순히 값을 복사하여 전달하므로 반응형이 유지되지 않습니다. 부모 컴포넌트에서 data.a.b가 변경되면 props는 새로운 값을 받지만, 자식 컴포넌트의 computed는 props 자체의 변화만 감지할 수 있습니다.
+
+2. 객체나 ref 전체를 전달하는 경우:
+```javascript
+// ParentComponent.vue
+<ChildComponent :propData="data" />
+
+// ChildComponent.vue
+const computedValue = computed(() => props.propData.value.a.b)
+```
+이 경우는 반응형이 정상적으로 유지됩니다. 참조가 전달되므로 원본 ref의 반응형 시스템이 그대로 동작합니다.
+
+만약 안전하게 props의 반응형을 유지하고 싶다면, 다음과 같은 패턴을 사용할 수 있습니다:
+
+```javascript
+// ParentComponent.vue
+const data = ref({
+  a: {
+    b: 1
+  }
+})
+
+// toRef를 사용하여 특정 경로에 대한 ref를 생성
+const bRef = toRef(() => data.value.a.b)
+
+<template>
+  <ChildComponent :propB="bRef" />
+</template>
+
+// ChildComponent.vue
+const props = defineProps(['propB'])
+const computedValue = computed(() => props.propB.value)
+```
+
+또는 더 현대적인 방식으로 컴포지션 API를 활용할 수 있습니다:
+
+```javascript
+// ParentComponent.vue
+const data = ref({
+  a: {
+    b: 1
+  }
+})
+
+// ChildComponent.vue
+// props를 defineProps 대신 withDefaults를 사용하여 타입 안전성 확보
+const props = withDefaults(defineProps<{
+  propData: Ref<{ a: { b: number } }>
+}>(), {})
+
+// computed 대신 toRef를 사용하여 더 안전하게 참조
+const bValue = toRef(() => props.propData.value.a.b)
+```
+
+실제 개발 시에는 다음과 같은 점들을 고려하는 것이 좋습니다:
+
+1. 가능하면 전체 ref 객체를 전달하고, 자식 컴포넌트에서 필요한 부분을 참조하는 것이 안전합니다.
+2. 특정 중첩된 값만 전달해야 할 경우, toRef를 사용하여 반응형 참조를 만들어 전달합니다.
+3. props로 받은 값을 computed로 변환할 때는, 원본 데이터의 반응형이 유지되는지 항상 확인해야 합니다.
+
+이러한 패턴을 따르면 컴포넌트 간의 데이터 전달에서도 반응형을 안전하게 유지할 수 있습니다.

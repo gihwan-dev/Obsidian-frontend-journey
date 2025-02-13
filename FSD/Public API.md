@@ -1,0 +1,1 @@
+> [원문](https://feature-sliced.design/docs/reference/public-api#public-api-for-cross-imports)

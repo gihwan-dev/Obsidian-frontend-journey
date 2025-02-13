@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c0739e5cc426f2f1",
+        "id": "58ad8aee309cd32b",
         "type": "tabs",
         "children": [
           {
-            "id": "357b95b9c4e2a85a",
+            "id": "1b3d417e3741b7a6",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -193,7 +193,7 @@
             }
           },
           {
-            "id": "5f112b166eece261",
+            "id": "a35f478c2b373684",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -201,9 +201,19 @@
               "icon": "trident-custom",
               "title": "Mermaid Toolbar"
             }
+          },
+          {
+            "id": "5c80bb484bbcce6d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -225,8 +235,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "357b95b9c4e2a85a",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
+    "Untitled.canvas",
     "Vue/Vue와 React의 렌더링 시스템 차이점.md",
     "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
     "FSD/Layers.md",
@@ -266,7 +277,6 @@
     "JavaScript/이벤트 루프.md",
     "JavaScript/클로저.md",
     "JavaScript/실행 컨텍스트.md",
-    "JavaScript/자바스크립트 메모리 구조 및 가비지 컬렉션.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",
@@ -274,7 +284,6 @@
     "Network",
     "HTML",
     "Excalidraw/B.sori IA.canvas",
-    "Untitled.canvas",
     "Untitled 3.canvas",
     "Untitled 1.canvas",
     "Untitled 2.canvas"

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Next.js/Parallel Routes.md",
+                "file": "FSD/FSD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Parallel Routes"
+              "title": "FSD"
             }
           }
         ]
@@ -233,10 +233,14 @@
   },
   "active": "0f31ba58ea8dec9e",
   "lastOpenFiles": [
-    "Next.js/Caching Data.md",
-    "Next.js/Parallel Routes.md",
+    "FSD/Features.md",
+    "FSD/FSD Tutorial.md",
     "FSD/Layers.md",
     "FSD/Public API.md",
+    "FSD/Entities.md",
+    "FSD/Entities 와 Features의 규칙 정하기.md",
+    "Next.js/Parallel Routes.md",
+    "Next.js/Caching Data.md",
     "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
     "Programming General/ORM에서의 관심사 분리.md",
     "Programming General/낮은 결합도와 높은 응집도.md",
@@ -268,12 +272,8 @@
     "Algorithm/1655 가운데를 말해요 <백준>.md",
     "Rust/15. 스마트 포인터.md",
     "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
-    "FSD/FSD Tutorial.md",
     "FSD/FSD.md",
-    "FSD/Entities.md",
-    "FSD/Entities 와 Features의 규칙 정하기.md",
     "JavaScript/모듈 시스템.md",
-    "JavaScript/이벤트 루프.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",

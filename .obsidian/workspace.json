@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
+                "file": "FSD/Layers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "헬퍼 & 유틸이 쓰레기통이 되는 이유"
+              "title": "Layers"
             }
           }
         ]
@@ -233,10 +233,12 @@
   },
   "active": "0f31ba58ea8dec9e",
   "lastOpenFiles": [
+    "FSD/Public API.md",
+    "FSD/Layers.md",
+    "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
     "Programming General/ORM에서의 관심사 분리.md",
     "Programming General/낮은 결합도와 높은 응집도.md",
     "Vue/Vue와 React의 렌더링 시스템 차이점.md",
-    "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
     "Next.js/Pasted image 20250213091042.png",
     "Programming General/응집도와 결합도 - 차이점.md",
     "Next.js/Pasted image 20250212215919.png",
@@ -253,7 +255,6 @@
     "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "conflict-files-obsidian-git.md",
     "Programming General",
-    "FSD/Layers.md",
     "데이터 시각화/데이터 시각화란?.md",
     "데이터 시각화/데이터 시각화 교과서",
     "데이터 시각화/데이터 시각화 교과서/2장 - 읽는 데이터에서 보는 데이터로.md",
@@ -273,7 +274,6 @@
     "JavaScript/모듈 시스템.md",
     "JavaScript/이벤트 루프.md",
     "JavaScript/클로저.md",
-    "JavaScript/실행 컨텍스트.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",

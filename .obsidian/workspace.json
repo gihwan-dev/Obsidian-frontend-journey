@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FSD/FSD.md",
+                "file": "FSD/Layers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FSD"
+              "title": "Layers"
             }
           }
         ]
@@ -233,10 +233,11 @@
   },
   "active": "0f31ba58ea8dec9e",
   "lastOpenFiles": [
+    "FSD/Public API.md",
+    "FSD/FSD.md",
     "FSD/Features.md",
     "FSD/FSD Tutorial.md",
     "FSD/Layers.md",
-    "FSD/Public API.md",
     "FSD/Entities.md",
     "FSD/Entities 와 Features의 규칙 정하기.md",
     "Next.js/Parallel Routes.md",
@@ -272,7 +273,6 @@
     "Algorithm/1655 가운데를 말해요 <백준>.md",
     "Rust/15. 스마트 포인터.md",
     "Excalidraw/Drawing 2024-12-09 11.50.48.excalidraw.md",
-    "FSD/FSD.md",
     "JavaScript/모듈 시스템.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",

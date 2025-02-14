@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FSD/Slices and segments.md",
+                "file": "FSD/Public API.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Slices and segments"
+              "title": "Public API"
             }
           }
         ]
@@ -233,10 +233,10 @@
   },
   "active": "0f31ba58ea8dec9e",
   "lastOpenFiles": [
+    "FSD/Slices and segments.md",
     "Next.js/Pasted image 20250214225950.png",
     "FSD/Public API.md",
     "FSD/Public API 참조.md",
-    "FSD/Slices and segments.md",
     "Next.js/Pasted image 20250214223741.png",
     "FSD/Layers.md",
     "FSD/FSD.md",
@@ -260,7 +260,6 @@
     "Next.js/Pasted image 20250212204533.png",
     "Next.js/Pasted image 20250212201922.png",
     "Next.js/Pasted image 20250212201536.png",
-    "Next.js/Pasted image 20250212201210.png",
     "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "conflict-files-obsidian-git.md",

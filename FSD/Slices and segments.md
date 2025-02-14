@@ -22,4 +22,13 @@ Image inspired by [https://enterprisecraftsmanship.com/posts/cohesion-coupling-
 
 > 모든 슬라이스(그리고 슬라이스가 없는 계층의 세그먼트)는 public API 정의를 포함해야 한다.
 > 
-> 이 슬라이스/세그먼트 외부의 모듈들은
+> 이 슬라이스/세그먼트 외부의 모듈들은 슬라이스/세그먼트의 내부 파일 구조가 아닌 public API만 참조할 수 있다.
+
+public API의 근거와 생성에 대한 모범 사례는 [[Public API]] 참조에서 자세히 읽어볼 수 있다.
+
+## slice 그룹
+연관성이 높은 슬라이스들은 한 폴더에 구조적으로 그룹화할 수 있지만, 다른 슬라이스들과 동일한 격리 규칙을 따라야 한다 -- 해당 폴더 내에서는 **코드 공유가 없어야** 한다.
+![[Pasted image 20250214225950.png]]
+
+## Segments
+세그먼트는 세번째이자 마지마

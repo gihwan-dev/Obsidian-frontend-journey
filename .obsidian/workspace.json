@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "Public API"
             }
+          },
+          {
+            "id": "31410ebbd11944db",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/순환 참조 예시.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "순환 참조 예시"
+            }
           }
         ]
       }
@@ -92,7 +104,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 353.5,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -233,9 +246,13 @@
   },
   "active": "0f31ba58ea8dec9e",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20250215145441.png",
+    "Excalidraw/순환 참조 예시.md",
+    "Excalidraw/순환 참조 예시.png",
+    "FSD/Public API.md",
+    "Next.js/Pasted image 20250215144304.png",
     "FSD/Slices and segments.md",
     "Next.js/Pasted image 20250214225950.png",
-    "FSD/Public API.md",
     "FSD/Public API 참조.md",
     "Next.js/Pasted image 20250214223741.png",
     "FSD/Layers.md",
@@ -258,8 +275,6 @@
     "publish.css",
     "Next.js/Pasted image 20250212204911.png",
     "Next.js/Pasted image 20250212204533.png",
-    "Next.js/Pasted image 20250212201922.png",
-    "Next.js/Pasted image 20250212201536.png",
     "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "conflict-files-obsidian-git.md",
@@ -272,7 +287,6 @@
     "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
     "Algorithm/2619. Array Prototype Last.md",
     "Algorithm/146.  LRU Cache.md",
-    "Algorithm/1655 가운데를 말해요 <백준>.md",
     "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
     "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
     "Vue",

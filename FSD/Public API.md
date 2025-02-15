@@ -52,3 +52,32 @@ import type { EntityA } from "entities/A/@x/B";
 > 교차 임포트를 최소한으로 유지하고, 교차 임포트를 제거하는 것이 종종 비합리적인 **Entities 계층에서만 이 표기법을 사용**하도록 해라.
 
 ## 인덱스 파일에서의 문제
+`index.js`파일과 같은 인덱스 파일(배럴 파일이라고도 함)은 public API를 정의하는 가장 일반적인 방법이다. 만들기 간단하지만, 특정 프레임워크나 번들러에서 문제를 발생시킬 수 있다.
+
+### 순환 임포트
+순환 임포트는 둘 또는 그 이상의 파일들이 서로를 순환하며 임포트하는 것을 의미한다.
+![[Pasted image 20250215144304.png]]
+
+이런 상황은 종종 번들러가 해결하기 힘들 수 있고, 특정한 경우에는 디버깅 하기 힘든 런타임 에러를 발생시킬 수 있따.
+
+순환 임포트 에러는 인덱스 파일에서만 일어나는것은 아니지만, 인덱스 파일을 가지게 되면 순환 임포트를 만들 확률이 높아지는 것은 분명하다. 아래와 같이 슬라이스의 두 객체가 public API를 통해 드러나는 경우 흔히 일어난다:
+```jsx
+// pages/home/ui/HomePage.jsx
+import { loadUserStatistics } from "../"; // importing from pages/home/index.js
+
+export function HomePage() { /* … */ }
+```
+
+```js
+// paes/home/index.js
+export { HomePage } from "./ui/HomePage";
+export { loadUserStatistics } from "./api/loadUserStatistics";
+```
+
+![[Pasted image 20250215145441.png]]
+
+이런 문제를 해결하려면 다음 두 가지 원칙을 고려해야 한다. 만약 두 파일을 가지고 있고, 한 곳에서 다른 하나를 임포트 해야 한다면:
+- 같은 슬라이스에 있다면, *상대적 경로*를 사용해서 임포트 한다.
+- 다른 슬라이스에 있다면, 항상 *절대 경로*를 사용해 임포트 한다.
+
+## 

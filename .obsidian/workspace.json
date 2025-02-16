@@ -11,10 +11,14 @@
             "id": "2c061b9ce3c2a7bd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Programming General/낮은 결합도와 높은 응집도.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "낮은 결합도와 높은 응집도"
             }
           }
         ]
@@ -239,6 +243,11 @@
   },
   "active": "2c061b9ce3c2a7bd",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20250211091604.png",
+    "Programming General/낮은 결합도와 높은 응집도.md",
+    "Programming General/응집도와 결합도 - 차이점.md",
+    "Programming General/ORM에서의 관심사 분리.md",
+    "FSD/Entities 와 Features의 규칙 정하기.md",
     "README.md",
     "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
     "Vue/Vue와 React의 렌더링 시스템 차이점.md",
@@ -256,15 +265,10 @@
     "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
     "Frontend/나만의 FE 컨벤션.md",
     "FSD/FSD.md",
-    "FSD/Entities 와 Features의 규칙 정하기.md",
     "FSD/Entities.md",
     "HTML/<template> 태그.md",
     "HTML/HTML 파서.md",
     "HTML/HTML 토큰 상태 목록.md",
-    "JavaScript/불변성.md",
-    "JavaScript/모듈 시스템.md",
-    "Network/HTTP.md",
-    "Network/HTTPS.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",

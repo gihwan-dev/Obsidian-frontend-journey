@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9f18c73e180beddd",
+        "id": "be4fb084653a6743",
         "type": "tabs",
         "children": [
           {
-            "id": "2c061b9ce3c2a7bd",
+            "id": "0f31ba58ea8dec9e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "FSD/Slices and segments.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Slices and segments"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#browser",
+                "query": "깊은 복사",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 353.5
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -202,19 +206,9 @@
               "icon": "trident-custom",
               "title": "Mermaid Toolbar"
             }
-          },
-          {
-            "id": "93515dd0f721b55f",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -237,37 +231,35 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2c061b9ce3c2a7bd",
+  "active": "0f31ba58ea8dec9e",
   "lastOpenFiles": [
-    "README.md",
-    "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
-    "Vue/Vue와 React의 렌더링 시스템 차이점.md",
-    "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
-    "@assets/images/trenditional-install-progress.png.md",
-    "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
-    "함수형프로그래밍/제너레이터와 이터레이터.md",
-    "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
-    "Browser/래스터화.md",
-    "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
-    "CSS/CSS란?.md",
-    "CSS/CSS Position.md",
-    "CSS/CSS Display.md",
-    "Design/디자인 요소.md",
-    "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
-    "Frontend/나만의 FE 컨벤션.md",
-    "FSD/FSD.md",
-    "FSD/Entities 와 Features의 규칙 정하기.md",
-    "FSD/Entities.md",
-    "HTML/<template> 태그.md",
-    "HTML/HTML 파서.md",
-    "HTML/HTML 토큰 상태 목록.md",
-    "JavaScript/불변성.md",
-    "JavaScript/모듈 시스템.md",
-    "Network/HTTP.md",
-    "Network/HTTPS.md",
-    "Next.js/Pasted image 20250215152236.png",
-    "@assets/images",
-    "@assets",
+    "이전 블로그 글들/what-i-learn-with-rust.md",
+    "이전 블로그 글들/web-front-performance-improve.md",
+    "이전 블로그 글들/web-api-total-summary.md",
+    "이전 블로그 글들/small-error-become-fatal.md",
+    "이전 블로그 글들/pnpm-deep-dive.md",
+    "이전 블로그 글들/my-resume-strategy.md",
+    "이전 블로그 글들/monorepo-day-one.md",
+    "이전 블로그 글들/image-compression.md",
+    "이전 블로그 글들/how-works-react-deppdiev.md",
+    "이전 블로그 글들/how-react-optimize-with-key.md",
+    "이전 블로그 글들/how-can-use-svg-properly.md",
+    "이전 블로그 글들/how-browser-manage-cookie.md",
+    "이전 블로그 글들/grid-pannel-implement-3.md",
+    "이전 블로그 글들/grid-pannel-implement-2.md",
+    "이전 블로그 글들/grid-pannel-implement-1.md",
+    "이전 블로그 글들/graphql-relay.md",
+    "이전 블로그 글들/github-app.md",
+    "이전 블로그 글들/generator-iterator-iterable.md",
+    "이전 블로그 글들/error-resolve.md",
+    "이전 블로그 글들/error-boundary-deep-dive.md",
+    "이전 블로그 글들/book-study-programmers-brain-part4.md",
+    "이전 블로그 글들/book-study-programmers-brain-part3.md",
+    "이전 블로그 글들/book-study-programmers-brain-part-2.md",
+    "이전 블로그 글들/book-study-programmers-brain-part-1.md",
+    "이전 블로그 글들/book-study-fp-book-9.md",
+    "이전 블로그 글들/book-study-fp-book-8.md",
+    "이전 블로그 글들",
     "이미지저장소/virtual-dom-image.png",
     "이미지저장소/trenditional-install-progress.png",
     "이미지저장소/symlinks-image.png",
@@ -277,14 +269,16 @@
     "이미지저장소/pnpm-content-addressable.png",
     "이미지저장소/panel.png",
     "이미지저장소/panel-drag-info.png",
-    "이미지저장소/images",
-    "이전 블로그 글들/images",
-    "이전 블로그 글들/blog",
-    "이전 블로그 글들",
+    "이미지저장소/panel-drag-and-drop.gif",
     "publish.css",
     "Programming General",
     "데이터 시각화/데이터 시각화 교과서",
     "데이터 시각화/데이터 시각화 교과서",
+    "데이터 시각화",
+    "이미지저장소/화면 기록 2024-11-29 오후 4.55.59.mov",
+    "이미지저장소/화면 기록 2024-11-29 오후 12.09.35.mov",
+    "Vue",
+    "TypeScript",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming General/낮은 결합도와 높은 응집도.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "낮은 결합도와 높은 응집도"
+              "title": "README"
             }
           }
         ]
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -243,8 +244,8 @@
   },
   "active": "2c061b9ce3c2a7bd",
   "lastOpenFiles": [
-    "Next.js/Pasted image 20250211091604.png",
     "Programming General/낮은 결합도와 높은 응집도.md",
+    "Next.js/Pasted image 20250211091604.png",
     "Programming General/응집도와 결합도 - 차이점.md",
     "Programming General/ORM에서의 관심사 분리.md",
     "FSD/Entities 와 Features의 규칙 정하기.md",
@@ -280,7 +281,6 @@
     "이미지저장소/portfolio-editor.png",
     "이미지저장소/pnpm-content-addressable.png",
     "이미지저장소/panel.png",
-    "이미지저장소/panel-drag-info.png",
     "이미지저장소/images",
     "이전 블로그 글들/images",
     "이전 블로그 글들/blog",

@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Programming General/응집도와 결합도 - 차이점.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "응집도와 결합도 - 차이점"
+            }
+          },
+          {
+            "id": "21a2fc969c21ed05",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -92,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -242,15 +256,19 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2c061b9ce3c2a7bd",
+  "active": "21a2fc969c21ed05",
   "lastOpenFiles": [
-    "Programming General/낮은 결합도와 높은 응집도.md",
-    "Next.js/Pasted image 20250211091604.png",
     "Programming General/응집도와 결합도 - 차이점.md",
-    "Programming General/ORM에서의 관심사 분리.md",
-    "FSD/Entities 와 Features의 규칙 정하기.md",
-    "README.md",
+    "Untitled.md",
     "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
+    "Programming General/ORM에서의 관심사 분리.md",
+    "React.js/Push Notification.md",
+    "React.js/리액트에서 클린코드란 무엇일까?.md",
+    "Programming General/낮은 결합도와 높은 응집도.md",
+    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
+    "README.md",
+    "Next.js/Pasted image 20250211091604.png",
+    "FSD/Entities 와 Features의 규칙 정하기.md",
     "Vue/Vue와 React의 렌더링 시스템 차이점.md",
     "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "@assets/images/trenditional-install-progress.png.md",
@@ -267,9 +285,6 @@
     "Frontend/나만의 FE 컨벤션.md",
     "FSD/FSD.md",
     "FSD/Entities.md",
-    "HTML/<template> 태그.md",
-    "HTML/HTML 파서.md",
-    "HTML/HTML 토큰 상태 목록.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",

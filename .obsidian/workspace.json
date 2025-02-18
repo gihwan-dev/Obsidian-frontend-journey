@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3aeec6fdbcfbeeb3",
+        "id": "e4238b611f5d7fb4",
         "type": "tabs",
         "children": [
           {
-            "id": "509f70a3302d278e",
+            "id": "eecffc3e400095dc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -238,8 +237,16 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "509f70a3302d278e",
+  "active": "eecffc3e400095dc",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",
+    "Next.js/Pasted image 20250218082916.png",
+    "Next.js/Pasted image 20250217082549.png",
+    "Next.js/Pasted image 20250217082544.png",
+    "Next.js/Pasted image 20250217081900.png",
+    "Next.js/Pasted image 20250217080925.png",
+    "Next.js/Pasted image 20250217080922.png",
     "Programming General/응집도와 결합도 - 차이점.md",
     "Untitled.md",
     "Programming General/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
@@ -265,19 +272,11 @@
     "Design/디자인 요소.md",
     "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
     "Frontend/나만의 FE 컨벤션.md",
-    "FSD/FSD.md",
-    "FSD/Entities.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",
     "이미지저장소/virtual-dom-image.png",
     "이미지저장소/trenditional-install-progress.png",
-    "이미지저장소/symlinks-image.png",
-    "이미지저장소/svg-storybook.png",
-    "이미지저장소/structureClone.png",
-    "이미지저장소/portfolio-editor.png",
-    "이미지저장소/pnpm-content-addressable.png",
-    "이미지저장소/panel.png",
     "이미지저장소/images",
     "이전 블로그 글들/images",
     "이전 블로그 글들/blog",

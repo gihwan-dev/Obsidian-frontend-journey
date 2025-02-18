@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
+                "file": "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 시각적 속성"
+              "title": "Outline of 타입스크립트 개념과 원리 그리고 응용"
             }
           },
           {
@@ -218,12 +218,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 216.5,
-    "collapsed": true
+    "width": 549
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,7 +240,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "eecffc3e400095dc",
+  "active": "feb1188d76b68e6b",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",

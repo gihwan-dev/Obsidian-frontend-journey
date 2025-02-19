@@ -58,47 +58,13 @@ HTML을 예로 들어보겠습니다. 주석을 공동 배치하는 모든 이�
 ## Exceptions
 물론 시스템 전체 또는 일부를 아우르는 문서와 요소들이 어떻게 통합되는지에 대한 좋은 논거가 있습니다. 그리고 컴포넌트들을 아우르는 통합 테스트나 엔드투엔드 테스트는 어디에 둘까요? 이것들이 예외라고 생각할 수 있지만, 실제로는 위에서 언급한 원칙을 잘 따를 수 있습니다.
 
-- English: If I have a part of my app associated with user authentication and I want to document that flow, I can put a README.md file in the folder that has all of the modules associated with user authentication.
-- 한국어: 만약 제가 사용자 인증과 관련된 앱의 일부분이 있고 그 흐름을 문서화하고 싶다면, 사용자 인증과 관련된 모든 모듈이 있는 폴더에 README.md 파일을 둘 수 있습니다.
+만약 제가 사용자 인증과 관련된 앱의 일부분이 있고 그 흐름을 문서화하고 싶다면, 사용자 인증과 관련된 모든 모듈이 있는 폴더에 README.md 파일을 둘 수 있습니다. 만약 그 흐름에 대한 통합 테스트를 작성해야 한다면, 그 테스트들을 위한 파일을 같은 폴더에 둘 수 있습니다. 엔드투엔드 테스트의 경우, 일반적으로 프로젝트의 루트에 두는 것이 더 합리적입니다.
 
-네, 계속해서 번역하겠습니다.
+이들은 프로젝트 자체를 넘어 시스템의 다른 부분까지 아우르기 때문에, 별도의 디렉토리에 두는 것이 제게는 합리적으로 보입니다. 이들은 실제로 src/ 파일들과 매핑되지 않습니다. 사실, E2E 테스트는 src/가 어떻게 구성되어 있는지 전혀 신경 쓰지 않습니다. src/ 디렉토리의 파일들을 리팩토링하고 이동하는 것이 E2E 테스트를 변경해야 할 필요성을 만들지 않아야 합니다.
 
-- English: If I need to write integration tests for that flow, I could place the file for those tests in that same folder.
-- 한국어: 만약 그 흐름에 대한 통합 테스트를 작성해야 한다면, 그 테스트들을 위한 파일을 같은 폴더에 둘 수 있습니다.
+## Conclusion
+우리의 목표는 가능한 한 유지보수가 쉬운 소프트웨어를 만드는 것입니다. 주석을 공동 배치함으로써 얻는 유지보수성, 적용성, 사용 용이성의 이점들을 다른 것들의 공동 배치를 통해서도 얻을 수 있습니다. 만약 한 번도 시도해보지 않았다면, 한번 시도해보시기를 추천합니다.
 
-- English: For end-to-end tests, those generally make more sense to go at the root of the project.
-- 한국어: 엔드투엔드 테스트의 경우, 일반적으로 프로젝트의 루트에 두는 것이 더 합리적입니다.
+추신. 만약 "관심사의 분리" 원칙을 위반하는 것이 걱정된다면, Pete Hunt의 이 강연을 보고 그 의미를 다시 평가해보시기를 추천합니다 😀.
 
-- English: They span beyond the project itself and into other parts of the system, so it makes sense to me for those to be in a separate directory.
-- 한국어: 이들은 프로젝트 자체를 넘어 시스템의 다른 부분까지 아우르기 때문에, 별도의 디렉토리에 두는 것이 제게는 합리적으로 보입니다.
-
-- English: They don't really map to the src/ files.
-- 한국어: 이들은 실제로 src/ 파일들과 매핑되지 않습니다.
-
-- English: In fact, E2E tests don't really care how the src/ is organized at all.
-- 한국어: 사실, E2E 테스트는 src/가 어떻게 구성되어 있는지 전혀 신경 쓰지 않습니다.
-
-- English: Refactoring and moving around files in the src/ directory should not necessitate changing the E2E tests at all.
-- 한국어: src/ 디렉토리의 파일들을 리팩토링하고 이동하는 것이 E2E 테스트를 변경해야 할 필요성을 만들지 않아야 합니다.
-
-
-- English: Our goal here is to build software that is as simple to maintain as possible.
-- 한국어: 우리의 목표는 가능한 한 유지보수가 쉬운 소프트웨어를 만드는 것입니다.
-
-- English: The same benefits of maintainability, applicability, and ease of use we get from co-locating our comments we get by co-location of other things as well.
-- 한국어: 주석을 공동 배치함으로써 얻는 유지보수성, 적용성, 사용 용이성의 이점들을 다른 것들의 공동 배치를 통해서도 얻을 수 있습니다.
-
-- English: If you've never tried it out, I recommend you give it a shot.
-- 한국어: 만약 한 번도 시도해보지 않았다면, 한번 시도해보시기를 추천합니다.
-
-- English: P.S. If you're concerned about violating "separation of concerns" I recommend you check out this talk by Pete Hunt and re-evaluate what that means 😀.
-- 한국어: 추신. 만약 "관심사의 분리" 원칙을 위반하는 것이 걱정된다면, Pete Hunt의 이 강연을 보고 그 의미를 다시 평가해보시기를 추천합니다 😀.
-
-- English: P.P.S. I should also note that this applies great to images and really any other resource as well.
-- 한국어: 추신의 추신. 이는 이미지와 실제로 다른 모든 리소스에도 훌륭하게 적용된다는 점도 언급해야겠습니다.
-
-- English: And when you use a tool like webpack, co-locating those resources is crazy easy too.
-- 한국어: 그리고 webpack과 같은 도구를 사용하면, 이러한 리소스들을 공동 배치하는 것도 엄청나게 쉽습니다.
-
-- English: Honestly, this is one of the core value propositions of webpack IMO.
-- 한국어: 솔직히 말해서, 이것이 제 의견으로는 webpack의 핵심 가치 제안 중 하나입니다.
+추신의 추신. 이는 이미지와 실제로 다른 모든 리소스에도 훌륭하게 적용된다는 점도 언급해야겠습니다. 그리고 webpack과 같은 도구를 사용하면, 이러한 리소스들을 공동 배치하는 것도 엄청나게 쉽습니다. 솔직히 말해서, 이것이 제 의견으로는 webpack의 핵심 가치 제안 중 하나입니다.

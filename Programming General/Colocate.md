@@ -42,8 +42,7 @@ HTML을 예로 들어보겠습니다. 주석을 공동 배치하는 모든 이�
 
 만약 그 함수를 사용하는 파일에 직접 두었다면, 상황은 완전히 달라졌을 것입니다. 복잡한 유틸리티 함수의 단위 테스트를 하지 말라는 것이 아닙니다(제발 하세요), 하지만 그것들을 필요한 곳 가까이에 두면 문제를 피하는 데 도움이 됩니다.
 
-- English: And for heaven's sake, please DELETE THIS ESLINT RULE and all rules like it.
-- 한국어: 그리고 제발 부탁드리니, 이 ESLINT 규칙과 이와 비슷한 모든 규칙들을 삭제해 주세요.
+> [!danger] 그리고 제발 부탁드리니, 이 ESLINT 규칙과 이와 비슷한 모든 규칙들을 삭제해 주세요.
 
 - English: The concept of co-location can be boiled down to this fundamental principle:
 - 한국어: 공동 배치의 개념은 다음과 같은 기본 원칙으로 요약될 수 있습니다:

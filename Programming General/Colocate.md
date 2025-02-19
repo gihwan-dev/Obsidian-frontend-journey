@@ -44,17 +44,13 @@ HTML을 예로 들어보겠습니다. 주석을 공동 배치하는 모든 이�
 
 > [!danger] 그리고 제발 부탁드리니, 이 ESLINT 규칙과 이와 비슷한 모든 규칙들을 삭제해 주세요.
 
-- English: The concept of co-location can be boiled down to this fundamental principle:
-- 한국어: 공동 배치의 개념은 다음과 같은 기본 원칙으로 요약될 수 있습니다:
 
-- English: Place code as close to where it's relevant as possible
-- 한국어: 코드를 관련된 곳과 최대한 가깝게 배치하세요
+## The principle
+**공동 배치의 개념은 다음과 같은 기본 원칙으로 요약될 수 있습니다:**
 
-- English: You might also say: "Things that change together should be located as close as reasonable." (Dan Abramov said something like this to me once).
-- 한국어: "함께 변경되는 것들은 합리적으로 가능한 한 가깝게 위치해야 한다"라고 말할 수도 있습니다. (Dan Abramov가 한번 저에게 이와 비슷한 말을 했습니다).
+> [!note] 코드를 관련된 곳과 최대한 가깝게 배치하세요
 
-- English: Aside from avoiding the problems discussed earlier, there are other benefits to structuring your projects this way.
-- 한국어: 앞서 논의한 문제들을 피하는 것 외에도, 프로젝트를 이런 방식으로 구조화하는 데는 다른 이점들이 있습니다.
+"함께 변경되는 것들은 합리적으로 가능한 한 가깝게 위치해야 한다"라고 말할 수도 있습니다. (Dan Abramov가 한번 저에게 이와 비슷한 말을 했습니다). 앞서 논의한 문제들을 피하는 것 외에도, 프로젝트를 이런 방식으로 구조화하는 데는 다른 이점들이 있습니다.
 
 - English: Taking a component and turning it into an open source project is often as simple as copy/pasting the folder to another project and publishing that to npm.
 - 한국어: 컴포넌트를 오픈 소스 프로젝트로 전환하는 것은 대개 폴더를 다른 프로젝트에 복사/붙여넣기 하고 npm에 배포하는 것만큼 간단합니다.

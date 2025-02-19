@@ -11,10 +11,14 @@
             "id": "6a9e81283ff12f36",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "수량 데이터의 시각화"
             }
           }
         ]
@@ -239,6 +243,8 @@
   },
   "active": "6a9e81283ff12f36",
   "lastOpenFiles": [
+    "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
+    "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "Programming General/Colocate.md",
     "conflict-files-obsidian-git.md",
     "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",
@@ -260,9 +266,7 @@
     "Next.js/Pasted image 20250211091604.png",
     "FSD/Entities 와 Features의 규칙 정하기.md",
     "Vue/Vue와 React의 렌더링 시스템 차이점.md",
-    "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "@assets/images/trenditional-install-progress.png.md",
-    "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "함수형프로그래밍/제너레이터와 이터레이터.md",
     "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "Browser/래스터화.md",

@@ -50,22 +50,13 @@ HTML을 예로 들어보겠습니다. 주석을 공동 배치하는 모든 이�
 
 > [!note] 코드를 관련된 곳과 최대한 가깝게 배치하세요
 
-"함께 변경되는 것들은 합리적으로 가능한 한 가깝게 위치해야 한다"라고 말할 수도 있습니다. (Dan Abramov가 한번 저에게 이와 비슷한 말을 했습니다). 앞서 논의한 문제들을 피하는 것 외에도, 프로젝트를 이런 방식으로 구조화하는 데는 다른 이점들이 있습니다.
+"함께 변경되는 것들은 합리적으로 가능한 한 가깝게 위치해야 한다"라고 말할 수도 있습니다. (Dan Abramov가 한번 저에게 이와 비슷한 말을 했습니다). 
 
-- English: Taking a component and turning it into an open source project is often as simple as copy/pasting the folder to another project and publishing that to npm.
-- 한국어: 컴포넌트를 오픈 소스 프로젝트로 전환하는 것은 대개 폴더를 다른 프로젝트에 복사/붙여넣기 하고 npm에 배포하는 것만큼 간단합니다.
+## Open Source made easy(-er)
+앞서 논의한 문제들을 피하는 것 외에도, 프로젝트를 이런 방식으로 구조화하는 데는 다른 이점들이 있습니다. 컴포넌트를 오픈 소스 프로젝트로 전환하는 것은 대개 폴더를 다른 프로젝트에 복사/붙여넣기 하고 npm에 배포하는 것만큼 간단합니다. 그런 다음 프로젝트에 설치하고 `require/import` 구문을 업데이트하기만 하면 끝입니다.
 
-- English: Then you just install it in your project and update your require/import statements and you're good to go.
-- 한국어: 그런 다음 프로젝트에 설치하고 require/import 구문을 업데이트하기만 하면 끝입니다.
-
-- English: Sure there's a good argument for documentation that spans the whole or part of a system and how things integrate together.
-- 한국어: 물론 시스템 전체 또는 일부를 아우르는 문서와 요소들이 어떻게 통합되는지에 대한 좋은 논거가 있습니다.
-
-- English: And where would you put integration or end-to-end tests that span across components?
-- 한국어: 그리고 컴포넌트들을 아우르는 통합 테스트나 엔드투엔드 테스트는 어디에 둘까요?
-
-- English: You might think those are exceptions, but they can actually subscribe nicely to the principle mentioned above.
-- 한국어: 이것들이 예외라고 생각할 수 있지만, 실제로는 위에서 언급한 원칙을 잘 따를 수 있습니다.
+## Exceptions
+물론 시스템 전체 또는 일부를 아우르는 문서와 요소들이 어떻게 통합되는지에 대한 좋은 논거가 있습니다. 그리고 컴포넌트들을 아우르는 통합 테스트나 엔드투엔드 테스트는 어디에 둘까요? 이것들이 예외라고 생각할 수 있지만, 실제로는 위에서 언급한 원칙을 잘 따를 수 있습니다.
 
 - English: If I have a part of my app associated with user authentication and I want to document that flow, I can put a README.md file in the folder that has all of the modules associated with user authentication.
 - 한국어: 만약 제가 사용자 인증과 관련된 앱의 일부분이 있고 그 흐름을 문서화하고 싶다면, 사용자 인증과 관련된 모든 모듈이 있는 폴더에 README.md 파일을 둘 수 있습니다.

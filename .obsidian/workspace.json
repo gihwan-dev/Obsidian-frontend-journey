@@ -222,7 +222,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 549
+    "width": 549,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,7 +241,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "feb1188d76b68e6b",
+  "active": "eecffc3e400095dc",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",

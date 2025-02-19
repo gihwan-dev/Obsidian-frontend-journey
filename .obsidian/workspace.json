@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e4238b611f5d7fb4",
+        "id": "e6d1c57abbabc36f",
         "type": "tabs",
         "children": [
           {
-            "id": "eecffc3e400095dc",
+            "id": "6a9e81283ff12f36",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.7"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -239,7 +237,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "eecffc3e400095dc",
+  "active": "6a9e81283ff12f36",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",

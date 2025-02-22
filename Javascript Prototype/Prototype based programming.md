@@ -16,3 +16,28 @@
 리버만의 예시는 프로토타입 기반 프로그래밍의 주요 아이디어가 구체적인 예시를 사용해 객체를 표현하고, 그 다음 복제나 새로운 속성 추가를 통해 모델의 새로운 지식을 표현하는 것임을 보여준다.
 
 ## 객체 생성(Object creation)
+객체는 속성들의 집합이다. 속성은 키와 값 사이의 연관 관계이다. 속성의 값은 함수가 될 수도 있는데, 이 경우 그 속성을 메서드라고 부른다. 자바스크립트에서 객체를 생성하는 방법은 여러 가지가 있지만, 모두 '무(無)에서의 객체 생성' 또는 '기존 객체의 복제'라는 두 가지 범주 중 하나에 속한다.
+
+무(無)에서의 객체 생성은 기존에 정의된 객체를 복제하지 않고도 새로운 객체를 생성할 수 있게 해준다:
+```js
+// 리터럴 객체 표기법을 통한 생성
+const dog = { name: "Max", breed: "Poodle" };
+```
+
+리터럴 객체 표기법을 통한 생성의 대안은 생성자 함수를 작성하고 객체 인스턴스를 `new` 키워드와 함께 생성하는 방식이다. 각 인스턴스 객체들은 자신만의 프로퍼티를 가진다:
+```js
+function Dog(name, breed) {
+	this.name = name;
+	this.breed = breed;
+	bard: function () {
+		console.log("Woof!");
+	};
+};
+
+const poodle = new Dog("Max", "Poodle");
+const dalmatian = new Dog("Bobby", "Dalmatian");
+
+console.log(poodle.name); // 'Max'
+console.log(dalmatian.name); // 'Bobby'
+```
+

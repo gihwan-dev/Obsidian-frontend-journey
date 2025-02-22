@@ -1,3 +1,4 @@
+> [원문](https://github.com/mikeesto/prototype-programming/blob/master/README.md)
 ## 소개(Introduction)
 프로토타입 기반 프로그래밍(Prototype Baesd Programming)은 객체 지향 프로그래밍(Object Orientated Programming)의 한 형태이다. 클래스가 없고 객체에만 의존하기 때문에 일반적으로 객체 기반 프로그래밍(Object Based Programming)이라고 불린다. 객체는 값, 메서드, 다른 객체에 대한 참조 등을 가질 수 있다.
 
@@ -162,4 +163,99 @@ console.log(modifier.sum()); // 25
 
 프로퍼티나 변수에 액세스할 때 마다 조회 작업이 반복된다. 존재하지 않는 프로퍼티에 액세스하면 항상 프로토타입 체인을 완전히 순회하게 된다. 또한 객체의 프로퍼티를 반복할 때 프로토타입 체인에 있는 모든 열거 가능한 프로퍼티가 열거된다. 그 결과 프로토타입 기반 언어에서 프로퍼티에 액세스하는 것은 일반적으로 Java와 같은 언어에서 변수에 액세스하는 것보다 훨씬 느리다.
 
-## 프로토타입 vs 클래스
+## Prototypes vs Classes
+클래스 기반 언어에서는 클래스가 먼저 정의된 다음 해당 클래스를 기반으로 객체가 인스턴스화 된다. 객체는 그 동작을 정의하는 클래스 없이는 존재할 수 없다. 객체는 일단 생성되면 그 동작을 확장할 수 없다. 객체는 일단 생성되면 그 동작을 확장할 수 없다. 이를 위해 클래스는 어느 정도의 확실성을 제공한다. 개와 고양이 객체가 Animal 클래스에서 인스턴스화된 경우 프로그래머는 두 객체에서 동일한 속성과 동작을 기대하는 것이 합리적이다.
+
+반대로 프로토타입 기반 언어에서는 객체가 기본 엔티티다. 클래스 구조가 없다. 객체의 프로토타입은 객체가 링크된 또 다른 객체일 뿐이다. 모든 객체에는 하나의 프로토타입 링크만 있으므로 프로토타입을 통해 단일 상속만 구현할 수 있다.
+
+기존 객체를 기반으로 새 객체를 만들 수 있다. 객체를 만든 후에 새로운 동작을 객체에 추가할 수 있다. 프로토타입을 사용해 객체 간에 동작을 공유하는 방법은 위임이다. 객체에서 변수나 메서드를 요청받았느데 처리 방법을 모를 경우 객체는 해당 요청을 프로토타입 목록에 위임한다.
+
+## 자바스크립트 클래스
+ECMAScript 2015에 도입된 자바스크립트 클래스는 클래스 키워드를 사용해 클래스를 생성하는 새로운 방법을 제공한다. 그러나 클래스가 도입되었다고 해서 자바스크립트에서 프로토타입 상속이 작동하는 방식이 바뀌지는 않는다. 따라서 클래스는 자바스크립트 커뮤니티 일부에서 불필요하고 복잡한 언어 추가라는 비판을 받아왔다.
+
+클래스를 정의하는 방법에는 표현식 또는 선언의 두 가지가 있다. 
+
+클래스 표현식의 예다:
+```js
+var book = class {
+    constructor(title, author) {
+        this.title = title;
+        this.author = author;
+    }
+};
+```
+
+클래스 선언의 예다:
+```js
+class Book {
+    constructor(title, author) {
+        this.title = title;
+        this.author = author;
+    }
+};
+```
+
+함수 선언과 다르게, 클래스 선언 또는 표현은 호이스팅 되지 않는다. 이는 클래스는 반드시 접근하기 전에 선언되어야 함을 의미한다:
+```js
+var b = new Book(); // Reference error here 
+
+class Book {};
+```
+
+### 서브 클래스
+다른 클래스의 자식 클래스를 생성하기 위해 `extends` 키워드를 사용한다:
+```js
+class Dog {
+    constructor(name) {
+        this.name = name;
+    }
+
+    woof() {
+        console.log(`${this.name} woofs!`);
+    }
+};
+
+class Puppy extends Dog {
+    constructor(name) {
+        super(name);
+    }
+};
+
+var bobby = new Puppy('Bobby');
+bobby.woof() // output is 'Bobby woofs!'
+```
+
+이 예제에서 `Puppy`는 `Dog`의 자식 클래스다. 자식 클래스로써 `Puppy`는 부모 클래스에 존재하는 `woof`에 접근하고 실행시킬 수 있다.
+
+## 비평(Criticism)
+자바스크립트 클래스는 기존 프로토타입 기반 상속의 문법적 설탕이라는 비판을 받아왔다. 클래스를 `typoef` 연산을 사용해 확인해보면 함수에 해당한다는 것을 알 수 있다.  이는 `new` 키워드를 사용해 클래스를 생성자 함수처럼 사용할 수 있는 이유를 설명한다.
+
+따라서 클래스는 자바스크립트 상속의 본질을 모호하게 만든다고 한다. 클래스의 모양(객체)와 동작 방식(함수) 사이에는 단절이 존재한다. 또한 자바스크립트의 클래스는 단일 상속만 제공하므로 프로그래머가 객체 지향 디자인을 표현하는데 제한이 있다.
+
+자바스크립트 클래스의 유일한 장점은 자바 같은 클래스 기반 언어 출신 프로그래머에게 친숙함을 제공하고 대부분의 기존 코드와 역호환이 가능하다는 점이다.
+
+## 결론(Conclusion)
+클래스 기반 프로그래밍과 프로토타입 기반 프로그래밍은 모두 객체 지향 패러다임을 구현하고자 한다. 대부분의 프로그래머는 C#, C++, Java와 같은 언어의 인기로 인해 클래스 기반 프로그래밍에 익숙하다. 그러나 프로토타입 기반 접근 방식을 채택하는 JavaScript의 등장으로 점점 더 많은 프로그래머가 프로토타입을 배우고 사용해야 하는 상황이 되었다. 자바스크립트는 클래스 구문을 도입해 인기있는 객체 지향 언어 출신 프로그래머를 수용하려고 노력해 왔다. 그러나 이는 기본 프로토타입 기반 시스템을 대체하지 못하고 오히려 혼란만 가중시킨다는 비판을 받기도 했다.
+
+프로토타입 기반 프로그래밍은 동적인 특성으로 인해 프로그래머에게 더 큰 자유와 유연성을 제공한다. 객체는 존재하기 위해 클래스가 필요하지 않으며 런타임에도 쉽게 복제, 공유 또는 확장할 수 있도록 설계되어 있다. 이 접근 방식의 한계는 대규모 프로젝트에서 유지 관리와 성능이다. 클래스 기반 접근 방식은 프로그래머가 컴파일 시 클래스와 계층 구조를 선언할 때 보다 엄격한 접근 방식을 채택해야 하지만, 견고성과 성능이 향상된다는 이점이 있다. 따라서 해결해야 할 문제의 유형과 예상되는 시스템의 가치있는 특성에 따라 가장 접합한 객체 지향 접근 방식을 채택하는 것이 결정되는 경우가 많다.
+
+#
+# Further reading
+
+[1] Allen, R. (2017). Self. Retrieved from [http://www.selflanguage.org/](http://www.selflanguage.org/)
+
+[2] Lieberman, H. (1986). Using Prototypical Objects to Implement Shared Behavior in Object Oriented Systems. Retrieved from [http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html](http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html)
+
+[3] Mozilla. (2018). Inheritance and the prototype chain. Retrieved from [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+
+[4] Atchley, D. (2015). Understanding Prototypes, Delegation & Composition. Retrieved from [https://www.datchley.name/understanding-prototypes-delegation-composition/](https://www.datchley.name/understanding-prototypes-delegation-composition/)
+
+[5] Zakas, N. (2010). Maintainable JavaScript: Don’t modify objects you don’t own. Retrieved from [https://www.nczonline.net/blog/2010/03/02/maintainable-javascript-dont-modify-objects-you-down-own/](https://www.nczonline.net/blog/2010/03/02/maintainable-javascript-dont-modify-objects-you-down-own/)
+
+[6] Bruni, C. (2017). Fast Properties in V8. Retrieved from [https://v8project.blogspot.com/2017/08/fast-properties.html](https://v8project.blogspot.com/2017/08/fast-properties.html)
+
+[7] Mozilla. (2018). Classes. Retrieved from [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+[8] Bevacqua, N. (2015). ES6 Classes in Depth. Retrieved from [https://ponyfoo.com/articles/es6-classes-in-depth](https://ponyfoo.com/articles/es6-classes-in-depth)
+
+[9] Ryan, C. (2015). JavaScript ES6 Class Syntax. Retrieved from [https://coryrylan.com/blog/javascript-es6-class-syntax](https://coryrylan.com/blog/javascript-es6-class-syntax)

@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Prototype based programming(번역)"
             }
+          },
+          {
+            "id": "53f65bcc3061d064",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -242,7 +255,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bac67c2f170b2755",
+  "active": "53f65bcc3061d064",
   "lastOpenFiles": [
     "Javascript Prototype/Self.md",
     "Javascript Prototype/Prototype based programming(번역).md",

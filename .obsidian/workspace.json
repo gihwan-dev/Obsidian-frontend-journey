@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript Prototype/Prototype based programming(번역).md",
+                "file": "Javascript Prototype/Prototype-based programming(Wikipedia).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prototype based programming(번역)"
-            }
-          },
-          {
-            "id": "53f65bcc3061d064",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.7"
+              "title": "Prototype-based programming(Wikipedia)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -255,10 +241,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "53f65bcc3061d064",
+  "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "Javascript Prototype/Self.md",
+    "Programming General/Object Oriented Programming.md",
+    "Javascript Prototype/Prototype-based programming(Wikipedia).md",
     "Javascript Prototype/Prototype based programming(번역).md",
+    "Javascript Prototype/Self.md",
+    "Programming General/낮은 결합도와 높은 응집도.md",
     "Programming General/Colocate.md",
     "Javascript Prototype",
     "콜아웃 리스트.md",
@@ -277,7 +266,6 @@
     "Programming General/ORM에서의 관심사 분리.md",
     "React.js/Push Notification.md",
     "React.js/리액트에서 클린코드란 무엇일까?.md",
-    "Programming General/낮은 결합도와 높은 응집도.md",
     "README.md",
     "Next.js/Pasted image 20250211091604.png",
     "FSD/Entities 와 Features의 규칙 정하기.md",
@@ -289,8 +277,6 @@
     "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "Browser/래스터화.md",
     "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
-    "CSS/CSS란?.md",
-    "CSS/CSS Position.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",

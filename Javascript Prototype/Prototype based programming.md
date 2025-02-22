@@ -41,3 +41,4 @@ console.log(poodle.name); // 'Max'
 console.log(dalmatian.name); // 'Bobby'
 ```
 
+`Object.create` 메서드는 명시적으로 정의된 생성자 함수 대신 사용될 수 있다.

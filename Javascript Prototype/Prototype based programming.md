@@ -88,3 +88,32 @@ console.log(patch.breed); // Great Dane
 위 예제에서 `patch` 객체는 `name` 속성을 가지고 있다. `breed` 속성은 프로토타입 체인을 따라가며 프로토타입을 탐색해서 찾을 수 있다. `Dog`의 `.prototype` 속성을 사용하면 새로운 속성들을 할당할 수 있고, `Dog` 생성자 함수로부터 새로운 객체가 생성될 때 이러한 속성들을 사용할 수 있게 된다.
 
 프로토타입 체인을 시각화 하면 다음과 같이 나타낼 수 있다:
+```mermaid
+graph TD
+    A["patch<br>name: 'Patch'"] -->|__proto__| B["Dog.prototype<br>breed: 'Great Dane'"]
+    B -->|__proto__| C["Object.prototype<br>toString(), valueOf()"]
+    D["Dog Constructor<br>function Dog()"] -->|prototype| B
+    
+    style A fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style B fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style D fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+```
+
+문자열이나 배열과 같은 자바스크립트의 내장 객체 프로토타입을 포함한 모든 객체들은 프로토타입을 사용해 변경하거나 확장할 수 있다. 하지만 이는 코드 통합의 관점에서 볼 때 일반적으로 나쁜 관행으로 여겨진다. 자바스크립트에서는 내장 프로토타입의 표준 구현에 의존하는 라이브러리와 프레임워크를 사용하는 것이 매우 일반적이다. 또한, 팀 단위로 작업할 때 이미 존재하는 자바스크립트 객체를 수정하는 것은 혼란을 야기하고 많은 시간을 낭비하게 할 수 있다. 거의 모든 경우에 원하는 기능을 구현하기 위해서는 새로운 객체를 생성하는 것이 더 적절하다.
+
+## 복제(Cloning)
+`Object.assign()`을 사용해 객체를 복제하면, 해당 객체의 최상위 속성들은 참조없이 새로운 객체로 복사된다. 하지만 값이 객체에 대한 참조인 경우, 그 값이 아닌 참조가 복사된다:
+```js
+const book = {
+	id: 1,
+	authors: {
+		author1: "John Jims",
+	}
+};
+
+const newBook = Object.assign({}, book);
+
+console.log(book.authors.author1); // John Jims;
+console.log(newBook.authors.author1); // John Jims;
+```

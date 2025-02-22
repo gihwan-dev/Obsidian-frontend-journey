@@ -116,4 +116,26 @@ const newBook = Object.assign({}, book);
 
 console.log(book.authors.author1); // John Jims;
 console.log(newBook.authors.author1); // John Jims;
+
+book.authors.author1="Jess Simpson";
+
+console.log(book.authors.author1); // Jess Simpson
+console.log(newBook.authors.author1); // Jess Simpson
 ```
+
+위 예제에서, `newBook`은 프로토타입에 대한 링크를 유지한다. 프로토타입 객체의 참조값이 변경되면 `newBook`에도 해당 변경사항이 반영된다.
+```mermaid
+graph TD
+    A[book object] -->|id| B[1]
+    A -->|authors| C[authors object]
+    D[newBook object] -->|id| E[1]
+    D -->|authors| C
+    C -->|author1| F["Jess Simpson"]
+    
+    style A fill:#f9d9d9,stroke:#333,stroke-width:2px
+    style D fill:#d9f9d9,stroke:#333,stroke-width:2px
+    style C fill:#d9d9f9,stroke:#333,stroke-width:2px
+```
+
+## 'this'의 사용
+프로토타입 기반 프로그래밍에서는 프로퍼티의 형태로 객체에 함수를 추가할 수 있다. 상속된 프로퍼티는 다른 프로퍼티와 동일하게 동작한다. 상속된 함수가 호출되면 `this`의 값은 함수가 

@@ -27,11 +27,11 @@ const dog = { name: "Max", breed: "Poodle" };
 리터럴 객체 표기법을 통한 생성의 대안은 생성자 함수를 작성하고 객체 인스턴스를 `new` 키워드와 함께 생성하는 방식이다. 각 인스턴스 객체들은 자신만의 프로퍼티를 가진다:
 ```js
 function Dog(name, breed) {
-	this.name = name;
-	this.breed = breed;
-	bard: function () {
+	this.name: name,
+	this.breed: breed,
+	bark: function () {
 		console.log("Woof!");
-	};
+	},
 };
 
 const poodle = new Dog("Max", "Poodle");
@@ -41,4 +41,33 @@ console.log(poodle.name); // 'Max'
 console.log(dalmatian.name); // 'Bobby'
 ```
 
-`Object.create` 메서드는 명시적으로 정의된 생성자 함수 대신 사용될 수 있다.
+`Object.create` 메서드는 명시적으로 정의된 생성자 함수 대신 사용될 수 있다:
+```js
+const Dog = {
+	name: "Max",
+	breed: "Poodle",
+	bark: function () {
+		console.log("Woof!");
+	},
+};
+
+const max = Object.create(Dog);
+max.bark(); // Woof!
+```
+
+기존 객체의 동작을 복제해서 새로운 객체를 생성할수도 있다. 복사된 객체는 기존의 객체와 같은 프로퍼티들을 가지게된다. 생성된 객체를 수정해도 원본에는 영향을 미치지 않는다:
+```js
+var dog = { name: 'Max', breed: 'Poodle' };
+
+var newDog = Object.assign({}, dog);
+
+console.log(dog.name); // 'Max'
+console.log(newDog.name); // 'Max'
+
+newDog.name = "Jessica";
+
+console.log(dog.name); // 'Max'
+console.log(newDog.name); // 'Jessica'
+```
+
+## 위임과 상속(Delegation and Ingeritance)

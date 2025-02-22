@@ -71,4 +71,20 @@ console.log(newDog.name); // 'Jessica'
 ```
 
 ## 위임과 상속(Delegation and Ingeritance)
-프로토타입 기반 프로그래밍의 핵심 메커닞므은 위임(delegation)이다. 객체는 위임을 통해 복제되고 확장될 수 있다. 이 원
+프로토타입 기반 프로그래밍의 핵심 메커니즘은 위임(delegation)이다. 객체는 위임을 통해 복제되고 확장될 수 있다. 이 메커니즘의 원리는 객체의 속성을 찾을 때, 해당 객체뿐만 아니라 프로토타입 체인을 따라 연결된 모든 객체들을 순차적으로 탐색한다는 것이다. 객체들은 `prototype` 속성을 통해 직접적으로 상속받는다. 모든 객체는 다른 객체로 연결되는 프로토타입 링크를 가지고 있다. 기본적으로 객체들은 `Object.prototype` 객체에 연결되어 있다.
+```js
+const Dog = function () {
+	this.name = "Patch";
+}
+
+const patch = new Dog();
+
+Dog.prototype.breed = "Great Dane";
+
+console.log(patch.name); // Patch
+console.log(patch.breed); // Great Dane
+```
+
+위 예제에서 `patch` 객체는 `name` 속성을 가지고 있다. `breed` 속성은 프로토타입 체인을 따라가며 프로토타입을 탐색해서 찾을 수 있다. `Dog`의 `.prototype` 속성을 사용하면 새로운 속성들을 할당할 수 있고, `Dog` 생성자 함수로부터 새로운 객체가 생성될 때 이러한 속성들을 사용할 수 있게 된다.
+
+프로토타입 체인을 시각화 하면 다음과 같이 나타낼 수 있다:

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e6d1c57abbabc36f",
+        "id": "1bdfe44a8f83071f",
         "type": "tabs",
         "children": [
           {
-            "id": "6a9e81283ff12f36",
+            "id": "bac67c2f170b2755",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",
+                "file": "Javascript Prototype/Self.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "수량 데이터의 시각화"
+              "title": "Self"
             }
           }
         ]
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -154,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
+                "file": "Programming General/Colocate.md",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 시각적 속성"
+              "title": "Outline of Colocate"
             }
           },
           {
@@ -218,11 +219,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 216.5,
+    "width": 549,
     "collapsed": true
   },
   "left-ribbon": {
@@ -241,11 +242,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "6a9e81283ff12f36",
+  "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
-    "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
+    "Javascript Prototype/Prototype based programming.md",
+    "Javascript Prototype/Self.md",
     "Programming General/Colocate.md",
+    "Javascript Prototype",
+    "콜아웃 리스트.md",
+    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
     "conflict-files-obsidian-git.md",
     "데이터 시각화/데이터 시각화 교과서/수량 데이터의 시각화.md",
     "Next.js/Pasted image 20250218082916.png",
@@ -261,21 +265,19 @@
     "React.js/Push Notification.md",
     "React.js/리액트에서 클린코드란 무엇일까?.md",
     "Programming General/낮은 결합도와 높은 응집도.md",
-    "TypeScript/타입스크립트 개념과 원리 그리고 응용.md",
     "README.md",
     "Next.js/Pasted image 20250211091604.png",
     "FSD/Entities 와 Features의 규칙 정하기.md",
     "Vue/Vue와 React의 렌더링 시스템 차이점.md",
+    "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "@assets/images/trenditional-install-progress.png.md",
+    "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "함수형프로그래밍/제너레이터와 이터레이터.md",
     "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "Browser/래스터화.md",
     "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
     "CSS/CSS란?.md",
     "CSS/CSS Position.md",
-    "CSS/CSS Display.md",
-    "Design/디자인 요소.md",
-    "Frontend/Dialog, Modal, Sheet의 차이 알고 사용하기.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",
@@ -287,7 +289,6 @@
     "이전 블로그 글들",
     "publish.css",
     "Programming General",
-    "데이터 시각화/데이터 시각화 교과서",
     "데이터 시각화/데이터 시각화 교과서",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",

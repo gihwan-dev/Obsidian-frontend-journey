@@ -71,3 +71,4 @@ console.log(newDog.name); // 'Jessica'
 ```
 
 ## 위임과 상속(Delegation and Ingeritance)
+프로토타입 기반 프로그래밍의 핵심 메커닞므은 위임(delegation)이다. 객체는 위임을 통해 복제되고 확장될 수 있다. 이 원

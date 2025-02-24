@@ -26,3 +26,49 @@
 
 클래스 기반 언어에서 새로운 인스턴스는 클래스 생성자 함수, 즉 객체의 멤버(속성 및 메서드)를 위한 메모리 블록을 예약하고 해당 블록에 대한 참조를 반환하는 특수 함수를 통해 구성된다. 생성자 인수의 선택적 집합은 함수에 전달될 수 있으며 일반적으로 프로퍼티에 보관된다. 결과 인스턴스는 클래스에 정의된 모든 메서드와 프로퍼티를 상속하며, 이는 유사한 타입의 객체를 생성할 수 있는 일종의 템플릿 역할을 한다.
 
+빈 객체 생성을 지원하는 시스템을 사용하면 기존 프로토타입에서 복제하지 않고도 새 객체를 처음부터 만들 수 있다. 이러한 시스템은 기존 객체를 참조하지 않고 새 객체의 속성과 동작을 지정하기 위한 특수한 구문을 제공한다. 많은 프로토타입 언어에는 런타임에 생성되는 다른 모든 객체에 대한 기본 프로토타입으로 설정되고 객체에 대한 설명을 문자열로 변환하는 `toString()` 함수 등 일반적으로 필요한 메서드를 포함하는 루트 객체(종종 `Object`라고 함)가 존재한다. 임시 객체 생성의 한 가지 유용한 측면은 새 객체의 슬록(속성 및 메서드) 이름이 최상위 객체와 네임스페이스 충돌을 일으키지 않도록 하는 것이다. JavaScript 언어에서는 `null` 프로토타입, 즉 `Object.create(null)`을 사용해 이 작업을 수행할 수 있다.
+
+복제는 기존 객체(프로토타입)의 동작을 복사해 새 객체를 만드는 프로세스를 말한다. 그러면 새 객체는 원본의 모든 특성을 갖게 된다. 이 시점부터 새 객체를 수정할 수 있다. 일부 시스템에서는 결과 자식 객체가 위임 또는 유사성을 통해 프로토타입에 대한 명시적인 링크를 유지하며, 프로토타입의 변경 사항은 이를 복제한 객체에도 적용된다. Forth(스택 기반 프로그래밍 언어)와 유사한 언어에서는 프로토타입의 변경이 이러한 방식처럼 전파되지 않는 좀 더 연쇄적인 모델을 따른다.
+
+```js
+// Example of true prototypal inheritance style in JavaScript.
+
+// Object creation using the literal object notation {}.
+const foo = { name: "foo", one: 1, two: 2 };
+
+// Another object.
+const bar = { two: "two", three: 3 };
+
+// Object.setPrototypeOf() is a method introduced in ECMAScript 2015.
+// For the sake of simplicity, let us pretend that the following
+// line works regardless of the engine used:
+Object.setPrototypeOf(bar, foo); // foo is now the prototype of bar.
+
+// If we try to access foo's properties from bar from now on, 
+// we'll succeed. 
+bar.one; // Resolves to 1.
+
+// The child object's properties are also accessible.
+bar.three; // Resolves to 3.
+
+// Own properties shadow prototype properties.
+bar.two; // Resolves to "two".
+bar.name; // Unaffected, resolves to "foo".
+foo.name; // Resolves to "foo".
+```
+
+또다른 예제:
+```js
+const foo = { one: 1, two: 2 };
+
+// bar.[[[prototype]]](https://en.wikipedia.org/wiki/Prototype "Prototype") = foo
+const bar = Object.create(foo);
+
+bar.three = 3;
+
+bar.one; // 1
+bar.two; // 2
+bar.three; // 3
+```
+
+## 위임(Delegation)

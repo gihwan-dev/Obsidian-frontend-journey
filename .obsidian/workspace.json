@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript Prototype/Prototype-based programming(Wikipedia).md",
+                "file": "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prototype-based programming(Wikipedia)"
+              "title": "Why is JavaScript prototyping?(Stack Overflow)"
             }
           }
         ]
@@ -243,8 +243,9 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "콜아웃 리스트.md",
     "Javascript Prototype/Prototype-based programming(Wikipedia).md",
+    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
+    "콜아웃 리스트.md",
     "Programming General/Object Oriented Programming.md",
     "Javascript Prototype/Prototype based programming(번역).md",
     "Javascript Prototype/Self.md",
@@ -276,7 +277,6 @@
     "함수형프로그래밍/제너레이터와 이터레이터.md",
     "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "Browser/래스터화.md",
-    "Browser/고성능 CSS 애니메이션을 만드는 방법.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
+                "file": "Javascript Prototype/Prototype based programming(번역).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Why is JavaScript prototyping?(Stack Overflow)"
+              "title": "Prototype based programming(번역)"
             }
           }
         ]

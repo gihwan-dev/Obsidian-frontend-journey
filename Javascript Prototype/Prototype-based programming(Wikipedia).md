@@ -1,4 +1,6 @@
 > [원문](https://en.wikipedia.org/wiki/Prototype-based_programming)
+> 관련 자료: [[Prototype based programming(번역)]]
+
 
 **프로토타입 기반 프로그래밍**은 프로토타입 역할을 하는 기존 객체를 재사용하는 프로세스를 통해 동작 재사용(상속이라고 함)이 수행되는 객체 지향 프로그래밍 스타일이다. 이 모델은 프로토타입, 프로토타입 지향, 클래스리스 또는 인스턴스 기반 프로그래밍이라고도 한다.
 

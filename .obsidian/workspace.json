@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript Prototype/Object Oriented Programming(Wiki).md",
+                "file": "Javascript Prototype/The Forgotten History of OOP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Object Oriented Programming(Wiki)"
+              "title": "The Forgotten History of OOP"
             }
           }
         ]
@@ -243,14 +243,15 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "Javascript Prototype/Class-based programming.md",
+    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
+    "Javascript Prototype/The Forgotten History of OOP.md",
+    "Javascript Prototype/Self.md",
     "Javascript Prototype/Object Oriented Programming(Wiki).md",
+    "Javascript Prototype/Class-based programming.md",
     "Javascript Prototype/Prototype based programming(번역).md",
     "Javascript Prototype/Prototype-based programming(Wikipedia).md",
-    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
     "콜아웃 리스트.md",
     "Programming General/Object Oriented Programming.md",
-    "Javascript Prototype/Self.md",
     "Programming General/낮은 결합도와 높은 응집도.md",
     "Programming General/Colocate.md",
     "Javascript Prototype",
@@ -276,7 +277,6 @@
     "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
     "@assets/images/trenditional-install-progress.png.md",
     "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
-    "함수형프로그래밍/제너레이터와 이터레이터.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",

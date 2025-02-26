@@ -239,8 +239,7 @@ bobby.woof() // output is 'Bobby woofs!'
 
 프로토타입 기반 프로그래밍은 동적인 특성으로 인해 프로그래머에게 더 큰 자유와 유연성을 제공한다. 객체는 존재하기 위해 클래스가 필요하지 않으며 런타임에도 쉽게 복제, 공유 또는 확장할 수 있도록 설계되어 있다. 이 접근 방식의 한계는 대규모 프로젝트에서 유지 관리와 성능이다. 클래스 기반 접근 방식은 프로그래머가 컴파일 시 클래스와 계층 구조를 선언할 때 보다 엄격한 접근 방식을 채택해야 하지만, 견고성과 성능이 향상된다는 이점이 있다. 따라서 해결해야 할 문제의 유형과 예상되는 시스템의 가치있는 특성에 따라 가장 접합한 객체 지향 접근 방식을 채택하는 것이 결정되는 경우가 많다.
 
-#
-# Further reading
+## Further reading
 
 [1] Allen, R. (2017). Self. Retrieved from [http://www.selflanguage.org/](http://www.selflanguage.org/)
 
@@ -259,3 +258,5 @@ bobby.woof() // output is 'Bobby woofs!'
 [8] Bevacqua, N. (2015). ES6 Classes in Depth. Retrieved from [https://ponyfoo.com/articles/es6-classes-in-depth](https://ponyfoo.com/articles/es6-classes-in-depth)
 
 [9] Ryan, C. (2015). JavaScript ES6 Class Syntax. Retrieved from [https://coryrylan.com/blog/javascript-es6-class-syntax](https://coryrylan.com/blog/javascript-es6-class-syntax)
+
+10 [[Why is JavaScript prototyping?(Stack Overflow)]]

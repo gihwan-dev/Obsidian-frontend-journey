@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript Prototype/Class-based programming.md",
+                "file": "Javascript Prototype/Object Oriented Programming.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Class-based programming"
+              "title": "Object Oriented Programming"
             }
           }
         ]
@@ -243,8 +243,9 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "Javascript Prototype/Prototype based programming(번역).md",
     "Javascript Prototype/Class-based programming.md",
+    "Javascript Prototype/Object Oriented Programming.md",
+    "Javascript Prototype/Prototype based programming(번역).md",
     "Javascript Prototype/Prototype-based programming(Wikipedia).md",
     "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
     "콜아웃 리스트.md",
@@ -276,7 +277,6 @@
     "@assets/images/trenditional-install-progress.png.md",
     "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "함수형프로그래밍/제너레이터와 이터레이터.md",
-    "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",

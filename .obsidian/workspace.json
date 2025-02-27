@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,8 +243,11 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
+    "Programming General/람다 계산법과 튜링 머신 - 변수와 규칙.md",
+    "Programming General/람다 계산법.md",
+    "Programming General/튜링 머신.md",
     "Javascript Prototype/The Forgotten History of OOP.md",
+    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
     "Javascript Prototype/Self.md",
     "Javascript Prototype/Object Oriented Programming(Wiki).md",
     "Javascript Prototype/Class-based programming.md",
@@ -275,9 +277,6 @@
     "Next.js/Pasted image 20250211091604.png",
     "FSD/Entities 와 Features의 규칙 정하기.md",
     "Vue/Vue와 React의 렌더링 시스템 차이점.md",
-    "데이터 시각화/데이터 시각화 교과서/시각적 속성.md",
-    "@assets/images/trenditional-install-progress.png.md",
-    "데이터 시각화/데이터 시각화 교과서/데이터 시각화란.md",
     "Next.js/Pasted image 20250215152236.png",
     "@assets/images",
     "@assets",

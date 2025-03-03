@@ -87,3 +87,28 @@ let doctor = {};
 1. 모든 자바스크립트는 `[[Prototype]]` 프로퍼티를 가진다.
 2. `[[Prototype]]` 프로퍼티는 객체 또는 `null` 값이다.
 
+`[[Prototype]]` 프로퍼티는 접근할 수 없다.
+
+```js
+let doctor = {};
+
+doctor.[[Prototype]] // Unexpected token '['
+```
+
+접근할 수 있는 방법은 다양하게 있다.
+1. `__proto__`
+2. `Object.getPrototypeOf()`
+
+첫 번째 방법은 의도치 않게 프로토타입을 수정할 수 있기 때문에 좋은 방법이 이니다. 추천되는 방법은 `Object.getPrototypeOf(doctor)` 같은 방식이다.
+
+왜 그렇다면 `[[Prototype]]` 프로퍼티는 숨겨진(접근할 수 없는) 프로퍼티일까?
+
+ECMAScript에서는 `[[Prototype]]` 프로퍼티는 내부 프로퍼티라고 정의한다.
+
+내부 프로퍼티란 코드의 동작을 정의한 프로퍼티를 의미한다. 하지만 코드에서는 접근할 수 없다.
+
+내부 프로퍼티는 `[[Prototype]]`이외에도 `[[Extensible]], [[Configurable]], [[Get]], [[Put]], [[Class]], [[Delete]]` 등이 있다.
+
+위처럼 내부 프로퍼티는 `[[ ]](double-square-bracket)` 표기법을 사용해 표현된다.
+
+내부 프로퍼티는 자바스크립트 언어의 어떤 부분이 아니다.

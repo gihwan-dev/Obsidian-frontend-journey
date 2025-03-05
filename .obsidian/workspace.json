@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,8 +243,9 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "Javascript Prototype/Prototype based programming(번역).md",
+    "콜아웃 리스트.md",
     "Javascript Prototype/Inheritance and the prototype chain.md",
+    "Javascript Prototype/Prototype based programming(번역).md",
     "Javascript Prototype/Using Prototypical Objects to Impltement Shared Behavior in Object Oriented Systems.md",
     "Next.js/Pasted image 20250304092216.png",
     "Next.js/Pasted image 20250304091956.png",
@@ -267,7 +267,6 @@
     "Javascript Prototype/람다 계산법.md",
     "Clean Code/튜링 머신.md",
     "Javascript Prototype/Self.md",
-    "콜아웃 리스트.md",
     "Javascript Prototype/Object Oriented Programming.md",
     "Clean Code/낮은 결합도와 높은 응집도.md",
     "Clean Code/Colocate.md",

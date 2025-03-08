@@ -123,8 +123,6 @@ function getSequence() {
 - jQuery 확장은 jQuery 객체 프로토타입에 직접 추가하는 방식으로 동작합니다
 - Prototype 라이브러리는 클래스 정의를 확장하는 특별한 방식을 일관되게 사용합니다
 
-네, 계속해서 번역하겠습니다.
-
 ### Prototype.js의 구현 예시
 제가 Prototype.js를 올바르게 기억한다면, 다음과 같은 방식으로 구현됩니다:
 

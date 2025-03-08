@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript Prototype/Using Prototypical Objects to Impltement Shared Behavior in Object Oriented Systems.md",
+                "file": "Javascript Prototype/Inheritance and the prototype chain.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Using Prototypical Objects to Impltement Shared Behavior in Object Oriented Systems"
+              "title": "Inheritance and the prototype chain"
             }
           }
         ]
@@ -243,12 +243,19 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "Javascript Prototype/The Forgotten History of OOP.md",
+    "Javascript Prototype/JavaScript Prototypes, Inheritance & Objects - 2025.md",
+    "Javascript Prototype/Object Oriented Programming.md",
+    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
+    "Javascript Prototype/Using Prototypical Objects to Impltement Shared Behavior in Object Oriented Systems.md",
+    "Javascript Prototype/Self.md",
     "Javascript Prototype/Prototype-based programming(Wikipedia).md",
     "Javascript Prototype/Prototype based programming(번역).md",
     "Javascript Prototype/Object Oriented Programming(Wiki).md",
-    "Javascript Prototype/Object Oriented Programming.md",
-    "Javascript Prototype/JavaScript Prototypes, Inheritance & Objects - 2025.md",
+    "Javascript Prototype/Class-based programming.md",
+    "Javascript Prototype/The Forgotten History of OOP.md",
+    "Javascript Prototype/람다 계산법과 튜링 머신 - 변수와 규칙.md",
+    "Javascript Prototype/Inheritance and the prototype chain.md",
+    "Javascript Prototype/람다 계산법.md",
     "conflict-files-obsidian-git.md",
     "Next.js/Pasted image 20250304092216.png",
     "Next.js/Pasted image 20250304091956.png",
@@ -256,10 +263,6 @@
     "Next.js/Pasted image 20250304091443.png",
     "Next.js/Pasted image 20250304091321.png",
     "Next.js/Pasted image 20250304091242.png",
-    "Javascript Prototype/람다 계산법과 튜링 머신 - 변수와 규칙.md",
-    "Javascript Prototype/람다 계산법.md",
-    "Javascript Prototype/Using Prototypical Objects to Impltement Shared Behavior in Object Oriented Systems.md",
-    "Javascript Prototype/Inheritance and the prototype chain.md",
     "Clean Code/헬퍼 & 유틸이 쓰레기통이 되는 이유.md",
     "Clean Code/튜링 머신.md",
     "Clean Code/응집도와 결합도 - 차이점.md",
@@ -274,9 +277,6 @@
     "Programming General/람다 계산법과 튜링 머신 - 변수와 규칙.md",
     "Programming General/람다 계산법.md",
     "Programming General/튜링 머신.md",
-    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
-    "Javascript Prototype/Self.md",
-    "Javascript Prototype/Class-based programming.md",
     "콜아웃 리스트.md",
     "Javascript Prototype",
     "Next.js/Pasted image 20250218082916.png",

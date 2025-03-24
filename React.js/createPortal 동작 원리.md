@@ -238,6 +238,7 @@ const Update = 0b0000000000000000100; // 2진수 표현
 - `Poratl`의 경우:
 	- `container`의 내용물이 변경되었을 때 설정된다.
 	- 이 플래그가 있으면 `commitHostPortalContainerCHildren`을 통해 변경된 자식들을 `container`에 반영한다.
+	- 초기에는 `Update`가 아닌 `Placement`의 플래그를 가지며, `commitReconciliationEffects`가 실행된다.
 
 예를 들어:
 ```ts
@@ -250,8 +251,15 @@ const Modal = ({ children }) => {
 };
 ```
 
-실제로 이 코드들의 `stack`을 따라가다 보면
+전반적인 흐름을 다시 요약해보자.
 
-`commitReconciliationEffects` > `commitHostPlacement` > `commitPlacement` > `insertOrAppendPlacementNodeIntoContainer` > 
+**렌더링 페이즈**
+1. `createPortal`을 호출하면 `Portal` 타입의 컴포넌트를 생성한다.
+2. `beginWorks`에서 `type`이 `Portal`인 컴포넌트는 `updatePortalComponent`를 통해 처리된다.
+3. `updatePortalComponent`에서는 `Portal` 컴포넌트의 재조정을 실행하고 `pushHostContainer`를 통해 해당 `Portal` 컴포넌트에 필요한 컨텍스트를 저장한다.
 
-> Fiber와 Lanes에 대한 간략한 설명
+**커밋 페이즈**
+1. `recursivelyTraverseMutationEffects`를 통해 `Portal`의 자식들에 대한 `mutation` 효과를 재귀적으로 처리한다.
+2. `commitReconciliationEffects` 
+3. `Update` 플래그가 있는 경우:
+	1. `commitHostPortalContainnerChildren`을 통해 `Portal` 자식들을 지정된 `container`에 실제로 마운트

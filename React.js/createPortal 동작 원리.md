@@ -206,10 +206,10 @@ function commitMutationEffectsOnFiber(finishedWork: Fiber, root: FiberRoot, lane
 }
 ```
 
-1. `recursivelyTraverseMutationEffects`: `Portal`의 자식들에 대한 `mutation` 효과를 재귀적으로 처리한다.
-2. `commitReconciliationEffects`: 재조정 효과 커밋
+1. `recursivelyTraverseMutationEffects`: `Portal`의 자식들에 대한 `mutation` 효과를 재귀적으로 처리한다. 이 함수에서는 삭제(Deletion) 처리를 하며, 전체 `Fiber` 트리를 순회하면서 `mutation` 관련 플래그를 확인한다.
+2. `commitReconciliationEffects`: 이 함수에서는 삽입(Placement) 처리가 진행된다. 새로운 노드를 `DOM` 트리의 올바른 위치에 배치하는 작업을 수행한다.
 3. `Update` 플래그가 있는 경우:
-	1. `commitHostPortalContainnerChildren`을 통해 `Portal` 자식들을 지정된 `container`에 실제로 마운트
+	1. `commitHostPortalContainnerChildren`을 통해 `Portal` 컴포넌트의 `container`에 대한 업데이트(Update) 처리가 진행된다. 
 
 이해가 가지 않는 변수가 많다. 하나하나 알아보자.
 
@@ -259,7 +259,32 @@ const Modal = ({ children }) => {
 3. `updatePortalComponent`에서는 `Portal` 컴포넌트의 재조정을 실행하고 `pushHostContainer`를 통해 해당 `Portal` 컴포넌트에 필요한 컨텍스트를 저장한다.
 
 **커밋 페이즈**
-1. `recursivelyTraverseMutationEffects`를 통해 `Portal`의 자식들에 대한 `mutation` 효과를 재귀적으로 처리한다.
-2. `commitReconciliationEffects` 
+1. `recursivelyTraverseMutationEffects`를 통해 `Portal`의 자식에 대한 삭제(Deletion) 효과를 재귀적으로 처리한다.
+2. `commitReconciliationEffects`를 통해 `Portal` 자체에 대한 삽입(Placement) 처리를 진행한다.
 3. `Update` 플래그가 있는 경우:
 	1. `commitHostPortalContainnerChildren`을 통해 `Portal` 자식들을 지정된 `container`에 실제로 마운트
+
+```mermaid
+graph TD
+    A[commitMutationEffects] --> B[recursivelyTraverseMutationEffects]
+    B --> C[commitMutationEffectsOnFiber]
+    
+    C --> D{Check Flags}
+    D -->|Placement| E[commitReconciliationEffects]
+    D -->|Update| F[commitHostComponentUpdate]
+    D -->|Deletion| G[commitDeletionEffects]
+    
+    G --> H[recursivelyTraverseDeletionEffects]
+    H --> I[commitDeletionEffectsOnFiber]
+    
+    E --> J[commitHostPlacement]
+    
+    subgraph "Recursive Tree Traversal"
+        B --> K[Child Fiber]
+        K --> B
+        C --> L[Child Fiber]
+        L --> C
+        H --> M[Child Fiber]
+        M --> H
+    end
+```

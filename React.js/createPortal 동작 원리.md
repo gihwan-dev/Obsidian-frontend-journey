@@ -258,11 +258,42 @@ const Modal = ({ children }) => {
 2. `beginWorks`에서 `type`이 `Portal`인 컴포넌트는 `updatePortalComponent`를 통해 처리된다.
 3. `updatePortalComponent`에서는 `Portal` 컴포넌트의 재조정을 실행하고 `pushHostContainer`를 통해 해당 `Portal` 컴포넌트에 필요한 컨텍스트를 저장한다.
 
+```mermaid
+graph TD
+    A[createPortal 호출] --> B[Portal 타입 컴포넌트 생성]
+    B --> C[beginWork]
+    
+    C --> D{type 체크}
+    D -->|Portal 타입| E[updatePortalComponent]
+    
+    E --> F[pushHostContainer]
+    F --> G[container context 설정]
+    
+    E --> H[reconcileChildFibers]
+    H --> I[자식 Fiber 생성/업데이트]
+    
+    subgraph "Portal 처리 과정"
+        F --> J[containerInfo 저장]
+        F --> K[contextFiberStackCursor 관리]
+        F --> L[contextStackCursor 관리]
+    end
+    
+    subgraph "재조정 과정"
+        H --> M[이전 자식과 비교]
+        M --> N[필요한 변경사항 계산]
+        N --> O[새로운 Fiber 트리 구성]
+    end
+```
+
 **커밋 페이즈**
-1. `recursivelyTraverseMutationEffects`를 통해 `Portal`의 자식에 대한 삭제(Deletion) 효과를 재귀적으로 처리한다.
-2. `commitReconciliationEffects`를 통해 `Portal` 자체에 대한 삽입(Placement) 처리를 진행한다.
-3. `Update` 플래그가 있는 경우:
-	1. `commitHostPortalContainnerChildren`을 통해 `Portal` 자식들을 지정된 `container`에 실제로 마운트
+1. `commitMutationEffects`가 호출되면, `recursivelyTraverseMutationEffects`를 통해 Fiber 트리를 재귀적으로 순회하면서 각 노드의 mutation effect를 처리한다.
+2. `Portal` 컴포넌트에 도달하면:
+   - `recursivelyTraverseMutationEffects`를 통해 자식 노드들의 mutation effect를 먼저 처리한다.
+   - `commitReconciliationEffects`를 통해 `Portal` 자체의 Placement 효과를 처리한다.
+   - `Update` 플래그가 있는 경우 `commitHostPortalContainerChildren`을 통해 `Portal`의 자식들을 지정된 `container`에 실제로 DOM 업데이트를 수행한다.
+3. 삭제(Deletion)가 필요한 경우:
+   - `recursivelyTraverseDeletionEffects`를 통해 삭제될 노드의 자식들에 대한 cleanup을 재귀적으로 처리한다.
+   - `commitDeletionEffects`를 통해 실제 DOM에서 노드를 제거하고 cleanup effect를 실행한다.
 
 ```mermaid
 graph TD

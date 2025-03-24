@@ -153,14 +153,13 @@ function pushHostContainer(fiber: Fiber, nextRootInstance: Container): void {
 ```
 
 주요 포인트는 다음과 같다:
-1. `Portal`은 다른 `DOM` 트리에 렌더링되므로, 새로운 `container context`가 필요하다.
+1. `Portal`은 다른 `DOM` 트리에 렌더링되므로, 새로운 `container context`가 필요하다.
 2. 이를 위해 3개의 스택을 관리한다:
-	- `rootInstanceStackCursor`: `container` 인스턴스 추적
-	- `contextFiberStackCursor`: `context` 제공 `Fiber` 추적
-	- `contextStackCursor`: 실제 `host context` 관리
-3. 에러 처리를 위해 임시로 `null`을 푸시했다가 실제 `context`로 교체하는 안전장치가 있다.
-
-이 함수는 Portal이 자신만의 독립적인 렌더링 context를 가질 수 있게 해주는 중요한 역할을 한다.
+   - `rootInstanceStackCursor`: `container` 인스턴스 추적
+   - `contextFiberStackCursor`: `context` 제공 `Fiber` 추적
+   - `contextStackCursor`: 실제 `host context` 관리
+3. 에러 처리를 위해 임시로 `null`을 푸시했다가 실제 `context`로 교체하는 안전장치가 있다.
+4. 이 함수는 Portal이 자신만의 독립적인 렌더링 context를 가질 수 있게 해주는 중요한 역할을 한다.
 
 지금까지의 살펴본 내용을 요약하면 다음과 같다:
 
@@ -206,50 +205,48 @@ function commitMutationEffectsOnFiber(finishedWork: Fiber, root: FiberRoot, lane
 }
 ```
 
-1. `recursivelyTraverseMutationEffects`: `Portal`의 자식들에 대한 `mutation` 효과를 재귀적으로 처리한다. 이 함수에서는 삭제(Deletion) 처리를 하며, 전체 `Fiber` 트리를 순회하면서 `mutation` 관련 플래그를 확인한다.
-2. `commitReconciliationEffects`: 이 함수에서는 삽입(Placement) 처리가 진행된다. 새로운 노드를 `DOM` 트리의 올바른 위치에 배치하는 작업을 수행한다.
+이 함수의 실행 순서와 각 단계의 역할이 매우 중요하다:
+
+1. `recursivelyTraverseMutationEffects`: Portal의 자식들에 대한 mutation 효과를 재귀적으로 처리한다. 이 함수에서는 삭제(Deletion) 처리를 하며, 전체 Fiber 트리를 순회하면서 mutation 관련 플래그를 확인한다.
+2. `commitReconciliationEffects`: 이 함수에서는 삽입(Placement) 처리가 진행된다. 새로운 노드를 DOM 트리의 올바른 위치에 배치하는 작업을 수행한다.
 3. `Update` 플래그가 있는 경우:
-	1. `commitHostPortalContainnerChildren`을 통해 `Portal` 컴포넌트의 `container`에 대한 업데이트(Update) 처리가 진행된다. 
+   - `commitHostPortalContainerChildren`을 통해 Portal 컴포넌트의 container에 대한 업데이트(Update) 처리가 진행된다.
+   - 이 함수는 Portal의 자식들을 실제 container에 마운트하는 최종 단계를 담당한다.
 
-이해가 가지 않는 변수가 많다. 하나하나 알아보자.
+이해가 가지 않는 변수들이 있다. 하나하나 알아보자.
 
-**1. 리소스 지원
-- `React`의 새로운 기능인 `Resources`와 관련된 것으로, 주로 서버 컴포넌트와 관련이 있다.
-- `hoistable elements`(예: `<script>`, `<style>` 등)를 특별히 처리할 수 있게 해주는 기능이다.
+**1. 리소스 지원 (supportsResources)**
+- React의 새로운 기능인 Resources와 관련된 것으로, 주로 서버 컴포넌트와 관련이 있다.
+- hoistable elements(예: `<script>`, `<style>` 등)를 특별히 처리할 수 있게 해주는 기능이다.
 - `currentHoistableRoot`를 통해 이러한 요소들이 어디에 배치되어야 하는지 추적된다.
+- 서버 컴포넌트에서 클라이언트로 전환될 때 필요한 리소스를 효율적으로 관리한다.
 
-**2. `Mutation` 처리(`recursivelyTraverseMutationEffects`)
-- `DOM`에 실제 변경사항을 적용하는 단계이다.
-- 주요 `mutation` 타입:
+**2. Mutation 처리 (recursivelyTraverseMutationEffects)**
+- DOM에 실제 변경사항을 적용하는 단계이다.
+- 주요 mutation 타입:
 ```ts
 // 예시적인 mutation 타입들
 const Placement = /*     */ 0b0000000000000000010; // 새로운 노드 삽입
 const Update = /*        */ 0b0000000000000000100; // 노드 업데이트
 const Deletion = /*      */ 0b0000000000000001000; // 노드 삭제
 ```
-- `recursivelyTraverseMutationEffects`는 `Fiber` 트리를 순회하면서 이러한 `mutation` 효과들을 실행한다.
+- `recursivelyTraverseMutationEffects`는 Fiber 트리를 순회하면서 이러한 mutation 효과들을 실행한다.
+- 자식 노드들의 mutation을 먼저 처리한 후, 부모 노드의 mutation을 처리하는 것이 중요하다.
 
-**3. `Update` 플래그
+**3. Update 플래그**
 ```ts
 // React Fiber flags
 const Update = 0b0000000000000000100; // 2진수 표현
 ```
-- 이 플래그는 해당 `Fiber` 노드의 `props`나 `state`가 변경되어 업데이트가 필요함을 나타낸다.
-- `Poratl`의 경우:
-	- `container`의 내용물이 변경되었을 때 설정된다.
-	- 이 플래그가 있으면 `commitHostPortalContainerCHildren`을 통해 변경된 자식들을 `container`에 반영한다.
-	- 초기에는 `Update`가 아닌 `Placement`의 플래그를 가지며, `commitReconciliationEffects`가 실행된다.
+- 이 플래그는 해당 Fiber 노드의 props나 state가 변경되어 업데이트가 필요함을 나타낸다.
+- Portal의 경우:
+  - container의 내용물이 변경되었을 때 설정된다.
+  - 이 플래그가 있으면 `commitHostPortalContainerChildren`을 통해 변경된 자식들을 container에 반영한다.
+  - 초기에는 Update가 아닌 Placement의 플래그를 가지며, `commitReconciliationEffects`가 실행된다.
 
-예를 들어:
-```ts
-// Portal 업데이트 시나리오
-const Modal = ({ children }) => {
-  return createPortal(
-    children,                              // 이 내용이 변경되면
-    document.getElementById('modal-root')  // Update 플래그가 설정되고
-  );                                      // container에 새 내용이 반영됨
-};
-```
+**4. Persistence 지원 (supportsPersistence)**
+- React의 서버 컴포넌트와 관련된 기능으로, 서버에서 렌더링된 컴포넌트의 상태를 클라이언트에서 유지하는 것을 지원한다.
+- Portal의 경우, 서버에서 렌더링된 Portal의 내용이 클라이언트에서도 올바르게 유지되도록 보장한다.
 
 전반적인 흐름을 다시 요약해보자.
 

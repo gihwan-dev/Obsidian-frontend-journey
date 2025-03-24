@@ -250,6 +250,8 @@ const Modal = ({ children }) => {
 };
 ```
 
-다만 여기까지
+실제로 이 코드들의 `stack`을 따라가다 보면
+
+`commitReconciliationEffects` > `commitHostPlacement` > `commitPlacement` > `insertOrAppendPlacementNodeIntoContainer` > 
 
 > Fiber와 Lanes에 대한 간략한 설명

@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Inheritance and the prototype chain"
             }
+          },
+          {
+            "id": "75c5ea31e0cc8687",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -241,7 +254,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bac67c2f170b2755",
+  "active": "75c5ea31e0cc8687",
   "lastOpenFiles": [
     "Javascript Prototype/JavaScript Prototypes, Inheritance & Objects - 2025.md",
     "Javascript Prototype/Object Oriented Programming.md",

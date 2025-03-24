@@ -152,6 +152,104 @@ function pushHostContainer(fiber: Fiber, nextRootInstance: Container): void {
 }
 ```
 
+주요 포인트는 다음과 같다:
+1. `Portal`은 다른 `DOM` 트리에 렌더링되므로, 새로운 `container context`가 필요하다.
+2. 이를 위해 3개의 스택을 관리한다:
+	- `rootInstanceStackCursor`: `container` 인스턴스 추적
+	- `contextFiberStackCursor`: `context` 제공 `Fiber` 추적
+	- `contextStackCursor`: 실제 `host context` 관리
+3. 에러 처리를 위해 임시로 `null`을 푸시했다가 실제 `context`로 교체하는 안전장치가 있다.
 
+이 함수는 Portal이 자신만의 독립적인 렌더링 context를 가질 수 있게 해주는 중요한 역할을 한다.
+
+지금까지의 살펴본 내용을 요약하면 다음과 같다:
+
+1. `createPortal`을 호출하면 `Portal` 타입의 컴포넌트를 생성한다.
+2. `beginWorks`에서 `type`이 `Portal`인 컴포넌트는 `updatePortalComponent`를 통해 처리된다.
+3. `updatePortalComponent`에서는 `Portal` 컴포넌트의 재조정을 실행하고 `pushHostContainer`를 통해 해당 `Portal` 컴포넌트에 필요한 컨텍스트를 저장한다.
+
+여기까지가 렌더링 단계에서의 `Portal` 처리에 대한 전체적인 흐름이다. 그렇다면 커밋 단계에서의 처리에 대해 살펴보자. 이에 대한 처리는 `commitMutationEffectsOnFiber` 함수에서 일어난다:
+
+```ts
+function commitMutationEffectsOnFiber(finishedWork: Fiber, root: FiberRoot, lanes: Lanes) {
+  // ... 다른 케이스들 ...
+
+  case HostPortal: {
+    if (supportsResources) {
+      // 리소스 지원시 hoistable root 처리
+      const previousHoistableRoot = currentHoistableRoot;
+      currentHoistableRoot = getHoistableRoot(
+        finishedWork.stateNode.containerInfo,
+      );
+      recursivelyTraverseMutationEffects(root, finishedWork, lanes);
+      commitReconciliationEffects(finishedWork, lanes);
+      currentHoistableRoot = previousHoistableRoot;
+    } else {
+      // 일반적인 경우
+      recursivelyTraverseMutationEffects(root, finishedWork, lanes);
+      commitReconciliationEffects(finishedWork, lanes);
+    }
+
+    // Update 플래그가 있는 경우
+    if (flags & Update) {
+      if (supportsPersistence) {
+        // Portal의 자식들을 container에 커밋
+        commitHostPortalContainerChildren(
+          finishedWork.stateNode,
+          finishedWork,
+          finishedWork.stateNode.pendingChildren,
+        );
+      }
+    }
+    break;
+  }
+}
+```
+
+1. `recursivelyTraverseMutationEffects`: `Portal`의 자식들에 대한 `mutation` 효과를 재귀적으로 처리한다.
+2. `commitReconciliationEffects`: 재조정 효과 커밋
+3. `Update` 플래그가 있는 경우:
+	1. `commitHostPortalContainnerChildren`을 통해 `Portal` 자식들을 지정된 `container`에 실제로 마운트
+
+이해가 가지 않는 변수가 많다. 하나하나 알아보자.
+
+**1. 리소스 지원
+- `React`의 새로운 기능인 `Resources`와 관련된 것으로, 주로 서버 컴포넌트와 관련이 있다.
+- `hoistable elements`(예: `<script>`, `<style>` 등)를 특별히 처리할 수 있게 해주는 기능이다.
+- `currentHoistableRoot`를 통해 이러한 요소들이 어디에 배치되어야 하는지 추적된다.
+
+**2. `Mutation` 처리(`recursivelyTraverseMutationEffects`)
+- `DOM`에 실제 변경사항을 적용하는 단계이다.
+- 주요 `mutation` 타입:
+```ts
+// 예시적인 mutation 타입들
+const Placement = /*     */ 0b0000000000000000010; // 새로운 노드 삽입
+const Update = /*        */ 0b0000000000000000100; // 노드 업데이트
+const Deletion = /*      */ 0b0000000000000001000; // 노드 삭제
+```
+- `recursivelyTraverseMutationEffects`는 `Fiber` 트리를 순회하면서 이러한 `mutation` 효과들을 실행한다.
+
+**3. `Update` 플래그
+```ts
+// React Fiber flags
+const Update = 0b0000000000000000100; // 2진수 표현
+```
+- 이 플래그는 해당 `Fiber` 노드의 `props`나 `state`가 변경되어 업데이트가 필요함을 나타낸다.
+- `Poratl`의 경우:
+	- `container`의 내용물이 변경되었을 때 설정된다.
+	- 이 플래그가 있으면 `commitHostPortalContainerCHildren`을 통해 변경된 자식들을 `container`에 반영한다.
+
+예를 들어:
+```ts
+// Portal 업데이트 시나리오
+const Modal = ({ children }) => {
+  return createPortal(
+    children,                              // 이 내용이 변경되면
+    document.getElementById('modal-root')  // Update 플래그가 설정되고
+  );                                      // container에 새 내용이 반영됨
+};
+```
+
+다만 여기까지
 
 > Fiber와 Lanes에 대한 간략한 설명

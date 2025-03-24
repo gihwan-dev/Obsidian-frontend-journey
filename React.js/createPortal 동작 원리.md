@@ -125,4 +125,33 @@ function updatePortalComponent(
 3. 마운트와 업데이트 시의 처리가 다른데, 이는 `Portal`의 특별한 마운팅 방식 때문이다.
 4. 실제 `DOM` 조작은 이후의 `commit` 단계에서 이루어진다.
 
+`reconcileChildren`, `reconcileChildFibers` 함수는 새로운 `children`과 이전 `children`을 비교해 필요한 변경사항을 계산하고 새로운 `Fiber` 트리를 구성하는 함수다.
+
+그렇다면 `pushHostContainer`는 무엇일까?
+
+```ts
+function pushHostContainer(fiber: Fiber, nextRootInstance: Container): void {
+  // 1. root 인스턴스를 스택에 푸시
+  // Portal이 팝될 때 root를 리셋할 수 있도록 함
+  push(rootInstanceStackCursor, nextRootInstance, fiber);
+
+  // 2. context를 제공한 Fiber를 추적
+  // 유니크한 context를 제공하는 Fiber만 팝하기 위함
+  push(contextFiberStackCursor, fiber, fiber);
+
+  // 3. host context 처리
+  // 에러 처리를 위해 먼저 빈 값을 푸시
+  push(contextStackCursor, null, fiber);
+  
+  // 4. root context 가져오기
+  const nextRootContext = getRootHostContext(nextRootInstance);
+  
+  // 5. 임시로 넣었던 null 값을 실제 context로 교체
+  pop(contextStackCursor, fiber);
+  push(contextStackCursor, nextRootContext, fiber);
+}
+```
+
+
+
 > Fiber와 Lanes에 대한 간략한 설명

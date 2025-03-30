@@ -34,5 +34,16 @@ export function createContext<T>(defaultValue: T): ReactContext<T> {
 
 이 구현은 React가 다양한 렌더링 환경에서 안정적으로 동작할 수 있도록 보장합니다.
 
+리액트 컨텍스트 타입을 타입으로 가지는 리액트 노드를 반환하는 형태의 간단한 함수다.  아주 간단한 형태로 축약하면 다음과 같다:
 
-리액트 컨텍스트 타입을 타입으로 가지는 리액트 노드를 반환하는 형태의 간단한 함수다. 
+```tsx
+export function createContext<T>(defaultValue: T): ReactContext<T> {
+  const context: ReactContext<T> = {
+    $$typeof: REACT_CONTEXT_TYPE,  // React 내부에서 이 객체가 Context임을 식별하는 심볼
+    _currentValue: defaultValue,    // Context의 현재 값을 초기화
+    Provider: null,                // Provider 컴포넌트를 위한 필드 초기화
+    Consumer: null                 // Consumer 컴포넌트를 위한 필드 초기화
+  };
+  return context;
+}
+```

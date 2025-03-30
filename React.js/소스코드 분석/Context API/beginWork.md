@@ -30,19 +30,19 @@ case ContextConsumer:
 우선 파라미터 변수에 대한 정리를 해보자.
 
 1. `current`: `Fiber` | `null`
-	- 현재 화면에 렌더링된 `Fiber` 노드를 가리킵니다
-	- 첫 렌더링의 경우 `null`입니다
-	- 업데이트 시에는 이전 렌더링의 `Fiber` 노드를 참조합니다
-	- "current tree" 또는 "old tree"라고도 불립니다
+	- 현재 화면에 렌더링된 `Fiber` 노드를 가리킨다
+	- 첫 렌더링의 경우 `null` 이다
+	- 업데이트 시에는 이전 렌더링의 `Fiber` 노드를 참조한다
+	- "current tree" 또는 "old tree"라고도 불린다
 2. `workInProgress`: `Fiber`
-	- 현재 작업 중인 새로운 `Fiber` 노드를 가리킵니다
-	-  업데이트를 위해 새로 생성되거나 재사용되는 `Fiber`입니다
-	- "work-in-progress tree" 또는 "new tree"라고도 불립니다
-	- 이 노드는 아직 화면에 반영되지 않은 상태입니다
+	- 현재 작업 중인 새로운 `Fiber` 노드를 가리킨다
+	-  업데이트를 위해 새로 생성되거나 재사용되는 `Fiber`다
+	- "work-in-progress tree" 또는 "new tree"라고도 불린다
+	- 이 노드는 아직 화면에 반영되지 않은 상태다
 3. `renderLanes`: `Lanes`
-	- 렌더링 우선순위를 나타내는 비트마스크 값입니다
-	- `React`의 동시성(Concurrent) 모드에서 사용됩니다
-	- 여러 업데이트의 우선순위를 관리합니다
+	- 렌더링 우선순위를 나타내는 비트마스크 값이다
+	- `React`의 동시성(Concurrent) 모드에서 사용된다
+	- 여러 업데이트의 우선순위를 관리한다
 	- 예를 들어:
 		- 사용자 입력: 높은 우선순위
 		- 데이터 페칭: 낮은 우선순위

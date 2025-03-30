@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/소스코드 분석/Context API/beginWork.md",
+                "file": "React.js/소스코드 분석/Context API/updateContextProvider.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "beginWork"
+              "title": "updateContextProvider"
             }
           }
         ]
@@ -243,8 +243,9 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "React.js/소스코드 분석/Context API/pushProvider.md",
     "React.js/소스코드 분석/Context API/beginWork.md",
+    "React.js/소스코드 분석/Context API/updateContextProvider.md",
+    "React.js/소스코드 분석/Context API/pushProvider.md",
     "React.js/소스코드 분석/createPortal 동작 원리.md",
     "React.js/소스코드 분석/beginWork.md",
     "React.js/소스코드 분석",
@@ -276,7 +277,6 @@
     "Clean Code/튜링 머신.md",
     "Clean Code/응집도와 결합도 - 차이점.md",
     "Clean Code/낮은 결합도와 높은 응집도.md",
-    "Clean Code/ORM에서의 관심사 분리.md",
     "Clean Code",
     "Next.js/Pasted image 20250303172835.png",
     "Javascript Prototype/Udemy 강의",

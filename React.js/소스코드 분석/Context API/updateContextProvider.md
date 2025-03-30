@@ -45,7 +45,7 @@ const newValue = newProps.value;
 pushProvider(workInProgress, context, newValue);
 ```
 - Provider에 전달된 새로운 props에서 `value`를 추출한다.
-- `pushProvider` 함수를 통해 새로운 Context 값을 Fiber 트리에 저장한다.
+- [[pushProvider]] 함수를 통해 새로운 Context 값을 Fiber 트리에 저장한다.
 - 이 값은 나중에 하위 컴포넌트들이 `useContext` 훅을 통해 접근할 수 있게 된다.
 
 3. **자식 컴포넌트 재조정**

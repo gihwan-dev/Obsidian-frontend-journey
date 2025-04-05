@@ -145,3 +145,88 @@ MyContext._currentValue = 'new value';  // ❌ 직접 수정
 4. 값 복원이 불가능해져 메모리 누수나 버그 발생 가능
 
 따라서 Provider는 단순한 구조적 요소가 아니라, React의 렌더링 시스템과 밀접하게 통합된 중요한 메커니즘입니다. valueStack은 이 메커니즘이 올바르게 작동하도록 보장하는 핵심 요소입니다.
+
+네, Context가 Provider 내부에서 사용되는지 확인하는 핵심 로직을 찾아보겠습니다.
+
+Read file: packages/react-reconciler/src/ReactFiberNewContext.js
+
+Read file: packages/react-reconciler/src/ReactFiberNewContext.js
+이제 Provider와 Context 사용의 연관성을 확인하기 위해 한 가지 파일을 더 살펴보겠습니다:
+
+Read file: packages/react-reconciler/src/ReactFiberBeginWork.js
+코드를 분석해보니, Context와 Provider의 연관성이 매우 흥미롭게 구현되어 있습니다. 핵심적인 부분을 설명드리겠습니다:
+
+1. **Context 값 검증과 Provider 연결**
+```javascript
+function readContextForConsumer(consumer, context) {
+  const value = isPrimaryRenderer
+    ? context._currentValue
+    : context._currentValue2;
+
+  if (lastContextDependency === null) {
+    if (consumer === null) {
+      throw new Error(
+        'Context는 React가 렌더링 중일 때만 읽을 수 있습니다...'
+      );
+    }
+    // 컴포넌트와 Context 간의 의존성을 설정
+    lastContextDependency = contextItem;
+    consumer.dependencies = {
+      lanes: NoLanes,
+      firstContext: contextItem,
+    };
+  }
+  return value;
+}
+```
+
+2. **Provider 업데이트 처리**
+```javascript
+function updateContextProvider(current, workInProgress, renderLanes) {
+  const context = workInProgress.type;
+  const newProps = workInProgress.pendingProps;
+  const newValue = newProps.value;
+
+  // Provider의 새 값을 스택에 푸시
+  pushProvider(workInProgress, context, newValue);
+  
+  // 자식 컴포넌트들을 처리
+  const newChildren = newProps.children;
+  reconcileChildren(current, workInProgress, newChildren, renderLanes);
+  return workInProgress.child;
+}
+```
+
+Provider가 필요한 이유와 작동 방식:
+
+1. **의존성 추적**:
+   - React는 각 컴포넌트가 어떤 Context를 사용하는지 추적해야 합니다.
+   - Provider는 이 의존성 트리의 시작점 역할을 합니다.
+
+2. **렌더링 최적화**:
+   ```javascript
+   consumer.dependencies = {
+     lanes: NoLanes,
+     firstContext: contextItem,
+   };
+   consumer.flags |= NeedsPropagation;
+   ```
+   - Provider는 어떤 컴포넌트들이 Context 값에 의존하는지 추적합니다.
+   - 이를 통해 Context 값이 변경될 때 필요한 컴포넌트만 리렌더링할 수 있습니다.
+
+3. **값 범위 관리**:
+   ```javascript
+   pushProvider(workInProgress, context, newValue);
+   // ... 자식 컴포넌트들 처리 ...
+   popProvider(context, workInProgress);
+   ```
+   - Provider는 Context 값의 유효 범위를 정의합니다.
+   - 중첩된 Provider의 경우 각각의 값이 올바른 범위에서만 적용되도록 보장합니다.
+
+따라서 Provider 없이 Context를 직접 사용할 수 없는 이유는:
+1. React가 Context 의존성을 추적할 수 없게 됩니다.
+2. 컴포넌트 트리에서 Context 값의 범위를 정의할 수 없습니다.
+3. 최적화된 리렌더링이 불가능해집니다.
+4. 중첩된 Context 사용 시 값 충돌이 발생할 수 있습니다.
+
+`valueStack`은 이러한 메커니즘을 지원하는 핵심 데이터 구조로, Provider 트리의 구조와 값의 범위를 관리하는 데 사용됩니다.

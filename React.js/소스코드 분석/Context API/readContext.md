@@ -224,4 +224,4 @@ function checkIfContextChanged(dependencies) {
 }
 ```
 
-이렇게 `next` 필드를 통해 의존성들을 연결함으로써, React는 컴포넌트가 구독하는 모든 Context를 효율적으로 관리하고 업데이트할 수 있습니다.
+이렇게 `next` 필드를 통해 의존성들을 연결함으로써, React는 컴포넌트가 구독하는 모든 Context를 효율적으로 관리하고 업데이트할 수 있다.

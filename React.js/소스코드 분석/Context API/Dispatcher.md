@@ -142,7 +142,7 @@ const HooksDispatcherOnUpdate: Dispatcher = {
 
 `HooksDispatcherOnUpdate`는 `HooksDispatcherOnMount`와 함께 React의 훅 시스템의 핵심을 이루며, 컴포넌트의 업데이트 과정에서 효율적인 상태 관리와 렌더링 최적화를 담당한. 특히 의존성 비교와 메모이제이션을 통해 불필요한 리렌더링을 방지하는 중요한 역할을 한다.
 
-## HooksDispatcher가 라이프 사이클에 따라 분리된 이유
+## HooksDispatcher가 라이프사이클에 따라 분리된 이유
 
 Dispatcher를 Mount와 Update로 분리한 이유는 크게 세 가지 측면에서 설명할 수 있다:
 

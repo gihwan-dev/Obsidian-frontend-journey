@@ -230,3 +230,110 @@ Provider가 필요한 이유와 작동 방식:
 4. 중첩된 Context 사용 시 값 충돌이 발생할 수 있습니다.
 
 `valueStack`은 이러한 메커니즘을 지원하는 핵심 데이터 구조로, Provider 트리의 구조와 값의 범위를 관리하는 데 사용됩니다.
+
+아, `valueStack`의 진짜 목적을 설명드리겠습니다! 실제 예시로 보면 이해가 더 쉬울 것 같네요:
+
+```jsx
+const MyContext = createContext('default');
+
+function App() {
+  return (
+    <MyContext.Provider value="A">          // (1) context._currentValue = "A"
+      <MyContext.Provider value="B">        // (2) context._currentValue = "B"
+        <ComponentX />
+        <MyContext.Provider value="C">      // (3) context._currentValue = "C"
+          <ComponentY />
+        </MyContext.Provider>               // (4) context._currentValue = "B" (복원!)
+        <ComponentZ />
+      </MyContext.Provider>                 // (5) context._currentValue = "A" (복원!)
+    </MyContext.Provider>
+```
+
+이 코드가 실행될 때 일어나는 일을 단계별로 보겠습니다:
+
+1. **Provider가 마운트될 때:**
+```javascript
+// (1) 첫 번째 Provider
+pushProvider(fiber, context, "A");
+// 실행되는 일:
+push(valueCursor, context._currentValue, fiber); // valueStack = ["default"]
+context._currentValue = "A";                     // currentValue = "A"
+
+// (2) 두 번째 Provider
+pushProvider(fiber, context, "B");
+// 실행되는 일:
+push(valueCursor, context._currentValue, fiber); // valueStack = ["default", "A"]
+context._currentValue = "B";                     // currentValue = "B"
+
+// (3) 세 번째 Provider
+pushProvider(fiber, context, "C");
+// 실행되는 일:
+push(valueCursor, context._currentValue, fiber); // valueStack = ["default", "A", "B"]
+context._currentValue = "C";                     // currentValue = "C"
+```
+
+2. **Provider가 언마운트될 때:**
+```javascript
+// (4) 세 번째 Provider 언마운트
+popProvider(context, fiber);
+// 실행되는 일:
+context._currentValue = valueStack[2];  // currentValue = "B" (이전 값 복원)
+valueStack.pop();                       // valueStack = ["default", "A"]
+
+// (5) 두 번째 Provider 언마운트
+popProvider(context, fiber);
+// 실행되는 일:
+context._currentValue = valueStack[1];  // currentValue = "A" (이전 값 복원)
+valueStack.pop();                       // valueStack = ["default"]
+```
+
+이제 `valueStack`이 필요한 진짜 이유가 보입니다:
+
+1. **값 복원을 위해서입니다!**
+   - Provider는 중첩될 수 있고, 각 Provider가 언마운트될 때 이전 Provider의 값으로 정확히 복원되어야 합니다.
+   - `valueStack` 없이는 이전 값이 무엇이었는지 알 수 없습니다.
+
+2. **동시성 모드에서 특히 중요합니다:**
+```jsx
+<Provider value="A">
+  <Provider value="B">
+    {/* 여기서 렌더링이 중단되고 나중에 재개될 수 있음 */}
+    <ExpensiveComponent />
+  </Provider>
+</Provider>
+```
+- React의 동시성 모드에서는 렌더링이 중단되고 나중에 재개될 수 있습니다.
+- 렌더링이 재개될 때 정확히 어떤 Provider 내부에 있었는지, 그 값이 무엇이었는지 알아야 합니다.
+
+3. **에러 복구에도 필요합니다:**
+```jsx
+<Provider value="A">
+  <Provider value="B">
+    <ErrorBoundary>
+      <BuggyComponent /> {/* 에러 발생! */}
+    </ErrorBoundary>
+  </Provider>
+</Provider>
+```
+- 컴포넌트에서 에러가 발생하면 React는 이전 상태로 돌아가야 합니다.
+- `valueStack`이 있어야 각 Provider의 값을 정확히 복원할 수 있습니다.
+
+4. **개발 모드 지원:**
+```javascript
+if (__DEV__) {
+  if (fiber !== fiberStack[index]) {
+    console.error('Unexpected Fiber popped.');
+  }
+}
+```
+- 개발 중에 Provider가 올바른 순서로 마운트/언마운트되는지 확인할 수 있습니다.
+
+따라서 `valueStack`은 단순히 현재 값을 저장하는 것이 아니라:
+- Provider 트리의 상태를 추적
+- 이전 값들을 정확히 복원
+- 동시성 모드 지원
+- 에러 복구 지원
+- 개발 모드 디버깅 지원
+
+이 모든 기능을 제공하는 중요한 메커니즘입니다!
+

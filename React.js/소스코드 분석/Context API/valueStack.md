@@ -421,3 +421,258 @@ popProvider(context, fiber) {
 3. `valueStack`은 Provider 트리가 변경될 때 값을 복원하는 용도입니다.
 4. 콘솔에 기본값이 보이는 것은 단지 객체의 현재 상태를 보여주는 것일 뿐, 실제 동작에는 영향을 미치지 않습니다.
 
+아, 정말 좋은 질문입니다! 실제로 모든 Provider가 pop될 때 초기값으로 돌아가는 과정을 추적해보겠습니다.
+
+먼저 Provider가 언마운트될 때의 코드를 보겠습니다:
+
+Read file: packages/react-reconciler/src/ReactFiberNewContext.js
+이제 `valueStack`의 동작을 더 자세히 보기 위해 `ReactFiberStack.js`도 확인해보겠습니다:
+
+Read file: packages/react-reconciler/src/ReactFiberStack.js
+이제 전체 과정을 설명드리겠습니다. 예를 들어:
+
+```javascript
+const MyContext = createContext('default');  // 초기값 설정
+
+// 렌더링
+<MyContext.Provider value="A">              // push: valueStack = ['default']
+  <MyContext.Provider value="B">            // push: valueStack = ['default', 'A']
+    <MyContext.Provider value="C">          // push: valueStack = ['default', 'A', 'B']
+      <Component />
+    </MyContext.Provider>                   // pop: valueStack = ['default', 'A']
+  </MyContext.Provider>                     // pop: valueStack = ['default']
+</MyContext.Provider>                       // pop: valueStack = []
+```
+
+각 단계별로 일어나는 일:
+
+1. **초기 생성**
+```javascript
+const MyContext = createContext('default');
+// context._currentValue = 'default'
+// valueStack은 비어있음 []
+```
+
+2. **첫 번째 Provider 마운트**
+```javascript
+pushProvider(fiber, context, 'A');
+// 1. push(valueCursor, context._currentValue, fiber)
+//    - valueStack.push('default')
+//    - valueCursor.current = 'A'
+// 2. context._currentValue = 'A'
+```
+
+3. **Provider 언마운트 시**
+```javascript
+popProvider(context, fiber);
+// 1. currentValue = valueCursor.current
+// 2. context._currentValue = currentValue (스택에서 꺼낸 이전 값으로 복원)
+// 3. pop(valueCursor, fiber) - 스택에서 값 제거
+```
+
+중요한 점은:
+
+1. **값 복원 메커니즘**
+```javascript
+// popProvider 내부
+const currentValue = valueCursor.current;  // 스택의 최상위 값 가져오기
+context._currentValue = currentValue;      // Context 값 복원
+pop(valueCursor, fiber);                  // 스택에서 제거
+```
+
+2. **스택이 비었을 때**
+```javascript
+if (index < 0) {
+  if (__DEV__) {
+    console.error('Unexpected pop.');
+  }
+  return;
+}
+```
+- 마지막 Provider가 언마운트되면 스택은 비게 됩니다
+- 이때 Context의 `_currentValue`는 마지막으로 복원된 값(초기값)을 유지합니다
+
+따라서 초기값으로 돌아가는 과정은:
+1. 각 Provider가 마운트될 때 이전 값을 스택에 저장
+2. 언마운트될 때 스택에서 이전 값을 꺼내 복원
+3. 마지막 Provider가 언마운트되면 초기값이 복원됨
+
+이 메커니즘은 React의 렌더링 생명주기와 완벽하게 동기화되어 있어서, Provider 트리가 어떻게 변경되더라도 Context 값이 올바르게 관리됩니다!
+
+아! 정말 날카로운 지적입니다. 제가 앞서 설명한 내용에 오류가 있었네요.
+
+실제로 `valueStack`의 동작을 다시 자세히 보면:
+
+```javascript
+// 1. Context 생성
+const MyContext = createContext('default');
+// context._currentValue = 'default'
+// valueStack = []
+
+// 2. 첫 번째 Provider 마운트
+pushProvider(fiber, context, 'A');
+// push(valueCursor, context._currentValue, fiber)
+// valueStack = ['default']  // 이전 값 'default' 저장
+// context._currentValue = 'A'
+
+// 3. 두 번째 Provider 마운트
+pushProvider(fiber, context, 'B');
+// push(valueCursor, context._currentValue, fiber)
+// valueStack = ['default', 'A']  // 이전 값 'A' 저장
+// context._currentValue = 'B'
+
+// 4. 모든 Provider 언마운트
+popProvider(context, fiber);  // 두 번째 Provider
+// context._currentValue = valueStack[1] ('A')
+// valueStack = ['default']
+
+popProvider(context, fiber);  // 첫 번째 Provider
+// context._currentValue = valueStack[0] ('default')
+// valueStack = []
+```
+
+맞습니다! 제가 앞서 설명한 것처럼 초기값이 자동으로 복원되는 것이 아니라, 초기값도 `valueStack`에 저장되어 있어야 복원이 가능합니다.
+
+이 부분을 더 자세히 확인하기 위해 Provider의 마운트/언마운트 코드를 다시 보겠습니다:
+
+Read file: packages/react-reconciler/src/ReactFiberBeginWork.js
+네, 제가 잘못 설명드렸네요. 실제로는:
+
+1. **초기값은 별도로 저장되지 않습니다**
+```javascript
+const MyContext = createContext('default');
+// context._currentValue = 'default'만 설정되고
+// valueStack에는 아무것도 저장되지 않음
+```
+
+2. **첫 번째 Provider 마운트 시**
+```javascript
+<MyContext.Provider value="A">
+// pushProvider 실행:
+// 1. valueStack에 현재 context._currentValue('default') 저장
+// 2. context._currentValue = 'A'로 설정
+```
+
+3. **마지막 Provider 언마운트 시**
+```javascript
+// popProvider 실행:
+// 1. context._currentValue = valueStack[0]('default')
+// 2. valueStack = []
+```
+
+따라서 초기값으로 돌아갈 수 있는 이유는:
+1. 첫 번째 Provider가 마운트될 때 현재 값(초기값)을 `valueStack`에 저장하기 때문
+2. 마지막 Provider가 언마운트될 때 그 저장된 초기값을 복원하기 때문
+
+이것은 중요한 의미를 가집니다:
+- Provider가 없는 상황에서는 항상 `createContext`에서 설정한 초기값을 사용
+- Provider가 하나라도 있으면 그 시점의 `context._currentValue`가 `valueStack`에 저장되어 나중에 복원됨
+- 결과적으로 모든 Provider가 언마운트되면 자연스럽게 초기값으로 돌아감
+
+이렇게 보면 초기값 복원이 자동으로 되는 것이 아니라, 첫 번째 Provider 마운트 시점에 저장된 값이 마지막에 복원되는 것이네요. 제가 앞서 잘못 설명드린 점 사과드립니다!
+
+아주 좋은 지적입니다! 실제로 이런 상황을 테스트해보겠습니다:
+
+```jsx
+const MyContext = createContext('default');
+
+function App() {
+  const [showProvider, setShowProvider] = useState(true);
+  const [value, setValue] = useState('A');
+
+  return (
+    <div>
+      {showProvider && (
+        <MyContext.Provider value={value}>
+          <Consumer />
+        </MyContext.Provider>
+      )}
+      {/* Provider가 조건부로 제거되면 Consumer는 'default'를 봐야 함 */}
+    </div>
+  );
+}
+```
+
+이런 상황에서 React는 어떻게 처리하는지 코드를 살펴보겠습니다:
+
+Read file: packages/react-reconciler/src/ReactFiberUnwindWork.js
+
+Read file: packages/react-reconciler/src/ReactFiberCommitWork.js
+코드를 분석해보니, Provider가 조건부로 렌더링되는 경우에도 React는 정확하게 처리합니다. 작동 방식을 설명드리겠습니다:
+
+1. **Provider가 처음 마운트될 때**:
+```javascript
+// 1. Provider 마운트
+<MyContext.Provider value="A">
+// pushProvider 호출:
+push(valueCursor, context._currentValue, fiber);  // valueStack = ['default']
+context._currentValue = 'A';                      // _currentValue = 'A'
+```
+
+2. **Provider가 조건부로 제거될 때**:
+```javascript
+// Provider가 언마운트됨
+if (workInProgress.tag === ContextProvider) {
+  popProvider(context, workInProgress);
+  // 1. currentValue = valueStack[0] ('default')
+  // 2. context._currentValue = currentValue
+  // 3. valueStack = []
+}
+```
+
+3. **Provider가 다시 마운트될 때**:
+```javascript
+// Provider 다시 마운트
+pushProvider(fiber, context, 'A');
+// 1. push(valueCursor, context._currentValue, fiber)
+//    - valueStack = ['default']  // 현재 값('default')을 스택에 저장
+// 2. context._currentValue = 'A'
+```
+
+중요한 점은:
+
+1. **값 복원이 항상 작동하는 이유**:
+```javascript
+// Provider 마운트 시
+pushProvider(fiber, context, newValue) {
+  // 현재 값(default 또는 이전 값)을 스택에 저장
+  push(valueCursor, context._currentValue, fiber);
+  // 새 값 설정
+  context._currentValue = newValue;
+}
+
+// Provider 언마운트 시
+popProvider(context, fiber) {
+  // 스택에서 이전 값을 복원
+  context._currentValue = valueStack.pop();
+}
+```
+
+2. **조건부 렌더링에서의 동작**:
+```jsx
+function App() {
+  const [show, setShow] = useState(true);
+  return (
+    <>
+      {show && (
+        <MyContext.Provider value="A">
+          <Child />
+        </MyContext.Provider>
+      )}
+      <button onClick={() => setShow(!show)}>Toggle</button>
+    </>
+  );
+}
+```
+
+이 경우:
+- Provider가 마운트될 때: `_currentValue`는 'A'가 되고, 'default'는 스택에 저장됨
+- Provider가 언마운트될 때: 스택에서 'default'를 꺼내 `_currentValue`로 복원
+- Provider가 다시 마운트될 때: 현재 값('default')을 스택에 저장하고 새 값('A') 설정
+
+따라서:
+1. Provider의 조건부 렌더링은 완벽하게 안전합니다.
+2. 값은 항상 올바르게 복원됩니다.
+3. 중첩된 Provider에서도 정확하게 작동합니다.
+
+이는 React의 Context 시스템이 매우 견고하게 설계되어 있음을 보여줍니다!

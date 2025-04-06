@@ -337,3 +337,87 @@ if (__DEV__) {
 
 이 모든 기능을 제공하는 중요한 메커니즘입니다!
 
+아하! 정말 좋은 관찰이에요. Context의 값 추적 메커니즘의 핵심을 짚어주셨네요.
+
+실제로 Context 객체 자체를 콘솔에 찍어보면 `_currentValue`가 기본값으로 보이는 이유와 실제 작동 방식을 살펴보겠습니다:
+
+Read file: packages/react/src/ReactContext.js
+이제 `useContext`가 어떻게 정확한 Context를 찾는지 보겠습니다:
+
+Read file: packages/react-reconciler/src/ReactFiberNewContext.js
+핵심적인 부분을 설명드리겠습니다:
+
+1. **Context 객체의 구조**
+```javascript
+const context = {
+  $$typeof: REACT_CONTEXT_TYPE,
+  _currentValue: defaultValue,    // 실제 값이 여기에 저장됨
+  _currentValue2: defaultValue,   // 보조 렌더러용
+  Provider: {
+    $$typeof: REACT_PROVIDER_TYPE,
+    _context: context             // 중요! Provider는 원본 context를 참조
+  }
+};
+```
+
+2. **값 추적 메커니즘**
+```javascript
+// Provider 렌더링 시
+pushProvider(fiber, context, newValue) {
+  push(valueCursor, context._currentValue, fiber);
+  context._currentValue = newValue;  // context 객체 자체의 값을 업데이트
+}
+
+// useContext 사용 시
+function readContextForConsumer(consumer, context) {
+  return context._currentValue;  // 동일한 context 객체에서 값을 읽음
+}
+```
+
+핵심은 다음과 같습니다:
+
+1. **참조 동일성 유지**
+- `createContext()`로 생성된 Context 객체는 항상 동일한 참조를 유지합니다.
+- Provider와 Consumer는 모두 이 동일한 Context 객체를 참조합니다.
+- 콘솔에 찍으면 기본값이 보이는 이유는 Context 객체의 현재 상태만 보이기 때문입니다.
+
+2. **값 추적 방식**
+```javascript
+const MyContext = createContext('default');
+// MyContext._currentValue = 'default'
+
+<MyContext.Provider value="new value">
+  // MyContext._currentValue = 'new value'
+  
+  const value = useContext(MyContext);
+  // useContext는 MyContext._currentValue를 직접 읽음
+</MyContext.Provider>
+```
+
+3. **정확한 값을 찾는 방법**
+- `useContext`는 index나 stack을 검색하지 않습니다!
+- 대신, Context 객체 자체의 `_currentValue`를 직접 읽습니다.
+- 이 값은 Provider에 의해 실시간으로 업데이트됩니다.
+
+4. **valueStack의 실제 역할**
+```javascript
+// Provider 마운트
+pushProvider(fiber, context, "new value") {
+  push(valueCursor, context._currentValue, fiber);  // 이전 값 저장
+  context._currentValue = "new value";              // 새 값 설정
+}
+
+// Provider 언마운트
+popProvider(context, fiber) {
+  context._currentValue = valueStack.pop();         // 이전 값 복원
+}
+```
+- `valueStack`은 값을 찾는 데 사용되지 않습니다.
+- 대신 Provider가 언마운트될 때 이전 값을 복원하는 데 사용됩니다.
+
+따라서:
+1. Context 값은 항상 Context 객체 자체에 있습니다.
+2. `useContext`는 단순히 그 객체의 현재 값을 읽습니다.
+3. `valueStack`은 Provider 트리가 변경될 때 값을 복원하는 용도입니다.
+4. 콘솔에 기본값이 보이는 것은 단지 객체의 현재 상태를 보여주는 것일 뿐, 실제 동작에는 영향을 미치지 않습니다.
+

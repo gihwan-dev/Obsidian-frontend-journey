@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/소스코드 분석/Context API/valueStack.md",
+                "file": "React.js/소스코드 분석/Context API/updateContextProvider.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "valueStack"
+              "title": "updateContextProvider"
             }
           }
         ]
@@ -243,13 +243,13 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "React.js/소스코드 분석/Context API/pushProvider.md",
+    "React.js/소스코드 분석/Context API/createContext.md",
     "React.js/소스코드 분석/Context API/valueStack.md",
+    "React.js/소스코드 분석/Context API/pushProvider.md",
     "React.js/소스코드 분석/Context API/동일 컨텍스트 참조 확인 예제.md",
     "React.js/소스코드 분석/Context API/valueCursor.md",
     "React.js/소스코드 분석/Context API/updateContextProvider.md",
     "React.js/소스코드 분석/Context API/beginWork.md",
-    "React.js/소스코드 분석/Context API/createContext.md",
     "React.js/소스코드 분석/Context API/Dispatcher.md",
     "React.js/소스코드 분석/Context API/enableRenderableContext.md",
     "React.js/소스코드 분석/Context API/push.md",

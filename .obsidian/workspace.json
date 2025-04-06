@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/소스코드 분석/Context API/updateContextProvider.md",
+                "file": "HTML/HTML 파서.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "updateContextProvider"
+              "title": "HTML 파서"
             }
           }
         ]
@@ -243,12 +243,17 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
+    "HTML/Untitled.md",
+    "HTML/HTML 파서.md",
+    "HTML/<template> 태그.md",
+    "HTML/HTML 토큰 상태 목록.md",
+    "JavaScript/README.md.md",
+    "React.js/소스코드 분석/Context API/updateContextProvider.md",
     "React.js/소스코드 분석/Context API/createContext.md",
     "React.js/소스코드 분석/Context API/valueStack.md",
     "React.js/소스코드 분석/Context API/pushProvider.md",
     "React.js/소스코드 분석/Context API/동일 컨텍스트 참조 확인 예제.md",
     "React.js/소스코드 분석/Context API/valueCursor.md",
-    "React.js/소스코드 분석/Context API/updateContextProvider.md",
     "React.js/소스코드 분석/Context API/beginWork.md",
     "React.js/소스코드 분석/Context API/Dispatcher.md",
     "React.js/소스코드 분석/Context API/enableRenderableContext.md",
@@ -264,11 +269,6 @@
     "Javascript Prototype/Class-based programming.md",
     "Javascript Prototype/람다 계산법과 튜링 머신 - 변수와 규칙.md",
     "Javascript Prototype/람다 계산법.md",
-    "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
-    "Javascript Prototype/Using Prototypical Objects to Impltement Shared Behavior in Object Oriented Systems.md",
-    "Javascript Prototype/The Forgotten History of OOP.md",
-    "Javascript Prototype/Prototype based programming(번역).md",
-    "Javascript Prototype/Object Oriented Programming.md",
     "React.js/소스코드 분석",
     "React.js/소스코드 분석/Context API",
     "Next.js/Pasted image 20250304092216.png",

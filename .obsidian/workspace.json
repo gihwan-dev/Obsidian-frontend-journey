@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Using Prototypical Objects to Impltement Shared Behavior in Object Oriented Systems"
             }
+          },
+          {
+            "id": "c6c9604911ae6c81",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -241,7 +254,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bac67c2f170b2755",
+  "active": "c6c9604911ae6c81",
   "lastOpenFiles": [
     "Javascript Prototype/Why is JavaScript prototyping?(Stack Overflow).md",
     "Javascript Prototype/Prototype based programming(번역).md",

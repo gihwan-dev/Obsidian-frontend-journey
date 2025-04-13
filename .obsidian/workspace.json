@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTML/HTML 파서.md",
+                "file": "Prompt Engineering/PromptEngineering - Lee Boonstra.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTML 파서"
+              "title": "PromptEngineering - Lee Boonstra"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,8 +243,8 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "HTML/Untitled.md",
     "HTML/HTML 파서.md",
+    "HTML/Untitled.md",
     "HTML/<template> 태그.md",
     "HTML/HTML 토큰 상태 목록.md",
     "JavaScript/README.md.md",

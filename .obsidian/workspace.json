@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prompt Engineering/PromptEngineering(요약) - Lee Boonstra.md",
+                "file": "Prompt Engineering/PromptEngineering - Lee Boonstra.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PromptEngineering(요약) - Lee Boonstra"
+              "title": "PromptEngineering - Lee Boonstra"
             }
           }
         ]
@@ -243,8 +243,8 @@
   },
   "active": "bac67c2f170b2755",
   "lastOpenFiles": [
-    "Prompt Engineering/PromptEngineering - Lee Boonstra.md",
     "Prompt Engineering/PromptEngineering(요약) - Lee Boonstra.md",
+    "Prompt Engineering/PromptEngineering - Lee Boonstra.md",
     "HTML/HTML 파서.md",
     "HTML/Untitled.md",
     "HTML/<template> 태그.md",

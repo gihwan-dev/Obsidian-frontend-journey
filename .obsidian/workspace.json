@@ -21,7 +21,8 @@
               "title": "HTML 파서"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -92,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -218,7 +220,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -264,8 +266,6 @@
     "Javascript Prototype/Self.md",
     "Javascript Prototype/Prototype-based programming(Wikipedia).md",
     "Javascript Prototype/Object Oriented Programming(Wiki).md",
-    "Javascript Prototype/JavaScript Prototypes, Inheritance & Objects - 2025.md",
-    "Javascript Prototype/Inheritance and the prototype chain.md",
     "Javascript Prototype/Class-based programming.md",
     "Javascript Prototype/람다 계산법과 튜링 머신 - 변수와 규칙.md",
     "Javascript Prototype/람다 계산법.md",
@@ -281,9 +281,6 @@
     "Next.js/Pasted image 20250303172835.png",
     "Javascript Prototype/Udemy 강의",
     "Javascript Prototype",
-    "Next.js/Pasted image 20250218082916.png",
-    "Next.js/Pasted image 20250217082549.png",
-    "Next.js/Pasted image 20250217082544.png",
     "@assets/images",
     "@assets",
     "이미지저장소/images",

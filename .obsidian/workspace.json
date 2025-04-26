@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "PromptEngineering - Lee Boonstra"
             }
+          },
+          {
+            "id": "d2854cd3c82d58e2",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -241,7 +254,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bac67c2f170b2755",
+  "active": "d2854cd3c82d58e2",
   "lastOpenFiles": [
     "Prompt Engineering/PromptEngineering(요약) - Lee Boonstra.md",
     "Prompt Engineering/PromptEngineering - Lee Boonstra.md",

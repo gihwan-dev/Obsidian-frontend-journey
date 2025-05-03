@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
+                "file": "Design System/And You Thought Buttons Were Easy?.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Building a Visual Language - Behind the scenes of our Airbnb design system"
+              "title": "And You Thought Buttons Were Easy?"
             }
           }
         ]
@@ -244,13 +244,19 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20250503173717.png",
+    "Next.js/Pasted image 20250503173656.png",
+    "Next.js/Pasted image 20250503173619.png",
+    "Next.js/Pasted image 20250503173518.png",
+    "Next.js/Pasted image 20250503173412.png",
+    "Next.js/Pasted image 20250503173347.png",
+    "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
+    "Design System/And You Thought Buttons Were Easy?.md",
     "Next.js/Pasted image 20250503171554.png",
     "Next.js/Pasted image 20250503160729.png",
     "Next.js/Pasted image 20250503155235.png",
     "Next.js/Pasted image 20250503154740.png",
     "Next.js/Pasted image 20250503154602.png",
-    "Next.js/Pasted image 20250503153839.png",
-    "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
     "Design System",
     "Prompt Engineering/PromptEngineering(요약) - Lee Boonstra.md",
     "Prompt Engineering/PromptEngineering - Lee Boonstra.md",
@@ -275,14 +281,8 @@
     "Javascript Prototype/Self.md",
     "Javascript Prototype/Prototype-based programming(Wikipedia).md",
     "Javascript Prototype/Object Oriented Programming(Wiki).md",
-    "Javascript Prototype/Class-based programming.md",
     "React.js/소스코드 분석",
     "React.js/소스코드 분석/Context API",
-    "Next.js/Pasted image 20250304092216.png",
-    "Next.js/Pasted image 20250304091956.png",
-    "Next.js/Pasted image 20250304091724.png",
-    "Next.js/Pasted image 20250304091443.png",
-    "Next.js/Pasted image 20250304091321.png",
     "Clean Code",
     "Javascript Prototype/Udemy 강의",
     "Javascript Prototype",

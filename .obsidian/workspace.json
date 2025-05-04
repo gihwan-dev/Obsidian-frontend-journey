@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -243,6 +244,7 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20250504143338.png",
     "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
     "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
     "Next.js/Pasted image 20250504135717.png",
@@ -279,7 +281,6 @@
     "React.js/소스코드 분석/createPortal 동작 원리.md",
     "React.js/소스코드 분석/Context API/useContext.md",
     "Javascript Prototype/Self.md",
-    "Javascript Prototype/Prototype-based programming(Wikipedia).md",
     "React.js/소스코드 분석",
     "React.js/소스코드 분석/Context API",
     "Clean Code",

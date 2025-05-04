@@ -20,10 +20,16 @@ API는 오랫동안 개발자의 영역이었습니다. 그러나 디자인 시�
 
 ```
 코드 마크업
------------<Card metadata="" title="">
+-----------
+
+<Card metadata="" title="">
   <CardMedia> (extends <Image>)
-  <CardDescription>    (slot)  </CardDescription>
-  <CardActionsArea>    (slot to add Button, IconButton, or TextLink)  </CardActionsArea>
+  <CardDescription>    
+    (slot)
+  </CardDescription>
+  <CardActionsArea>
+     (slot to add Button, IconButton, or TextLink)       
+  </CardActionsArea>
 </Card>
 ```
 

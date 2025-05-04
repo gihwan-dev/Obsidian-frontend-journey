@@ -55,3 +55,38 @@ Card
 반면, Figma 레이어에 구조를 매핑하는 디자이너는 비슷하지만 다른 구조를 개략적으로 잡을 수 있습니다. 일부 의도는 Figma 특화된 것입니다. 예를 들어 "타이 파이터"(`]-[`) 또는 "인셋"(`[-]`)은 자동 레이아웃 간격을 예상하거나 기본 컴포넌트 또는 하위 컴포넌트에 `.`을 앞에 붙이는 것과 같습니다.
 
 그러나 이러한 빠른 초안은 현실적이면서도 피할 수 있는 차이점을 노출합니다. 차이점에는 요소 이름(`metadata`와 `subtitle`, `body`와 `description`), 계층 구조(`actions`가 `content`에 포함되는지 또는 형제인지), 그리고 하위 컴포넌트(`CardMedia`와 `CardImage`)가 포함됩니다.
+
+![[Pasted image 20250504145558.png]]
+
+## 2. 속성(Properties)
+개발자와 디자인 도구 모두 일관된 속성 이름, 옵션 이름 및 기본값을 불러일으켜야 합니다.
+
+```
+Figma only:
+- State  
+  - default  
+  - hover? (recommend: include)  
+  - focus? (recommend: include)  
+  - error  
+  - errorHover? (recommend: omit)  
+  - disabled  
+  - readOnly
+
+Both Figma & code:- required (false - default, true)  
+- inlineLabel (false - default, true)  
+- helperTextPlacement (right, bottom - default)
+
+Code only:
+- ariaLabel  
+- disabled (in Figma, use States)  
+- error (in Figma, use States)  
+- errorEvent  
+- errorText (in Figma, update text shown when in State=Error)  
+- helperText (in Figma, show/hide and update text)  
+- id  
+- label (use .Label element)  
+- readOnly (false - default, true) (in Figma, use States)  
+- width
+```
+
+예를 들어, 두 도구 모두 `inlineLabel`(불리언 토글)과 `helperTextPlacement`(`right` 또는 `bottom`이라는 두 가지 이름이 지정된 옵션)에 대한 동일한 Dropdown 속성을 불러일으킬 수 있습니다. 반면에, 코딩된 컴포넌트는 일부 상태는 속성을 통해 활성화하고 다른 상태는 상호작용을 통해서만 트리거될 수 있습니다. 이 경우, Figma에서 디자이너를 위해 속성 및 상호작용 트리거 상태를 단일 메뉴로 통합하면서 일관된 옵션 레이블을 유지하는 것이 바람직할 수 있습니다. 마지막으로, 코드가 `aria-label`과 `id`와 같은 (많은?) 추가 속성을 포함하는 것은 매우 일반적입니다.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
+                "file": "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Sorry State of States - Today’s Figma assets show design could align better with code"
+              "title": "Crafting Component API, Together - How to unify anatomy and props across code and design tools"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,6 +243,8 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
+    "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
+    "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
     "Next.js/Pasted image 20250504135717.png",
     "Next.js/Pasted image 20250504135209.png",
     "Next.js/Pasted image 20250504134856.png",
@@ -254,9 +255,7 @@
     "Next.js/Pasted image 20250504132745.png",
     "Next.js/Pasted image 20250504132715.png",
     "Next.js/Pasted image 20250504132334.png",
-    "Next.js/Pasted image 20250504132033.png",
     "Design System/And You Thought Buttons Were Easy?.md",
-    "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
     "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
     "Design System",
     "Prompt Engineering/PromptEngineering(요약) - Lee Boonstra.md",

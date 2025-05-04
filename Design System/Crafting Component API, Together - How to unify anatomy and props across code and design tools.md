@@ -31,7 +31,9 @@ API는 오랫동안 개발자의 영역이었습니다. 그러나 디자인 시�
 
 ```
 FIGMA 레이어
-------------Card
+------------
+
+Card
   ]-[ .Card (as Base Figma component)
     CardImage (extends Image as subcomponent)
     [-] CardContent

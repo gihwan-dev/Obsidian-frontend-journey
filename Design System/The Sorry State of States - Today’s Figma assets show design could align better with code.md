@@ -42,3 +42,25 @@
 
 ![[Pasted image 20250504123949.png]]
 
+`state` 속성 패턴은 제가 컨설팅하는 팀들에서 관찰한 것과 일치했습니다:
+
+- **Hover**: 10개 중 6개는 `state`:`hover`(또는 `state`:`hovered`) 옵션을 지원합니다.
+- **Active**: 2개는 `state`:`active` 옵션을 지원합니다.
+- **Focus**: 10개 중 8개는 `state`:`focus`를 지원하며, 별도의 불리언 속성으로 `focus`를 제공하는 경우는 없었습니다.
+- **Disabled**: 10개 중 9개는 `state`:`disabled`를 지원하며, 오직 하나(Atlassian)만이 `isDisabled`를 별도의 불리언 속성으로 구분했습니다.
+- **Read only**: 10개 중 6개는 `state`:`readonly`를 지원하며, 불리언 속성으로 `readonly`를 제공하는 경우는 없었습니다.
+- **Error**와 **Success**: 10개 중 8개는 `state`:`error`(또는 유사하게 명명된 유효성 검사) 옵션을 지원하며, 하나(Atlassian)만이 `error`를 별도의 불리언 속성으로 제공했습니다.
+
+컴포넌트들은 때때로 `warning`, `skeleton`, `typing`과 같은 다른 `state` 옵션들을 포함했습니다. 한 컴포넌트는 심지어 `filled`를 포함했는데, 이는 여기서 다루지 않는 `value`와 `placeholder` 속성의 인접 상태 문제로 흘러갑니다.
+
+어떤 Figma 에셋도 `readonly` + `focus` 또는 `hover` + `error`와 같은 타당한 상태 조합을 지원하지 않았습니다.
+
+## 코드 라이브러리에서의 현재 상태(States)
+
+해당 라이브러리들의 `Text input` 컴포넌트 코드를 비슷하게 검토한 결과, 다른 주요 모델이 발견되었습니다:
+
+- **Hover**와 **Active**: 대부분의 코드 라이브러리는 이러한 상태들을 사용자 상호작용에 반응하는 암시적 상태로 구현합니다.
+- **Disabled**와 **Read only**: 거의 모든 코드 라이브러리가 이러한 props를 구현하며, 두 props 모두 관례적으로 여겨질 만큼 충분히 일반적입니다.
+- **Error**와 **Success**: 많은 코드 라이브러리는 오류 표시를 위해 `error`(또는 `inInvalid`, `hasError` 등) 불리언 prop을 구현합니다. GitHub Primer는 이진(binary)에서 열거형(enumerated)으로 확장된 `validationStatus` prop을 통해 `error`와 `success`를 구분합니다. 일부 코드 라이브러리는 오류 텍스트를 위한 `error` prop을 구현합니다.
+
+Shopify Polaris의 React 컴포넌트는 컴포넌트 전반에 걸친 의도적인 관례임을 시사하는 `disabled`와 `readonly`에 대한 Typescript 인터페이스를 구현합니다. 이 라이브러리는 또한 강제 적용 가능한 `focused`를 구현합니다.

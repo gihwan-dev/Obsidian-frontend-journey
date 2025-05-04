@@ -98,3 +98,41 @@ Shopify Polaris의 React 컴포넌트는 컴포넌트 전반에 걸친 의도적
 
 ![[Pasted image 20250504131543.png]]
 
+Figma 컴포넌트에서 `Radio button` 상태를 구현할 때, `hover`, `active`, `focus`, `selected` 옵션을 가진 `state` 속성을 포함할 수 있습니다. 그러나 이렇게 하면 `selected`와 `hover`가 동시에 발생하는 것과 같은 가능한 조합이 누락됩니다. 이러한 조합은 `hover selected`와 같은 추가 `state` 옵션으로 추가될 _수_ 있지만, 복합 옵션 이름을 통해 모든 조합을 제공하는 미끄러운 경사면으로 빠질 위험이 있습니다. 더 나은 방법은 `selected`에 대한 별개의 Figma 변형 속성(옵션이 `true`와 `false`라 해도 시각적 디자인은 달라집니다)과 `state`로 관심사를 분리하는 것입니다.
+
+![[Pasted image 20250504132033.png]]
+
+체크박스의 세 번째 `checked` 상태인 `indeterminate`(부분 선택) 가능성은 12개의 가능한 조합을 만들어 냄으로써, 복합 용어의 열거형 `state` 목록이 덜 바람직하게 됩니다. 또한, `checked` 속성은 이진 변형에서 `not checked`(기본값), `indeterminate`(부분 선택), `checked`(선택됨)라는 열거형 옵션을 드러내는 것으로 바뀌게 됩니다.
+
+![[Pasted image 20250504132334.png]]
+
+용감하게 Eric Bailey의 상태 목록을 자세히 검토한 분들은 `Deselected`(선택 해제됨)와 같은 더 많은 관련 고려 사항을 발견할 수 있을 것입니다. 대부분의 팀에게는 `Deselected`(`Selected`에서 변경된 상태)를 `Rest`(선택되지도 상호작용하지도 않은 상태)와 구분하여 포함하는 것은 비현실적입니다.
+
+### 부분적인 조합 세트
+`disabled` 속성은 다릅니다. 이는 `true` 또는 (기본적으로) `false`로 설정되는 변형입니다. 비활성화된(disabled) 컨트롤은 본질적으로 `rest` 상태에 있으며, 시각적으로 구분되고 `hover`, `active`, `focus` 상태는 관련이 없습니다.
+
+![[Pasted image 20250504132715.png]]
+
+결과적으로, 디자이너는 선택해야 합니다: `disabled`를 상호작용 `state`와 분리하거나, `disabled`를 `state`의 옵션으로 포함시킬 수 있습니다. Figma 에셋이 rest 상태가 아닌 disabled 상태를 구현하지 않는 한, 두 선택 모두 8개의 가능한 조합 중 5개의 부분 세트로 귀결됩니다.
+
+![[Pasted image 20250504132745.png]]
+
+`disabled` 옵션을 `state` 차원에 넣는 것이 편리할까요? 물론, 쉬워 보입니다. 하지만 코드는 그런 방식으로 작동하지 않습니다. 게다가, `disabled`를 `state`에 통합하면 모델의 명확성과 의미가 줄어들고, 곧 살펴볼 다른 관계들을 제대로 모델링할 수 없게 됩니다(의도된 말장난입니다).
+
+### 상호 의존적인 속성들
+`readonly` 속성으로 이야기가 더 복잡해집니다. 이 속성도 코드에서는 관례적으로 불리언 속성입니다. `disabled`처럼 `readonly`도 기본적으로 `false`입니다. 그러나 `disabled`와 달리, `readonly`는 `rest`_와_ `focus`를 지원하지만 일반적으로 `hover`와 `active`는 지원하지 않습니다.
+
+![[Pasted image 20250504133018.png]]
+
+또한, `disabled`와 `readonly`는 절대 동시에 발생하지 않습니다. `readonly`_와_ `disabled` 모두 `true`로 설정되면, `disabled`가 우선시되고 `readonly`는 무시됩니다. 이렇게 이 속성들은 상호 의존적입니다.
+
+디자이너가 7개의 유효한 조합을 모두 구현한다면, Figma는 이 경우를 충분히 잘 처리합니다. 우선순위가 높으므로 `disabled`가 먼저 오고, 그 다음 `readonly`, 그 다음 `state` 순서가 되어야 합니다. 컴포넌트 사용자가 `disabled`를 false로 설정하면, 컴포넌트는 다른 모든 `state`를 `rest`로 되돌립니다.
+
+![[Pasted image 20250504133037.png]]
+
+`disabled`와 `readonly` 모두를 `state` 속성의 옵션으로 통합할 수 있을까요? 예, 가능합니다. 그러나 여러 차원을 하나의 속성으로 결합하고 복합 이름을 사용하는 속성은 코드와 일치하지 않으며 확장성이 좋지 않습니다.
+### 열거형 또는 불리언 props 선택하기
+Error와 success 유효성 검증 상태는 더 많은 질문을 불러일으킵니다. `disabled`와 `readonly` 모두 명확하게 이진적이며, `true`와 `false` 값으로 쉽게 표현할 수 있습니다(Figma variant 속성으로 구축되었더라도). 일부 디자인 시스템은 `error` 상태만 제공하는데, 이는 이미 익숙한 선택(및 권장사항)을 제시합니다. 즉, 기본값이 `false`이고 `true`로 설정할 수 있는 `error` variant 속성을 제공하는 것입니다.
+
+![[Pasted image 20250504133225.png]]
+

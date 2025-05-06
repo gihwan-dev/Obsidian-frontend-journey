@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
+                "file": "Design System/Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crafting Component API, Together - How to unify anatomy and props across code and design tools"
+              "title": "Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,6 +243,8 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
+    "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
+    "Design System/Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs.md",
     "Next.js/Pasted image 20250504153801.png",
     "Next.js/Pasted image 20250504153455.png",
     "Next.js/Pasted image 20250504152946.png",
@@ -254,9 +255,7 @@
     "Next.js/Pasted image 20250504145558.png",
     "Next.js/Pasted image 20250504143338.png",
     "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
-    "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
     "Next.js/Pasted image 20250504135717.png",
-    "Next.js/Pasted image 20250504135209.png",
     "Design System/And You Thought Buttons Were Easy?.md",
     "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
     "Design System",

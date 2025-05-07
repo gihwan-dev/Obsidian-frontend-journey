@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design System/Understand the basics of design systems, what they are, how they work, and how they can change the way you design..md",
+                "file": "Design System/Design systems from adeveloper’s perspective.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Understand the basics of design systems, what they are, how they work, and how they can change the way you design."
+              "title": "Design systems from adeveloper’s perspective"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,8 +243,9 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
-    "Design System/Design system(Widipedia).md",
     "Design System/Understand the basics of design systems, what they are, how they work, and how they can change the way you design..md",
+    "Design System/Design systems from adeveloper’s perspective.md",
+    "Design System/Design system(Widipedia).md",
     "Design System/Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs.md",
     "Next.js/Pasted image 20250506150316.png",
     "Next.js/Pasted image 20250506150226.png",
@@ -280,7 +280,6 @@
     "React.js/소스코드 분석/Context API/enableRenderableContext.md",
     "React.js/소스코드 분석/Context API/push.md",
     "React.js/소스코드 분석/Context API/readContext.md",
-    "React.js/소스코드 분석/createPortal 동작 원리.md",
     "React.js/소스코드 분석",
     "React.js/소스코드 분석/Context API",
     "Clean Code",

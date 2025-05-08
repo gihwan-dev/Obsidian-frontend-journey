@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design System/FluentUI2 조사 중 질문.md",
+                "file": "Design System/Fluent UI 분석.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FluentUI2 조사 중 질문"
+              "title": "Fluent UI 분석"
             }
           }
         ]
@@ -244,8 +244,8 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
-    "Design System/Fluent UI 분석.md",
     "Design System/FluentUI2 조사 중 질문.md",
+    "Design System/Fluent UI 분석.md",
     "Next.js/Pasted image 20250508193654.png",
     "Next.js/Pasted image 20250508193648.png",
     "Next.js/Pasted image 20250508193643.png",

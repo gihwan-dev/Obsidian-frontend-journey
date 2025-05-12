@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design/디자인 요소.md",
+                "file": "Design System/Design systems from adeveloper’s perspective.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "디자인 요소"
+              "title": "Design systems from adeveloper’s perspective"
             }
           }
         ]
@@ -243,18 +243,18 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
-    "이미지저장소/포인터 영역.md",
-    "이미지저장소/포인터 영역.png",
-    "Design/디자인 요소.md",
+    "Design System/Design system(Widipedia).md",
     "Design System/Understand the basics of design systems, what they are, how they work, and how they can change the way you design..md",
-    "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
+    "Design System/Design systems from adeveloper’s perspective.md",
     "Design System/Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs.md",
     "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
-    "Design System/Design systems from adeveloper’s perspective.md",
+    "Design/디자인 요소.md",
+    "이미지저장소/포인터 영역.md",
+    "이미지저장소/포인터 영역.png",
+    "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
     "Design System/Fluent UI 분석.md",
     "Design System/And You Thought Buttons Were Easy?.md",
     "Design System/FluentUI2 조사 중 질문.md",
-    "Design System/Design system(Widipedia).md",
     "Next.js/Pasted image 20250508193654.png",
     "Next.js/Pasted image 20250508193648.png",
     "Next.js/Pasted image 20250508193643.png",

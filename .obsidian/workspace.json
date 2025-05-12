@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design System/And You Thought Buttons Were Easy?.md",
+                "file": "Design System/Crafting Component API, Together.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "And You Thought Buttons Were Easy?"
+              "title": "Crafting Component API, Together"
             }
           }
         ]
@@ -244,15 +244,16 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
-    "Next.js/Pasted image 20250503173347.png",
-    "Design System/And You Thought Buttons Were Easy?.md",
+    "Design System/Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs.md",
     "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
+    "Design System/Design systems from adeveloper’s perspective.md",
+    "Design System/Crafting Component API, Together.md",
+    "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
+    "Design System/And You Thought Buttons Were Easy?.md",
+    "Next.js/Pasted image 20250503173347.png",
     "Design System/Understand the basics of design systems, what they are, how they work, and how they can change the way you design..md",
     "Design System/Fluent UI 분석.md",
-    "Design System/Design systems from adeveloper’s perspective.md",
     "Design System/Design system(Widipedia).md",
-    "Design System/Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs.md",
-    "Design System/Crafting Component API, Together - How to unify anatomy and props across code and design tools.md",
     "Design/디자인 요소.md",
     "이미지저장소/포인터 영역.md",
     "이미지저장소/포인터 영역.png",
@@ -265,8 +266,6 @@
     "Next.js/Pasted image 20250508191708.png",
     "Next.js/Pasted image 20250508191255.png",
     "Next.js/Pasted image 20250506150316.png",
-    "Next.js/Pasted image 20250506150226.png",
-    "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
     "Design System",
     "Prompt Engineering/PromptEngineering(요약) - Lee Boonstra.md",
     "Prompt Engineering/PromptEngineering - Lee Boonstra.md",

@@ -22,3 +22,7 @@ _나는 Brooks의 주장에 동의하는데, 이는 모든 도메인에 걸쳐 �
 
 > _One question a programmer might ask is: if I had theoretically perfect tools (languages and IDEs and input devices and [OperatingSystem](https://wiki.c2.com/?OperatingSystem)s and frameworks and libraries) and processes (methodologies, community, education, etc.), then, modulo the application-specific stuff, how many of me would I be worth as a programmer/IT person? Ultimately, the answer to this question depends on the domain and the tools you already work with._
 
+프로그래머가 던질 수 있는 한 가지 질문은 다음과 같습니다: 만약 이론적으로 완벽한 도구들(언어, IDE, 입력 장치, 운영체제(OperatingSystem), 프레임워크, 라이브러리)과 프로세스(방법론, 커뮤니티, 교육 등)가 있다면, 애플리케이션 특화 요소를 제외하고, 프로그래머/IT 전문가로서 내 생산성은 현재 대비 몇 배가 될 수 있을까? 궁극적으로 이 질문에 대한 답은 작업하는 도메인과 이미 사용 중인 도구들에 따라 달라집니다.
+
+---
+

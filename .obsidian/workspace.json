@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,12 +243,12 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
+    "Clean Code/은탄환은 없다/은탄환은 없다.md",
+    "Clean Code/타르 웅덩이 밖으로/타르 웅덩이 밖으로.md",
     "Clean Code/타르 웅덩이 밖으로/연관 지식/Essential Difficulty(내제적 복잡성).md",
     "Clean Code/타르 웅덩이 밖으로/연관 지식/Accidental Difficulty(우발적 복잡성).md",
     "Clean Code/타르 웅덩이 밖으로/연관 지식/SimplySimplistic.md",
     "SimplySimplistic.md",
-    "Clean Code/타르 웅덩이 밖으로/타르 웅덩이 밖으로.md",
-    "Clean Code/은탄환은 없다/은탄환은 없다.md",
     "Clean Code/은탄환은 없다",
     "Clean Code/타르 웅덩이 밖으로/연관 지식",
     "Clean Code/타르 웅덩이 밖으로",

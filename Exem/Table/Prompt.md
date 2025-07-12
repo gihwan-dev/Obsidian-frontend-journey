@@ -8,9 +8,10 @@
 2. 내부 expanded 관련 useEffect 제거(161번 라인)
 3. expanded 관련 상태와 dispatcher를 전달받는 props 추가
 4. 확장 관련 상태 및 디스패치 함수를 tanstack table로 바로 전달해서 tanstack table에서 처리해주는 상태 동기화를 사용
-5. 확장 관련 동기화를 위한 useEffect가 있다면 제거
-6. tanstack table의 확장 로직 사용. 이를 오버라이드 하는 로직 파악해서 제거
-7. tanstack table의 확장 로직으로는 구현할 수 없는 특이 사항이 있다면 Table 컴포넌트 최 상단에 주석으로 남겨둬야함. 일단은 Tanstack Table의 확장을 사용하게 해서 최대한 확장 관련 로직 단순화 해야함.
+5. expandAll을 전달 받되. 이를 initialState로 바로 전달하게 하고 expand, setExpande 상태 제거.
+6. 확장 관련 동기화를 위한 useEffect가 있다면 제거
+7. tanstack table의 확장 로직 사용. 이를 오버라이드 하는 로직 파악해서 제거
+8. tanstack table의 확장 로직으로는 구현할 수 없는 특이 사항이 있다면 Table 컴포넌트 최 상단에 주석으로 남겨둬야함. 일단은 Tanstack Table의 확장을 사용하게 해서 최대한 확장 관련 로직 단순화 해야함.
 
 ## 작업 이후 체크 리스트
 타입체크 및 lint는 실행할 필요 없어. 구조 수정 작업 모두 완료하고 한 번에 처리할거야.

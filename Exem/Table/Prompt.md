@@ -9,13 +9,12 @@
 1. 내부 searchWord 상태 제거
 2. 내부 searchWord 관련 useEffect 제거
 3. rowPining과 동일하게 비제어/제어 상태를 분리해 사용
-4. rowPinning과 동일하게 TableProps에 1-depth로 존재하는 searchKeyWord 프로퍼티 제거 및 option.expandable 처럼 TableToolbar 타입의 search.searchKeyword, search.onSearchChange 로 응집도 개선
+4. TableProps에 1-depth로 존재하는 searchKeyWord 프로퍼티 제거 및 TableToolbar 의 search 프로퍼티에 searchKeyWord, onSearchKeyWorkChange, initialSearchKeyword 추가
 5. useTableSearch의 로직이 불필요하게 복잡함. useTableSearch 제거 및 검색시 table.setGlobalFilter 를 직접 사용하도록 수정 
 6. useTableSearch 제거
 7. TableToolbar가 table를 전달받게 수정
-8. TableToolbar 내부의 useTableSearchContext 제거
-9. TableToolbar 내부의 searchTerm 제거해 비제어 컴포넌트로 동작하게 수정
-10. TableToolbar의 TextField의 handleKeyDown에서 table.setGlobalFilter 호출
+8. TableToolbar 내부의 searchTerm 제거해 TextField가 비제어 컴포넌트로 동작하게 수정
+9. TableToolbar의 TextField의 handleKeyDown에서 table.setGlobalFilter 호출
 
 ## 작업 이후 체크 리스트
 타입체크 및 lint는 실행할 필요 없어. 구조 수정 작업 모두 완료하고 한 번에 처리할거야.

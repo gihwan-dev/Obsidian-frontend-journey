@@ -9,7 +9,7 @@
 1. 내부 searchWord 상태 제거
 2. 내부 searchWord 관련 useEffect 제거
 3. rowPining과 동일하게 비제어/제어 상태를 분리해 사용
-4. TableProps에 1-depth로 존재하는 searchKeyWord 프로퍼티 제거 및 TableToolbar 의 search 프로퍼티에 searchKeyWord, onSearchKeyWorkChange, initialSearchKeyword 추가
+4. TableProps에 1-depth로 존재하는 searchKeyWord 프로퍼티 제거 및 TableOptions에 searchable 프로퍼티 추가 및 searchKeyWord, onSearchKeyWorkChange, initialSearchKeyword 추가(rowPinning 참고)
 5. useTableSearch의 로직이 불필요하게 복잡함. useTableSearch 제거 및 검색시 table.setGlobalFilter 를 직접 사용하도록 수정 
 6. useTableSearch 제거
 7. TableToolbar가 table를 전달받게 수정

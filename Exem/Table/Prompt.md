@@ -15,6 +15,7 @@
 7. TableToolbar가 table를 전달받게 수정
 8. TableToolbar 내부의 searchTerm 제거해 TextField가 비제어 컴포넌트로 동작하게 수정
 9. TableToolbar의 TextField의 handleKeyDown에서 table.setGlobalFilter 호출
+10. tanstack table의 기본 필터링 로직으로 기존의 동작 요구사항을 만족할 수 없는 경우 table/utils/getFilteredRowModel 내부 로직 수정
 
 ## 작업 이후 체크 리스트
 타입체크 및 lint는 실행할 필요 없어. 구조 수정 작업 모두 완료하고 한 번에 처리할거야.

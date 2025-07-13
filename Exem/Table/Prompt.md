@@ -2,7 +2,7 @@
 
 **이번 작업 목표**: @src/shared/ui/table/Table.tsx 컴포넌트의 내부 searchWord 상태 제거 및 상태 관련 값들은 외부에서 전달 받아 바로 tanstack table config로 전달해 자동으로 동기화 되게끔 구성하는것. 내부의 searchWord 관련 useEffect 및 상태를 제거하는것을 목표로 한다. 제어 상태일 경우에는 외부 상태로 동작하며 비 제어 상태일 경우에는 tanstack table 내부의 자체 로직을 사용해야 한다.
 
-**중요**: 가장 먼저 tanstack table의 global filter 문서를 읽고 계획을 세운다.
+**중요**: 가장 먼저 tanstack table의 global filter 문서를 읽고 계획을 세운다. 기존의 호환성은 고려하지 않는다. table 폴더 내부의 테스트, 스토리북은 수정한다.
 
 ## 작업 필요 내용
 

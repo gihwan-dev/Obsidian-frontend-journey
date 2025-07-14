@@ -8,11 +8,12 @@
 
 1. 내부 selectdRow 상태 제거
 2. 내부 selectedRow 관련 useEffect 제거(useTableSelection)
-3. rowPining과 동일하게 비제어/제어 상태를 분리해 사용
+3. rowPining과 동일하게 비제어/제어 상태를 분리해 사용(initialState, state, onStateChange 추가)
 4. table config에 options.fixable.use 가 true이고 type이 row인 경우 enableSubRowSelection이 true이도록 하는 설정 추가
 5. TableProps에 1-depth로 존재하는 onRowSelect 프로퍼티 제거 및 TableOptions의 selctable로 위치를 옮겨 응집도 개선
 6. useTableSelection 최종적으로 제거 되어야함
-7. 
+7. useTableColumn의 Selection 관련 로직도 tanstack table 내부의 동작을 활용하도록 단순화(내부 선택 상태 오버라이드 하는 로직 전부 제거)
+8. getIsAllRowSelected, getIsSomeRowSelected, getToggleAllRowSelectedHandler 등 tanstack table 메서드 활용하는 방식으로 수정
 
 ## 작업 이후 체크 리스트
 타입체크 및 lint는 실행할 필요 없어. 구조 수정 작업 모두 완료하고 한 번에 처리할거야.

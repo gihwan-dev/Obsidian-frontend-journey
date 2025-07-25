@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/마이다스 IT 방문.md",
+                "file": "AI/CodeRabbit 에이전트 동작 방식 분석.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "마이다스 IT 방문"
+              "title": "CodeRabbit 에이전트 동작 방식 분석"
             }
           }
         ]
@@ -244,6 +244,7 @@
   },
   "active": "7b036ad40a194ed6",
   "lastOpenFiles": [
+    "AI/마이다스 IT 방문.md",
     "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "README.md",
     "Next.js/Pasted image 20250725131241.png",
@@ -253,7 +254,6 @@
     "Next.js/Pasted image 20250725130335.png",
     "Next.js/Pasted image 20250725125718.png",
     "Exem/Table/Prompt.md",
-    "AI/마이다스 IT 방문.md",
     "Exem/Table/Untitled",
     "Exem/Table",
     "Exem",

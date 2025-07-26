@@ -55,6 +55,22 @@ Contextual Retrieval은 BM25 인덱스(Contextual BM25)를 생성하고 임베�
 맥락이_추가된_청크="이 정크는 ACME 회사의 2023년 2분기 SEC 파일링으로 부터 왔습니다; 이전 분기의 수익률은 3억 1400만 달러 입니다. 회사의 수익 성장률은 이전 분기 대비 3% 입니다."
 ```
 
+과거에도 맥락을 사용해 검색 성능을 높이려는 여러 방법이 제안된 바 있다. 예를 들어, 각 조각에 일반적인 문서 요약을 추가하는 방법(실험 결과 효과가 매우 제한적이었음), 가상 문서 임베딩, 요약 기반 인덱싱(평가 결과 성능이 낮았음) 등이 있다. 이 글에서 제안하는 방법은 이러한 기존 방법들과는 다르다.
+
+## Contextual Retrieval 구현하기
+물론, 지식 베이스에 있는 수천 또는 수백만 개의 조각에 일일이 수작업으로 주석을 다는 것은 너무 많은 작업이 될것이다. 그래서 Contextual Retrieval을 구현하기 위해 Claude를 활용한다. 우리는 모델에게 전체 문서의 맥락을 사용해 각 조각을 설명하는 간결하고ㅗ 조각별 맥락을 제공하도록 지시하는 프롬프트를 작성했다. 각 조각의 맥락을 생성하기 위해 아래의 Claude 3 Haliku 프롬프트를 사용했다.
+
+```text
+<document> 
+{{WHOLE_DOCUMENT}} 
+</document> 
+Here is the chunk we want to situate within the whole document 
+<chunk> 
+{{CHUNK_CONTENT}} 
+</chunk> 
+Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
+```
+
 
 
 #n8n 

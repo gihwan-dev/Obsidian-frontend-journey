@@ -71,6 +71,13 @@ Here is the chunk we want to situate within the whole document
 Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
 ```
 
-생성된 맥락 정보 텍스트는 주로 50-100 토큰이며, BM25 인덱스가 생성되기 전에 
+생성된 맥락 정보 텍스트는 주로 50-100 토큰이며, BM25 인덱스가 생성되기 전에 추가된다. 
+
+아래는 전처리 과정이 실제로 동작 하는 방식이다:
+![[Pasted image 20250726230153.png]]
+
+Contextual Retrieval에 관심이 있다면, [our cookbook](https://github.com/anthropics/anthropic-cookbook/tree/main/skills/contextual-embeddings)에서 확인할 수 있다.
+
+
 
 #n8n 

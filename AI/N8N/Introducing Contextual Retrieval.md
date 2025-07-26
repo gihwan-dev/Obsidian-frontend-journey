@@ -96,7 +96,8 @@ Contextual Retrieval에 관심이 있다면, [our cookbook](https://github.com/a
 ### 구현시 고려사항
 Contextual Retrieval을 구현할 때 몇 가지 고려사항이 있다:
 1. **청크 경계**: 어떻게 문서를 청크로 나눌 것인지 고려해야 한다. 청크 사이즈, 청크 경계, 청크 오버랩은 검색 성능에 형향을 줄 수 있다.
-2. **임베딩 모델**: 
+2. **임베딩 모델**: Contextual Retrieval이 우리가 테스트한 모든 모델에서 성능 향상을 보여줬지만, 특정 모델은 다른 것들보다 더 이득이 컸다. 우리는 Gemini와 Voyage 임베딩이 특히나 효과적임을 확인했다.
+3. 
 
 
 #n8n 

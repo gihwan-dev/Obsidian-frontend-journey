@@ -71,6 +71,6 @@ Here is the chunk we want to situate within the whole document
 Please give a short succinct context to situate this chunk within the overall document for the purposes of improving search retrieval of the chunk. Answer only with the succinct context and nothing else. 
 ```
 
-
+생성된 맥락 정보 텍스트는 주로 50-100 토큰이며, BM25 인덱스가 생성되기 전에 
 
 #n8n 

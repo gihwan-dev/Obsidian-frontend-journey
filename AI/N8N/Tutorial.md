@@ -12,3 +12,6 @@ n8n에서, AI 에이전트는 몇 가지 연결과 함계 노드로써 제공된
 | Scope               | Generates language         | Performs complex, real-world tasks |
 | Example             | LLM generating a paragraph | An agent scheduling an appointment |
 
+AI 에이전트를 노드로 제공함으로써 n8n은 다양한 효율적인 워크플로우를 구성할 수 있게 되었다.
+
+#n8n

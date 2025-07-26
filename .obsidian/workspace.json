@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/N8N/Tutorial.md",
+                "file": "AI/N8N/RAG in n8n.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tutorial"
+              "title": "RAG in n8n"
             }
           }
         ]
@@ -243,8 +243,9 @@
   },
   "active": "d3ad345b158d29ba",
   "lastOpenFiles": [
-    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/N8N/Tutorial.md",
+    "AI/N8N/RAG in n8n.md",
+    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/N8N",
     "2025-07-26.md",
     "Untitled Kanban.md",
@@ -284,7 +285,6 @@
     "Next.js/Pasted image 20250503173347.png",
     "Design System/Understand the basics of design systems, what they are, how they work, and how they can change the way you design..md",
     "Design System/Fluent UI 분석.md",
-    "Design System/Design system(Widipedia).md",
     "이미지저장소/포인터 영역.png",
     "Next.js/Pasted image 20250508193654.png",
     "Next.js/Pasted image 20250508193648.png",

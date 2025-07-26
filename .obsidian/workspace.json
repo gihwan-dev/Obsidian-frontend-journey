@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/CodeRabbit 에이전트 동작 방식 분석.md",
+                "file": "AI/N8N/Tutorial.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CodeRabbit 에이전트 동작 방식 분석"
+              "title": "Tutorial"
             }
           }
         ]
@@ -243,10 +243,12 @@
   },
   "active": "d3ad345b158d29ba",
   "lastOpenFiles": [
+    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
+    "AI/N8N/Tutorial.md",
+    "AI/N8N",
     "2025-07-26.md",
     "Untitled Kanban.md",
     "Untitled Kanban 1.md",
-    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/마이다스 IT 방문.md",
     "README.md",
     "Next.js/Pasted image 20250725131241.png",
@@ -283,12 +285,10 @@
     "Design System/Understand the basics of design systems, what they are, how they work, and how they can change the way you design..md",
     "Design System/Fluent UI 분석.md",
     "Design System/Design system(Widipedia).md",
-    "Design/디자인 요소.md",
     "이미지저장소/포인터 영역.png",
     "Next.js/Pasted image 20250508193654.png",
     "Next.js/Pasted image 20250508193648.png",
     "Design System",
-    "React.js/소스코드 분석",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

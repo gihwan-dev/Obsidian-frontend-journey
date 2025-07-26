@@ -79,6 +79,6 @@ Please give a short succinct context to situate this chunk within the overall do
 Contextual Retrieval에 관심이 있다면, [our cookbook](https://github.com/anthropics/anthropic-cookbook/tree/main/skills/contextual-embeddings)에서 확인할 수 있다.
 
 ## Contextual Retrieval의 코스트를 줄이기 위해 프롬프트 캐싱하기
-
+위에서 언급한 특별한 프롬프트 캐싱 기능 덕분에, Claude를 사용하면 Contextual Retrieval을 매우 저렴하게 구현할 수 있다. 프롬프트 캐싱을 사용하면, 각 조각마다 참조 문서를 매번 전달할 필요가 없다.
 
 #n8n 

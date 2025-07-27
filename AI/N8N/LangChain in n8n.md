@@ -13,3 +13,5 @@ n8n은 LangChain의 기능을 구현한 몇 가지 노드들을 제공한다. La
 
 ### Root nocdes
 각 클러스터는 하나의 루트 노드로 시작한다.
+#### Chains
+[[Chain]]

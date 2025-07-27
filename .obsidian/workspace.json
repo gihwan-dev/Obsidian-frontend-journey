@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -243,8 +244,12 @@
   },
   "active": "d3ad345b158d29ba",
   "lastOpenFiles": [
-    "AI/N8N/RAG in n8n.md",
+    "AI/N8N/Sub nodes.md",
     "AI/N8N/LangChain in n8n.md",
+    "AI/N8N/Cluster nodes.md",
+    "AI/N8N/Root nodes.md",
+    "Next.js/Pasted image 20250727135144.png",
+    "AI/N8N/RAG in n8n.md",
     "AI/N8N/Tutorial.md",
     "AI/N8N/Introducing Contextual Retrieval.md",
     "Next.js/Pasted image 20250727005604.png",
@@ -263,7 +268,6 @@
     "Next.js/Pasted image 20250725131137.png",
     "Next.js/Pasted image 20250725130833.png",
     "Next.js/Pasted image 20250725130718.png",
-    "Next.js/Pasted image 20250725130335.png",
     "Exem/Table/Prompt.md",
     "Exem/Table/Untitled",
     "Exem/Table",
@@ -285,9 +289,6 @@
     "Design System/Crafting Component API, Together.md",
     "Design System/Design Systems Support - Operating a Workflow to Resolve Designer and Developer Needs.md",
     "Design System/The Sorry State of States - Today’s Figma assets show design could align better with code.md",
-    "Design System/Design systems from adeveloper’s perspective.md",
-    "Design System/Building a Visual Language - Behind the scenes of our Airbnb design system.md",
-    "Design System/And You Thought Buttons Were Easy?.md",
     "Design System",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",

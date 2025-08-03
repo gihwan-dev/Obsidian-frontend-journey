@@ -246,15 +246,15 @@
     "type": "floating",
     "children": [
       {
-        "id": "3531cb53e6a216da",
+        "id": "51282dc737d6e5bb",
         "type": "window",
         "children": [
           {
-            "id": "c661d8253f172cf8",
+            "id": "027f6db6c11af0c1",
             "type": "tabs",
             "children": [
               {
-                "id": "641ed09e1cb936ad",
+                "id": "5b4a9fbbd3e259b6",
                 "type": "leaf",
                 "state": {
                   "type": "webviewer",
@@ -280,8 +280,9 @@
       }
     ]
   },
-  "active": "d3ad345b158d29ba",
+  "active": "5b4a9fbbd3e259b6",
   "lastOpenFiles": [
+    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/How Large Language Models work.md",
     "Next.js/Pasted image 20250803211440.png",
     "Next.js/Pasted image 20250803211030.png",
@@ -301,7 +302,6 @@
     "AI/N8N/RAG in n8n.md",
     "AI/N8N/Tutorial.md",
     "AI/N8N/Introducing Contextual Retrieval.md",
-    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/N8N",
     "2025-07-26.md",
     "Untitled Kanban.md",

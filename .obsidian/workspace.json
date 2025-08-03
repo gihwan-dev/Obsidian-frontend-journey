@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "AI/How Large Language Models work.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -281,7 +281,7 @@
       }
     ]
   },
-  "active": "641ed09e1cb936ad",
+  "active": "d3ad345b158d29ba",
   "lastOpenFiles": [
     "AI/How Large Language Models work.md",
     "Next.js/Pasted image 20250803211440.png",

@@ -241,46 +241,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "5da8f4a2da2c5d37",
-    "type": "floating",
-    "children": [
-      {
-        "id": "51282dc737d6e5bb",
-        "type": "window",
-        "children": [
-          {
-            "id": "027f6db6c11af0c1",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "5b4a9fbbd3e259b6",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/AI/How+Large+Language+Models+work",
-                    "title": "How Large Language Models work - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "How Large Language Models work - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1440,
-        "height": 2560,
-        "maximize": false,
-        "zoom": 0.5
-      }
-    ]
-  },
-  "active": "5b4a9fbbd3e259b6",
+  "active": "d3ad345b158d29ba",
   "lastOpenFiles": [
     "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/How Large Language Models work.md",

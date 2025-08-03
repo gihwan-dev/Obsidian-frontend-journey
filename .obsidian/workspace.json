@@ -242,8 +242,48 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "d3ad345b158d29ba",
+  "floating": {
+    "id": "5da8f4a2da2c5d37",
+    "type": "floating",
+    "children": [
+      {
+        "id": "3531cb53e6a216da",
+        "type": "window",
+        "children": [
+          {
+            "id": "c661d8253f172cf8",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "641ed09e1cb936ad",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/AI/How+Large+Language+Models+work",
+                    "title": "How Large Language Models work - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "How Large Language Models work - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 2560,
+        "maximize": false,
+        "zoom": 0.5
+      }
+    ]
+  },
+  "active": "641ed09e1cb936ad",
   "lastOpenFiles": [
+    "AI/How Large Language Models work.md",
     "Next.js/Pasted image 20250803211440.png",
     "Next.js/Pasted image 20250803211030.png",
     "Next.js/Pasted image 20250803210801.png",
@@ -254,9 +294,7 @@
     "Next.js/Pasted image 20250803204338.png",
     "Next.js/Pasted image 20250803202819.png",
     "Next.js/Pasted image 20250803202446.png",
-    "Next.js/Pasted image 20250803202057.png",
     "AI/N8N/LangChain in n8n.md",
-    "AI/How Large Language Models work.md",
     "AI/N8N/Chain.md",
     "AI/N8N/Sub nodes.md",
     "AI/N8N/Root nodes.md",

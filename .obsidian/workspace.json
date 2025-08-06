@@ -11,10 +11,14 @@
             "id": "f8556cf01c07a737",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "AI/Introduction to AI Agents.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Introduction to AI Agents"
             }
           }
         ]
@@ -240,6 +244,7 @@
   },
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
+    "AI/How Large Language Models work.md",
     "AI/Introduction to AI Agents.md",
     "Next.js/Pasted image 20250804085826.png",
     "Next.js/Pasted image 20250804085648.png",
@@ -247,7 +252,6 @@
     "Next.js/Pasted image 20250804085042.png",
     "Next.js/Pasted image 20250804084640.png",
     "AI/CodeRabbit 에이전트 동작 방식 분석.md",
-    "AI/How Large Language Models work.md",
     "Next.js/Pasted image 20250803211440.png",
     "Next.js/Pasted image 20250803211030.png",
     "Next.js/Pasted image 20250803210801.png",

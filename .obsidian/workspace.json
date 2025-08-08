@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/LG엔솔/프롬프트.md",
-                "mode": "source",
+                "file": "프롬프트.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -244,8 +244,9 @@
   },
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
-    "AI/Introduction to AI Agents.md",
     "Exem/LG엔솔/프롬프트.md",
+    "프롬프트.md",
+    "AI/Introduction to AI Agents.md",
     "Exem/LG엔솔",
     "AI/How Large Language Models work.md",
     "Next.js/Pasted image 20250804085826.png",
@@ -285,7 +286,6 @@
     "Clean Code/타르 웅덩이 밖으로/연관 지식/Essential Difficulty(내제적 복잡성).md",
     "Clean Code/타르 웅덩이 밖으로/연관 지식/Accidental Difficulty(우발적 복잡성).md",
     "Clean Code/타르 웅덩이 밖으로/연관 지식/SimplySimplistic.md",
-    "SimplySimplistic.md",
     "Clean Code/은탄환은 없다",
     "Clean Code/타르 웅덩이 밖으로/연관 지식",
     "Clean Code/타르 웅덩이 밖으로",

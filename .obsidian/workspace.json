@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "Introduction to AI Agents"
             }
-          },
-          {
-            "id": "6f8aa6e064869140",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.10"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -255,7 +242,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "6f8aa6e064869140",
+  "active": "f8556cf01c07a737",
   "lastOpenFiles": [
     "AI/프롬프트 엔지니어링",
     "AI/How Large Language Models work.md",

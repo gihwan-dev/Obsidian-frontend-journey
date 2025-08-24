@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "컨퍼런스/2025/FeConf2025.md",
+                "file": "컨퍼런스/2025/FeConf2025/라이트닝 토크 2부/Keep-all 빌런.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FeConf2025"
+              "title": "Keep-all 빌런"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -245,9 +244,12 @@
   },
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
+    "컨퍼런스/2025/FeConf2025/라이트닝 토크 2부",
+    "컨퍼런스/2025/FeConf2025.md",
+    "컨퍼런스/2025/FeConf2025/라이트닝 토크 2부/Keep-all 빌런.md",
+    "컨퍼런스/2025/FeConf2025",
     "AI/프롬프트 엔지니어링/Prompt Engineer - Analyzing Skill Requirements in the AI Job Market.md",
     "AI/프롬프트 엔지니어링/프롬프트 엔지니어링의 부상과 진화 - LLM 초창기부터 현재까지.md",
-    "컨퍼런스/2025/FeConf2025.md",
     "AI/Introduction to AI Agents.md",
     "컨퍼런스/2025",
     "컨퍼런스",
@@ -288,9 +290,6 @@
     "Clean Code/Colocate.md",
     "AI",
     "Clean Code/ORM에서의 관심사 분리.md",
-    "Clean Code/타르 웅덩이 밖으로/타르 웅덩이 밖으로.md",
-    "Clean Code/은탄환은 없다/은탄환은 없다.md",
-    "Clean Code/은탄환은 없다",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

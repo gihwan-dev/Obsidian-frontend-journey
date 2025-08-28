@@ -104,8 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -255,10 +254,49 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f8556cf01c07a737",
+  "floating": {
+    "id": "567c4bf535299ce5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "549cc449ca9a501c",
+        "type": "window",
+        "children": [
+          {
+            "id": "fa3982261749eaa0",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "e2540a8fd934e41d",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/React.js/%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C+%EB%B6%84%EC%84%9D/createPortal+%EB%8F%99%EC%9E%91+%EC%9B%90%EB%A6%AC",
+                    "title": "createPortal 동작 원리 - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "createPortal 동작 원리 - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0.5
+      }
+    ]
+  },
+  "active": "e2540a8fd934e41d",
   "lastOpenFiles": [
-    "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트/Chapter1.md",
+    "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",
     "컨퍼런스/2025/FeConf2025/라이트닝 토크 2부",
     "컨퍼런스/2025/FeConf2025.md",
@@ -292,7 +330,6 @@
     "Next.js/Pasted image 20250803211030.png",
     "Next.js/Pasted image 20250803210801.png",
     "Next.js/Pasted image 20250803210525.png",
-    "Next.js/Pasted image 20250803210144.png",
     "AI/N8N/Sub nodes.md",
     "AI/N8N",
     "2025-07-26.md",

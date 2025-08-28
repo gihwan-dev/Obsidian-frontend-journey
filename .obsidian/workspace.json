@@ -33,8 +33,7 @@
               "title": "Release Notes 1.9.12"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -256,7 +255,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "08e415636466245c",
+  "active": "f8556cf01c07a737",
   "lastOpenFiles": [
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트/Chapter1.md",

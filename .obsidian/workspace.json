@@ -285,8 +285,8 @@
         ],
         "direction": "vertical",
         "x": 0,
-        "y": 0,
-        "width": 2560,
+        "y": 25,
+        "width": 1440,
         "height": 1440,
         "maximize": false,
         "zoom": 0.5

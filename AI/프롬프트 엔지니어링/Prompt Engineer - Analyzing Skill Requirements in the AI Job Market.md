@@ -10,3 +10,4 @@ LLMs 모델의 등장과 함께 새로운 직업이 등장했다: 프롬프트 �
 - 텍스트 마이닝으로 필요한 데이터를 수집함
 
 ## 2 Related Work
+### 2.1 The Emergence of the Prompt Engineer

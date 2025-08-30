@@ -11,4 +11,4 @@ LLMs 모델의 등장과 함께 새로운 직업이 등장했다: 프롬프트 �
 
 ## 2 Related Work
 ### 2.1 The Emergence of the Prompt Engineer
-AI는 
+AI는 일하는 방식과 필요한 기술을 변화시키고 있다. 

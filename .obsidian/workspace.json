@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "Prompt Engineer - Analyzing Skill Requirements in the AI Job Market"
             }
-          },
-          {
-            "id": "08e415636466245c",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.12"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.12"
-            }
           }
         ]
       }

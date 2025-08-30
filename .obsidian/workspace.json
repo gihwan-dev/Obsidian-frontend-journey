@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/How Large Language Models work.md",
+                "file": "AI/LLM의 추론 모델 - 작동 원리와 미스터리.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How Large Language Models work"
+              "title": "LLM의 추론 모델 - 작동 원리와 미스터리"
             }
           }
         ]
@@ -244,6 +244,8 @@
   },
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
+    "AI/How Large Language Models work.md",
+    "AI/LLM의 추론 모델 - 작동 원리와 미스터리.md",
     "AI/프롬프트 엔지니어링의 부상과 진화 - LLM 초창기부터 현재까지.md",
     "AI/프롬프트 엔지니어링/Prompt Engineer - Analyzing Skill Requirements in the AI Job Market.md",
     "함수형프로그래밍/제너레이터와 이터레이터.md",
@@ -258,7 +260,6 @@
     "컨퍼런스/2025",
     "컨퍼런스",
     "AI/프롬프트 엔지니어링",
-    "AI/How Large Language Models work.md",
     "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/N8N/LangChain in n8n.md",
     "AI/N8N/Cluster nodes.md",
@@ -289,7 +290,6 @@
     "Exem/Table/Prompt.md",
     "Exem/Table/Untitled",
     "Exem/Table",
-    "Clean Code/Colocate.md",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

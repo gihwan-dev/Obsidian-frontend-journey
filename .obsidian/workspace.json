@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/대규모 언어 모델의 창발적 특성 - 현상, 논쟁, 그리고 메커니즘에 대한 심층 분석.md",
+                "file": "React.js/전문가를 위한 리액트/Chapter2 - JSX.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "대규모 언어 모델의 창발적 특성 - 현상, 논쟁, 그리고 메커니즘에 대한 심층 분석"
+              "title": "Chapter2 - JSX"
             }
           }
         ]
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,15 +245,16 @@
   },
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
-    "AI/추론 엔진의 해부 - 현대 대규모 언어 모델에 대한 심층 분석.md",
+    "React.js/전문가를 위한 리액트/Chapter1.md",
+    "React.js/전문가를 위한 리액트/Chapter2 - JSX.md",
     "AI/대규모 언어 모델의 창발적 특성 - 현상, 논쟁, 그리고 메커니즘에 대한 심층 분석.md",
+    "AI/추론 엔진의 해부 - 현대 대규모 언어 모델에 대한 심층 분석.md",
     "AI/LLM의 창발적 특성.md",
     "AI/LLM의 추론 모델 - 작동 원리와 미스터리.md",
     "AI/How Large Language Models work.md",
     "AI/프롬프트 엔지니어링의 부상과 진화 - LLM 초창기부터 현재까지.md",
     "AI/프롬프트 엔지니어링/Prompt Engineer - Analyzing Skill Requirements in the AI Job Market.md",
     "함수형프로그래밍/제너레이터와 이터레이터.md",
-    "React.js/전문가를 위한 리액트/Chapter1.md",
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",
     "컨퍼런스/2025/FeConf2025/라이트닝 토크 2부",
@@ -287,7 +289,6 @@
     "AI/N8N/Sub nodes.md",
     "AI/N8N",
     "2025-07-26.md",
-    "Untitled Kanban.md",
     "Exem/Table/Untitled",
     "Exem/Table",
     "Excalidraw/B.sori IA.canvas",

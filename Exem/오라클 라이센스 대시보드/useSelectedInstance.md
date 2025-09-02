@@ -19,7 +19,6 @@
 
 ````markdown
 ## useSelectionGroupExtractor 훅 구현 명세
-
 ### 도메인 컨텍스트
 - **목적**: DB 인스턴스 선택 상태를 기반으로 API 요청에 필요한 그룹명과 인스턴스명을 추출
 - **인스턴스 타입**: InstanceInfo (DB 인스턴스 정보)
@@ -120,8 +119,6 @@ interface SelectionContextState {
 4. 그룹 부분 선택 → instanceNames에 개별 항목 포함
 5. 혼합 선택 → 적절한 분리
 
-```
-
 ## 주요 개선 사항:
 1. **명확한 타입 정의**: InstanceInfo, GroupBy, 반환 타입 등 모든 인터페이스 명시
 2. **도메인 컨텍스트 추가**: DB 인스턴스와 API 요청 구조 설명
@@ -138,4 +135,243 @@ interface SelectionContextState {
 - 유틸리티 함수 분리 (getGroupKey, isGroupFullySelected 등)
 - 메모이제이션 적용 검토 (대량 인스턴스 처리 시)
 - TypeScript strict 모드 활용하여 타입 안정성 확보
+````
+
+완벽합니다! API 응답 구조를 이해했습니다. 이제 전체 프롬프트를 개선해드리겠습니다.
+
+# 개선된 프롬프트 - 최종 버전 v2
+
+````markdown
+## useSelectionGroupExtractor 훅 구현 명세
+### 도메인 컨텍스트
+- **목적**: DB 인스턴스 선택 상태를 기반으로 API 요청에 필요한 그룹명과 인스턴스명을 추출
+- **데이터 소스**: API 응답 데이터 (groupBy에 따라 다른 구조)
+- **그룹화 기준**: FAB, System, Cluster, Instance (4가지 독립적 기준)
+
+### API 응답 타입 정의
+```typescript
+// API 응답 타입
+type InstanceListResponse = string[];  // dbms/list
+
+type FABGroupResponse = Array<{
+  fab: string;
+  instances: string[];
+}>;  // dbms/group-by/fab
+
+type SystemGroupResponse = Array<{
+  system: string;
+  instances: string[];
+}>;  // dbms/group-by/system
+
+type ClusterGroupResponse = Array<{
+  cluster: string;
+  instances: string[];
+}>;  // dbms/group-by/cluster
+
+// 통합 데이터 타입
+type ApiData = 
+  | InstanceListResponse 
+  | FABGroupResponse 
+  | SystemGroupResponse 
+  | ClusterGroupResponse;
 ```
+
+### 핵심 인터페이스
+
+```typescript
+type GroupBy = 'FAB' | 'System' | 'Cluster' | 'Instance';
+
+interface SelectionGroupExtractorParams {
+  data: ApiData;                           // API 응답 데이터
+  selectedInstances: string[] | null;      // 선택된 인스턴스명 (null = 모두 선택)
+  groupBy: GroupBy;
+}
+
+interface ExtractedSelection {
+  groupNames: string[];      // 완전히 선택된 그룹명 리스트
+  instanceNames: string[];   // 부분 선택된 인스턴스명 리스트
+}
+```
+
+### 주요 기능 요구사항
+
+#### 1. 선택 상태 규칙
+
+- `null`: 모든 인스턴스 선택 (초기값)
+- `[]`: 선택된 인스턴스 없음
+- `string[]`: 특정 인스턴스들만 선택
+
+#### 2. GroupBy별 추출 로직
+
+##### Instance 모드
+
+```typescript
+// data: string[]
+// 그룹 추출 불필요, selectedInstances 그대로 반환
+{
+  groupNames: [],
+  instanceNames: selectedInstances ?? data  // null이면 전체 반환
+}
+```
+
+##### FAB/System/Cluster 모드
+
+```typescript
+// data: GroupResponse[]
+// 각 그룹별로 완전/부분 선택 판단
+{
+  groupNames: [/* 모든 인스턴스가 선택된 그룹명 */],
+  instanceNames: [/* 부분 선택된 그룹의 인스턴스명 */]
+}
+```
+
+#### 3. 순수 함수 구현
+
+```typescript
+// 타입 가드
+const isGroupedData = (
+  data: ApiData
+): data is FABGroupResponse | SystemGroupResponse | ClusterGroupResponse => {
+  return Array.isArray(data) && data.length > 0 && 'instances' in data[0];
+};
+
+// 핵심 추출 로직
+const extractGroupsAndInstances = (
+  data: ApiData,
+  selectedInstances: string[] | null,
+  groupBy: GroupBy
+): ExtractedSelection => {
+  // null 처리: 모두 선택
+  if (selectedInstances === null) {
+    if (groupBy === 'Instance') {
+      return { groupNames: [], instanceNames: data as string[] };
+    }
+    // 그룹 모드: 모든 그룹명 반환
+    const groupedData = data as (FABGroupResponse | SystemGroupResponse | ClusterGroupResponse);
+    const groupNames = groupedData.map(group => 
+      group.fab || group.system || group.cluster
+    ).filter(Boolean);
+    return { groupNames, instanceNames: [] };
+  }
+
+  // Instance 모드: 그룹 추출 불필요
+  if (groupBy === 'Instance') {
+    return { groupNames: [], instanceNames: selectedInstances };
+  }
+
+  // 그룹 모드: 완전/부분 선택 분리
+  const groupedData = data as (FABGroupResponse | SystemGroupResponse | ClusterGroupResponse);
+  const groupNames: string[] = [];
+  const partialInstances: string[] = [];
+
+  groupedData.forEach(group => {
+    const groupName = group.fab || group.system || group.cluster;
+    const groupInstances = group.instances;
+    
+    const selectedInGroup = groupInstances.filter(
+      instance => selectedInstances.includes(instance)
+    );
+
+    if (selectedInGroup.length === groupInstances.length) {
+      // 그룹 완전 선택
+      groupNames.push(groupName);
+    } else if (selectedInGroup.length > 0) {
+      // 그룹 부분 선택
+      partialInstances.push(...selectedInGroup);
+    }
+  });
+
+  return { groupNames, instanceNames: partialInstances };
+};
+```
+
+### Context API 구조
+
+```typescript
+// 4개의 독립적인 Context (변경 없음)
+interface SelectionContextState {
+  selectedInstances: string[] | null;
+  setSelectedInstances: (instances: string[] | null) => void;
+}
+
+- FABSelectionContext
+- SystemSelectionContext  
+- ClusterSelectionContext
+- InstanceSelectionContext
+```
+
+### useSelectionGroupExtractor 훅
+
+```typescript
+const useSelectionGroupExtractor = ({
+  data,
+  selectedInstances,
+  groupBy
+}: SelectionGroupExtractorParams): ExtractedSelection => {
+  return useMemo(() => 
+    extractGroupsAndInstances(data, selectedInstances, groupBy),
+    [data, selectedInstances, groupBy]
+  );
+};
+```
+
+### 구현 제약사항
+
+- 각 Context는 독립적으로 동작 (상호 의존성 없음)
+- 소비처에서 groupBy에 따라 적절한 Context 선택
+- 모든 추출 로직은 테스트 가능한 순수 함수로 구현
+- 타입 안정성을 위한 타입 가드 사용
+
+### 엣지 케이스 처리
+
+- 빈 data 배열
+- 빈 instances 배열을 가진 그룹
+- 중복 인스턴스명 처리
+- undefined/null 그룹명 방어
+
+### 테스트 시나리오
+
+1. **Instance 모드**
+    
+    - null → 전체 인스턴스 반환
+    - 특정 선택 → 선택된 인스턴스만 반환
+2. **그룹 모드 (FAB/System/Cluster)**
+    
+    - null → 모든 그룹명 반환, 빈 instanceNames
+    - 그룹 완전 선택 → groupNames에 포함
+    - 그룹 부분 선택 → instanceNames에 개별 항목
+    - 혼합 선택 → 적절한 분리
+    - 빈 그룹 → 무시
+
+### 사용 예시
+
+```typescript
+// API 호출 후
+const apiResponse = await fetchGroupedInstances(groupBy);
+
+// Context에서 선택 상태 가져오기
+const { selectedInstances } = useContext(getCurrentContext(groupBy));
+
+// 추출
+const { groupNames, instanceNames } = useSelectionGroupExtractor({
+  data: apiResponse,
+  selectedInstances,
+  groupBy
+});
+
+// API 요청 body 구성
+const requestBody = { groupNames, instanceNames };
+```
+
+```
+
+## 주요 개선 사항:
+1. **API 응답 구조 반영**: 실제 API 응답 타입에 맞춘 데이터 구조 정의
+2. **타입 안정성 강화**: 타입 가드와 명확한 타입 정의 추가
+3. **로직 단순화**: Instance 모드와 그룹 모드 명확히 분리
+4. **구체적인 구현 예시**: 실제 코드에 가까운 구현 제공
+5. **사용 플로우 명시**: API 호출부터 추출까지 전체 플로우 설명
+
+## 추가 권장사항:
+- 성능 최적화를 위한 Set 자료구조 활용 검토
+````

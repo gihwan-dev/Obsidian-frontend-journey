@@ -259,4 +259,6 @@ function Child() {
 
 ### 가상 DOM과 실제 DOM 비교
 - `React.createElement`는 리액트 엘리먼트를 생성하며 `document.createElement`는 DOM 노드를 생성함
+- 리액트 컴포넌트가 렌더링되면 리액트는 새 가상 DOM 트리를 생성하고 이전 가상 DOM 트리와 비교한 다음, 이전 트리를 새 트리와 일치하도록 업데이트하는 데 필요한 최소 변경 횟수를 계산
+- 이를 **재조정 프로세스** 라고 함
 - 

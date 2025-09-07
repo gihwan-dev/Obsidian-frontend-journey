@@ -126,4 +126,77 @@ const dom = {
 	- **단일 렌더링**: 차이점이 식별되면 단 한 번의 일괄 처리를 통해 실제 DOM을 업데이트함
 
 ## 가상 DOM 작동 방식
-- 
+- 가상 DOM은 실제 DOM의 문제점을 완화하는 유용한 기술
+- 가상 DOM을 메모리에 만들고 실제 DOM 직접 수정하지 않고 가상 표현을 변경해 요휼적으로 실제 DOM을 업데이트
+- 가상 DOM은 브라우저마다 다양한 실제 DOM 구현의 차이를 추상화한 일관된 API를 제공해 엘리먼트를 작성하고 업데이트하는 환경을 개선함
+
+### 리액트 엘리먼트
+- 리액트에서 UI는 컴포넌트 또는 리액트 엘리먼트 트리 형태로 표현
+- 리액트 엘리먼트는 `React.createElement` 함수를 사용해 생성
+```jsx
+const element = React.createElement(
+	"div",
+	{ className: "my-class" },
+	"Hello, world!"
+);
+```
+
+- 여기에 `console.log(element)`를 사용하면 아래와 같은 결과를 볼 수 있음
+```ts
+{
+	$$typeof: Symbol(react.element),
+	type: "div",
+	key: null,
+	ref: null,
+	props: {
+		className: "my-class",
+		children: "Hello, world!"
+	},
+	_owner: null,
+	_store: {}
+}
+```
+
+- 리액트 엘리먼트는 가장 작은 구성 블록으로 화면에 표현될 내용을 설명하는 자바스크립트 객체
+
+#### `$$typeof`
+- 객체가 유효한 리액트 엘리먼트인지 확인할 때 사용하는 특수한 심벌(symbol)
+- 위 예제에서는 `Symbol(react.element)`로 설정
+- `$$typeof`는 엘리먼트 종류에 따라 값이 다를 수 있음
+	- `Symbol(react.fragment)`: 리액트 Fragment를 나타내는 경우
+	- `Symbol(react.portal)`: 리액트 포털을 나타내는 경우
+	- `Symbol(react.profiler)`: 리액트 프로파일러를 나타내는 경우
+	- `Symbol(react.provider)`: 리액트 컨텍스트 제공자를 나타내는 경우
+- 일반적으로 `$$typeof`는 리액트 엘리먼트의 종류를 식별하는 표시자 역할을 함
+
+#### type
+- ype 속성은 엘리먼트가 나타내는 컴포넌트의 종류를 알려줌
+- 위 예시에서는 "div"인데 이는 `<div>` DOM 엘리먼트라는 의미
+- 이런 DOM 엘리먼트는 "호스트 컴포넌트"라고 부르기도 함
+- 리액트 엘리먼트의 `type`은 문자열이거나 함수
+- 문자열인 경우에는 "div", "span", "button" 같은 HTML 태그 이름을 나타냄
+- 함수인 경우 사용자 정의 리액트 컴포넌트, 즉 JSX를 반환하는 자바스크립트 함수가 됨
+- 아래는 리액트 엘리먼트 종류가 사용자 정의 컴포넌트인 경우의 예시
+```jsx
+const MyComponent = (props) => {
+	return <div>{props.text}</div>;
+};
+
+const myElement = <MyComponent text="Hello, world!" />;
+```
+
+- `myElement`는 아래처럼 표현됨
+```ts
+{
+	$$typeof: Symbol(react.element),
+	type: MyComponent,
+	key: null,
+	ref: null,
+	props: {
+		text: "Hello, world!"
+	},
+	_owner: null,
+	_store: {}
+}
+```
+

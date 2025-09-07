@@ -258,4 +258,5 @@ function Child() {
 - 개발 모드에서 `_source`는 엘리먼트가 생성된 파일 이름과 줄 번호를 추적하는데 사용되어 디버깅에 유용함
 
 ### 가상 DOM과 실제 DOM 비교
+- `React.createElement`는 리액트 엘리먼트를 생성하며 `document.createElement`는 DOM 노드를 생성함
 - 

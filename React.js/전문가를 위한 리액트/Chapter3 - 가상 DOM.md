@@ -169,7 +169,7 @@ const element = React.createElement(
 	- `Symbol(react.provider)`: 리액트 컨텍스트 제공자를 나타내는 경우
 - 일반적으로 `$$typeof`는 리액트 엘리먼트의 종류를 식별하는 표시자 역할을 함
 
-#### type
+#### `type`
 - ype 속성은 엘리먼트가 나타내는 컴포넌트의 종류를 알려줌
 - 위 예시에서는 "div"인데 이는 `<div>` DOM 엘리먼트라는 의미
 - 이런 DOM 엘리먼트는 "호스트 컴포넌트"라고 부르기도 함
@@ -204,4 +204,58 @@ const myElement = <MyComponent text="Hello, world!" />;
 - 사용자 정의 리액트 컴포넌트가 렌더링 되는 방식:
 	- 스칼라 값(숫자, 문자열, 불리언 처럼 더 이상 분해되지 않는 단 하나의 단일 값)을 만나면 텍스트 노드로 렌더링
 	- `null` 또는 `undefined`를 만나면 아무것도 렌더링하지 않음
+
+#### `ref`
+- 부모 컴포넌트는 이 속성을 사용해 기본 DOM 노드에 대한 참조를 요청
+
+#### `props`
+- 컴포넌트에 전달되는 모든 속성과 props를 포함하는 객체
+
+#### `_owner`
+- 프로덕션 빌드가 아닐 때만 접근할 수 있는 속성
+- 엘리먼트를 생성한 컴포넌트를 추적하기 위해 리액트 내부적으로 사용
+- 프롬이나 상태가 변경될 때 엘리먼트의 업데이트를 담당할 컴포넌트를 결정하는 데 사용
+- 아래는 `_owner` 속성이 어떻게 사용되는지 보여주는 예시:
+```tsx
+function Parent() {
+	return <Child />;
+}
+
+function Child() {
+	const element = <div>Hello, world!</div>;
+	console.log(element._owner); // Parent
+	return element;
+}
+```
+
+- 리액트는 이 정보를 사용해 프롭이나 상태가 변경될 때 엘리먼트의 업데이트를 담당할 컴포넌트를 결정
+- `_owner` 속성은 리액트가 내부적으로 구현을 위해서만 사용하는 값이므로, 애플리케이션 코드에서 사용하면 안됨
+
+> [!Note] `_owner`가 프로덕션 빌드에서 존재하지 않는 이유
+> `_owner` 속성은 **디버깅과 경고 메시지**를 위해 존재하며, 리액트가 컴포넌트 트리를 추적하고 개발자에게 유용한 정보를 제공하는데 도움을 줌. 프로덕션 빌드에서는 `_owner` 속성 자체가 **존재하지 않음**.
+
+#### `_store`
+- 엘리먼트에 대한 추가 데이터를 저장하기 위해 리액트가 내부적으로 사용하는 객체
+- `_store`에 저장된 특정 속성 및 값은 공개 API의 일부가 아니므로 직접 접근해선느 안됨
+- 아래는 `_store` 속성의 예시:
+```ts
+{
+	validation: null,
+	key: null,
+	originalProps: { className: "my-class", children: "Hello, world!" },
+	props: { className: "my-class", children: "Hello, world!" },
+	_self: nul,
+	_source: { fileName: "MyComponent.js", lineNumber: 10 },
+	_owner: {
+		_currentElement: [Circular], _debugID: 0, stateNode: [MyComponent]
+	},
+	_isStatic: false,
+	_warnedAboutRefsInRender: false,
+}
+```
+
+- 위 속성들은 리액트가 내부적으로 엘리먼트의 상태와 컨텍스트의 다양한 측면을 추적할 때 사용됨
+- 개발 모드에서 `_source`는 엘리먼트가 생성된 파일 이름과 줄 번호를 추적하는데 사용되어 디버깅에 유용함
+
+### 가상 DOM과 실제 DOM 비교
 - 

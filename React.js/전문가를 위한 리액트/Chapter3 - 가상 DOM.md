@@ -280,4 +280,33 @@ function Child() {
 
 #### 불필요한 리렌더링
 - 리렌더링은 애초에 리액트가 설계된 대로 작동하는 방식
-- 
+- 리렌더링은 리액트가 각 함수 컴포넌트를 재귀적으로 호출하며 프롭을 인수로 각 함수 컴포넌트에 전달한다는 의미
+- 리액트는 프롭이 변경되지 않은 컴포넌트도 무시하지 않고 **상태나 프롭이 변경된 부모 컴포넌트의 모든 자식 컴포넌트를 호출**
+- 아래의 `ParentComponent`에서 전달된 프롭이 변경되지 않더라고 `ChildComponent`는 `ParentComponent`의 상태가 변경될 때마다 리렌더링됨
+```tsx
+import React, { useState } from "react";
+
+const ChildComponent = ({ message }) => {
+	return <div>{message}</div>;
+};
+
+const ParentComponent = () => {
+	const [count, setCount] = useState(0);
+	
+	return (
+		<div>
+			<button onClick={() => setCount(count + 1)}>증가</button>
+			<ChildComponent message="정적 메세지 입니다." />
+		</div>
+	);
+};
+```
+
+- 이러한 리렌더링 문제를 잘 해결하려면 **컴포넌트를 주의 깊게 구조화하고 `memo` 혹은 `useMemo` 같은 최적화 기능을 사용해 리렌더링을 관리** 해야함
+
+## 복습하기
+1. DOM이란 무엇이며, 가상 DOM과 어떻게 다를까?
+2. 문서 조각(Document Fragment)이란 무엇이며, 가상 DOM과 어떤 점에서 비슷하고 다를까?
+3. DOM에서 문제가 되는 사안은 무엇일까?
+4. 사용자 인터페이스를 더 빠르게 업데이트하는 데 가상 DOM이 어떻게 활용될까?
+5. 리액트의 렌더링은 어떻게 동작할까? 이로 인해 어떤 잠재된 문제가 발생할 수 있을까?

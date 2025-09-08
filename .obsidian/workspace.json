@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/전문가를 위한 리액트/Chapter3 - 가상 DOM.md",
+                "file": "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter3 - 가상 DOM"
+              "title": "Chapter4 - 재조정"
             }
           }
         ]
@@ -246,6 +246,7 @@
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
     "React.js/전문가를 위한 리액트/Chapter3 - 가상 DOM.md",
+    "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
     "Frontend/프로젝트 공통 프롬프트.md",
     "Frontend/나만의 FE 컨벤션.md",
     "Clean Code/모던 리액트 애플리케이션 아키텍처 - 컴포넌트 경계, 로직, 상태에 대한 심층 분석.md",
@@ -278,7 +279,6 @@
     "AI/N8N/Cluster nodes.md",
     "AI/N8N/Chain.md",
     "AI/N8N/Tutorial.md",
-    "AI/N8N/Root nodes.md",
     "Exem/LG엔솔",
     "Next.js/Pasted image 20250804085826.png",
     "Next.js/Pasted image 20250804085648.png",

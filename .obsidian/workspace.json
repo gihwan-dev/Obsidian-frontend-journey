@@ -243,46 +243,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "98aa6917662abbf7",
-    "type": "floating",
-    "children": [
-      {
-        "id": "9f6098a49f925dd7",
-        "type": "window",
-        "children": [
-          {
-            "id": "fcc5f3f14583b39b",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "27399843117b6fd1",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/React.js/%EC%A0%84%EB%AC%B8%EA%B0%80%EB%A5%BC+%EC%9C%84%ED%95%9C+%EB%A6%AC%EC%95%A1%ED%8A%B8/Chapter3+-+%EA%B0%80%EC%83%81+DOM",
-                    "title": "Chapter3 - 가상 DOM - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "Chapter3 - 가상 DOM - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 2560,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0.5
-      }
-    ]
-  },
-  "active": "27399843117b6fd1",
+  "active": "f8556cf01c07a737",
   "lastOpenFiles": [
     "React.js/전문가를 위한 리액트/Chapter3 - 가상 DOM.md",
     "Frontend/프로젝트 공통 프롬프트.md",

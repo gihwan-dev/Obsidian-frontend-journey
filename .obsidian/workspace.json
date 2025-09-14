@@ -255,11 +255,50 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f8556cf01c07a737",
+  "floating": {
+    "id": "94eca4bc0213c8c7",
+    "type": "floating",
+    "children": [
+      {
+        "id": "84828bb2b4c5013c",
+        "type": "window",
+        "children": [
+          {
+            "id": "73bca7f83d61e9f1",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "657b1fff69fc4e80",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/AI/%EB%8C%80%EA%B7%9C%EB%AA%A8+%EC%96%B8%EC%96%B4+%EB%AA%A8%EB%8D%B8%EC%9D%98+%EC%B0%BD%EB%B0%9C%EC%A0%81+%ED%8A%B9%EC%84%B1+-+%ED%98%84%EC%83%81%2C+%EB%85%BC%EC%9F%81%2C+%EA%B7%B8%EB%A6%AC%EA%B3%A0+%EB%A9%94%EC%BB%A4%EB%8B%88%EC%A6%98%EC%97%90+%EB%8C%80%ED%95%9C+%EC%8B%AC%EC%B8%B5+%EB%B6%84%EC%84%9D",
+                    "title": "대규모 언어 모델의 창발적 특성 - 현상, 논쟁, 그리고 메커니즘에 대한 심층 분석 - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "대규모 언어 모델의 창발적 특성 - 현상, 논쟁, 그리고 메커니즘에 대한 심층 분석 - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1440,
+        "maximize": false,
+        "zoom": 0.5
+      }
+    ]
+  },
+  "active": "657b1fff69fc4e80",
   "lastOpenFiles": [
+    "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
     "Next.js/Pasted image 20250915070614.png",
     "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md",
-    "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
     "React.js/전문가를 위한 리액트/Chapter3 - 가상 DOM.md",
     "Frontend/프로젝트 공통 프롬프트.md",
     "Frontend/나만의 FE 컨벤션.md",
@@ -300,7 +339,6 @@
     "Next.js/Pasted image 20250803211440.png",
     "Next.js/Pasted image 20250803211030.png",
     "Next.js/Pasted image 20250803210801.png",
-    "Next.js/Pasted image 20250803210525.png",
     "AI/N8N",
     "Exem/Table/Untitled",
     "Excalidraw/B.sori IA.canvas",

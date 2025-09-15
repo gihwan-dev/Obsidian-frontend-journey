@@ -229,7 +229,7 @@ function beginWork(
 
 #### `completeWork(작업 완료)`
 - `compeleteWork` 함수는 작업용 파이버 노드에 업데이트를 적용하고 애플리케이션의 업데이트된 상태를 나타내는 실제 DOM 트리를 새롭게 생성함
-- 호스트 환경이 브라우저라면 `docuemnt.createElement`로 새로운 루트를 생성해서 `newElement.appendChild` 같은 작업을 수행함
+- 호스트 환경이 브라우저라면 `docuemnt.createElement`, `newElement.appendChild` 같은 작업을 수행함
 - 핵심은 실제 화면에 적용되지 않고 화면 밖에서 존재하는 DOM 트리라는 것
 - 그렇기에 우선순위가 더 높은 업데이트가 예약되면 여기서 만들어진 UI는 버려질 수 있음
 - `completeWork`의 시그니처:
@@ -245,4 +245,7 @@ function completeWork(
 - `completeWork` 함수는 `beginWork` 함수와 관계가 밀점함. `beginWork`가 파이버 노드에 '업데이트가 필요함' 상태에 대한 플래그를 설정한다면, `completeWork`는 호스트 환경에 커밋할 새 트리를 구성하는 역할
 - `completeWork`가 트리 맨 위에 도달해 새 DOM 트리를 구성하면 '렌더링 단계가 완료되었다'고 볼 수 있음. 이후에는 커밋 단계로 넘어가게됨
 
+> [!Note] 참고: [[completeWork에서 DOM을 미리 구성하는 이유]]
+
 #### 커밋 단계
+- **커밋 단계**는 렌더링 단계에서 가상 DOM에 적용된 변경 사항을 실제 DOM에 반영함

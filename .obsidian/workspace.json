@@ -104,8 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -257,8 +256,9 @@
   },
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
-    "React.js/renderExpirationTime.md",
+    "React.js/completeWork에서 DOM을 미리 구성하는 이유.md",
     "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
+    "React.js/renderExpirationTime.md",
     "Next.js/Pasted image 20250916071915.png",
     "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md",
     "Next.js/Pasted image 20250916071351.png",
@@ -294,7 +294,6 @@
     "컨퍼런스",
     "AI/프롬프트 엔지니어링",
     "AI/N8N/LangChain in n8n.md",
-    "AI/N8N/Cluster nodes.md",
     "Exem/LG엔솔",
     "Next.js/Pasted image 20250804085826.png",
     "Next.js/Pasted image 20250804085648.png",

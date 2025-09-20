@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "bf96c9ce48980785",
+        "id": "ee31cab65b2dc545",
         "type": "tabs",
         "children": [
           {
-            "id": "f8556cf01c07a737",
+            "id": "d30eaf80eb3b497b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AI/Claude Code Meetup.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Claude Code Meetup"
+              "title": "New tab"
             }
           }
         ]
@@ -92,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -243,10 +238,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f8556cf01c07a737",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
-    "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
+    "Untitled Kanban.md",
     "AI/Claude Code Meetup.md",
+    "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
     "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md",
     "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
     "React.js/useEffect 와 리액트에서의 효과(Effect) 란.md",
@@ -278,7 +274,6 @@
     "React.js/전문가를 위한 리액트/Chapter2 - JSX.md",
     "React.js/전문가를 위한 리액트/Chapter1.md",
     "AI/LLM의 창발적 특성.md",
-    "AI/LLM의 추론 모델 - 작동 원리와 미스터리.md",
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",
     "컨퍼런스/2025/FeConf2025/라이트닝 토크 2부",

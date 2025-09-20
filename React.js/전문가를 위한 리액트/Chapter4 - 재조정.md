@@ -309,3 +309,7 @@ function commitMutaionEffects(Fiber) {
 > [[ useEffect 와 리액트에서의 효과(Effect) 란 ]]
 
 #### 화면에 모두 표시하기
+- 리액트는 현재 트리(current tree)나 작업용 트리(workInProgress tree) 중 하나 위에 `FiberRootNode`를 둠. `FiberRootNode`는 재조정 과정의 커밋 단계를 관리하는 핵심 데이터 구조
+- 가상 DOM이 업데이트 되면 리액트는 현재 트리를 변경하지 않고 작업용 트리를 업데이트함
+- 렌더링 프로세스가 완료되면 `commitRoot`를 호출해 작업용 트리에 적용된 변경 사항을 실제 DOM에 커밋
+- `commitRoot`는 `FiberRootNode`의 포인터를 현재 트리에서 작업용 트리로 전환하고, 작업용 트리를 새로운 현재 트리로 만듬

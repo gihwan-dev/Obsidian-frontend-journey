@@ -13,24 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
+                "file": "AI/Claude Code Meetup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter5 - 자주 묻는 질문과 유용한 패턴"
-            }
-          },
-          {
-            "id": "539863735d98c024",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-09-15 07.05.29.excalidraw"
+              "title": "Claude Code Meetup"
             }
           }
         ]
@@ -257,12 +245,13 @@
   },
   "active": "f8556cf01c07a737",
   "lastOpenFiles": [
-    "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
     "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
+    "AI/Claude Code Meetup.md",
+    "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md",
+    "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
     "React.js/useEffect 와 리액트에서의 효과(Effect) 란.md",
     "React.js/레이아웃 단계가 필요한 이유.md",
     "Next.js/Pasted image 20250918070952.png",
-    "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md",
     "번역글/마틴 파울러/LLM과 소프트웨어 개발에 대한 몇 가지 생각.md",
     "번역글/마틴 파울러",
     "번역글",
@@ -290,7 +279,6 @@
     "React.js/전문가를 위한 리액트/Chapter1.md",
     "AI/LLM의 창발적 특성.md",
     "AI/LLM의 추론 모델 - 작동 원리와 미스터리.md",
-    "AI/프롬프트 엔지니어링/Prompt Engineer - Analyzing Skill Requirements in the AI Job Market.md",
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",
     "컨퍼런스/2025/FeConf2025/라이트닝 토크 2부",

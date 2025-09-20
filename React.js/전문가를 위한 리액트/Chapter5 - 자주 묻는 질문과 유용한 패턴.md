@@ -54,4 +54,4 @@ function memo(type, compare) {
 		- 초기 검사(`if (current === null)`)를 통해 현재 작업이 컴포넌트의 초기 렌더링인지 아닌지를 결정함
 		- `current`가 `null`이면 컴포넌트가 처음 마운트된 것
 	2. **타입 및 빠른 경로 최적화**
-		- 
+		- `Component.compare`와 `Component.defaultProps`

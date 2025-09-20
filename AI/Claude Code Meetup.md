@@ -1,1 +1,2 @@
 - Tmux
+- claude code template

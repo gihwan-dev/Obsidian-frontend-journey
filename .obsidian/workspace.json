@@ -11,10 +11,14 @@
             "id": "d30eaf80eb3b497b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "AI/Claude Code Meetup.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Claude Code Meetup"
             }
           }
         ]
@@ -238,7 +242,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0c81285cd13c3654",
+  "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
     "Untitled Kanban.md",
     "AI/Claude Code Meetup.md",

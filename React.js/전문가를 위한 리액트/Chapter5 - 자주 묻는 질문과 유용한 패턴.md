@@ -470,3 +470,6 @@ function Toggle({ on, onToggle }) {
   </button>;
 }
 ```
+
+> [!Note] 참고
+> 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
+                "file": "React.js/전문가를 위한 리액트/QnA/Tanstack Table의 제어-비제어 철학.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter5 - 자주 묻는 질문과 유용한 패턴"
+              "title": "Tanstack Table의 제어-비제어 철학"
             }
           }
         ]
@@ -245,8 +245,9 @@
   },
   "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
-    "React.js/전문가를 위한 리액트/QnA/🤔 `useState`가 왜 상태 업데이트 흐름을 파악하기 어렵게 만드나?.md",
     "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
+    "React.js/전문가를 위한 리액트/QnA/Tanstack Table의 제어-비제어 철학.md",
+    "React.js/전문가를 위한 리액트/QnA/🤔 `useState`가 왜 상태 업데이트 흐름을 파악하기 어렵게 만드나?.md",
     "React.js/전문가를 위한 리액트/QnA/🤔 \"상태와 상태 변경은 명시적으로 `useReducer`와 함께 사용됨\" 이라는 말의 의미.md",
     "React.js/전문가를 위한 리액트/QnA/🤔 ref는 객체 참조인가요, 다른 의미인가요?.md",
     "React.js/전문가를 위한 리액트/QnA/🤔 \"콘텍스트 업데이트가 프롭의 범위 바깥에 있다\"는 말의 의미.md",
@@ -278,7 +279,6 @@
     "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "AI/프롬프트 엔지니어링의 부상과 진화 - LLM 초창기부터 현재까지.md",
     "AI/추론 엔진의 해부 - 현대 대규모 언어 모델에 대한 심층 분석.md",
-    "AI/마이다스 IT 방문.md",
     "Exem/오라클 라이센스 대시보드",
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/Claude Code Meetup.md",
+                "file": "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Claude Code Meetup"
+              "title": "Chapter5 - 자주 묻는 질문과 유용한 패턴"
             }
           }
         ]
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -244,8 +245,8 @@
   },
   "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
-    "Untitled Kanban.md",
     "AI/Claude Code Meetup.md",
+    "Untitled Kanban.md",
     "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
     "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md",
     "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",

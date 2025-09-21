@@ -54,4 +54,6 @@ function memo(type, compare) {
 		- 초기 검사(`if (current === null)`)를 통해 현재 작업이 컴포넌트의 초기 렌더링인지 아닌지를 결정함
 		- `current`가 `null`이면 컴포넌트가 처음 마운트된 것
 	2. **타입 및 빠른 경로 최적화**
-		- `Component.compare`와 `Component.defaultProps`
+		- `Component.compare`와 `Component.defaultProps`를 확인해 컴포넌트가 단순 함수 컴포넌트이고 빠른 경로 업데이트가 가능한지 확인
+		- 조건이 충족되면 진행 중인 파이버의 태그를 더 단순한 컴포넌트를 가리키는 `SimpleMemoComponent`로 설정
+	3. **개발 모드 확인**

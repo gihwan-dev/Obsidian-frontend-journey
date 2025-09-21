@@ -308,4 +308,41 @@ const MyComponent = () => {
 		- 유지 보수 및  수정이 쉬운 코드로 구조화하는 방법을 지원해 소프트웨어 시스템의 수명을 향상시킬 수 있음
 	- **효율성**
 		- 일반적인 문제에 효율적인 해결책을 제공해 소프트웨어 시스템의 성능을 개선할 수 있음
-- 
+- 어떤 패턴이 다른 패턴에 비해 근본적으로 더 좋거나 나쁘지 않고 각자 나름의 역할이 있음
+- 대부분의 패턴은 이상적인 추상화 수준을 도출해 내는 데 유용함
+- 가독성이 덜어지거나 유지 보수가 불가능할 정도로 상태와 설정이 과도하게 증가하는 것을 방지하고, 대신 오래도록 잘 유지되게 코드를 작성하는 법을 찾는 데 도움이 됨
+- 이 때문에 디자인 패턴을 선택할 때 대체로 제어(control)를 고려하게 됨
+
+### 프레젠테이션/컨테이너 컴포넌트
+- 프레젠테이션 컴포넌트는 UI를 렌더링하고, 컨테이너 컴포넌트는 UI의 상태를 처리함
+
+```jsx
+const PresentationalCounter = (props) => {
+  return (
+    <section>
+      <button onClick={props.increment}>+</button>
+      <button onClick={props.decrement}>-</button>
+      <button onClick={props.reset}>재설정</button>
+      <h1>현재 카운트: {props.count}</h1>
+    </section>
+  );
+};
+
+const ContainerCounter = () => {
+  const [count, setCount] = useState(0);
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+  const reset = () => setCount(0);
+  
+  return (
+    <PresentationalCounter
+      count={count}
+      increment={increment}
+      decrement={decrement}
+      reset={reset}
+    />
+  );
+};
+```
+
+- 이 패턴은 단일 책임 원칙 때문에 매우 유용하며, 애플리케이션에서 관심사를 분리해 모듈화, 재사용, 테스트를 가능케 함으로써 더 나은 확장을 실혐함

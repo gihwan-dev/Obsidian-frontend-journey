@@ -441,22 +441,32 @@ function Form() {
 
 ```jsx
 function Toggle({ on, onToggle }) {
+  // 1. 내부 상태는 비제어 모드를 위해 항상 존재
   const [isOn, setIsOn] = useState(false);
-  
+
+  // 2. '제어 모드'인지 명확히 변수로 확인
+  const isControlled = on !== undefined;
+
+  // 3. 실제 화면에 표시되고, 다음 상태를 결정할 기준이 되는 현재 값
+  const currentValue = isControlled ? on : isOn;
+
   const handleToggle = () => {
-    const nextState = on === undefined ? !isOn : on;
-    
-    if (on === undefined) {
+    // 4. 다음 상태는 언제나 현재 값의 반대
+    const nextState = !currentValue;
+
+    // 5. 비제어 모드일 때만 내부 상태를 직접 업데이트
+    if (!isControlled) {
       setIsOn(nextState);
     }
-    
+
+    // 6. onToggle 콜백이 있다면 항상 호출해서 상태 변경을 알림
     if (onToggle) {
       onToggle(nextState);
     }
   };
-  
+
   return <button onClick={handleToggle}>
-    {on !== undefined ? on : isOn ? "On" : "Off" }
-  </button>
+    {currentValue ? "On" : "Off"}
+  </button>;
 }
 ```

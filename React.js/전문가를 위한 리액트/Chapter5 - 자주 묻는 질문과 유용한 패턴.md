@@ -435,4 +435,28 @@ function Form() {
 }
 ```
 
-- 제어 프롭 패턴은 제어 컴포넌트의 원리를 확장함
+- 제어 프롭 패턴은 제어 컴포넌트의 원리를 확장함. 컴포넌트는 외부에서 프롭으로 제어될 수도 있고 내부적으로 자체 상태를 관리하면서 선택적으로 외부 제어를 가능하게 함
+- 이 패턴을 따르는 컴포넌트는 **상탯값** 그리고 **상태를 업데이트하는 함수 두 가지**를 프롭으로 받음
+- 아래는 토글 버튼 예제임
+
+```jsx
+function Toggle({ on, onToggle }) {
+  const [isOn, setIsOn] = useState(false);
+  
+  const handleToggle = () => {
+    const nextState = on === undefined ? !isOn : on;
+    
+    if (on === undefined) {
+      setIsOn(nextState);
+    }
+    
+    if (onToggle) {
+      onToggle(nextState);
+    }
+  };
+  
+  return <button onClick={handleToggle}>
+    {on !== undefined ? on : isOn ? "On" : "Off" }
+  </button>
+}
+```

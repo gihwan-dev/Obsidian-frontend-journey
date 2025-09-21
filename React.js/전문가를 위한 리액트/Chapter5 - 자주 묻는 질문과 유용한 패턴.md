@@ -372,4 +372,52 @@ const withAsync = (Component) => (props) => {
 ```
 
 - 이제 `Component`가 `withAsync`에 전달되면, 프롭에 따라 적절한 렌더링을 진행함
-- 
+
+### 렌더 프롭
+- 컴포넌트의 상태를 전달받는 함수를 프롭으로 사용하는 패턴
+
+```jsx
+<WindowSize
+  render={({ width, height }) => (
+   <div>
+     창 크기: {width} x {height}px
+   </div>
+  )}
+/>
+
+const WindowSize = (props) => {
+  const [size, setSize] = useState({ width: -1, height: -1 });
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handlerResize);
+  }, []);
+  
+  return props.render(size);
+};
+```
+
+
+- `WindowSize`는 이벤트 리스너를 사용해 크기가 조정될 때마다 상태에 일부 데이터를 저장하지만 이 컴포넌트 자체는 헤드리스
+- UI를 표현하는 방법을 명시하지 않고, 자신을 렌더링하는 부모 컴포넌트로부터 전달받은 **렌더 프롭**을 호출해 렌더링 작업에 대한 제어를 부모에게 넘겨 제어를 역전함
+- 다만 이제는 훅으로 대체되었음
+
+### 자식 함수
+- `render` 프롭의 이름을 아예 삭제하고 `children`만 사용하는 것도 선호하는 사람도 있음
+
+```jsx
+<WindowSize>
+  {({ width, height }) => (
+    <div>
+      창 크기: {width}x{height}px
+    </div>
+  )}
+</WindowSize>
+```
+
+- 이도 마찬가지로 훅 등장 이후로 잘 사용되는 패턴은 아님
+
+### 제어 프롭

@@ -48,7 +48,7 @@ function memo(type, compare) {
 	- `$$typeof`: 메모화된 컴포넌트를 식별하는 속성
 	- `type`: 원본 컴포넌트(함수)에 대한 참조
 	- `compare`: 메모화에 사용할 비교 함수를 설정하는 속성
-- `updateMemoComponent` 라는 함수(재조정자에서 `memo`를 처리하는 함수)의 동작 방식:
+- [`updateMemoComponent`](https://github.com/facebook/react/blob/d91d28c8ba6fe7c96e651f82fc47c9d5481bf5f9/packages/react-reconciler/src/ReactFiberBeginWork.js#L472-L539) 라는 함수(재조정자에서 `memo`를 처리하는 함수)의 동작 방식:
 	1. **초기 점검**
 		- 현재 파이버, 작업 중인 파이버, 컴포넌트, 새 프롭, 업데이트의 우선순와 타이밍을 나타내는 렌더 레인 등 여러 인수를 받음
 		- 초기 검사(`if (current === null)`)를 통해 현재 작업이 컴포넌트의 초기 렌더링인지 아닌지를 결정함
@@ -94,5 +94,38 @@ function memo(type, compare) {
 			- 예정된 컨텍스트 업데이트가 있는 경우 프롭이 변경되지 않았더라더 컴포넌트를 다시 리렌더링. 콘텍스트 업데이트가 컴포넌트 프롭의 범위 바깥에 있는 것으로 간주되기 때문
 			- 상태 변경, 콘텍스트 변경, 예정된 업데이트도 모두 렌더링을 일으킬 수 있음
 
-> 참고:
-> 
+> [!Note] QnA:
+> - [[🤔 ref는 객체 참조인가요, 다른 의미인가요?]]
+> - [[🤔 hasScheduledUpdateOrContext의 '콘텍스트'는 createContext가 맞나요?]]
+> - [[🤔 "콘텍스트 업데이트가 프롭의 범위 바깥에 있다"는 말의 의미]]
+## 5.2 `useMemo`를 사용한 메모화
+- `React.memo`와 `useMemo` 모두 메모화를 위한 도구지만 용도가 매우 다름
+- `React.memo`는 전체 컴포넌트를 메모화해 렌더링을 최적화
+- `useMemo`는 컴포넌트 내부의 특정 계산을 메모화해 재계산을 피하교 결과에 대한 일관된 참조를 유지함
+### `useMemo`의 나쁜 사례
+- `useMemo`는 계산 비용이 많이 드는 연산을 메모화하거나 객체와 배열에 대한 안정적인 참조를 유지하는데 특히 유용함. 스칼라 값은 대체로 `useMemo`를 사용할 필요가 없음
+- 아래 컴포넌트에서 `onClick` 핸들러가 렌더링 마다 다시 생성되는데 정말 문제가 될까?
+
+```tsx
+const MyComponent = () => {
+  const [count, setCount] = useState(0);
+  
+  return (
+    <div>
+      <p>카운트: {count}</p>
+      <p>2x 카운트: {count * 2}</p>
+      <button onClick={() => setCount((oldCount) => oldCount + 1)}>
+        증가
+      </button>
+    </div>
+  );
+};
+```
+
+- 일각에서는 `onClick` 핸들러를 `useCallback`으로 메모화해야 한다고 말함
+- `<button>` 은 브라우저 네이티브 엘리먼트이므로, `onClick` 함수를 메모화 해서 얻는 이점이 없음(네이티브 이기 때문에 리렌더링의 대상이 아님). 게다가 이 버튼 엘리먼트에는 자식 컴포넌트도 없음.
+- 리액트에서 내장 컴포넌트 또는 '호스트'컴포넌트 (`div`, `button`, `input` 등)는 함수 프롭등의 프롭을 사용자 정의 컴포넌트와 조금 다르게 취급함
+	- **직접 전달**
+		- 함수 프롭(`onClick` 등)을 내장 컴포넌트에 전달하면, 리액트는 이를 실제 `DOM`에 직접 전달함. 이러한 함수에 래퍼 생성 등의 추가 작업을 수행하지 않음
+		- 특히 `onClick` 같은 이벤트 기반 프롭의 경우, 리액트는 이벤트 핸들러를 `DOM` 엘리먼트에 직접 추가하는 대신 이벤트 위임을 사용해 이벤트를 처리함
+		- 

@@ -421,3 +421,18 @@ const WindowSize = (props) => {
 - 이도 마찬가지로 훅 등장 이후로 잘 사용되는 패턴은 아님
 
 ### 제어 프롭
+- 제어 프롭 패턴은 상태 관리에 대한 전략적 접근 방식으로, 제어 컴포넌트의 개념을 확장한것
+- 제어 컴포넌트는 내부에 자체 상태를 유지하지 않는 컴포넌트
+- 이들의 현재값은 부모 컴포넌트에서 전달한 프롭에 의해 결정되며 부모 컴포넌트가 단일 정보 출처의 역할을 함
+- 상태를 관리하고 제어 컴포넌트의 값을 업데이트하는 책임은 모두 부모 컴포넌트에 있게 됨
+- 아래의 `<input>` 태그는 제어 컴포넌트임
+
+```jsx
+function Form() {
+  const [inputValue, setInputValue] = React.useState("");
+  
+  return <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+}
+```
+
+- 제어 프롭 패턴은 제어 컴포넌트의 원리를 확장함

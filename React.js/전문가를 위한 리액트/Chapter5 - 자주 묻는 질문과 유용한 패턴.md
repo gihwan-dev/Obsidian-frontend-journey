@@ -471,5 +471,96 @@ function Toggle({ on, onToggle }) {
 }
 ```
 
+> [!Note] 알면 좋을 내용
+> [[Tanstack Table의 제어-비제어 철학]]
+
+### 프롭 컬렉션
+- 여러 개의 프롭을 함께 묶어야 하는 경우도 이따금 발생함
+- 드래그 앤 드롭 기능에는 다양한 프롭이 필요함
+	- `onDragStart`: 드래그를 시작할 때
+	- `onDragOver`: 드롭존을 식별할 때
+	- `onDrop`: 드롭했을 때
+	- `onDragEnd`: 드래그가 완료 되었을 때
+- 기본적으로 데이터나 엘리멘트는 다른 엘리먼트에 드롭할 수 없음
+- 한 엘리먼트를 드래그해서 다른 엘리먼트에 드래그 하려면 엘리먼트에서 기본 동작을 방지하도록 해야함
+- 이 작업을 위해서는 드롭존에 발생한 `onDragOver` 이벤트의 핸들러에서 `event.preventDefault`를 실행해야함
+
 > [!Note] 참고
-> 
+> [[DropZone에서 발생한 onDrag에서 preventDefault를 호출해야 하는 이유]]
+
+- 즉 위 프롭의 집합들은 대부분 함께 사용하며 `onDragOver`의 기본값은 일반적으로 `event => { event.prevetDefault(); moreStuff(); }` 이므로 이러한 프롭을 한데 모아두면 다양한 컴포넌트에서 재사용할 수 있음
+
+```js
+export const droppableProps = {
+  onDragOver: (event) => {
+    event.preventDefault();
+  },
+  onDrop: (event) => {},
+};
+
+export const draggableProps = {
+  onDragStart: (event) => {},
+  onDragEnd: (event) => {},
+}
+```
+
+- 드롭존으로 동작할 리액트 컴포넌트에는 아래와 같이 사용할 수 있음
+
+```jsx
+<Dropzone {...droppableProps} />
+```
+
+> [!Note] 참고
+> [[그래서 DropZone의 역할은?]]
+
+- 아래처럼 프롭 컬렉션을 덮어 씌우면 프롭 컬렉션의 함수에서 제공한 `event.preventDefault` 호출이 사라질 수 있음
+
+```jsx
+<Dropzone
+  {...drappableProps}
+  onDragOver={() => {
+    alert("Dragged");
+  }}
+/>
+```
+
+### 프롭 게터
+- 프롭 게터는 사용자 정의 프롭을 프롭 컬렉션에 조합하고 병합함
+- `droppableProps` 컬렉션을 우선 프롭 게터로 변경함
+
+```js
+export const getDroppableProps = () => {
+  return {
+    onDragOvewr: (event) => {
+      event.preventDefault();
+    },
+    onDrop: (event) => {},
+  };
+};
+```
+
+- 아래와 같은 조합 함수를 만들어 사용할 수 있음
+
+```js
+const compose = 
+  (...functions) => 
+  (...args) =>
+    functions.forEach((fn) => fn?.(...args));
+
+export const getDrappableProps = ({
+  onDragOver: replacementOnDragOver,
+  ...replacementProps
+}) => {
+  const defaultOnDragOver = (event) => {
+    event.preventDefault();
+  };
+  
+  return {
+    onDragOver: compose(replacementOnDragOver, defaultOnDragOver),
+    onDrop: (event) => {},
+    ...replacementProps,
+  };
+};
+```
+
+- 이를 게터 패턴 이라고 함

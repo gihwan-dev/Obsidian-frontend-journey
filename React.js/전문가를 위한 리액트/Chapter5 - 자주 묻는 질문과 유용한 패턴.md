@@ -569,4 +569,4 @@ export const getDrappableProps = ({
 - `Context API` 혹은 `createElement`를 사용해 구현할 수 있음
 
 ### 상태 리듀서
-- 
+- 외부에서 `reducer` 상태를 제어할 수 있도록 하는 패턴

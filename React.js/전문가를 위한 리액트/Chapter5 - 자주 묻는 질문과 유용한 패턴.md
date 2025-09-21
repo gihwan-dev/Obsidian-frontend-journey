@@ -151,3 +151,161 @@ const MyComponent = () => {
 - 리액트 컴파일러는 리액트 리렌더링 동작의 객체 동일성 비교를 깊은 비교 없는 시맨틱 값 비교로 변환해 성능을 향상시킴
 - `React Conf 2021`에서 `React Forget`의 이름으로 소개되었으며, 내부적으로 '기대 이상의 성과'를 거두고 있음
 
+## 지연 로딩
+- `lazy` 함수와 `Suspense`를 사용해 동적으로 필요할 때 모듈을 불러올 수 있음
+- `Suspense`는 프라미스가 해결되기 전까지, 폴백 컴포넌트를 표시할 수 있는 컴포넌트
+
+### `Suspense`를 통한 더 나은 UI 제어
+- `Suspense`는 `try/catch` 블록처럼 작동함
+- `Suspense`로 감싼 컴포넌트 트리 어디든 지연 로드되고 비동기로 읽어들이는 요소를 두면, `Suspense`의 폴백이 보여짐
+
+## `useState`와 `useReducer`
+- 리액트에는 상태 관리를 위한 두 개의 훅으로 `useState`와 `useReducer`가 있음
+- 이 둘은 모두 컴포넌트의 상태를 관리하는 데 사용함
+- `useState`는 단일 상태를 관리하는데 적합하고, `useReducer`는 복잡한 상태를 관리한다는 점에서 다름
+
+```jsx
+const MyComponent = () => {
+  const [state, setState] = useState({
+    count: 0,
+    name: "Tejumma",
+    age: 30,
+  });
+  
+  return (
+	// ... 다른 UI 요소들
+    <button onClick={() => setState({ ...state, count: state.count + 1 })}>
+      증가
+    </button>
+  )
+}
+```
+
+- 위에서는 `count`, `name`, `age` 라는 속성이 있음. 버튼을 클릭하면 `count`를 증가시킴
+- 자세히 보면 이전 상태와 속성이 같은 **새로운 객체**로 생성하되 `count`를 1 만큼 증가시킨 것임
+- 매우 일반적인 패턴이지만 버그가 발생할 가능성이 높다는 문제가 있음. 이전 상태를 주의 깊게 전개하지 않으면 실수로 상태의 일부 속성을 덮어쓸 수 있음
+- 재밌는 사실은 `useState`가 내부적으로 `useReducer`를 사용한다는 점임
+- `useState`는 `useReducer`의 상위 추상화라고 볼 수 있음
+- `useState` 대신 `useReducer`를 사용해도 된다는 의미임. 아래처럼 작성 할 수 있음
+
+```jsx
+function useState(initialState) {
+  const [state, dispatch] = useReducer(
+    (state, newValue) => newValue,
+    initialState
+  );
+  
+  return [state, dispatch];
+}
+```
+
+- 첫 예시를 `useReducer`로 아래와 같이 구현할 수 있음
+
+```jsx
+const initialState = {
+  count: 0,
+  name: "Tejumma",
+  age: 30,
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return { ...state, count: state.count + 1 };
+    default:
+      return state;
+  }
+};
+
+const MyComponent = () => {
+  const [state, dispatch] = reducer, initialState);
+  
+  return (
+    // ... 다른 UI 요소들
+    <button onClick={() => dispatch({ type: "increment" })}>
+      증가
+    </button>
+  );
+};
+```
+
+- `useReducer`가 `useState` 보다 장황하다고 말하는 이도 있고, 이 말에 많은 사람이 동의하겠지만, 추상화 계층에서 한 단계 아래로 내려갈수록 코드가 장황해지는 것은 당연함
+- `useState`로 `useReducer`와 동일한 작업을 수행할 수 있으니 더 간단한 `useState`만 사용해도 되지 않나? 하는 질문에 `useReducer`를 사용할 때 얻는 이점 세가지를 알려줌
+	- 상태 업데이트 로직을 컴포넌트에서 분리할 수 있음. `reducer` 함수는 단독으로 테스트하고 다른 컴포넌트에서도 재사용이 가능함. 이 방법은 컴포넌트를 깔끔하고 단순하게 유지하고 **단일 책임 원칙**을 따르기에 좋음
+	- 상태와 상태 변경은 항상 명시적으로 `useReducer`와 함께 사용됨. 어떤 이들은 `useState`가 `JSX` 트리 계층을 통한 컴포넌트 상태 업데이트의 전반적인 흐름을 파악하기 어렵게 만든다고 주장하기도 함
+	- `useReducer`는 **이벤트 소스** 모델임. 즉, 애플리케이션에서 발생하는 이벤트를 모델링해서 일종의 진단 로그를 추적하는데 사용할 수 있다는 의미.
+- `useReducer`는 도구 상자에 담아 두면 좋지만 항상 필요하지는 않음. 대부분의 사용 사례에서 지나친 경우가 많음.
+
+> [!Note] QnA
+> - [[🤔 "상태와 상태 변경은 명시적으로 `useReducer`와 함께 사용됨" 이라는 말의 의미]]
+> - [[🤔 `useState`가 왜 상태 업데이트 흐름을 파악하기 어렵게 만드나?]]
+
+### `Immer`와 편의성
+- `Immer`는 복잡한 상태 관리를 처리할 때 유용함
+- 상태가 중첩되거나 복잡한 형태라면, 기존에 사용하던 상태 업데이트 방식은 장황하고 오류가 발생하기 쉬움
+- `Immer`는 변경 가능한 초안 상태로 작업하고, 한 번 생성된 상태는 변경 불가로 만들어 복잡성을 관리할 수 있도록 도와줌
+- `useState`는 단순한 상태에 적합하고 `useReducer`는 복잡한 상태 관리에 적합한데, 복잡한 상태 관리야말로 `Immer`가 가장 빛을 발하는 부분임
+- `useReducer`로 작업할 때 제공하는 리듀서 함수는 항상 순수해야 하며, 항상 새 상태 객체를 반환해야함. 하지만 `use-immer`라이버ㄹ리의 `useImmerReducer`를 사용해 `Immer`와 `useReducer`를 통합하면, 더 단순하고 직관적인 리듀서 함수를 작성할 수 있음
+
+```jsx
+const initialState = {
+  user: {
+    name: "John Doe",
+    age: 28,
+    address: {
+      city: "New York",
+      country: "USA",
+    },
+  },
+};
+
+const reducer = (draft, action) => {
+  switch (action.type) {
+    case "updateName":
+      draft.user.name = action.payload;
+      break;
+    case "updateCity":
+      draft.user.address.city = action.payload;
+      break;
+    default:
+      break;
+  }
+};
+
+const MyComponent = () => {
+  const [state, dispatch] = useImmerReducer(reducer, initialState);
+  
+  // ...
+};
+```
+
+- 이처럼 `Immer` 를 사용해 중첩 객체에 대한 상태 변경 로직을 단순화 할 수 있음
+- `produce` 함수를 사용해서 `useState`에서도 사용할 수 있음
+
+```jsx
+const MyComponent = () => {
+  const [state, setState] = useState(initialState);
+  
+  const updateName = (nweName) => {
+    setState(
+      produce((draft) => {
+        draft.user.name = newName;
+      })
+    );
+  };
+  // ...
+};
+```
+
+## 강력한 패턴
+- 디자인 패턴은 소프트웨어 개발에서 반복되는 문제에 주로 사용되는 해결책
+- 디자인 패턴은 여러 이유로 중요함
+	- **재사용성**
+		- 흔히 겪는 문제에 대한 재사용 가능한 해결책을 제공해 소프트웨어 개발 시간과 노력을 절약할 수 있음
+	- **표준화**
+		- 문제를 해결하는 표준 방법을 제공해 개발자끼리 서로 더 잘 이해하고 소통할 수 있음
+	- **유지 보수성**
+		- 유지 보수 및  수정이 쉬운 코드로 구조화하는 방법을 지원해 소프트웨어 시스템의 수명을 향상시킬 수 있음
+	- **효율성**
+		- 일반적인 문제에 효율적인 해결책을 제공해 소프트웨어 시스템의 성능을 개선할 수 있음
+- 

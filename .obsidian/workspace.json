@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
+                "file": "React.js/전문가를 위한 리액트/Chapter6 - 서버 사이드 리액트.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter5 - 자주 묻는 질문과 유용한 패턴"
+              "title": "Chapter6 - 서버 사이드 리액트"
             }
           }
         ]
@@ -245,8 +245,9 @@
   },
   "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
-    "React.js/전문가를 위한 리액트/QnA/그래서 DropZone의 역할은?.md",
     "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
+    "React.js/전문가를 위한 리액트/Chapter6 - 서버 사이드 리액트.md",
+    "React.js/전문가를 위한 리액트/QnA/그래서 DropZone의 역할은?.md",
     "React.js/전문가를 위한 리액트/QnA/DropZone에서 발생한 onDrag에서 preventDefault를 호출해야 하는 이유.md",
     "React.js/전문가를 위한 리액트/QnA/Tanstack Table의 제어-비제어 철학.md",
     "React.js/전문가를 위한 리액트/QnA/🤔 \"콘텍스트 업데이트가 프롭의 범위 바깥에 있다\"는 말의 의미.md",
@@ -278,7 +279,6 @@
     "Clean Code/모던 리액트 애플리케이션 아키텍처 - 컴포넌트 경계, 로직, 상태에 대한 심층 분석.md",
     "Clean Code/복잡성 관리의 기술 - 지속 가능한 소프트웨어 아키텍처를 위한 프론트엔드 엔지니어 가이드.md",
     "AI/How Large Language Models work.md",
-    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
     "Exem/오라클 라이센스 대시보드",
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",

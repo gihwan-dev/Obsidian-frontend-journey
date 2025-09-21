@@ -564,3 +564,5 @@ export const getDrappableProps = ({
 ```
 
 - 이를 게터 패턴 이라고 함
+
+### 복합 컴포넌트

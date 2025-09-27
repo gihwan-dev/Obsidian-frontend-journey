@@ -85,4 +85,11 @@ hydrateRoot(document, <App />);
 ## 리액트의 서버 렌더링 API
 ### `renderToString`
 - 리액트 컴포넌트를 HTML 문자열로 렌더링할 때 사용함
-- 
+- 기본적으로 `JSX -> React.createElement -> React 엘리먼트 -> renderToString(React Element) -> HTML` 순서로 변환됨
+- 동기식 API임
+
+### `renderToPipeableStream`
+- Suspense를 완벽하게 지우너함
+- 스트림이기 때문에 스트리밍 할 수 있음
+- HTMl 청크를 비동기적으로 전송할 수 있음
+- 변환 결과가 HTML 문자열이 아닌 Node.js 스트림이 됨

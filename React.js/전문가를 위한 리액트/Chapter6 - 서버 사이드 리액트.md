@@ -17,3 +17,63 @@
 - 크로스 사이트 요청 위조 같은 공격에 취약함
 
 ## 서버 렌더링의 부상
+### 서버 렌더링의 장점
+- 최초 페인트 속도가 증가
+- 접근성 개선
+- SEO 개선
+- 보안 향상
+
+## 하이드레이션
+- 서버에서 생성되어 전송된 HTML에 이벤트 리스너와 자바스크립트 기능을 추가하는 프로세스를 의미
+- 아래 단계로 진행
+	- **클라이언트 번들 로딩**: HTML을 렌더링 하는 동안 앱의 코드가 포함된 자바스크립트 번들을 다운로드 및 파싱
+	- **이벤트 리스너 추가**: 번들이 로드되면 이벤트 리스너 및 기타 동적 기능을 DOM 요소에 추가해 정적 HTML을 '하이드레이션'함. 이 동작은 일반적으로 `react-dom` 패키지의 `hydrateRoot` 함수를 사용해 수행되며, 루트 리액트 컴포넌트와 `DOM` 컨테이너를 인수로 받음
+- 리액트는 하이드레이션을 하며 정적 HTML의 DOM 구조를 리액트 컴포넌트가 JSX를 사용해 정의한 구조와 일치시킴
+
+### 하이드레이션에 대한 비판
+- 일부에서는 하이드레이션이 필요 이상으로 느리다고 비판하며 재개 가능성을 더 나은 대안으로 꼽기도 함
+- 하이드레이션을 사용하면 서버에서 리액트 앱을 먼저 렌더링 하고 출력을 클라이언트로 전달함. 이 시점까지 인터랙티브 한 기능이 없음
+- 이후 브라우저는 클라이언트 번들을 다운로드 하고 이벤트 리스너를 추가한 후 '리렌더링' 해야함
+- 재개 가능성을 활용하면 전체 앱이 서버에서 렌더링되어 브라우저로 스트리밍됨
+- 초기 마크업과 함께 모든 인터랙티브 동작이 직렬화되어 클라이언트로 전송됨
+- 다만 이 방식은 복잡성이 하이드레이션에 비해 큼
+
+## 서버 렌더링 작성
+### 클라이언트 전용 리액트 앱에 서버 렌더링을 수동으로 추가하기
+- `server.js` 파일을 만들고 아래 코드를 포함:
+```js
+const express = require('express');
+const path = require('path');
+const React = require('react');
+const ReactDOMServer = require('react-dom/server');
+
+const App = require('./src/App');
+
+const app = express();
+
+// build 디렉토리의 정적 파일 서빙
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', (req, res) => {
+// APP 컴포넌트를 렌더링해 HTML 문자열 생성
+  const html = RreactDOMServer.renderToString(<App />);
+  
+  // 렌더링된 App 컴포넌트가 포함된 HTML 응답을 전송
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+    ...
+    <div id='root'>
+    <!-- 렌더링된 App 컴포넌트를 여기에 삽입 -->
+      ${html}
+    </div>
+    <!-- 메인 자바스크립트 번들을 연결 -->
+    <script src='/static/js/main.js'></script>
+  `)
+});
+
+app.listen(3000, () => {
+  console.log("Server listening on port 3000");
+})
+```
+

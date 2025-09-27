@@ -77,3 +77,12 @@ app.listen(3000, () => {
 })
 ```
 
+- 이후 클라이언트 사이드 코드에서는 아래 코드가 필요함:
+```js
+hydrateRoot(document, <App />);
+```
+
+## 리액트의 서버 렌더링 API
+### `renderToString`
+- 리액트 컴포넌트를 HTML 문자열로 렌더링할 때 사용함
+- 

@@ -86,4 +86,20 @@
 - `useDeferredValue`는 특정 UI 업데이트를 나중으로 미루는 데 사용되는 리액트 훅
 - 과부하 작업이나 연산 집약적 작업을 처리할 때 유용함
 - 초기 렌더링 중에 반환되는 지연된 값은 인수로 전달된 값과 동일함. 이후 업데이트에서는 `useDeferredValue`가 오래된 값을 더 오래 유지하고, 새 값으로 업데이트 할 시점을 제어해 부드러운 사용자 경험을 유지하게 함
-- 
+- 이전 값과 새 값 사이에 렌더링이 여러 번 발생하지 않도록 동작해. 값이 바뀌어도 UI가 매번 새롭게 리렌더링 되지 않음. 대신 새 값으로 업데이트될 시점을 제어해 한 번에 새 값으로 업데이트되게 함.
+- 리액트 커밋 기록을 보면 첫 구현은 아래와 같았음:
+
+```js
+function useDeferredValue(value) {
+  const [newValue, setNewValue] = useState(value); // 초깃값만 저장
+  
+  useEffect(() => {
+    startTransition(() => {
+      startNewValue(value);
+    });
+  }, [value]);
+  
+  return newValue;
+}
+```
+

@@ -103,3 +103,8 @@ function useDeferredValue(value) {
 }
 ```
 
+- 컴포넌트가 지연된 값으로 다시 렌더링되면, 리액트는 일정 시간 동안 이전 값을 계속 표기하며 우선순위가 높은 업데이트가 우선순위가 낮은 업데이트보다 먼저 처리되도록 함
+
+### `useDeferredValue`의 목적
+- `useDeferredValue`의 목적은 덜 중요한 업데이트의 렌더링을 지연하는 것
+- 

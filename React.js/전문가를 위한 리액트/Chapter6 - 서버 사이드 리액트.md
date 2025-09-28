@@ -89,7 +89,20 @@ hydrateRoot(document, <App />);
 - 동기식 API임
 
 ### `renderToPipeableStream`
-- Suspense를 완벽하게 지우너함
+- Suspense를 완벽하게 지원함
 - 스트림이기 때문에 스트리밍 할 수 있음
-- HTMl 청크를 비동기적으로 전송할 수 있음
+- HTML 청크를 비동기적으로 전송할 수 있음
 - 변환 결과가 HTML 문자열이 아닌 Node.js 스트림이 됨
+
+### `renderToReadableStream`
+- 변환 결과가 Node.js 스트림이 아닌 브라우저 스트림으로 전송
+
+### 언제 무엇을 사용해야 하나요?
+- `renderToString`은 동기식으로 동작해 적합하지 않을 때가 있음
+- 아직 완벽한 사용자 시나리오는 존재하지 않음
+- 특히 서드 파티 라이버러리는 `renderTo*Stream` 계열의 API를 지원하지 않는 경우가 많음
+- 최근 릴리스한 리액트 19에는 `refetchDNS`, `preconnect`, `preload` 등의 새로운 API를 추가해 더 효율적인 서버 렌더링을 지원하고 있음
+
+## 직접 구현하지 마세요
+- 서버 렌더러를 직접 구현하는 작업은 굉장히 어렵고 시간도 많이 걸림
+- `Next.js`, `Remix` 같은 기존 프레임워크를 사용하는 편이 더 나음

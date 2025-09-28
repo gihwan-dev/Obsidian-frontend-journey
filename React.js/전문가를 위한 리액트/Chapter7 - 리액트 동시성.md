@@ -107,4 +107,69 @@ function useDeferredValue(value) {
 
 ### `useDeferredValue`의 목적
 - `useDeferredValue`의 목적은 덜 중요한 업데이트의 렌더링을 지연하는 것
+- 디바운싱, 스로틀링과의 차이점: 이 방법들을 지연 시간을 설정해야 하지만 `useDeferredValue`는 렌더링 최적화에 더 특화되어 지연 시간을 사용자 기기의 성능에 맞춰 조정하며 임의로 설정할 필요가 없음
+- `useDeferredValue`느 지연 시간을 동적으로 조정하는 접근 방식을 취함
+- `useDeferredValue`는 지연된 렌더링을 중단시킬 수 있음
+- 디바운싱과 스로틀링은 렌더링과 직접 관련이 없는 시나리오에서 유용할 수 있으며 `useDeferredValue`는 렌더링 관련 시나리오에서 효과적임. 둘 모두를 사용해 종합적인 최적화를 달성할 수도 있음
+
+### `useDefferedValue` 사용 시기
+- 대규모 데이터를 검색하거나 필터링할 때
+- 복잡한 시각화나 애니메이션을 렌더링할 때
+- 백그라운드에서 서버의 데이터를 업데이트할 때
+- 사용자 상호 작용에 영향을 미칠 수 있는 연산 집약적 작업을 처리할 때
+
+### `useDefferedValue`가 적합하지 않은 경우
+- `useDeferredValue`의 사용 여부를 결정할 때 자문할 마땅한 질문은 '이 업데이트가 사용자 입력에 의한 것인가?' 임
+- 사용자가 즉각적인 반응을 기대할 만한 업데이트는 지연하면 안됨
+
+## 동시성 렌더링 관련 문제
+- 동시성 렌더링은 성능과 응답성을 높이지만, 새로운 문제도 야기함. 그 중 가장 큰 문제는 업데이트 처리 순서를 예측하기 어렵다는 것임
+- 버그의 일종인 **티어링** 이라는 현상은 업데이트 순서가 어긋나면서 UI가 일관성을 잃게 되는 문제를 가리킴
+- 이 현상은 애플리케이션이 렌더링되는 동안 업데이트가 발생할 때, 컴포넌트가 일관되지 않은 데이터로 렌더링되면서 발생할 수 있음
+
+### 티어링
+- 동기식 세계에서는 컴포넌트 트리를 위에서 아래로 이동하며 차례로 렌더링하기 때문에 항상 일관적임
+
+```jsx
+let count = 0;
+setInterval(() => count++, 1);
+
+export default function App() {
+  const [name, setName] = useState("");
+  const [isPending, startTransition] = useTransition();
+  
+  const updateName = (newVal) => {
+    startTransition(() => {
+      setName(newVal);
+    });
+  };
+  
+  return (
+    <div>
+      <input value={name} onChange={(e) => updateName(e.target.value)} />
+      {isPending && <div>로딩 중...</div>}
+      <ul>
+        <li><ExpensiveComponent /></li>
+        <li><ExpensiveComponent /></li>
+        <li><ExpensiveComponent /></li>
+        <li><ExpensiveComponent /></li>
+      </ul>
+    </div>
+  );
+}
+
+const ExpensiveComponent = () => {
+  const now = performance.now();
+  
+  while(performance.now() - now < 100) {
+    // 대기
+  }
+  
+  return <>{count}</>;
+}
+```
+
+- 위 예시에서 `count` 값은 `setInterval`을 통해 지속적으로 업데이트됨
+- `ExpensiveComponent`의 렌더링이 사용자 입력으로 인해 중단되는 경우 오래된 `count` 값을 보여주게 될 수 있음
+- 이처럼 사용자 입력에 따라 리액트가 렌더링을 '중지' 하고 텍스트 입력 필드 업데이트와 같은 더 긴급한 업데이트를 우선 처리하게 되는 경우 오래된 값을 렌더링 하게 될 수 있음
 - 

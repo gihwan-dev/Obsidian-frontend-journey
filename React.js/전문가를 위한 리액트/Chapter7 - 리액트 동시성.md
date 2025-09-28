@@ -172,4 +172,6 @@ const ExpensiveComponent = () => {
 - 위 예시에서 `count` 값은 `setInterval`을 통해 지속적으로 업데이트됨
 - `ExpensiveComponent`의 렌더링이 사용자 입력으로 인해 중단되는 경우 오래된 `count` 값을 보여주게 될 수 있음
 - 이처럼 사용자 입력에 따라 리액트가 렌더링을 '중지' 하고 텍스트 입력 필드 업데이트와 같은 더 긴급한 업데이트를 우선 처리하게 되는 경우 오래된 값을 렌더링 하게 될 수 있음
+
+#### `useSyncExternalStore`
 - 

@@ -69,3 +69,6 @@
 
 ## `useTranstion`
 - `useTransition` 에서 반환된 `startTransition` 함수로 감싸진 모든 업데이트는 트랜지션 레인에 들어감
+- 이 훅은 두 요소가 포함된 배열을 반환함
+	- `isPending`: 트랜지션이 진행 중인지 여부를 나타내는 불리언값. 흥미로운 점은 `startTransition`을 호출하면 가장 먼저 `isPending` 값을 `false`로 설정하는 동기적인 `setState({ isPending: false })`를 예약한다는 것임. 이는 `isPending`에 의존하는 업데이트가 빠르게 이루어져야 `useTransition`의 목적에 부합한다는 것을 의미함
+	- `startTransition`: 지연, 혹은 낮은 우선순위가 부여되어야 하는 업데이트를 감쌀 때 사용하는 함수

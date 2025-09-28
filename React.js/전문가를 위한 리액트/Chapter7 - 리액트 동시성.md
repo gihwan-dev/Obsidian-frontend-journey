@@ -174,4 +174,58 @@ const ExpensiveComponent = () => {
 - 이처럼 사용자 입력에 따라 리액트가 렌더링을 '중지' 하고 텍스트 입력 필드 업데이트와 같은 더 긴급한 업데이트를 우선 처리하게 되는 경우 오래된 값을 렌더링 하게 될 수 있음
 
 #### `useSyncExternalStore`
+- 앱 내부 상태와 외부 상태를 동기화하는 리액트 훅
+- 외부 저장소에 변화가 발생할 때 동기적으로 업데이트를 강제해 일관성을 유지함
+
+```js
+const value = useSyncExternalStore(store.subscribe, store.getSnapshot);
+```
+
+- `store.subscribe`
+	- 함수 내부에서는 외부 저장소의 변경 사항을 구독하고 저장소에 변화가 생길 때 마다 콜백 함수를 호출
+	- 리액트는 이 콜백 함수 호출을, 새 값을 사용해 컴포넌트를 리렌더링하라는 신호로 간주할 수 있음
+	- 이 함수를 실행하면 정리 함수를 반환하는데 반한된 함수를 실행하며 외부 저장소의 구독을 취소함
+```js
+const store = {
+  subscribe(rerender) {
+    const newData = getNewData().then(rerender);
+    return () => {
+      // 구독 해제
+    };
+  };
+};
+
+// 사용 사례: resze, scroll 이벤트에 리렌더링을 발생 시키는 예제
+const store = {
+  subscribe(rerenderImmediately) {
+    window.addEventListener("resize", rerenderImmediately);
+    return () => {
+      window.removeEventListener("resize", rerenderImmediately)
+    };
+  };
+};
+```
+
+- `stre.getSnapshot`
+	- 외부 저장소의 현잿값을 반환하는 함수
+	- 컴포넌트가 렌더링될 때마다 호추되며, 반환된 값은 컴포넌트의 내부 상태를 업데이트하는 데 사용됨
+	- 동기적으로 호출되므로 비동기 연산을 수행하거나 부작용이 있ㅇ서는 안됨
+	- 렌더링 시점에 일관성을 보장해 여러 인스턴스의 컴포넌트가 동일한 상태를 가짐
+```js
+const store = {
+  subcribe(즉시_리렌더링) {
+    window.addEventListener("resize", 즉시_리렌더링);
+    return () => {
+      window.removeEventListener("resize", 즉시_리렌더링);
+    }
+  },
+  getSnapshote() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+};
+```
+
 - 

@@ -13,15 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/전문가를 위한 리액트/Chapter7 - 리액트 동시성.md",
+                "file": "AI/How Large Language Models work.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter7 - 리액트 동시성"
+              "title": "How Large Language Models work"
+            }
+          },
+          {
+            "id": "a20e87da7b064a15",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -92,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -243,10 +255,19 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "d30eaf80eb3b497b",
+  "active": "a20e87da7b064a15",
   "lastOpenFiles": [
-    "React.js/전문가를 위한 리액트/Chapter6 - 서버 사이드 리액트.md",
+    "AI/Claude Code Meetup.md",
+    "AI/CodeRabbit 에이전트 동작 방식 분석.md",
+    "AI/프롬프트 엔지니어링의 부상과 진화 - LLM 초창기부터 현재까지.md",
+    "AI/마이다스 IT 방문.md",
+    "AI/N8N/Introducing Contextual Retrieval.md",
+    "AI/N8N/LangChain in n8n.md",
+    "AI/N8N/Cluster nodes.md",
+    "AI/N8N/Chain.md",
+    "AI/대규모 언어 모델의 창발적 특성 - 현상, 논쟁, 그리고 메커니즘에 대한 심층 분석.md",
     "React.js/전문가를 위한 리액트/Chapter7 - 리액트 동시성.md",
+    "React.js/전문가를 위한 리액트/Chapter6 - 서버 사이드 리액트.md",
     "React.js/전문가를 위한 리액트/Chapter5 - 자주 묻는 질문과 유용한 패턴.md",
     "React.js/전문가를 위한 리액트/QnA/그래서 DropZone의 역할은?.md",
     "React.js/전문가를 위한 리액트/QnA/DropZone에서 발생한 onDrag에서 preventDefault를 호출해야 하는 이유.md",
@@ -258,7 +279,6 @@
     "React.js/전문가를 위한 리액트/QnA/🤔 hasScheduledUpdateOrContext의 '콘텍스트'는 createContext가 맞나요?.md",
     "React.js/레이아웃 단계가 필요한 이유.md",
     "React.js/전문가를 위한 리액트/QnA",
-    "AI/Claude Code Meetup.md",
     "Untitled Kanban.md",
     "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.md",
     "React.js/전문가를 위한 리액트/Chapter4 - 재조정.md",
@@ -267,18 +287,10 @@
     "번역글/마틴 파울러/LLM과 소프트웨어 개발에 대한 몇 가지 생각.md",
     "번역글/마틴 파울러",
     "번역글",
-    "React.js/전문가를 위한 리액트/QnA/리액트 스케줄러 5밀리초의 의미.md",
-    "React.js/전문가를 위한 리액트/QnA/completeWork에서 DOM을 미리 구성하는 이유.md",
-    "React.js/renderExpirationTime.md",
     "Next.js/Pasted image 20250916071915.png",
     "Next.js/Pasted image 20250916071351.png",
     "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.png",
     "Next.js/Pasted image 20250915070614.png",
-    "React.js/전문가를 위한 리액트/Chapter3 - 가상 DOM.md",
-    "Frontend/프로젝트 공통 프롬프트.md",
-    "Frontend/나만의 FE 컨벤션.md",
-    "Clean Code/모던 리액트 애플리케이션 아키텍처 - 컴포넌트 경계, 로직, 상태에 대한 심층 분석.md",
-    "Clean Code/복잡성 관리의 기술 - 지속 가능한 소프트웨어 아키텍처를 위한 프론트엔드 엔지니어 가이드.md",
     "Exem/오라클 라이센스 대시보드",
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",

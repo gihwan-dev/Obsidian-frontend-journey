@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "How Large Language Models work"
             }
-          },
-          {
-            "id": "a20e87da7b064a15",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.14"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.14"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -255,7 +242,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "a20e87da7b064a15",
+  "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
     "AI/Claude Code Meetup.md",
     "AI/CodeRabbit 에이전트 동작 방식 분석.md",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/N8N/Chain.md",
+                "file": "DB/Oracle.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chain"
+              "title": "Oracle"
             }
           }
         ]
@@ -244,6 +244,9 @@
   },
   "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
+    "AI/N8N/Chain.md",
+    "DB/Oracle.md",
+    "DB",
     "함수형프로그래밍/map, filter, reduce.md",
     "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "함수형프로그래밍/제너레이터와 이터레이터.md",
@@ -255,7 +258,6 @@
     "AI/N8N/Introducing Contextual Retrieval.md",
     "AI/N8N/LangChain in n8n.md",
     "AI/N8N/Cluster nodes.md",
-    "AI/N8N/Chain.md",
     "AI/대규모 언어 모델의 창발적 특성 - 현상, 논쟁, 그리고 메커니즘에 대한 심층 분석.md",
     "React.js/전문가를 위한 리액트/Chapter7 - 리액트 동시성.md",
     "React.js/전문가를 위한 리액트/Chapter6 - 서버 사이드 리액트.md",
@@ -270,7 +272,6 @@
     "React.js/전문가를 위한 리액트/QnA/🤔 hasScheduledUpdateOrContext의 '콘텍스트'는 createContext가 맞나요?.md",
     "React.js/레이아웃 단계가 필요한 이유.md",
     "React.js/전문가를 위한 리액트/QnA",
-    "Untitled Kanban.md",
     "Next.js/Pasted image 20250918070952.png",
     "번역글/마틴 파울러",
     "번역글",
@@ -285,7 +286,6 @@
     "컨퍼런스/2025/FeConf2025",
     "컨퍼런스/2025",
     "컨퍼런스",
-    "AI/프롬프트 엔지니어링",
     "Next.js/Pasted image 20250804085826.png",
     "Next.js/Pasted image 20250804085648.png",
     "Next.js/Pasted image 20250804085335.png",

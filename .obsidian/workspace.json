@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/현 API 문제점.md",
+                "file": "DB/오라클 성능 고도화 원리와 해법 - 10.20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "현 API 문제점"
+              "title": "오라클 성능 고도화 원리와 해법 - 10.20"
             }
           }
         ]
@@ -242,49 +242,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "777262d90a094a45",
-    "type": "floating",
-    "children": [
-      {
-        "id": "afacd1aa68e3badf",
-        "type": "window",
-        "children": [
-          {
-            "id": "ebc541bebd1e8334",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "703841040e46ee88",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/Exem/%ED%98%84+API+%EB%AC%B8%EC%A0%9C%EC%A0%90",
-                    "title": "data:text/plain,",
-                    "mode": "blank"
-                  },
-                  "icon": "globe-2",
-                  "title": "data:text/plain,"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 33,
-        "width": 1728,
-        "height": 1084,
-        "maximize": false,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "703841040e46ee88",
+  "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
     "Exem/현 API 문제점.md",
-    "DB/Oracle.md",
+    "DB/오라클 성능 고도화 원리와 해법 - 10.20.md",
     "AI/N8N/Chain.md",
     "DB",
     "함수형프로그래밍/map, filter, reduce.md",

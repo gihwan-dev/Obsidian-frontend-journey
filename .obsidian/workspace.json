@@ -242,10 +242,49 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "d30eaf80eb3b497b",
+  "floating": {
+    "id": "777262d90a094a45",
+    "type": "floating",
+    "children": [
+      {
+        "id": "afacd1aa68e3badf",
+        "type": "window",
+        "children": [
+          {
+            "id": "ebc541bebd1e8334",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "703841040e46ee88",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/Exem/%ED%98%84+API+%EB%AC%B8%EC%A0%9C%EC%A0%90",
+                    "title": "현 API 문제점 - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "현 API 문제점 - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 33,
+        "width": 1728,
+        "height": 1084,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "703841040e46ee88",
   "lastOpenFiles": [
-    "DB/Oracle.md",
     "Exem/현 API 문제점.md",
+    "DB/Oracle.md",
     "AI/N8N/Chain.md",
     "DB",
     "함수형프로그래밍/map, filter, reduce.md",

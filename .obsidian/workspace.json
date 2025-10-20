@@ -242,47 +242,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "7973eed55ffef317",
-    "type": "floating",
-    "children": [
-      {
-        "id": "6eaf12816a077900",
-        "type": "window",
-        "children": [
-          {
-            "id": "34c9218a82956e39",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ab12a68417cff5ff",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/DB/%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%84%B1%EB%8A%A5+%EA%B3%A0%EB%8F%84%ED%99%94+%EC%9B%90%EB%A6%AC%EC%99%80+%ED%95%B4%EB%B2%95+-+10.21",
-                    "title": "오라클 성능 고도화 원리와 해법 - 10.21 - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "오라클 성능 고도화 원리와 해법 - 10.21 - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 837,
-        "y": 1676,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "ab12a68417cff5ff",
+  "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
+    "DB/간단 메모/RAC.md",
+    "DB/간단 메모/Ping.md",
     "DB/오라클 성능 고도화 원리와 해법 - 10.21.md",
     "DB/간단 메모/DB 맥락에서 fetch 란?.md",
     "DB/간단 메모/ANSI 표준.md",
@@ -290,11 +253,9 @@
     "DB/간단 메모/Undo 블록 재사용.md",
     "DB/오라클 성능 고도화 원리와 해법 - 10.20.md",
     "DB/간단 메모/버퍼 캐시 블록.md",
-    "DB/간단 메모/Ping.md",
     "DB/간단 메모/OPS.md",
     "DB/간단 메모/Exclusive 모드.md",
     "DB/간단 메모/오라클에서 로우 단위 Lock은 레코드의 속성으로 관리.md",
-    "DB/간단 메모/RAC.md",
     "DB/간단 메모",
     "Exem/현 API 문제점.md",
     "AI/N8N/Chain.md",

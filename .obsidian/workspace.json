@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.22.md",
+                "file": "DB/오라클 성능 고도와 원리와 해법 I/회고/10.22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "오라클 성능 고도화 원리와 해법 - 10.22"
+              "title": "10.22"
             }
           }
         ]
@@ -242,8 +242,49 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "d30eaf80eb3b497b",
+  "floating": {
+    "id": "a58c96b7637d5a08",
+    "type": "floating",
+    "children": [
+      {
+        "id": "69e173f150ca4ffa",
+        "type": "window",
+        "children": [
+          {
+            "id": "96e51b51047fca9f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4edea5bd5ac173e8",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/README",
+                    "title": "README - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "README - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 264,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "4edea5bd5ac173e8",
   "lastOpenFiles": [
+    "DB/오라클 성능 고도와 원리와 해법 I/회고/10.22.md",
+    "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.22.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/논리적 VS 물리적.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/익스텐트.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/오브젝트.md",
@@ -253,7 +294,6 @@
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/데이터파일.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/세그먼트.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/테이블스페이스.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.22.md",
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.20.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고",
     "DB/오라클 성능 고도와 원리와 해법 I",
@@ -273,7 +313,6 @@
     "AI/N8N/Chain.md",
     "DB",
     "함수형프로그래밍/map, filter, reduce.md",
-    "함수형프로그래밍/ES6에서의 순회와 이터러블.md",
     "React.js/전문가를 위한 리액트/QnA",
     "Next.js/Pasted image 20250918070952.png",
     "번역글/마틴 파울러",

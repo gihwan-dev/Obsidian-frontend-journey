@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.24.md",
+                "file": "DB/오라클 성능 고도와 원리와 해법 I/회고/10.24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "오라클 성능 고도화 원리와 해법 - 10.24"
+              "title": "10.24"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -243,10 +242,51 @@
       "obsidian-kanban:Create new board": false
     }
   },
+  "floating": {
+    "id": "cb2c98976195b197",
+    "type": "floating",
+    "children": [
+      {
+        "id": "21c7483750ac72a7",
+        "type": "window",
+        "children": [
+          {
+            "id": "a0e3f30acbee0886",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "681513b6cf72670b",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/DB/%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%84%B1%EB%8A%A5+%EA%B3%A0%EB%8F%84%EC%99%80+%EC%9B%90%EB%A6%AC%EC%99%80+%ED%95%B4%EB%B2%95+I/%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%84%B1%EB%8A%A5+%EA%B3%A0%EB%8F%84%ED%99%94+%EC%9B%90%EB%A6%AC%EC%99%80+%ED%95%B4%EB%B2%95+-+10.24",
+                    "title": "오라클 성능 고도화 원리와 해법 - 10.24 - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "오라클 성능 고도화 원리와 해법 - 10.24 - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 264,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
   "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
-    "Clean Code/프론트엔드 극대화 (Front-end maximalism).md",
+    "DB/오라클 성능 고도와 원리와 해법 I/회고/10.24.md",
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.24.md",
+    "기준으로.md",
+    "Clean Code/프론트엔드 극대화 (Front-end maximalism).md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.22.md",
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.22.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/논리적 VS 물리적.md",
@@ -271,9 +311,7 @@
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/버퍼 캐시 블록.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/OPS.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/Exclusive 모드.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/오라클에서 로우 단위 Lock은 레코드의 속성으로 관리.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모",
-    "Exem/현 API 문제점.md",
     "DB",
     "React.js/전문가를 위한 리액트/QnA",
     "Next.js/Pasted image 20250918070952.png",

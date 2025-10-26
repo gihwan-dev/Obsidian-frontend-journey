@@ -261,11 +261,11 @@
                   "type": "webviewer",
                   "state": {
                     "url": "https://publish.obsidian.md/gihwan-dev/DB/%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%84%B1%EB%8A%A5+%EA%B3%A0%EB%8F%84%EC%99%80+%EC%9B%90%EB%A6%AC%EC%99%80+%ED%95%B4%EB%B2%95+I/%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%84%B1%EB%8A%A5+%EA%B3%A0%EB%8F%84%ED%99%94+%EC%9B%90%EB%A6%AC%EC%99%80+%ED%95%B4%EB%B2%95+-+10.24",
-                    "title": "오라클 성능 고도화 원리와 해법 - 10.24 - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
+                    "title": "data:text/plain,",
+                    "mode": "blank"
                   },
                   "icon": "globe-2",
-                  "title": "오라클 성능 고도화 원리와 해법 - 10.24 - Gihwan-dev - Obsidian Publish"
+                  "title": "data:text/plain,"
                 }
               }
             ]
@@ -281,7 +281,7 @@
       }
     ]
   },
-  "active": "d30eaf80eb3b497b",
+  "active": "681513b6cf72670b",
   "lastOpenFiles": [
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.24.md",
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.24.md",

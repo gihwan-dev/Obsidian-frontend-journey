@@ -242,45 +242,6 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "cb2c98976195b197",
-    "type": "floating",
-    "children": [
-      {
-        "id": "0025cec4fcf88e44",
-        "type": "window",
-        "children": [
-          {
-            "id": "538398508552e801",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1af23a8d7f04c6a7",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/DB/%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%84%B1%EB%8A%A5+%EA%B3%A0%EB%8F%84%EC%99%80+%EC%9B%90%EB%A6%AC%EC%99%80+%ED%95%B4%EB%B2%95+I/%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%84%B1%EB%8A%A5+%EA%B3%A0%EB%8F%84%ED%99%94+%EC%9B%90%EB%A6%AC%EC%99%80+%ED%95%B4%EB%B2%95+-+10.29",
-                    "title": "오라클 성능 고도화 원리와 해법 - 10.29 - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "오라클 성능 고도화 원리와 해법 - 10.29 - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 768,
-        "y": 264,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 1
-      }
-    ]
-  },
   "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.27.md",

@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -242,10 +243,50 @@
       "obsidian-kanban:Create new board": false
     }
   },
+  "floating": {
+    "id": "8defbd359c1d1560",
+    "type": "floating",
+    "children": [
+      {
+        "id": "809bfc400420393a",
+        "type": "window",
+        "children": [
+          {
+            "id": "aa34a541ed02879d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5316863b59d996de",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/README",
+                    "title": "README - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "README - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 264,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
   "active": "d30eaf80eb3b497b",
   "lastOpenFiles": [
-    "Exem/오라클 라이센스 대시보드/코드 부검.md",
     "DB/SQL 자격검정 실전문제/데이터 모델링의 이해.md",
+    "Next.js/Pasted image 20251104082352.png",
+    "Exem/오라클 라이센스 대시보드/코드 부검.md",
     "DB/SQL 자격검정 실전문제",
     "Exem/오라클 라이센스 대시보드/useSelectedInstance.md",
     "Exem/LG엔솔/프롬프트.md",
@@ -272,7 +313,6 @@
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.22.md",
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.22.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/논리적 VS 물리적.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/익스텐트.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고",
     "DB/오라클 성능 고도와 원리와 해법 I",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모",
@@ -289,7 +329,6 @@
     "Next.js/Pasted image 20250828074014.png",
     "React.js/전문가를 위한 리액트",
     "Next.js/Pasted image 20250804085826.png",
-    "Next.js/Pasted image 20250804085648.png",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ee31cab65b2dc545",
+        "id": "1abd35f1e276a4b9",
         "type": "tabs",
         "children": [
           {
-            "id": "d30eaf80eb3b497b",
+            "id": "283855fe24d5a46a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DB/SQL 자격검정 실전문제/데이터 모델링의 이해.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "데이터 모델링의 이해"
+              "title": "New tab"
             }
           }
         ]
@@ -243,46 +239,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "8defbd359c1d1560",
-    "type": "floating",
-    "children": [
-      {
-        "id": "809bfc400420393a",
-        "type": "window",
-        "children": [
-          {
-            "id": "aa34a541ed02879d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "5316863b59d996de",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/README",
-                    "title": "README - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "README - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 768,
-        "y": 264,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "5316863b59d996de",
+  "active": "283855fe24d5a46a",
   "lastOpenFiles": [
     "DB/SQL 자격검정 실전문제/데이터 모델링의 이해.md",
     "Next.js/Pasted image 20251104082352.png",

@@ -243,7 +243,46 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "283855fe24d5a46a",
+  "floating": {
+    "id": "784e388289e53af5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "65d9eb21d3c8387d",
+        "type": "window",
+        "children": [
+          {
+            "id": "e0f31349b1466f12",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "82c7b1885d98382f",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/DB/SQL+%EC%9E%90%EA%B2%A9%EA%B2%80%EC%A0%95+%EC%8B%A4%EC%A0%84%EB%AC%B8%EC%A0%9C/%EB%8D%B0%EC%9D%B4%ED%84%B0+%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98+%EC%9D%B4%ED%95%B4",
+                    "title": "데이터 모델링의 이해 - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "데이터 모델링의 이해 - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 264,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "82c7b1885d98382f",
   "lastOpenFiles": [
     "DB/SQL 자격검정 실전문제/데이터 모델링의 이해.md",
     "Next.js/Pasted image 20251104082352.png",

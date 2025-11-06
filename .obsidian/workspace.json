@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -242,46 +243,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "72cd4fac4f89ec12",
-    "type": "floating",
-    "children": [
-      {
-        "id": "f96df76b3bca5fb9",
-        "type": "window",
-        "children": [
-          {
-            "id": "94d107641a4551b3",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "0408e7a8a757aa85",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/DB/SQL+%EC%9E%90%EA%B2%A9%EA%B2%80%EC%A0%95+%EC%8B%A4%EC%A0%84%EB%AC%B8%EC%A0%9C/%EB%8D%B0%EC%9D%B4%ED%84%B0+%EB%AA%A8%EB%8D%B8%EA%B3%BC+%EA%B4%80%EA%B3%84",
-                    "title": "데이터 모델과 관계 - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "데이터 모델과 관계 - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 768,
-        "y": 264,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "0408e7a8a757aa85",
+  "active": "45c2fa924c1c83f4",
   "lastOpenFiles": [
     "DB/SQL 자격검정 실전문제/데이터 모델과 관계.md",
     "DB/SQL 자격검정 실전문제/데이터 모델링의 이해.md",

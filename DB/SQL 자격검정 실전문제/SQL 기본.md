@@ -92,3 +92,15 @@
 
 ### 테이블에 입력된 데이터의 수정
 - UPDATE 테이블명 SET 수정되어야 할 칼럼명 = 수정되기를 원하는 새로운 값;
+
+### 테이블 삭제
+- TRUNCATE TABLE 테이블명
+- DROP TABLE 테이블명
+- DELETE FROM 테이블명
+
+TRUNCATE, DROP은 로그를 남기지 않음
+
+### 테이블에 입력된 데이터 조회
+- `SELECT [All /Distinct] 칼럼명1, 칼럼명2 FROM 테이블명;`
+	- ALL: 옵션이므로 별도로 표기하지 않아도 됨. 중복된 데이터가 있어도 모두 표기.
+	- DISTINCT: 중복된 데이터가 있는 경우 1건을 처리해서 출력

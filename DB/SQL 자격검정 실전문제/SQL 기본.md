@@ -58,3 +58,35 @@
 - 사전 정의한 예약어는 쓸 수 없다.
 - A-Z, a-z, 0-9, _, $, # 문자만 허용된다.
 
+### 외래키
+- 테이블 생성시 설정 가능
+- 널 값을 가질 수 있음
+- 한 테이블에 하나만 존재해야 함
+- 외래키 값은 참조 무결성 제약을 받을 수 있음
+
+### 테이블 불필요한 칼럼 삭제
+- ALTER TABLE 테이블명 DROP COLUMN 삭제할 칼럼 
+
+### 테이블 이름 변경
+- **RENAME** _OLD_OBJECT_NAME_ **TO** _NEW_OBJECT_NAME_
+
+
+### 테이블 FK 액션
+#### Delete(/Modify) Action
+1. Cascade: Master 삭제 시 Child 같이 삭제
+2. Set Null: Master 삭제 시 Child 해당 필드 Null
+3. Set Default: Master 삭제 시 Child 해당 필드 Default 값으로 설정
+4. Restrict: Child 테이블에 PK 값이 없는 경우만 Master 삭제 허용
+5. No Action: 참조무결성을 위반하는 삭제/수정 액션을 취하지 않음
+
+#### Insert Action
+1. Automatic: Master 테이블에 PK가 없는 경우 Master PK를 생성 후 Child 입력
+2. Set Null: Master 테이블에 PK가 없는 경우 Child 외부키를 Null 값으로 처리
+3. Set Default: Master 테이블에 PK가 없는 경우 Child 외부키를 지정된 기본값으로 입력
+4. Dependent: Master 테이블에 PK가 존재할 때만 Child 입력 허용
+5. No Action: 참조 무결성을 위반하는 입력 액션을 취하지 않음
+
+### 테이블에 데이터를 입력하는 두 가지 유형
+ 1. INSERT INTO 테이블명 (COLUMN_LIST) VALUES (COLUMN_LIST에 넣을 VALUE_LIST);
+ 2. INSERT INTO 테이블명 VALUES (전체 COLUMN에 넣을 VALUE_LIST);
+

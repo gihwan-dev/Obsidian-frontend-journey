@@ -90,3 +90,5 @@
  1. INSERT INTO 테이블명 (COLUMN_LIST) VALUES (COLUMN_LIST에 넣을 VALUE_LIST);
  2. INSERT INTO 테이블명 VALUES (전체 COLUMN에 넣을 VALUE_LIST);
 
+### 테이블에 입력된 데이터의 수정
+- UPDATE 테이블명 SET 수정되어야 할 칼럼명 = 수정되기를 원하는 새로운 값;

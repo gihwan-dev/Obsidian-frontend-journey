@@ -278,3 +278,7 @@ end
 - GROUP BY 절에 의한 소그룹별로 만들어진 집계 데이터 중, HAVING 절에서 제한 조건을 두어 조건을 만족하는 내용만 출력한다.
 - HAVING 절은 일반적으로 GROUP BY 절 뒤에 위치한다.
 - 중첩된 그룹함수의 경우 최종 결과값은 1건이 될 수 밖에 없다.
+
+### ORDER BY 문장
+- `SELECT 칼럼명 [ALIAS명] FROM 테이블명 [GROUP BY 칼럼이나 표현식] [HAVING 그룹조건식] [ORDER BY 칼럼이나 표현식 [ASC 또는 DESC]]`
+- 오름차순이 기본값

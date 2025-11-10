@@ -123,4 +123,52 @@ TRUNCATE, DROP은 로그를 남기지 않음
 - Oracle 에서는 DDL 문장 수행 후 자동으로 COMMIT을 수행
 - SQL Server에서는 DDL 문장 수행 후 자동으로 COMMIT하지 않음
 - Oracle 에서는 DDL 문장의 수행은 내부적으로 트랜잭션을 종료 시킴
-- SQL Server 에서는 CREATE TABLE 문장도 TRANSACTION의 범주에 포함됨. 그러므로 ROLLBACK 문장에 의해 최종적으로 B 테이블은 생성되지 않음
+- SQL Server 에서는 CREATE TABLE 문장도 TRANSACTION의 범주에 포함됨.
+
+### 트랜잭션 시작 종료
+- BEGIN TRANSACTION(BEGIN TRAN 구문도 가능)으로 트랜잭션을 시작하고  COMMIT TRANSACTION(TRANSACTION은 생략 가능) 또는 ROLLBACK TRANSACTION(TRANSACTION 생략 가능)으로 트랜잭션을 종료한다.
+- ROLLBACK 구문을 만나면 최초의 BEGIN TRANSACTION 시점까지 모두 ROLLBACK이 수행된다.
+
+### 저장점(SAVEPOINT)
+- 저장점(SAVEPOINT)을 정의하면 롤백(ROLLBACK) 할 때 트랜잭션에 포함된 전체 작업을 롤백하는 것이 아니라 현 시점에서 SAVEPOINT 까지 트랜잭션의 일부만 롤백할 수 있다
+- Oracle
+	- SAVEPOINT SVPT1;
+	- ...
+	- ROLLBACK TO SVPT1;
+- SQL Server
+	- SAVE TRANSACTION SVTR1;
+	- ...
+	- ROLLBACK TRANSACTION SVTR1;
+
+### WHERE 절
+- WHERE 절은 FROM 절 다음에 위치하며, 조건식은 아래 내용으로 구성됨
+	- 칼럼명(보통 조건식의 좌측에 위치)
+	- 비교 연산자
+	- 문자, 숫자, 표현식(보통 조건식의 우측에 위치)
+	- 비교 칼럼명(JOIN 사용시)
+
+### 연산자의 우선순위
+1. 괄호로 묶은 연산
+2. 부정 연산자(NOT)
+3. 비교 연산자
+4. 논리 연산자(AND, OR 순으로 처리)
+
+### NULL의 연산
+- NULL 값과의 연산(`+, -, *, /` 등)은 NULL 값을 리턴
+- NULL 값과의 비교연산 (`=, >, >=, <, <=`)은 `FALSE`를 리턴
+- 특정 값보다 크다. 작다라고 표현할 수 없음
+
+### 부정 비교 연산자
+- `!=`: 같지 않다.
+- `^=`: 같지 않다.
+- `<>`: 같지 않다.
+- `NOT 칼럼명 =` : ~와 같지 않다.
+- `NOT 칼럼명 > `: ~ 보다 크지 않다.
+
+### 공백 문자열 처리 방식
+- Oracle에서는 공백 문자열을 NULL로 전환함. 그래서 공백 문자열 데이터를 조회하려면 NULL 조건으로 조회해야함.
+- SQL Server에서는 공백 문자열이 그대로 들어감. 그래서 조회할 때 칼러명 = "" 으로 조회 해야함.
+
+### 특정 값 바운더리에 포함되는지 확인하는 방법
+- BETWEEN a AND b
+- IN (list)

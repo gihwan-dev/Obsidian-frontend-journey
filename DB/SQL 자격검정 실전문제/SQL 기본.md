@@ -282,3 +282,7 @@ end
 ### ORDER BY 문장
 - `SELECT 칼럼명 [ALIAS명] FROM 테이블명 [GROUP BY 칼럼이나 표현식] [HAVING 그룹조건식] [ORDER BY 칼럼이나 표현식 [ASC 또는 DESC]]`
 - 오름차순이 기본값
+- 숫자형 데이터 타입은 오름차순으로 정렬했을 경우 가장 작은 값부터 출력
+- 날짜형 데이터 타입은 오름차순으로 정렬했을 경우 가장 빠른 값부터 출력
+- Oracle에서는 NULL값을 가장 큰 값으로 간주
+- SQL Server 에서는 NULL 값을 가장 작은 값으로 간주

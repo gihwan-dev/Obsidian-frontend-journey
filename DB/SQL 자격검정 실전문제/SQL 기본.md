@@ -219,3 +219,15 @@ TRUNCATE, DROP은 로그를 남기지 않음
 | 날짜형 함수     | DATE 타입의 값을 연산한다.            | SYSDATE/GETDATE, EXTRACT/DATEPART, TO_NUMBER(TO_CHAR(d, 'YYYY' \| 'MM' \| 'DD')) / YEAR \| MONTH \| DAY |
 | 변환형 함수     | 문자, 숫자, 날짜형 값의 데이터 타입을 변환한다. | TO_NUMBER, TO_CHAR, TO_DATE / CAST, CONVERT                                                             |
 | NULL 관련 함수 | NULL을 처리하기 위한 함수             | NVL/ISNULL, NULLIF, COALESCE                                                                            |
+
+### CASE WHEN THEN
+- if else와 비슷함
+
+```sql
+case 
+	when 조건1 then 결과1
+	when 조건2 then 결과2
+	else 기본결과
+end
+```
+

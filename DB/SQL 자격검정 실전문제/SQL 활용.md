@@ -8,3 +8,11 @@
 - (NATURAL) JOIN 연산은 다양한 JOIN 기능으로 구현
 - DIVIDE 연산은 현재 사용되지 않음
 
+### JOIN 의 종류
+- `INNER JOIN`: 교집합
+- `LEFT JOIN`: 왼쪽 테이블 전부 + 오른쪽 매칭 되는 것
+- `RIGHT JOIN`: 오른쪽 테이블 전부 + 왼쪽 매칭되는 것
+- `FULL OUTER JOIN`: 양쪽 전부 다
+
+> 참고로 `RIGHT JOIN` === `RIGHT OUTER JOIN`
+

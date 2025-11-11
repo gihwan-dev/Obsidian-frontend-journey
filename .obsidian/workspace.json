@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/SQL 자격검정 실전문제/SQL 기본.md",
+                "file": "DB/SQL 자격검정 실전문제/SQL 활용.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL 기본"
+              "title": "SQL 활용"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -282,9 +281,10 @@
       }
     ]
   },
-  "active": "813907794af46ea1",
+  "active": "45c2fa924c1c83f4",
   "lastOpenFiles": [
     "DB/SQL 자격검정 실전문제/SQL 기본.md",
+    "DB/SQL 자격검정 실전문제/SQL 활용.md",
     "Next.js/Pasted image 20251110080154.png",
     "DB/SQL 자격검정 실전문제/데이터 모델과 관계 - sqlp.md",
     "DB/SQL 자격검정 실전문제/데이터 모델링의 이해.md",

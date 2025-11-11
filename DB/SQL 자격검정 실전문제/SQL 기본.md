@@ -298,3 +298,10 @@ end
 ### TOP
 **Oracle/DB2:** `FETCH FIRST 10 ROWS ONLY` | **Altibase:** `LIMIT 10` | **HANA:** `TOP 10` 또는 `LIMIT 10`
 - WITH TIES: 값이 동일한 경우 함계 출력
+
+### EQUI JOIN 문장
+`SELECT 테이블1.칼럼명, 테이블2.칼럼명, ... FROM 테이블1, 테이블2 WHERE 테이블1. 칼럼명1 = 테이블2.칼럼명2;`: `WHERE` 절에 `JOIN` 조건을 넣는다.
+
+### ANSI/ISO SQL 표준 EQUI JOIN 문장
+`SELECT 테이블1.칼럼명, 테이블2.칼럼명, ... FROM 테이블1 INNER JOIN 테이블2 ON 테이블1.칼럼명1 = 테이블2.칼럼명2;`: `ON` 절에 `JOIN` 조건을 넣는다.
+

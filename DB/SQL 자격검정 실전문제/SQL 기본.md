@@ -294,3 +294,7 @@ end
 4. 그룹핑된 값의 조건에 맞는 것만을 출력(HAVING)
 5. 데이터 값을 출력/계산(SELECT)
 6. 데이터를 정렬(ORDER BY)
+
+### TOP
+**Oracle/DB2:** `FETCH FIRST 10 ROWS ONLY` | **Altibase:** `LIMIT 10` | **HANA:** `TOP 10` 또는 `LIMIT 10`
+- WITH TIES: 값이 동일한 경우 함계 출력

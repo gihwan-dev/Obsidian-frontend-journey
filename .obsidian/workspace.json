@@ -243,7 +243,46 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "45c2fa924c1c83f4",
+  "floating": {
+    "id": "67d8616b85daca65",
+    "type": "floating",
+    "children": [
+      {
+        "id": "77b9ad665bc54601",
+        "type": "window",
+        "children": [
+          {
+            "id": "5d7237a7956e6a7b",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "813907794af46ea1",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/DB/SQL+%EC%9E%90%EA%B2%A9%EA%B2%80%EC%A0%95+%EC%8B%A4%EC%A0%84%EB%AC%B8%EC%A0%9C/SQL+%EA%B8%B0%EB%B3%B8",
+                    "title": "SQL 기본 - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "SQL 기본 - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 768,
+        "y": 264,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "813907794af46ea1",
   "lastOpenFiles": [
     "DB/SQL 자격검정 실전문제/SQL 기본.md",
     "Next.js/Pasted image 20251110080154.png",

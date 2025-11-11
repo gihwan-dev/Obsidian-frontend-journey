@@ -16,3 +16,6 @@
 
 > 참고로 `RIGHT JOIN` === `RIGHT OUTER JOIN`
 
+### 카티시안 곱(Cartesian Product)
+두 테이블을 Join 조건 없이 결합하면, 한 쪽 테이블의 모든 행과 다른쪽 테이블의 모든 행이 조합되는 현상
+

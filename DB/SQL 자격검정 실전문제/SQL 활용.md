@@ -19,3 +19,17 @@
 ### 카티시안 곱(Cartesian Product)
 두 테이블을 Join 조건 없이 결합하면, 한 쪽 테이블의 모든 행과 다른쪽 테이블의 모든 행이 조합되는 현상
 
+### USING
+JOINT시 양 쪽 테이블에 동일한 이름의 칼럼이 있을 때 사용할 수 있는 문법
+
+- `USING T.STADIUM_ID = S>STADIUM_ID` 같은 문법 사용할 수 없음
+- `USING(STADIUM_ID)` = 같은 경우 테이블 명 접두사를 붙일 수 없음
+	- `T.STADIUM_ID` 같은거는 안됨. `STADIUM_ID`로 써야함.
+
+### CROSS JOIN
+테이블 간 JOIN 조건이 없는 경우 생길 수 있는 모든 데이터의 조합을 말함. 결과는 양쪽 `M * N` 건의 데이터 조합이 발생함.
+
+
+### ON 에서 IN 사용시
+모든 행에 대해서 출력을 하되 JOIN 대상을 제한해 해당하지 않는 값에 NULL이 할당됨
+

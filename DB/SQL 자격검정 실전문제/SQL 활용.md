@@ -64,3 +64,24 @@ JOINT시 양 쪽 테이블에 동일한 이름의 칼럼이 있을 때 사용할
 - SQL Server에서의 계층형 질의문은 앵커 멤버를 실행해 기본 결과 집합을 만들고 이후 재귀 멤버를 지속적으로 실행한다.
 - 오라클의 계층형 질의문에서 WHERE 절은 모든 전개를 진행한 이후 필터 조건으로서 조건을 만족하는 데이터만을 추출하는데 활용된다.
 - 오라클의 PRIOR 키워드는 SELECT, WHERE 절에서도 사용할 수 있다.
+
+### START WITH과 CONNECT BY PRIOR 동작 방식
+**START WITH**: 계층 구조의 **시작점(루트)**을 정의
+- 어디서부터 탐색을 시작할지 지정
+- 조건을 만족하는 모든 행이 루트 노드가 됨
+
+**CONNECT BY**: 부모-자식 관계를 정의
+- 현재 행과 다음 행을 어떻게 연결할지 지정
+- `PRIOR` 키워드로 방향 결정 (하향식 vs 상향식)
+
+#### PRIOR 키워드의 위치가 중요
+```sql
+-- 하향식 탐색 (부모 → 자식)
+CONNECT BY PRIOR child_col = parent_col
+-- "이전(PRIOR) 행의 child_col = 현재 행의 parent_col"
+
+-- 상향식 탐색 (자식 → 부모)  
+CONNECT BY child_col = PRIOR parent_col
+-- "현재 행의 child_col = 이전(PRIOR) 행의 parent_col"
+```
+

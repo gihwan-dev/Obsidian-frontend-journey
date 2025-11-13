@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "SQL 활용"
             }
+          },
+          {
+            "id": "057453e78a2a539e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -243,7 +256,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "45c2fa924c1c83f4",
+  "active": "057453e78a2a539e",
   "lastOpenFiles": [
     "DB/SQL 자격검정 실전문제/SQL 활용.md",
     "DB/SQL 자격검정 실전문제/SQL 기본.md",

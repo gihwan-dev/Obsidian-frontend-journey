@@ -85,3 +85,21 @@ CONNECT BY child_col = PRIOR parent_col
 -- "현재 행의 child_col = 이전(PRIOR) 행의 parent_col"
 ```
 
+### SELF JOIN
+- 동일 테이블 사이의 조인을 말함
+- FROM 절에 동일 테이블이 두 번 이상 나타남
+- 동일 테이블 사이의 조인을 수행하면 테이블과 칼럼 이름이 모두 동일하기 때문에 식별을 위해 반드시 테이블 별칭을 사용
+
+```sql
+SELECT
+	ALIAS명1.칼럼명,
+	ALIAS명2.칼럼명,
+	...
+FROM
+	테이블 ALLIAS명1
+	테이블 ALIAS명2
+WHERE
+	ALIAS명1.칼럼명2 = ALIAS명2.칼럼명1;
+```
+
+한 테이블 내에서 두 칼럼이 연관 관계가 있을 경우 사용한다.

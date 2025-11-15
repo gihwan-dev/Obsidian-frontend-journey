@@ -173,3 +173,4 @@ GROUPING 함수는 다음 값을 반환합니다:
 - CUBE, ROLLUP, GROUPING SETS 함수들의 대상 칼럼 중 집계된 칼럼 이외의 대상 칼럼 값은 NULL을 반환함
 - CUBE 그룹 함수는 인자로 주어진 칼럼의 결합 가능한 모든 조합에 대해서 집계를 수행하므로 다른 그룹 함수에 비해 시스템에 대한 부하가 큼
 
+### GROUPING과 INNER JOIN

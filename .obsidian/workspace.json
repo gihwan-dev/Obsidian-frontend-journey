@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/친절한 SQL 튜닝/회고/251117 - 43.md",
+                "file": "Tanstack Table/Code Wiki 번역.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "251117 - 43"
+              "title": "Code Wiki 번역"
             }
           }
         ]
@@ -245,6 +245,8 @@
   "active": "45c2fa924c1c83f4",
   "lastOpenFiles": [
     "DB/친절한 SQL 튜닝/회고/251117 - 43.md",
+    "Tanstack Table/Code Wiki 번역.md",
+    "Tanstack Table",
     "DB/친절한 SQL 튜닝/SQL 처리 과정과 IO.md",
     "DB/친절한 SQL 튜닝/회고",
     "DB/친절한 SQL 튜닝/Untitled.md",
@@ -276,7 +278,6 @@
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/Unique 인덱스가 정의되어 있을 때는 insert에 의한 로우 Lock 경합이 생길 수 있음.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/하나의 쿼리 !== 트랜잭션.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.24.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.24.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고",
     "DB/오라클 성능 고도와 원리와 해법 I",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모",
@@ -284,7 +285,6 @@
     "React.js/전문가를 위한 리액트/QnA",
     "Next.js/Pasted image 20250918070952.png",
     "번역글/마틴 파울러",
-    "번역글",
     "Next.js/Pasted image 20250916071915.png",
     "Next.js/Pasted image 20250916071351.png",
     "Excalidraw/Drawing 2025-09-15 07.05.29.excalidraw.png",

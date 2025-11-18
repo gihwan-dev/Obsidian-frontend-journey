@@ -242,46 +242,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "6bee3e2f36920a4d",
-    "type": "floating",
-    "children": [
-      {
-        "id": "693dd9f48d7f99c1",
-        "type": "window",
-        "children": [
-          {
-            "id": "028d3420a2261044",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "6329273c2a4c4815",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/DB/%EC%B9%9C%EC%A0%88%ED%95%9C+SQL+%ED%8A%9C%EB%8B%9D/SQL+%EC%B2%98%EB%A6%AC+%EA%B3%BC%EC%A0%95%EA%B3%BC+IO",
-                    "title": "SQL 처리 과정과 IO - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "SQL 처리 과정과 IO - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 2560,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "6329273c2a4c4815",
+  "active": "45c2fa924c1c83f4",
   "lastOpenFiles": [
     "DB/친절한 SQL 튜닝/회고/251117 - 43.md",
     "DB/친절한 SQL 튜닝/SQL 처리 과정과 IO.md",

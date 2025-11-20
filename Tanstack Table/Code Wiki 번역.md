@@ -41,4 +41,4 @@
 	- 테이블의 각 데이터 포인트는 `Cell` 객체로 표현됨
 	- `createCell` 함수로 생성됨
 	- `Row`와 `Column`  객체에 대한 참조를 가지고 있음
-	- 
+	- `getValue`로 값을 얻거나 `getContext` 함수로 연관된 `table`, `column`, `row` 정보가 담긴 객체를 얻을 수 있음

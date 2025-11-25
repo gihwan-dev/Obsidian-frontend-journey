@@ -101,6 +101,20 @@ const { data: historyResponse } = useInstanceRevisionHistoryQuery();
 - api/ 폴더에 api 호출 함수 정의
 - model/ 에 쿼리 커스텀훅 추가
 
+### 1대1 대응되는 어댑터가 실질적으로 유용할까?
+결국 어댑터의 사용 이유가 API 변경시 수정될 부분들을 줄이기 위함 입니다. API가 변경 되었을 때 수정되어야 하는 범위에 대해서 시각화 해보면
+
+#### 어댑터가 적용된 경우
+![[Pasted image 20251125085908.png]]
+
+#### 사용하지 않는 경우
+![[Pasted image 20251125085950.png]]
+
+실질적으로 1대1로 매핑되며 단일 컴포넌트에서 사용되는 경우에는 크게 변경 부위를 줄여주지 못합니다.
+
+다만 아래처럼 여러 컴포넌트에서 사용되는 API에서는 효과를 발휘할 수 있습니다:
+![[Pasted image 20251125090227.png]]
+
 그래서 제안 하는 방식은 아래와 같습니다:
 1. 기본적으로 어댑터를 사용하지 않습니다.
 2. 재사용 되는 엔드포인트 호출(인스턴스 정보 요청)을 커스텀 훅으로 분리해 재사용 합니다.
@@ -222,6 +236,14 @@ export const useInstanceQuery = (instanceId: string) => {
 const { data: instance } = useInstanceQuery(instanceId);
 // instance.instanceId, instance.instanceName, instance.status 사용
 ```
+
+## 추가적으로 정의부를 왜 분리해야 하나
+아래처럼 BE의 변경과 FE의 변경을 자동화 하기 위함 입니다:
+![[Pasted image 20251125090530.png]]
+
+어차피 Open API Generator나 Orval을 사용해 요청 함수 생성 자동화를 진행하게 되었을 때의 형태와 유사하게 만드려 했습니다. 당시에 OAG를 사용하지 못한다는 얘기를 들어서 그렇게 진행했고, 사실상 OAG, Orval 둘 중 하나를 사용해 자동화 하는게 가장 좋다고 생각합니다.
+
+page 계층 안에 API 호출 함수들이 들어가게 되면 이러한 자동화를 적용할 수 없습니다.
 
 ## 참고
 https://javascript.plainenglish.io/how-i-use-adapter-pattern-in-reactjs-cb331e9bef0c?gi=6c6eb950c120

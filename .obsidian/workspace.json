@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Test/단위 테스트의 기술/1. 시작하기.md",
+                "file": "Exem/현 API 문제점.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. 시작하기"
+              "title": "현 API 문제점"
+            }
+          },
+          {
+            "id": "4fff57f219bdb414",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-11-25 08.54.21.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-11-25 08.54.21.excalidraw"
             }
           }
         ]
@@ -244,6 +256,13 @@
   },
   "active": "45c2fa924c1c83f4",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-11-25 08.54.21.excalidraw.md",
+    "Exem/현 API 문제점.md",
+    "Next.js/Pasted image 20251125090530.png",
+    "Next.js/Pasted image 20251125090227.png",
+    "Next.js/Pasted image 20251125085950.png",
+    "Next.js/Pasted image 20251125085908.png",
+    "Excalidraw/Drawing 2025-11-25 08.54.21.excalidraw.png",
     "Test/단위 테스트의 기술/1. 시작하기.md",
     "콜아웃 리스트.md",
     "Tanstack Table/Code Wiki 번역.md",
@@ -253,8 +272,6 @@
     "Next.js/Pasted image 20251119075809.png",
     "Next.js/Pasted image 20251119075803.png",
     "Next.js/Pasted image 20251119075800.png",
-    "Next.js/Pasted image 20251119075756.png",
-    "Next.js/Pasted image 20251119075751.png",
     "DB/친절한 SQL 튜닝/회고/251117 - 43.md",
     "Tanstack Table",
     "DB/친절한 SQL 튜닝/SQL 처리 과정과 IO.md",
@@ -263,10 +280,8 @@
     "DB/SQL 자격검정 실전문제/SQL 활용.md",
     "DB/친절한 SQL 튜닝",
     "DB/SQL 자격검정 실전문제/SQL 기본.md",
-    "Next.js/Pasted image 20251110080154.png",
     "DB/SQL 자격검정 실전문제/데이터 모델과 관계 - sqlp.md",
     "DB/SQL 자격검정 실전문제/데이터 모델링의 이해.md",
-    "Next.js/Pasted image 20251104082352.png",
     "Exem/오라클 라이센스 대시보드/코드 부검.md",
     "DB/SQL 자격검정 실전문제",
     "Exem/오라클 라이센스 대시보드/useSelectedInstance.md",
@@ -275,16 +290,12 @@
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.30.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/커서.md",
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.30.md",
-    "Next.js/Pasted image 20251030075707.png",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/Call 시점과 Response 시점의 차이.md",
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.29.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.29.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.27.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/ITL 슬롯.md",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/비트맵 인덱스.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.27.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/쿼리, 트랜잭션의 차이점.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/Unique 인덱스가 정의되어 있을 때는 insert에 의한 로우 Lock 경합이 생길 수 있음.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고",
     "DB/오라클 성능 고도와 원리와 해법 I",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모",

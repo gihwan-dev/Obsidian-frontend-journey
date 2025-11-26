@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/현 API 문제점.md",
+                "file": "Test/단위 테스트의 기술/1. 시작하기.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "현 API 문제점"
+              "title": "1. 시작하기"
             }
           },
           {
@@ -256,8 +256,8 @@
   },
   "active": "45c2fa924c1c83f4",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-11-25 08.54.21.excalidraw.md",
     "Exem/현 API 문제점.md",
+    "Excalidraw/Drawing 2025-11-25 08.54.21.excalidraw.md",
     "Next.js/Pasted image 20251125090530.png",
     "Next.js/Pasted image 20251125090227.png",
     "Next.js/Pasted image 20251125085950.png",

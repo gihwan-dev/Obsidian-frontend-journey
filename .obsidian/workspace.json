@@ -25,12 +25,14 @@
             "id": "ae06775b64267e67",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.10.6"
+                "file": "Clean Code/선언적 프로그래밍.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.6"
+              "icon": "lucide-file",
+              "title": "선언적 프로그래밍"
             }
           },
           {
@@ -117,7 +119,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -269,6 +272,10 @@
   },
   "active": "ae06775b64267e67",
   "lastOpenFiles": [
+    "Clean Code/컴파운드 패턴이 무조건 좋을까?/고차 함수를 왜 사용해야 할까?.md",
+    "Clean Code/선언적 프로그래밍.md",
+    "Clean Code/컴파운드 패턴이 무조건 좋을까?/컴파운드 패턴이 무조건 좋을까?.md",
+    "Clean Code/컴파운드 패턴이 무조건 좋을까?",
     "Test/단위 테스트의 기술/1. 시작하기.md",
     "Exem/현 API 문제점.md",
     "Excalidraw/Drawing 2025-11-25 08.54.21.excalidraw.md",
@@ -307,13 +314,10 @@
     "DB/오라클 성능 고도와 원리와 해법 I/오라클 성능 고도화 원리와 해법 - 10.29.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.29.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고/10.27.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/ITL 슬롯.md",
-    "DB/오라클 성능 고도와 원리와 해법 I/간단 메모/비트맵 인덱스.md",
     "DB/오라클 성능 고도와 원리와 해법 I/회고",
     "DB/오라클 성능 고도와 원리와 해법 I",
     "DB/오라클 성능 고도와 원리와 해법 I/간단 메모",
     "DB",
-    "React.js/전문가를 위한 리액트/QnA",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

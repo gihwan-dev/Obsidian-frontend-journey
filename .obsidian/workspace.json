@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clean Code/리액트에서의 추상화.md",
+                "file": "Clean Code/리액트 아키텍처와 추상화 전략 - 2025년 현대적 디자인 패턴의 포괄적 분석.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "리액트에서의 추상화"
+              "title": "리액트 아키텍처와 추상화 전략 - 2025년 현대적 디자인 패턴의 포괄적 분석"
             }
           }
         ]
@@ -245,7 +245,7 @@
   "active": "461cb0b1e75a82a0",
   "lastOpenFiles": [
     "Clean Code/리액트 아키텍처의 심층 분석 -  렌더 프롭(Render Props)과 커스텀 훅(Custom Hooks)의 구조적 트레이드오프 및 컴포넌트 단위 추상화의 현대적 재해석.md",
-    "Clean Code/리액트에서의 추상화.md",
+    "Clean Code/리액트 아키텍처와 추상화 전략 - 2025년 현대적 디자인 패턴의 포괄적 분석.md",
     "Clean Code/리액트 아키텍처의 심연 - 고차 함수를 통한 메커니즘과 정책의 분리 및 추상화 고도화 전략 보고서.md",
     "Clean Code/모던 리액트 애플리케이션 아키텍처 - 컴포넌트 경계, 로직, 상태에 대한 심층 분석.md",
     "Clean Code/복잡성 관리의 기술 - 지속 가능한 소프트웨어 아키텍처를 위한 프론트엔드 엔지니어 가이드.md",

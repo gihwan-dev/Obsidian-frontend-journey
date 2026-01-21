@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "87d525b5a13cb443",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -243,7 +256,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b3d62afb435e8d58",
+  "active": "87d525b5a13cb443",
   "lastOpenFiles": [
     "Clean Code/category-theory-for-programmers/README.md",
     "Clean Code/category-theory-for-programmers/part-3/15-monads-monoids-and-categories.md",

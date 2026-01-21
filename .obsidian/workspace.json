@@ -13,30 +13,31 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Exem/차세대 대시보드/Untitled.canvas",
+                "file": "Exem/차세대 대시보드/위젯 생성 관리.canvas",
                 "viewState": {
-                  "x": 97.36705738934664,
-                  "y": 1.1397520588912284,
-                  "zoom": -0.12222221736554756
+                  "x": 674.507129169262,
+                  "y": -68.5411711117554,
+                  "zoom": -1.333333280351429
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "title": "위젯 생성 관리"
             }
           },
           {
-            "id": "87d525b5a13cb443",
+            "id": "3f0f8eee2daa40e8",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "excalidraw",
               "state": {
-                "currentVersion": "1.11.4"
+                "file": "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md"
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-01-21 11.05.57.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -257,10 +258,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b3d62afb435e8d58",
+  "active": "3f0f8eee2daa40e8",
   "lastOpenFiles": [
+    "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md",
+    "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.png",
+    "Exem/차세대 대시보드/Untitled.md",
+    "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Clean Code/category-theory-for-programmers/README.md",
-    "Exem/차세대 대시보드/Untitled.canvas",
     "Exem/차세대 대시보드",
     "Clean Code/category-theory-for-programmers/part-3/15-monads-monoids-and-categories.md",
     "Clean Code/category-theory-for-programmers/part-3/14-lawvere-theories.md",
@@ -293,8 +297,6 @@
     "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/tsconfig.json",
     "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/package.json",
     "Clean Code/category-theory-for-programmers/part-1/10-natural-transformations.md",
-    "Clean Code/category-theory-for-programmers/part-1/09-function-types.md",
-    "Clean Code/category-theory-for-programmers/part-1/08-functoriality.md",
     "Clean Code/category-theory-for-programmers/images/part-1/uniqueness.jpeg",
     "Clean Code/category-theory-for-programmers/images/part-1/productranking.jpeg",
     "Clean Code/category-theory-for-programmers/images/part-1/productpattern.jpeg",
@@ -304,7 +306,6 @@
     "Clean Code/category-theory-for-programmers/images/part-1/monoidhomset.webp",
     "Clean Code/category-theory-for-programmers/images/part-1/monoid.webp",
     "Clean Code/category-theory-for-programmers/images/part-1/initial.jpeg",
-    "Clean Code/category-theory-for-programmers/images/part-1/img_1330.jpeg",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

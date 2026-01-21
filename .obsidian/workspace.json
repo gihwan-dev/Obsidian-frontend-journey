@@ -15,29 +15,16 @@
               "state": {
                 "file": "Exem/차세대 대시보드/위젯 생성 관리.canvas",
                 "viewState": {
-                  "x": 674.507129169262,
-                  "y": -68.5411711117554,
-                  "zoom": -1.333333280351429
+                  "x": 1064.2410412172107,
+                  "y": -314.57577881191037,
+                  "zoom": -0.13333332803514297
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "위젯 생성 관리"
             }
-          },
-          {
-            "id": "3f0f8eee2daa40e8",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-01-21 11.05.57.excalidraw"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -258,10 +245,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "3f0f8eee2daa40e8",
+  "active": "b3d62afb435e8d58",
   "lastOpenFiles": [
-    "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md",
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.png",
+    "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md",
     "Exem/차세대 대시보드/Untitled.md",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Clean Code/category-theory-for-programmers/README.md",

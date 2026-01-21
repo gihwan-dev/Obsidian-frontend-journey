@@ -4,7 +4,7 @@
 		{"id":"0880f06693555722","type":"text","text":"WidgetPack","x":420,"y":-320,"width":140,"height":60,"color":"1"},
 		{"id":"627bcd6d6b438a29","type":"text","text":"BuiltInWidget","x":420,"y":-130,"width":140,"height":60,"color":"1"},
 		{"id":"0260f2c09bc79094","x":420,"y":-620,"width":480,"height":220,"color":"1","type":"text","text":"**WigetBuilder**\n\n- 단일 위젯 생성"},
-		{"id":"1ef5fd0499a00460","x":1240,"y":-400,"width":250,"height":365,"type":"text","text":"**Widget**\n\n"}
+		{"id":"1ef5fd0499a00460","x":1080,"y":-435,"width":460,"height":715,"type":"text","text":"**Widget**\n\n### 도메인 순수 vs 도메인 포함\n\n**도메인 순수**\n- LineWidget\n- BarWidget\n\n**도메인 포함**\n- MaxGaugeInsight\n- SQLScatter\n- MetricChart\n\b\n### 위젯에 필요한 정보(위젯을 분리하는 기준)\n- 어떤 API에 의존하는지\n- 어떤 시각화 타입인지"}
 	],
 	"edges":[]
 }

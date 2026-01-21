@@ -1,9 +1,9 @@
 {
 	"nodes":[
 		{"id":"3812b60b5674937f","type":"link","url":"https://gemini.google.com/share/59b99e712c9b","x":-660,"y":-620,"width":780,"height":1100},
-		{"id":"0880f06693555722","type":"text","text":"WidgetPack","x":250,"y":-360,"width":480,"height":220,"color":"1"},
+		{"id":"0880f06693555722","type":"text","text":"WidgetPack\n- ","x":250,"y":-360,"width":480,"height":220,"color":"1"},
 		{"id":"627bcd6d6b438a29","type":"text","text":"BuiltInWidget","x":250,"y":-100,"width":480,"height":235,"color":"1"},
-		{"id":"0260f2c09bc79094","x":250,"y":-620,"width":480,"height":220,"color":"1","type":"text","text":"**WigetBuilder**\n\n- 단일 위젯 생성\n- formData를 반환\n\t- formData에는 어떤 API에 의존하는지에 대한 정보가 빠져있음"},
+		{"id":"0260f2c09bc79094","x":250,"y":-620,"width":480,"height":220,"color":"1","type":"text","text":"**WigetBuilder**\n\n- 단일 위젯 생성\n- formData를 반환\n\t- formData에는 어떤 API에 의존하는지에 대한 정보가 빠져있음\n- 위젯 생성 주체가 고객\n- 생성되는 위젯이 동적임\n- 변경이 잦을거고, 파생되는 수정이 최소화 되어야 한다고 생각해 의존성을 끊어낼 생각임"},
 		{"id":"1ef5fd0499a00460","x":1300,"y":-620,"width":460,"height":755,"type":"text","text":"**Widget**\n\n### 도메인 순수 vs 도메인 포함\n\n**도메인 순수**\n- LineWidget\n- BarWidget\n\n**도메인 포함**\n- MaxGaugeInsight\n- SQLScatter\n- MetricChart\n\b\n### 위젯에 필요한 정보(위젯을 분리하는 기준)\n- 어떤 API에 의존하는지\n- 어떤 시각화 타입인지"}
 	],
 	"edges":[]

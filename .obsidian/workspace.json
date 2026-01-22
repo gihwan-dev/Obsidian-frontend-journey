@@ -15,9 +15,9 @@
               "state": {
                 "file": "Exem/차세대 대시보드/위젯 생성 관리.canvas",
                 "viewState": {
-                  "x": 1530.7918050527624,
-                  "y": -579.9216542530137,
-                  "zoom": -0.7797352427390779
+                  "x": 2414.409631447474,
+                  "y": 1138.9390275592273,
+                  "zoom": -1.0262168007581254
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -245,8 +245,9 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0c81285cd13c3654",
+  "active": "b3d62afb435e8d58",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20260122115326.png",
     "Next.js/Pasted image 20260122105012.png",
     "Next.js/Pasted image 20260122104843.png",
     "Next.js/Pasted image 20260122104758.png",
@@ -293,7 +294,6 @@
     "Clean Code/category-theory-for-programmers/images/part-1/productcandidates.jpeg",
     "Clean Code/category-theory-for-programmers/images/part-1/piggyback.jpeg",
     "Clean Code/category-theory-for-programmers/images/part-1/not-a-product.jpeg",
-    "Clean Code/category-theory-for-programmers/images/part-1/monoidhomset.webp",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

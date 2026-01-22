@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"dd049a7db4a0660a","type":"file","file":"Next.js/Pasted image 20260122175457.png","x":0,"y":-120,"width":400,"height":367},
+		{"id":"47c6fc2067b4c3f8","type":"text","text":"### Table 시각화의 Form - 기본 형태\nhttps://www.figma.com/design/nJ8YQifyJmzQKnHBtDNGPt/Dashboard?node-id=5518-177163&m=dev","x":-520,"y":-13,"width":380,"height":154},
+		{"id":"acc4bdf3a931e188","type":"text","text":"### Table 시각화의 Form - tree\nhttps://www.figma.com/design/nJ8YQifyJmzQKnHBtDNGPt/Dashboard?node-id=5518-177403&m=dev","x":-520,"y":407,"width":380,"height":193},
+		{"id":"a6d3038742e3c6c8","x":0,"y":320,"width":400,"height":367,"type":"file","file":"Next.js/Pasted image 20260122175706.png"},
+		{"id":"33e369091fbf2f05","type":"text","text":"### Table 시각화의 Form - group by\nhttps://www.figma.com/design/nJ8YQifyJmzQKnHBtDNGPt/Dashboard?node-id=5518-177659&m=dev","x":-520,"y":880,"width":380,"height":154},
+		{"id":"084c87f54c2625cb","x":0,"y":824,"width":400,"height":266,"type":"file","file":"Next.js/Pasted image 20260122175814.png"}
+	],
+	"edges":[
+		{"id":"9cf5d28f9f012b32","fromNode":"47c6fc2067b4c3f8","fromSide":"right","toNode":"dd049a7db4a0660a","toSide":"left"},
+		{"id":"ee8c15186a5494a7","fromNode":"acc4bdf3a931e188","fromSide":"right","toNode":"a6d3038742e3c6c8","toSide":"left"},
+		{"id":"4bea8e0641a79847","fromNode":"33e369091fbf2f05","fromSide":"right","toNode":"084c87f54c2625cb","toSide":"left"}
+	]
+}

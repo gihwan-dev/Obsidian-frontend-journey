@@ -4,24 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "c2bae054fbe15ade",
+        "id": "cf53e4ac1029ee68",
         "type": "tabs",
         "children": [
           {
-            "id": "b3d62afb435e8d58",
+            "id": "f724eef7e0a7e341",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Exem/차세대 대시보드/위젯 생성 관리.canvas",
+                "file": "Exem/차세대 대시보드/위젯 빌더.canvas",
                 "viewState": {
-                  "x": 2414.409631447474,
-                  "y": 1138.9390275592273,
-                  "zoom": -1.0262168007581254
+                  "x": 372.5717492001462,
+                  "y": 52.601030472452805,
+                  "zoom": -1.1611110252362744
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "위젯 생성 관리"
+              "title": "위젯 빌더"
             }
           }
         ]
@@ -245,8 +245,15 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b3d62afb435e8d58",
+  "active": "f724eef7e0a7e341",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20260122175814.png",
+    "Next.js/Pasted image 20260122175812.png",
+    "Next.js/Pasted image 20260122175706.png",
+    "Exem/차세대 대시보드/위젯 생성 관리.canvas",
+    "Next.js/Pasted image 20260122175457.png",
+    "Exem/차세대 대시보드/위젯 빌더.canvas",
+    "Exem/현 API 문제점.md",
     "Next.js/Pasted image 20260122115326.png",
     "Next.js/Pasted image 20260122105012.png",
     "Next.js/Pasted image 20260122104843.png",
@@ -254,7 +261,6 @@
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.png",
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md",
     "Exem/차세대 대시보드/Untitled.md",
-    "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Clean Code/category-theory-for-programmers/README.md",
     "Exem/차세대 대시보드",
     "Clean Code/category-theory-for-programmers/part-3/15-monads-monoids-and-categories.md",
@@ -287,13 +293,8 @@
     "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/yarn.lock",
     "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/tsconfig.json",
     "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/package.json",
-    "Clean Code/category-theory-for-programmers/part-1/10-natural-transformations.md",
     "Clean Code/category-theory-for-programmers/images/part-1/uniqueness.jpeg",
     "Clean Code/category-theory-for-programmers/images/part-1/productranking.jpeg",
-    "Clean Code/category-theory-for-programmers/images/part-1/productpattern.jpeg",
-    "Clean Code/category-theory-for-programmers/images/part-1/productcandidates.jpeg",
-    "Clean Code/category-theory-for-programmers/images/part-1/piggyback.jpeg",
-    "Clean Code/category-theory-for-programmers/images/part-1/not-a-product.jpeg",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

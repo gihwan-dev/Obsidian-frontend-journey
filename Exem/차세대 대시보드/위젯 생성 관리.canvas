@@ -9,7 +9,7 @@
 		{"id":"627bcd6d6b438a29","type":"text","text":"**BuiltInWidget**\n- 복수 혹은 단일 위젯 생성\n- 하드 코딩한 템플릿을 기반으로 생성\n- 생성 주체가 개발자\n- 생성 되는 위젯이 정적임\n- 위젯과 강결합 될 수 밖에 없음. 오히려 강하게 결합 시켜 파생되는 수정을 빠르게 파악할 수 있게 할 필요가 있어 보임\n\n\n**BuiltInWidget은 어떻게 변할까?**\n\n- 템플릿의 확장","x":250,"y":-260,"width":480,"height":300,"color":"1"},
 		{"id":"c7a777cc1f1c0dee","x":900,"y":-610,"width":250,"height":260,"type":"text","text":"**변환 로직 필요**\n\nWidgetBuilder의 반환 formData를 Widget에 맞게 변환\n\n관련해서 widget.types.ts에 WidgetBuilder 타입을 제거하면 어떨지.\n\n위젯과 WidgetBuilder의 의존 관계를 끊어내고 싶음"},
 		{"id":"8481396a3f2f2536","x":1238,"y":480,"width":332,"height":400,"type":"file","file":"Next.js/Pasted image 20260122104758.png"},
-		{"id":"5c6445f9d5bcf862","x":1675,"y":340,"width":645,"height":980,"type":"text","text":"## 노트\n- visualization이 ui 폴더 안으로 들어가도 문제 없어 보임\n- model 안에 hooks 있는거 펼치기\n- commont.ts -> common.schema.ts로 수정\n- useMetricDropdownRefProvider 파일명 MetricDropdownRefProvider 로 수정\n- utils에 math.ts 파일 lib로 이동"},
+		{"id":"5c6445f9d5bcf862","x":1675,"y":340,"width":645,"height":980,"type":"text","text":"## 노트\n- visualization이 ui 폴더 안으로 들어가도 문제 없어 보임 -> 현상 유지\n- model 안에 hooks 있는거 펼치기\n- commont.ts -> common.schema.ts로 수정\n- useMetricDropdownRefProvider 파일명 MetricDropdownRefProvider 로 수정\n- utils에 math.ts 파일 lib로 이동"},
 		{"id":"b61c4fae5c82db27","x":1170,"y":960,"width":400,"height":204,"type":"file","file":"Next.js/Pasted image 20260122104843.png"},
 		{"id":"febb4c103f5141ba","x":2600,"y":765,"width":400,"height":131,"type":"file","file":"Next.js/Pasted image 20260122105012.png"}
 	],

@@ -15,9 +15,9 @@
               "state": {
                 "file": "Exem/차세대 대시보드/위젯 생성 관리.canvas",
                 "viewState": {
-                  "x": 2171.6532726948603,
-                  "y": 625.1349552251559,
-                  "zoom": -0.02417971720660117
+                  "x": 1530.7918050527624,
+                  "y": -579.9216542530137,
+                  "zoom": -0.7797352427390779
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -245,7 +245,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b3d62afb435e8d58",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
     "Next.js/Pasted image 20260122105012.png",
     "Next.js/Pasted image 20260122104843.png",

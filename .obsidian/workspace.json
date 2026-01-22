@@ -15,9 +15,9 @@
               "state": {
                 "file": "Exem/차세대 대시보드/위젯 생성 관리.canvas",
                 "viewState": {
-                  "x": 731.0425157373594,
-                  "y": -785.9836567940274,
-                  "zoom": -0.6132757020392066
+                  "x": 2338.3250260854456,
+                  "y": 890.9161758340985,
+                  "zoom": -1.0297352328049705
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -95,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -248,6 +247,9 @@
   },
   "active": "b3d62afb435e8d58",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20260122105012.png",
+    "Next.js/Pasted image 20260122104843.png",
+    "Next.js/Pasted image 20260122104758.png",
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.png",
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md",
     "Exem/차세대 대시보드/Untitled.md",
@@ -292,8 +294,6 @@
     "Clean Code/category-theory-for-programmers/images/part-1/piggyback.jpeg",
     "Clean Code/category-theory-for-programmers/images/part-1/not-a-product.jpeg",
     "Clean Code/category-theory-for-programmers/images/part-1/monoidhomset.webp",
-    "Clean Code/category-theory-for-programmers/images/part-1/monoid.webp",
-    "Clean Code/category-theory-for-programmers/images/part-1/initial.jpeg",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

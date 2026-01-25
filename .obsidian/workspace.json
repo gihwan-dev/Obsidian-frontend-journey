@@ -28,12 +28,20 @@
             "id": "a490223849a755fb",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "kanban",
               "state": {
-                "currentVersion": "1.11.5"
+                "file": "Exem/Todo/2026년 1월.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false
+                  ]
+                }
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.5"
+              "icon": "lucide-trello",
+              "title": "2026년 1월"
             }
           }
         ],
@@ -108,7 +116,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -260,6 +269,10 @@
   },
   "active": "a490223849a755fb",
   "lastOpenFiles": [
+    "Exem/Todo/2026년 1월.md",
+    "위젯 빌더 리팩토링.md",
+    "Exem/Todo/Untitled.md",
+    "Exem/Todo",
     "Next.js/Pasted image 20260122175814.png",
     "Next.js/Pasted image 20260122175812.png",
     "Next.js/Pasted image 20260122175706.png",
@@ -296,8 +309,6 @@
     "Clean Code/category-theory-for-programmers/part-2/05-the-yoneda-lemma.md",
     "Clean Code/category-theory-for-programmers/part-2/04-representable-functors.md",
     "Clean Code/category-theory-for-programmers/part-2/03-free-monoids.md",
-    "Clean Code/category-theory-for-programmers/part-2/02-limits-and-colimits.md",
-    "Clean Code/category-theory-for-programmers/part-2/01-declarative-programming.md",
     "Clean Code/category-theory-for-programmers/part-2",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/yarn.lock",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/tsconfig.json",
@@ -305,9 +316,7 @@
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/index.ts",
     "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/yarn.lock",
     "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/tsconfig.json",
-    "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/package.json",
     "Clean Code/category-theory-for-programmers/images/part-1/uniqueness.jpeg",
-    "Clean Code/category-theory-for-programmers/images/part-1/productranking.jpeg",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

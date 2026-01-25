@@ -23,8 +23,21 @@
               "icon": "lucide-layout-dashboard",
               "title": "위젯 빌더"
             }
+          },
+          {
+            "id": "a490223849a755fb",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -245,7 +258,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f724eef7e0a7e341",
+  "active": "a490223849a755fb",
   "lastOpenFiles": [
     "Next.js/Pasted image 20260122175814.png",
     "Next.js/Pasted image 20260122175812.png",

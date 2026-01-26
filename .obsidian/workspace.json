@@ -11,14 +11,17 @@
             "id": "08d5d7bee3da682e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
-                "mode": "source",
-                "source": false
+                "file": "Exem/차세대 대시보드/위젯 빌더.canvas",
+                "viewState": {
+                  "x": 522.5679495239746,
+                  "y": 573.0863452007399,
+                  "zoom": -0.3722221676950123
+                }
               },
-              "icon": "lucide-file",
-              "title": "위젯 빌더 리팩토링"
+              "icon": "lucide-layout-dashboard",
+              "title": "위젯 빌더"
             }
           }
         ]
@@ -245,13 +248,13 @@
   },
   "active": "08d5d7bee3da682e",
   "lastOpenFiles": [
+    "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
     "Exem/Todo/2026년 1월.md",
     "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
     "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
     "Clean Code/category-theory-for-programmers/part-1/01-category-the-essence-of-composition.md",
     "Clean Code/category-theory-for-programmers/notes/커리-하워드 동형성 쉽게 이해하기.md",
     "Clean Code/category-theory-for-programmers/notes",
-    "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
     "Exem/현 API 문제점.md",
     "Todo/2026-01-26.md",
     "Todo",

@@ -11,17 +11,14 @@
             "id": "08d5d7bee3da682e",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Exem/차세대 대시보드/위젯 빌더.canvas",
-                "viewState": {
-                  "x": 522.5679495239746,
-                  "y": 573.0863452007399,
-                  "zoom": -0.3722221676950123
-                }
+                "file": "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "위젯 빌더"
+              "icon": "lucide-file",
+              "title": "위젯 빌더 리팩토링"
             }
           }
         ]
@@ -95,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -248,8 +244,9 @@
   },
   "active": "08d5d7bee3da682e",
   "lastOpenFiles": [
-    "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
     "Exem/Todo/2026년 1월.md",
+    "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
+    "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
     "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
     "Clean Code/category-theory-for-programmers/part-1/01-category-the-essence-of-composition.md",
@@ -258,7 +255,6 @@
     "Exem/현 API 문제점.md",
     "Todo/2026-01-26.md",
     "Todo",
-    "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/Todo/Untitled.md",
     "Exem/Todo",
     "Next.js/Pasted image 20260122175814.png",
@@ -288,7 +284,6 @@
     "Clean Code/category-theory-for-programmers/part-3/05-monads-and-effects.md",
     "Clean Code/category-theory-for-programmers/part-3/04-monads-programmers-definition.md",
     "Clean Code/category-theory-for-programmers/part-3/03-free-forgetful-adjunctions.md",
-    "Clean Code/category-theory-for-programmers/part-3/02-adjunctions.md",
     "Clean Code/category-theory-for-programmers/part-3",
     "Clean Code/category-theory-for-programmers/part-2",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/yarn.lock",

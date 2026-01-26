@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cf53e4ac1029ee68",
+        "id": "9b2eff33cf155619",
         "type": "tabs",
         "children": [
           {
-            "id": "f724eef7e0a7e341",
+            "id": "08d5d7bee3da682e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
+                "file": "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "위젯 빌더 리팩토링"
+              "title": "02-types-and-functions"
             }
           }
         ]
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -242,14 +243,16 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f724eef7e0a7e341",
+  "active": "08d5d7bee3da682e",
   "lastOpenFiles": [
-    "Exem/Todo/2026년 1월.md",
+    "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
+    "Clean Code/category-theory-for-programmers/part-1/01-category-the-essence-of-composition.md",
+    "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
     "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
+    "Exem/Todo/2026년 1월.md",
     "Exem/현 API 문제점.md",
     "Todo/2026-01-26.md",
     "Todo",
-    "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/Todo/Untitled.md",
     "Exem/Todo",
@@ -283,7 +286,6 @@
     "Clean Code/category-theory-for-programmers/part-3/02-adjunctions.md",
     "Clean Code/category-theory-for-programmers/part-3/01-its-all-about-morphisms.md",
     "Clean Code/category-theory-for-programmers/part-3",
-    "Clean Code/category-theory-for-programmers/part-2/06-yoneda-embedding.md",
     "Clean Code/category-theory-for-programmers/part-2",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/yarn.lock",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/tsconfig.json",

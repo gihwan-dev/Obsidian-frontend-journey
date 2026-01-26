@@ -11,41 +11,31 @@
             "id": "f724eef7e0a7e341",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Exem/차세대 대시보드/위젯 빌더.canvas",
-                "viewState": {
-                  "x": 297.30299386500525,
-                  "y": 673.9267116628107,
-                  "zoom": -0.6222221577609054
-                }
+                "file": "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "위젯 빌더"
+              "icon": "lucide-file",
+              "title": "위젯 빌더 리팩토링"
             }
           },
           {
             "id": "a490223849a755fb",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Exem/Todo/2026년 1월.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "2026년 1월"
+              "icon": "lucide-file",
+              "title": "02-types-and-functions"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -116,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -267,10 +256,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "a490223849a755fb",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
     "Exem/Todo/2026년 1월.md",
-    "위젯 빌더 리팩토링.md",
+    "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
+    "Exem/차세대 대시보드/위젯 빌더.canvas",
+    "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
     "Exem/Todo/Untitled.md",
     "Exem/Todo",
     "Next.js/Pasted image 20260122175814.png",
@@ -278,7 +269,6 @@
     "Next.js/Pasted image 20260122175706.png",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Next.js/Pasted image 20260122175457.png",
-    "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/현 API 문제점.md",
     "Next.js/Pasted image 20260122115326.png",
     "Next.js/Pasted image 20260122105012.png",
@@ -307,8 +297,6 @@
     "Clean Code/category-theory-for-programmers/part-3",
     "Clean Code/category-theory-for-programmers/part-2/06-yoneda-embedding.md",
     "Clean Code/category-theory-for-programmers/part-2/05-the-yoneda-lemma.md",
-    "Clean Code/category-theory-for-programmers/part-2/04-representable-functors.md",
-    "Clean Code/category-theory-for-programmers/part-2/03-free-monoids.md",
     "Clean Code/category-theory-for-programmers/part-2",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/yarn.lock",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/tsconfig.json",

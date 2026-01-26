@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273,
-    "collapsed": true
+    "width": 322.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -243,11 +242,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "08d5d7bee3da682e",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
     "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
     "Clean Code/category-theory-for-programmers/part-1/01-category-the-essence-of-composition.md",
+    "Clean Code/category-theory-for-programmers/notes/커리-하워드 동형성 쉽게 이해하기.md",
     "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
+    "Clean Code/category-theory-for-programmers/notes",
     "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
     "Exem/Todo/2026년 1월.md",
     "Exem/현 API 문제점.md",
@@ -284,14 +285,12 @@
     "Clean Code/category-theory-for-programmers/part-3/04-monads-programmers-definition.md",
     "Clean Code/category-theory-for-programmers/part-3/03-free-forgetful-adjunctions.md",
     "Clean Code/category-theory-for-programmers/part-3/02-adjunctions.md",
-    "Clean Code/category-theory-for-programmers/part-3/01-its-all-about-morphisms.md",
     "Clean Code/category-theory-for-programmers/part-3",
     "Clean Code/category-theory-for-programmers/part-2",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/yarn.lock",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/tsconfig.json",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/package.json",
     "Clean Code/category-theory-for-programmers/part-1/challenges/02-types-and-functions/index.ts",
-    "Clean Code/category-theory-for-programmers/part-1/challenges/01-category-the-essence-of-composition/yarn.lock",
     "Clean Code/category-theory-for-programmers/images/part-1/uniqueness.jpeg",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",

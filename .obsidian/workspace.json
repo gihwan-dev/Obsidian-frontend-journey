@@ -6,6 +6,7 @@
       {
         "id": "6b62b0d7bcfc7ba5",
         "type": "tabs",
+        "dimension": 47.710423026602705,
         "children": [
           {
             "id": "91b145d76c73a2a1",
@@ -32,6 +33,7 @@
       {
         "id": "78c917dfecfd61fb",
         "type": "tabs",
+        "dimension": 52.2895769733973,
         "children": [
           {
             "id": "664f19dc0e95fda1",
@@ -118,7 +120,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.00390243530273
+    "width": 322.00390243530273,
+    "collapsed": true
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -268,22 +271,36 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "91b145d76c73a2a1",
+  "active": "664f19dc0e95fda1",
   "lastOpenFiles": [
+    "Exem/Todo/2026년 1월.md",
+    "Exem/현 API 문제점.md",
+    "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
+    "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
+    "Clean Code/category-theory-for-programmers/part-1/01-category-the-essence-of-composition.md",
+    "Clean Code/category-theory-for-programmers/part-1/04-kleisli-categories.md",
+    "Clean Code/category-theory-for-programmers/part-1/05-products-and-coproducts.md",
+    "Clean Code/category-theory-for-programmers/part-1/06-simple-algebraic-data-types.md",
+    "Clean Code/category-theory-for-programmers/part-1/07-functors.md",
+    "Clean Code/category-theory-for-programmers/part-1/09-function-types.md",
+    "Clean Code/category-theory-for-programmers/part-3/01-its-all-about-morphisms.md",
+    "Clean Code/category-theory-for-programmers/part-3/04-monads-programmers-definition.md",
+    "Clean Code/category-theory-for-programmers/part-3/02-adjunctions.md",
+    "Clean Code/category-theory-for-programmers/part-2/06-yoneda-embedding.md",
+    "Clean Code/category-theory-for-programmers/part-2/05-the-yoneda-lemma.md",
+    "Clean Code/category-theory-for-programmers/part-2/04-representable-functors.md",
+    "Clean Code/category-theory-for-programmers/part-2/03-free-monoids.md",
+    "Clean Code/category-theory-for-programmers/part-2/02-limits-and-colimits.md",
+    "Clean Code/category-theory-for-programmers/part-1/08-functoriality.md",
     "Exem/AI/디자인 검토 SKILL 개발.md",
     "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md.tmp.5.1769556485549",
     "Exem/AI",
-    "Exem/Todo/2026년 1월.md",
-    "Exem/현 API 문제점.md",
     "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
-    "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
-    "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
     "Exem/회의/26.01.27.md",
     "Untitled.base",
     "Exem/회의",
     "Exem/Todo/Untitled",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
-    "Clean Code/category-theory-for-programmers/part-1/01-category-the-essence-of-composition.md",
     "Clean Code/category-theory-for-programmers/notes/커리-하워드 동형성 쉽게 이해하기.md",
     "Clean Code/category-theory-for-programmers/notes",
     "Todo/2026-01-26.md",
@@ -301,20 +318,7 @@
     "Next.js/Pasted image 20260122104758.png",
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.png",
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.md",
-    "Exem/차세대 대시보드/Untitled.md",
-    "Clean Code/category-theory-for-programmers/README.md",
     "Exem/차세대 대시보드",
-    "Clean Code/category-theory-for-programmers/part-3/15-monads-monoids-and-categories.md",
-    "Clean Code/category-theory-for-programmers/part-3/14-lawvere-theories.md",
-    "Clean Code/category-theory-for-programmers/part-3/13-topoi.md",
-    "Clean Code/category-theory-for-programmers/part-3/12-enriched-categories.md",
-    "Clean Code/category-theory-for-programmers/part-3/11-kan-extensions.md",
-    "Clean Code/category-theory-for-programmers/part-3/10-ends-and-coends.md",
-    "Clean Code/category-theory-for-programmers/part-3/09-algebras-for-monads.md",
-    "Clean Code/category-theory-for-programmers/part-3/08-f-algebras.md",
-    "Clean Code/category-theory-for-programmers/part-3/07-comonads.md",
-    "Clean Code/category-theory-for-programmers/part-3/06-monads-categorically.md",
-    "Clean Code/category-theory-for-programmers/part-3/05-monads-and-effects.md",
     "Clean Code/category-theory-for-programmers/part-3",
     "Clean Code/category-theory-for-programmers/images/part-1/uniqueness.jpeg",
     "Excalidraw/B.sori IA.canvas",

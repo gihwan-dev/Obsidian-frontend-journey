@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "README"
             }
+          },
+          {
+            "id": "2f9ffb0cb0be82c0",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Exem/01-Projects/디자인-검증-자동화/구현 아키텍쳐.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "구현 아키텍쳐"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -242,8 +255,11 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0c81285cd13c3654",
+  "active": "2f9ffb0cb0be82c0",
   "lastOpenFiles": [
+    "Exem/01-Projects/디자인-검증-자동화/설계/구현 아키텍쳐.excalidraw.md",
+    "Exem/00-Inbox/README.md",
+    "Exem/01-Projects/디자인-검증-자동화/구현 아키텍쳐.md",
     "Exem/05-Templates/README.md",
     "Exem/01-Projects/Table/Prompt.md",
     "Exem/01-Projects/디자인-검증-자동화/설계/디자인 검증 자동화 계획.md",
@@ -261,7 +277,6 @@
     "Exem/01-Projects/디자인-검증-자동화/설계",
     "Exem/01-Projects/디자인-검증-자동화/기획",
     "Exem/01-Projects/디자인-검증-자동화",
-    "Exem/00-Inbox/README.md",
     "Exem/02-Daily/Todo/README.md",
     "Exem/02-Daily/회의록/README.md",
     "Exem/03-Knowledge/FE-Patterns/README.md",
@@ -271,8 +286,6 @@
     "Exem/04-Snippets/Components/README.md",
     "Exem/03-Knowledge/API/현 API 문제점.md",
     "Exem/06-Archive/README.md",
-    "Exem/04-Snippets/README.md",
-    "Exem/03-Knowledge/README.md",
     "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
     "Exem/06-Archive",

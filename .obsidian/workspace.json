@@ -12,20 +12,10 @@
             "id": "91b145d76c73a2a1",
             "type": "leaf",
             "state": {
-              "type": "kanban",
-              "state": {
-                "file": "Exem/Todo/2026년 1월.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
-              },
-              "icon": "lucide-trello",
-              "title": "2026년 1월"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -39,14 +29,10 @@
             "id": "664f19dc0e95fda1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Exem/AI/디자인 검토 SKILL 개발.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "디자인 검토 SKILL 개발"
+              "title": "New tab"
             }
           }
         ]
@@ -270,11 +256,32 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "664f19dc0e95fda1",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
+    "Exem/03-Knowledge/API/현 API 문제점.md",
+    "Exem/03-Knowledge/AI/디자인 검토 SKILL 개발.md",
+    "Exem/02-Daily/회의록/26.01.27.md",
+    "Exem/02-Daily/Todo/2026년 1월.md",
+    "Exem/01-Projects/Table/Prompt.md",
+    "Exem/01-Projects/LG엔솔/프롬프트.md",
+    "Exem/01-Projects/오라클-라이센스-대시보드/코드 부검.md",
+    "Exem/01-Projects/오라클-라이센스-대시보드/useSelectedInstance.md",
+    "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
+    "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
+    "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
+    "Exem/06-Archive",
+    "Exem/05-Templates",
+    "Exem/04-Snippets/Utils",
+    "Exem/04-Snippets/Hooks",
+    "Exem/04-Snippets/Components",
+    "Exem/04-Snippets",
+    "Exem/03-Knowledge/FE-Patterns",
+    "Exem/03-Knowledge/API",
+    "Exem/03-Knowledge/AI",
+    "Exem/03-Knowledge",
+    "Exem/AI/디자인 검토 SKILL 개발.md",
     "Next.js/Pasted image 20260128091059.png",
     "Exem/Todo/2026년 1월.md",
-    "Exem/AI/디자인 검토 SKILL 개발.md",
     "Exem/현 API 문제점.md",
     "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
     "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md",
@@ -290,23 +297,7 @@
     "Clean Code/category-theory-for-programmers/part-2/06-yoneda-embedding.md",
     "Clean Code/category-theory-for-programmers/part-2/05-the-yoneda-lemma.md",
     "Clean Code/category-theory-for-programmers/part-2/04-representable-functors.md",
-    "Clean Code/category-theory-for-programmers/part-2/03-free-monoids.md",
-    "Clean Code/category-theory-for-programmers/part-2/02-limits-and-colimits.md",
-    "Clean Code/category-theory-for-programmers/part-1/08-functoriality.md",
-    "Clean Code/category-theory-for-programmers/part-1/02-types-and-functions.md.tmp.5.1769556485549",
-    "Exem/AI",
-    "Exem/차세대 대시보드/위젯 빌더 리팩토링.md",
-    "Exem/회의/26.01.27.md",
-    "Untitled.base",
-    "Exem/회의",
-    "Exem/Todo/Untitled",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
-    "Clean Code/category-theory-for-programmers/notes/커리-하워드 동형성 쉽게 이해하기.md",
-    "Clean Code/category-theory-for-programmers/notes",
-    "Todo/2026-01-26.md",
-    "Todo",
-    "Exem/Todo/Untitled.md",
-    "Exem/Todo",
     "Next.js/Pasted image 20260122175814.png",
     "Next.js/Pasted image 20260122175812.png",
     "Next.js/Pasted image 20260122175706.png",
@@ -317,9 +308,6 @@
     "Next.js/Pasted image 20260122104843.png",
     "Next.js/Pasted image 20260122104758.png",
     "Exem/차세대 대시보드/Drawing 2026-01-21 11.05.57.excalidraw.png",
-    "Exem/차세대 대시보드",
-    "Clean Code/category-theory-for-programmers/part-3",
-    "Clean Code/category-theory-for-programmers/images/part-1/uniqueness.jpeg",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

@@ -11,20 +11,14 @@
             "id": "f17fe52ffe23a82b",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Exem/02-Daily/Todo/2026년 1월.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "Exem/01-Projects/디자인-검증-자동화/설계/디자인 검증 자동화 계획.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "2026년 1월"
+              "icon": "lucide-file",
+              "title": "디자인 검증 자동화 계획"
             }
           }
         ]
@@ -251,6 +245,7 @@
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
+    "Exem/02-Daily/Todo/2026년 1월.md",
     "Exem/01-Projects/design-check-system.excalidraw.png",
     "Exem/01-Projects/README.md",
     "Exem/01-Projects/디자인-검증-자동화/설계/디자인 검증 자동화 계획.md",
@@ -263,7 +258,6 @@
     "Exem/00-Inbox/README.md",
     "Exem/05-Templates/README.md",
     "Exem/01-Projects/Table/Prompt.md",
-    "Exem/02-Daily/Todo/2026년 1월.md",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
     "디자인 검토 SKILL 개발.md",
     "Exem/02-Daily/회의록/26.01.27.md",

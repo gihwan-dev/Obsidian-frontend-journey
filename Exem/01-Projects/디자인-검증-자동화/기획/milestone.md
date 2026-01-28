@@ -95,3 +95,15 @@
 - 변경 파일: `scripts/capture-figma-screenshot.ts` (신규), `.claude/skills/design-check/SKILL.md` (Phase 1, 2-1, 6-1, 에러 처리 테이블 수정)  
 - 검증: 실제 Figma URL로 스크립트 실행 → PNG 정상 생성 (1264x96, 7.1KB) 확인  
 - 다음 영향: design-check SKILL의 Phase 2-1이 MCP 대신 REST API 스크립트 사용, Phase 2-2/2-3(get_design_context, get_variable_defs)은 여전히 MCP 사용
+
+**[2026-01-28] 크기 동기화 파이프라인 구현 세션 요약**:
+- 발견된 이슈: Figma 노드의 CSS 크기(예: 632px)와 Storybook wrapper의 크기(예: 480px)가 불일치하여 캡처된 PNG 크기가 달라져 비교 정확도 저하
+- 핵심 원칙: Figma가 생성한 비트맵의 물리적 크기를 절대 기준으로 삼고, Storybook 환경을 이에 맞춤
+- 변경 파일 요약:
+  - `capture-figma-screenshot.ts`: bbox 조회 + PNG 크기 읽기 + `.meta.json` 저장 + 4096px 경고
+  - `capture-screenshot.ts`: `--container-width` 옵션 + CSS 주입 + 폰트 로딩 대기
+  - `compare-screenshots.ts`: 크기 불일치 시 경고 로그 추가
+- 아키텍처 결정: `.meta.json` 파일에 `bbox`(CSS px), `image`(실제 픽셀), `scale` 저장
+- 아키텍처 결정: width만 주입, height는 주입하지 않음 — height 차이는 실제 구현 차이이므로 diff로 잡혀야 함
+- 아키텍처 결정: `document.fonts.ready` 대기 + `requestAnimationFrame` 리플로우 보장
+- 다음 영향: design-check SKILL에서 Figma 캡처 후 `.meta.json`의 `bbox.width`를 `--container-width`로 전달

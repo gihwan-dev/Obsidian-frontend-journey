@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 448.00390243530273,
-    "collapsed": true
+    "width": 448.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -245,6 +244,11 @@
   },
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
+    "Clean Code/category-theory-for-programmers/part-1/04-클라이슬리-카테고리.md",
+    "Clean Code/category-theory-for-programmers/draw.excalidraw.md",
+    "Clean Code/category-theory-for-programmers/graph-to-category.excalidraw.png",
+    "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
+    "Next.js/Pasted image 20260129080327.png",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
     "Clean Code/category-theory-for-programmers/part-3/15-모나드-모노이드-카테고리.md",
     "Clean Code/category-theory-for-programmers/part-3/14-로베어-이론.md",
@@ -268,9 +272,6 @@
     "Clean Code/category-theory-for-programmers/part-2/02-극한과-쌍대극한.md",
     "Clean Code/category-theory-for-programmers/part-2/01-선언적-프로그래밍.md",
     "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
-    "Clean Code/category-theory-for-programmers/part-1/10-자연-변환.md",
-    "Clean Code/category-theory-for-programmers/part-1/09-함수-타입.md",
-    "Clean Code/category-theory-for-programmers/part-1/08-펑터성.md",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
     "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
@@ -293,8 +294,6 @@
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Next.js/Pasted image 20260122175457.png",
     "Next.js/Pasted image 20260122115326.png",
-    "Next.js/Pasted image 20260122105012.png",
-    "Next.js/Pasted image 20260122104843.png",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

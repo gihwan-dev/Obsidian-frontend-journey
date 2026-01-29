@@ -11,12 +11,14 @@
             "id": "f17fe52ffe23a82b",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md"
+                "file": "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "아키텍쳐"
+              "icon": "lucide-file",
+              "title": "위젯 빌더 리팩토링"
             }
           }
         ]
@@ -242,8 +244,8 @@
   },
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
-    "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
+    "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
     "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
     "Next.js/Pasted image 20260129102932.png",

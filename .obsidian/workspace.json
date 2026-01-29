@@ -11,17 +11,14 @@
             "id": "f17fe52ffe23a82b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
-                "viewState": {
-                  "x": 662.5496474345516,
-                  "y": 1579.2978109231472,
-                  "zoom": -0.2398520486593606
-                }
+                "file": "Exem/02-Daily/회의록/26.01.29.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "위젯 빌더"
+              "icon": "lucide-file",
+              "title": "26.01.29"
             }
           }
         ]
@@ -95,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 448.00390243530273
+    "width": 284.00390243530273
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -247,11 +244,12 @@
   },
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
+    "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
+    "Exem/02-Daily/회의록/26.01.29.md",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
     "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
-    "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
     "Next.js/Pasted image 20260129102932.png",
     "Next.js/Pasted image 20260129102538.png",
     "Exem/02-Daily/회의록/26.01.27.md",
@@ -278,7 +276,6 @@
     "Clean Code/category-theory-for-programmers/part-3/01-모든-것은-사상에-관한-것.md",
     "Clean Code/category-theory-for-programmers/part-2/06-요네다-매장.md",
     "Clean Code/category-theory-for-programmers/part-2/05-요네다-보조정리.md",
-    "Clean Code/category-theory-for-programmers/part-2/04-표현-가능-펑터.md",
     "Exem/01-Projects/design-check-system.excalidraw.png",
     "Exem/01-Projects/디자인-검증-자동화/설계",
     "Exem/01-Projects/디자인-검증-자동화/기획",

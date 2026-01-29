@@ -11,17 +11,12 @@
             "id": "f17fe52ffe23a82b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "excalidraw",
               "state": {
-                "file": "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
-                "viewState": {
-                  "x": 460.78580386430286,
-                  "y": 1650.6712925597078,
-                  "zoom": 0.6987157608126188
-                }
+                "file": "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md"
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "위젯 빌더"
+              "icon": "excalidraw-icon",
+              "title": "아키텍쳐"
             }
           }
         ]
@@ -247,6 +242,10 @@
   },
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
+    "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
+    "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
+    "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
+    "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
     "Next.js/Pasted image 20260129102932.png",
     "Next.js/Pasted image 20260129102538.png",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
@@ -257,7 +256,6 @@
     "Clean Code/category-theory-for-programmers/draw.excalidraw.md",
     "Clean Code/category-theory-for-programmers/graph-to-category.excalidraw.png",
     "Next.js/Pasted image 20260129080327.png",
-    "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
     "Clean Code/category-theory-for-programmers/part-3/15-모나드-모노이드-카테고리.md",
     "Clean Code/category-theory-for-programmers/part-3/14-로베어-이론.md",
     "Clean Code/category-theory-for-programmers/part-3/13-토포스.md",
@@ -276,9 +274,6 @@
     "Clean Code/category-theory-for-programmers/part-2/06-요네다-매장.md",
     "Clean Code/category-theory-for-programmers/part-2/05-요네다-보조정리.md",
     "Clean Code/category-theory-for-programmers/part-2/04-표현-가능-펑터.md",
-    "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
-    "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
-    "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
     "Exem/01-Projects/design-check-system.excalidraw.png",
     "Exem/01-Projects/디자인-검증-자동화/설계",
     "Exem/01-Projects/디자인-검증-자동화/기획",
@@ -296,7 +291,6 @@
     "Next.js/Pasted image 20260122175812.png",
     "Next.js/Pasted image 20260122175706.png",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
-    "Next.js/Pasted image 20260122175457.png",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",

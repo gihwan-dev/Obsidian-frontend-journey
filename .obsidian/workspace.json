@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
+                "file": "Exem/01-Projects/디자인-검증-자동화/TODO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "위젯 빌더 리팩토링"
+              "title": "TODO"
             }
           }
         ]
@@ -244,6 +244,8 @@
   },
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
+    "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
+    "Exem/01-Projects/디자인-검증-자동화/TODO.md",
     "Exem/01-Projects/디자인-검증-자동화/기획/milestone.md",
     "Exem/01-Projects/디자인-검증-자동화/기획/survey.md",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
@@ -255,7 +257,6 @@
     "Exem/02-Daily/Todo/2026년 1월.md",
     "Exem/02-Daily/Todo/README.md",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
-    "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
     "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Next.js/Pasted image 20260129102932.png",
     "Next.js/Pasted image 20260129102538.png",
@@ -276,7 +277,6 @@
     "Clean Code/category-theory-for-programmers/part-3/06-범주론적-모나드.md",
     "Clean Code/category-theory-for-programmers/part-3/05-모나드와-효과.md",
     "Clean Code/category-theory-for-programmers/part-3/04-모나드-프로그래머의-정의.md",
-    "Clean Code/category-theory-for-programmers/part-3/03-자유-망각-수반.md",
     "Exem/01-Projects/design-check-system.excalidraw.png",
     "Exem/01-Projects/디자인-검증-자동화/설계",
     "Exem/01-Projects/디자인-검증-자동화/기획",

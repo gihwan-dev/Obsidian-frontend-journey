@@ -11,14 +11,17 @@
             "id": "f17fe52ffe23a82b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
-                "mode": "source",
-                "source": false
+                "file": "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
+                "viewState": {
+                  "x": 662.5496474345516,
+                  "y": 1579.2978109231472,
+                  "zoom": -0.2398520486593606
+                }
               },
-              "icon": "lucide-file",
-              "title": "위젯 빌더 리팩토링"
+              "icon": "lucide-layout-dashboard",
+              "title": "위젯 빌더"
             }
           }
         ]
@@ -244,13 +247,13 @@
   },
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
+    "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
+    "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
-    "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
     "Next.js/Pasted image 20260129102932.png",
     "Next.js/Pasted image 20260129102538.png",
-    "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
     "Exem/02-Daily/회의록/26.01.27.md",
     "Exem/02-Daily/Todo/2026년 1월.md",
     "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",

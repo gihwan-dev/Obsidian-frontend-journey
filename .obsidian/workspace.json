@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
+                "file": "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-크고-작은-카테고리"
+              "title": "위젯 빌더 리팩토링"
             }
           }
         ]
@@ -244,10 +244,13 @@
   },
   "active": "f17fe52ffe23a82b",
   "lastOpenFiles": [
+    "Exem/02-Daily/회의록/26.01.27.md",
+    "Exem/02-Daily/Todo/2026년 1월.md",
+    "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
+    "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
     "Clean Code/category-theory-for-programmers/part-1/04-클라이슬리-카테고리.md",
     "Clean Code/category-theory-for-programmers/draw.excalidraw.md",
     "Clean Code/category-theory-for-programmers/graph-to-category.excalidraw.png",
-    "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
     "Next.js/Pasted image 20260129080327.png",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
     "Clean Code/category-theory-for-programmers/part-3/15-모나드-모노이드-카테고리.md",
@@ -269,9 +272,6 @@
     "Clean Code/category-theory-for-programmers/part-2/05-요네다-보조정리.md",
     "Clean Code/category-theory-for-programmers/part-2/04-표현-가능-펑터.md",
     "Clean Code/category-theory-for-programmers/part-2/03-자유-모노이드.md",
-    "Clean Code/category-theory-for-programmers/part-2/02-극한과-쌍대극한.md",
-    "Clean Code/category-theory-for-programmers/part-2/01-선언적-프로그래밍.md",
-    "Clean Code/category-theory-for-programmers/part-1/03-categories-great-and-small.md",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
     "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",

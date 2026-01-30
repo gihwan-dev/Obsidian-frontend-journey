@@ -15,8 +15,8 @@
               "state": {
                 "file": "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
                 "viewState": {
-                  "x": -560,
-                  "y": 30,
+                  "x": -448.78493886994187,
+                  "y": 13.020601354189562,
                   "zoom": 0
                 }
               },
@@ -247,6 +247,8 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
+    "Exem/01-Projects/Table 컴포넌트/TODO.md",
+    "Exem/01-Projects/Table 컴포넌트",
     "Next.js/Pasted image 20260130163620.png",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
@@ -294,7 +296,6 @@
     "Exem/01-Projects/디자인-검증-자동화",
     "Exem/06-Archive",
     "Exem/05-Templates",
-    "Exem/04-Snippets/Utils",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Excalidraw/B.sori IA.canvas",

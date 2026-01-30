@@ -11,20 +11,14 @@
             "id": "f17fe52ffe23a82b",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Exem/02-Daily/Todo/2026년 1월.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "Exem/02-Daily/README.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "2026년 1월"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -248,12 +242,16 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f17fe52ffe23a82b",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
-    "Exem/01-Projects/ai-essence/TODO.md",
-    "Exem/02-Daily/Todo/2026년 1월.md",
-    "Exem/01-Projects/ai-essence",
+    "Untitled.base",
     "Exem/02-Daily/Todo/README.md",
+    "Exem/02-Daily/Todo/2026년 1월.md",
+    "README.md",
+    "프롬프트.md",
+    "콜아웃 리스트.md",
+    "Exem/01-Projects/ai-essence/TODO.md",
+    "Exem/01-Projects/ai-essence",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
     "Exem/02-Daily/README.md",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
@@ -280,10 +278,6 @@
     "Clean Code/category-theory-for-programmers/part-3/12-풍부한-카테고리.md",
     "Clean Code/category-theory-for-programmers/part-3/11-칸-확장.md",
     "Clean Code/category-theory-for-programmers/part-3/10-끝과-쌍대끝.md",
-    "Clean Code/category-theory-for-programmers/part-3/09-모나드-대수.md",
-    "Clean Code/category-theory-for-programmers/part-3/08-F-대수.md",
-    "Clean Code/category-theory-for-programmers/part-3/07-코모나드.md",
-    "Clean Code/category-theory-for-programmers/part-3/06-범주론적-모나드.md",
     "Exem/01-Projects/design-check-system.excalidraw.png",
     "Exem/01-Projects/디자인-검증-자동화/설계",
     "Exem/01-Projects/디자인-검증-자동화/기획",
@@ -293,7 +287,6 @@
     "Exem/04-Snippets/Utils",
     "Exem/04-Snippets/Hooks",
     "Exem/04-Snippets/Components",
-    "Exem/04-Snippets",
     "Next.js/Pasted image 20260128091059.png",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Next.js/Pasted image 20260122175814.png",

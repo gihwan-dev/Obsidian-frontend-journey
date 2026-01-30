@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
+                "file": "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
                 "viewState": {
-                  "x": -448.78493886994187,
-                  "y": 13.020601354189562,
-                  "zoom": 0
+                  "x": 631.9713245089331,
+                  "y": 26.979422327615122,
+                  "zoom": -0.45434997703841246
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "작업 진행 내용"
+              "title": "작업 방향"
             }
           }
         ]
@@ -248,9 +248,11 @@
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
     "Exem/01-Projects/Table 컴포넌트/TODO.md",
+    "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
+    "Exem/01-Projects/Table/Prompt.md",
+    "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Exem/01-Projects/Table 컴포넌트",
     "Next.js/Pasted image 20260130163620.png",
-    "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
     "Next.js/Pasted image 20260130163714.png",
     "Next.js/Pasted image 20260130163636.png",
@@ -288,8 +290,6 @@
     "Clean Code/category-theory-for-programmers/draw.excalidraw.md",
     "Clean Code/category-theory-for-programmers/graph-to-category.excalidraw.png",
     "Next.js/Pasted image 20260129080327.png",
-    "Clean Code/category-theory-for-programmers/part-3/15-모나드-모노이드-카테고리.md",
-    "Clean Code/category-theory-for-programmers/part-3/14-로베어-이론.md",
     "Exem/01-Projects/design-check-system.excalidraw.png",
     "Exem/01-Projects/디자인-검증-자동화/설계",
     "Exem/01-Projects/디자인-검증-자동화/기획",
@@ -301,7 +301,6 @@
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
     "Untitled 3.canvas",
-    "Untitled 1.canvas",
-    "Untitled 2.canvas"
+    "Untitled 1.canvas"
   ]
 }

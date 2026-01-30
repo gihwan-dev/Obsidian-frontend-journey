@@ -11,17 +11,20 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "kanban",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
-                "viewState": {
-                  "x": 631.9713245089331,
-                  "y": 26.979422327615122,
-                  "zoom": -0.45434997703841246
+                "file": "Exem/01-Projects/ai-essence/TODO.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false
+                  ]
                 }
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "작업 방향"
+              "icon": "lucide-trello",
+              "title": "TODO"
             }
           }
         ]
@@ -247,8 +250,8 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/TODO.md",
     "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
+    "Exem/01-Projects/Table 컴포넌트/TODO.md",
     "Exem/01-Projects/Table/Prompt.md",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Exem/01-Projects/Table 컴포넌트",

@@ -8,17 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f17fe52ffe23a82b",
+            "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Exem/02-Daily/README.md",
-                "mode": "source",
-                "source": false
+                "file": "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
+                "viewState": {
+                  "x": -560,
+                  "y": 30,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "lucide-layout-dashboard",
+              "title": "작업 진행 내용"
             }
           }
         ]
@@ -183,8 +186,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -218,7 +221,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -242,18 +245,29 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0c81285cd13c3654",
+  "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Untitled.base",
+    "Next.js/Pasted image 20260130163620.png",
+    "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
+    "Exem/01-Projects/DPM 대시보드/TODO.md",
+    "Next.js/Pasted image 20260130163714.png",
+    "Next.js/Pasted image 20260130163636.png",
+    "Next.js/Pasted image 20260130163626.png",
+    "Exem/02-Daily/Dashboard.md",
+    "Exem/01-Projects/DPM 대시보드",
+    "Exem/01-Projects/ai-essence/TODO.md",
+    "Todo/2026-02-09.md",
+    "Todo/2026-01-09.md",
+    "Todo",
     "Exem/02-Daily/Todo/README.md",
     "Exem/02-Daily/Todo/2026년 1월.md",
+    "Exem/02-Daily/README.md",
+    "Untitled.base",
     "README.md",
     "프롬프트.md",
     "콜아웃 리스트.md",
-    "Exem/01-Projects/ai-essence/TODO.md",
     "Exem/01-Projects/ai-essence",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더 리팩토링.md",
-    "Exem/02-Daily/README.md",
     "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
     "Exem/01-Projects/디자인-검증-자동화/TODO.md",
@@ -274,10 +288,6 @@
     "Next.js/Pasted image 20260129080327.png",
     "Clean Code/category-theory-for-programmers/part-3/15-모나드-모노이드-카테고리.md",
     "Clean Code/category-theory-for-programmers/part-3/14-로베어-이론.md",
-    "Clean Code/category-theory-for-programmers/part-3/13-토포스.md",
-    "Clean Code/category-theory-for-programmers/part-3/12-풍부한-카테고리.md",
-    "Clean Code/category-theory-for-programmers/part-3/11-칸-확장.md",
-    "Clean Code/category-theory-for-programmers/part-3/10-끝과-쌍대끝.md",
     "Exem/01-Projects/design-check-system.excalidraw.png",
     "Exem/01-Projects/디자인-검증-자동화/설계",
     "Exem/01-Projects/디자인-검증-자동화/기획",
@@ -285,13 +295,7 @@
     "Exem/06-Archive",
     "Exem/05-Templates",
     "Exem/04-Snippets/Utils",
-    "Exem/04-Snippets/Hooks",
-    "Exem/04-Snippets/Components",
-    "Next.js/Pasted image 20260128091059.png",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
-    "Next.js/Pasted image 20260122175814.png",
-    "Next.js/Pasted image 20260122175812.png",
-    "Next.js/Pasted image 20260122175706.png",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",

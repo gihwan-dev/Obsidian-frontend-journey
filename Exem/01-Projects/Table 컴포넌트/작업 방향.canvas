@@ -1,7 +1,7 @@
 {
 	"nodes":[
 		{"id":"e1eb872562c4d721","type":"link","url":"https://tanstack.com/table/v8/docs/guide/custom-features","x":-600,"y":-480,"width":1060,"height":1000},
-		{"id":"1ab7291fbf20af03","type":"text","text":"## 커스텀 피쳐 기반 리팩토링\n\n- 기능 하나씩 마이그레이션 진행\n- 우선 적으로 가이드라인 문서를 하나 만들어 놓고 진행하기\n- 테스트 깨져서는 안됨\n- 기능 단위 분리 우선 정리\n\t- cell bordering 기능\n\t- row 이동 기능\n\t- \bsticky tree 기능\n\t- etc","x":500,"y":-480,"width":760,"height":1000}
+		{"id":"1ab7291fbf20af03","type":"text","text":"## 커스텀 피쳐 기반 리팩토링\n\n- 기능 하나씩 마이그레이션 진행\n- 우선 적으로 가이드라인 문서를 하나 만들어 놓고 진행하기\n- 테스트 깨져서는 안됨\n- 기능 단위 분리 우선 정리\n\t- cell bordering 기능\n\t- row 이동 기능\n\t- \bsticky tree 기능\n\t- etc...","x":500,"y":-480,"width":760,"height":1000}
 	],
 	"edges":[]
 }

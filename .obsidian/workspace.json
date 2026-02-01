@@ -11,14 +11,12 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Exem/00-Inbox/WebEnv 문제점.md",
-                "mode": "source",
-                "source": false
+                "file": "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "WebEnv 문제점"
+              "icon": "excalidraw-icon",
+              "title": "webEnv-localStorage-교체-설명.excalidraw"
             }
           }
         ]
@@ -244,8 +242,11 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/03-Knowledge/API/현 API 문제점.md",
+    "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/00-Inbox/WebEnv 문제점.md",
+    "Exem/02-Daily/Dashboard.md",
+    "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.md",
+    "Exem/03-Knowledge/API/현 API 문제점.md",
     "Exem/ClickUp-마이그레이션/레거시/[F&F] Top SQL Comparison 쿼리 개선 요청.md",
     "Exem/ClickUp-마이그레이션/레거시/[LG에너지솔루션] 인스턴스 통합 모니터링 대시보드.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Slash Command.md",
@@ -267,9 +268,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/00-Sentry.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/Uptime-Kuma.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/Komodo.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/Xen Orchestra.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/portainer.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/00-Infra 제어.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",

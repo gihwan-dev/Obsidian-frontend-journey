@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/ClickUp-마이그레이션/레거시/대시보드 레포 구조.md",
+                "file": "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/00-AI 도구.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "대시보드 레포 구조"
+              "title": "00-AI 도구"
             }
           }
         ]
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.00390243530273
+    "width": 274.01103591918945
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -242,11 +242,19 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0c81285cd13c3654",
+  "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/ClickUp-마이그레이션/업무환경개선/커서 MDC - 컨벤션.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Context7.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Figma MCP.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Slash Command.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Chrome Devtools MCP.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/00-ExtJS.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/Extjs 프로젝트 배포 프로세스 개선.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Verdaccio.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/Tailwind 자동완성.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Grafana.md",
+    "Exem/ClickUp-마이그레이션/레거시/대시보드 레포 구조.md",
+    "Exem/ClickUp-마이그레이션/업무환경개선/커서 MDC - 컨벤션.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Vaultwarden.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/MFO 2512 릴리즈 테스트 환경에 도입.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/00-Sentry.md",
@@ -257,19 +265,11 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/00-Infra 제어.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/extJS 프로젝트 Lint.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/Extjs 디버깅 (with 크롬 확장).md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/Extjs 프로젝트 배포 프로세스 개선.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/00-ExtJS.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Tailwind 자동완성.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/NMAP 네트워크 스캔/nmap 개선.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/NMAP 네트워크 스캔/00-NMAP 네트워크 스캔.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills/Figma 디자인 검증 스킬/figma-design-pipeline 설정.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills/Figma 디자인 검증 스킬/component-screenshot 설정.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills/Figma 디자인 검증 스킬/design-check 설정.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills/Figma 디자인 검증 스킬/figma-to-code 설정.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills/Figma 디자인 검증 스킬/00-Figma 디자인 검증 스킬.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills/00-Claude Code Skills.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Chrome Devtools MCP.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Swagger parser.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",

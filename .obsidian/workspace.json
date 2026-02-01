@@ -11,17 +11,14 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
-                "viewState": {
-                  "x": 665.8478371919969,
-                  "y": -30.741771241405885,
-                  "zoom": 0.22688390597573074
-                }
+                "file": "Exem/ClickUp_자료_정리_최기환.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "작업 방향"
+              "icon": "lucide-file",
+              "title": "ClickUp_자료_정리_최기환"
             }
           }
         ]
@@ -247,8 +244,10 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/TODO.md",
+    "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
+    "Exem/ClickUp_자료_정리_최기환.md",
     "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
+    "Exem/01-Projects/Table 컴포넌트/TODO.md",
     "Exem/01-Projects/Table/Prompt.md",
     "Exem/01-Projects/ai-essence/TODO.md",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
@@ -285,7 +284,6 @@
     "Exem/02-Daily/회의록/26.01.27.md",
     "Next.js/Pasted image 20260129102932.png",
     "Next.js/Pasted image 20260129102538.png",
-    "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
     "Clean Code/category-theory-for-programmers/part-1/04-클라이슬리-카테고리.md",
     "Clean Code/category-theory-for-programmers/draw.excalidraw.md",
     "Clean Code/category-theory-for-programmers/graph-to-category.excalidraw.png",

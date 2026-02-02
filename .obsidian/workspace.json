@@ -11,12 +11,17 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "canvas",
               "state": {
-                "file": "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.md"
+                "file": "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
+                "viewState": {
+                  "x": 437.85531682615664,
+                  "y": 2.603981157071539,
+                  "zoom": -0.24133394519707724
+                }
               },
-              "icon": "excalidraw-icon",
-              "title": "webEnv-localStorage-교체-설명.excalidraw"
+              "icon": "lucide-layout-dashboard",
+              "title": "작업 방향"
             }
           }
         ]
@@ -240,7 +245,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b853f4f43b242f26",
+  "active": "7d08263bc23f330a",
   "lastOpenFiles": [
     "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.md",
     "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.png",

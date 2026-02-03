@@ -11,14 +11,10 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AI/AI에게 역할을 부여하면 응답 품질이 올라가는 이유.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "AI에게 역할을 부여하면 응답 품질이 올라가는 이유"
+              "title": "New tab"
             }
           }
         ]
@@ -242,10 +238,24 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7d08263bc23f330a",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
-    "Exem/00-Inbox/클로드 100달러 사용시.md",
+    "Clean Code/category-theory-for-programmers/part-2/04-표현-가능-펑터.md",
+    "Clean Code/category-theory-for-programmers/part-2/03-자유-모노이드.md",
+    "Clean Code/category-theory-for-programmers/part-2/02-극한과-쌍대극한.md",
+    "Clean Code/category-theory-for-programmers/part-2/01-선언적-프로그래밍.md",
+    "Clean Code/category-theory-for-programmers/part-1/10-자연-변환.md",
+    "Clean Code/category-theory-for-programmers/part-1/09-함수-타입.md",
+    "Clean Code/category-theory-for-programmers/part-1/08-펑터성.md",
+    "Clean Code/category-theory-for-programmers/part-1/07-펑터.md",
+    "Clean Code/category-theory-for-programmers/part-1/06-단순-대수적-데이터-타입.md",
+    "Clean Code/category-theory-for-programmers/part-1/05-곱과-쌍대곱.md",
+    "Clean Code/category-theory-for-programmers/part-1/04-클라이슬리-카테고리.md",
+    "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
+    "Clean Code/category-theory-for-programmers/part-1/02-타입과-함수.md",
+    "Clean Code/category-theory-for-programmers/part-1/01-카테고리-합성의-본질.md",
     "AI/AI에게 역할을 부여하면 응답 품질이 올라가는 이유.md",
+    "Exem/00-Inbox/클로드 100달러 사용시.md",
     "Next.js/Pasted image 20260203114100.png",
     "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
     "Exem/01-Projects/차세대-대시보드/WebEnv/차세대 WebEnv 저장 구조.md",
@@ -264,20 +274,6 @@
     "Exem/02-Daily/Dashboard.md",
     "Exem/03-Knowledge/API/현 API 문제점.md",
     "Exem/ClickUp-마이그레이션/레거시/[F&F] Top SQL Comparison 쿼리 개선 요청.md",
-    "Exem/ClickUp-마이그레이션/레거시/[LG에너지솔루션] 인스턴스 통합 모니터링 대시보드.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Slash Command.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/task-master MCP.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/playwright MCP, sequential-thinking.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Context7.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Chrome Devtools MCP.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/00-AI 도구.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Figma MCP.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/00-ExtJS.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS/Extjs 프로젝트 배포 프로세스 개선.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Verdaccio.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Tailwind 자동완성.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Grafana.md",
-    "Exem/ClickUp-마이그레이션/레거시/대시보드 레포 구조.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",

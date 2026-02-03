@@ -11,14 +11,17 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Exem/01-Projects/차세대-대시보드/WebEnv/차이점 비교.md",
-                "mode": "source",
-                "source": false
+                "file": "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
+                "viewState": {
+                  "x": 3352.9178633385236,
+                  "y": 976.4511269210253,
+                  "zoom": -1.559538769174973
+                }
               },
-              "icon": "lucide-file",
-              "title": "차이점 비교"
+              "icon": "lucide-layout-dashboard",
+              "title": "전체 흐름"
             }
           }
         ]
@@ -244,10 +247,10 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
-    "Exem/01-Projects/차세대-대시보드/WebEnv/차이점 비교.md",
-    "Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점 - 현재 코드 기준.md",
     "Exem/01-Projects/차세대-대시보드/WebEnv/차세대 WebEnv 저장 구조.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/차이점 비교.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점 - 현재 코드 기준.md",
     "Exem/01-Projects/차세대-대시보드/WebEnv/레거시WebEnv 저장 구조.md",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.md",

@@ -1,8 +1,9 @@
 {
 	"nodes":[
 		{"id":"b28072d96e0e5637","type":"file","file":"Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.md","x":-300,"y":580,"width":1160,"height":1280},
-		{"id":"ef469948fa4a2d97","type":"file","file":"Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점.md","x":-700,"y":-560,"width":900,"height":1060},
-		{"id":"e0e93ac6fb683dc7","type":"file","file":"Exem/01-Projects/차세대-대시보드/WebEnv/레거시WebEnv.md","x":320,"y":-560,"width":900,"height":1060}
+		{"id":"8e61071f0a28b5b9","type":"file","file":"Exem/01-Projects/차세대-대시보드/WebEnv/차세대 WebEnv 저장 구조.md","x":1080,"y":1220,"width":920,"height":1060},
+		{"id":"e0e93ac6fb683dc7","type":"file","file":"Exem/01-Projects/차세대-대시보드/WebEnv/레거시WebEnv 저장 구조.md","x":1080,"y":80,"width":920,"height":1060},
+		{"id":"ef469948fa4a2d97","type":"file","file":"Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점 - 현재 코드 기준.md","x":2720,"y":440,"width":900,"height":1060}
 	],
 	"edges":[]
 }

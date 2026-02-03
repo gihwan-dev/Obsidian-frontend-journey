@@ -11,17 +11,14 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
-                "viewState": {
-                  "x": 182.92798962948024,
-                  "y": 57.79541860272269,
-                  "zoom": -0.02811680994570835
-                }
+                "file": "Exem/01-Projects/차세대-대시보드/WebEnv/차이점 비교.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "전체 흐름"
+              "icon": "lucide-file",
+              "title": "차이점 비교"
             }
           }
         ]
@@ -247,11 +244,13 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/차이점 비교.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점 - 현재 코드 기준.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/차세대 WebEnv 저장 구조.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/레거시WebEnv 저장 구조.md",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.md",
-    "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
-    "Exem/01-Projects/차세대-대시보드/WebEnv/레거시WebEnv.md",
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯빌더",
     "Exem/01-Projects/차세대-대시보드/WebEnv",
@@ -277,8 +276,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/Grafana.md",
     "Exem/ClickUp-마이그레이션/레거시/대시보드 레포 구조.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/커서 MDC - 컨벤션.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Vaultwarden.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/MFO 2512 릴리즈 테스트 환경에 도입.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",

@@ -11,17 +11,14 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
-                "viewState": {
-                  "x": 117.67718545644387,
-                  "y": -972.3894828385157,
-                  "zoom": -0.3221470732400316
-                }
+                "file": "Exem/01-Projects/차세대-대시보드/WebEnv 문제점.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "작업 방향"
+              "icon": "lucide-file",
+              "title": "WebEnv 문제점"
             }
           }
         ]
@@ -247,9 +244,12 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.md",
+    "Exem/01-Projects/차세대-대시보드/webEnv-localStorage-교체-설명.excalidraw.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv 문제점.md",
+    "Exem/00-Inbox/README.md",
     "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.png",
-    "Exem/00-Inbox/WebEnv 문제점.md",
+    "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
+    "Exem/01-Projects/Table 컴포넌트/TODO.md",
     "Exem/02-Daily/Dashboard.md",
     "Exem/03-Knowledge/API/현 API 문제점.md",
     "Exem/ClickUp-마이그레이션/레거시/[F&F] Top SQL Comparison 쿼리 개선 요청.md",
@@ -271,8 +271,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/Vaultwarden.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/MFO 2512 릴리즈 테스트 환경에 도입.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/00-Sentry.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/Uptime-Kuma.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어/Komodo.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",
@@ -283,7 +281,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구",
     "Exem/ClickUp-마이그레이션/업무환경개선/NAS 구축/Harbor",
-    "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Next.js/Pasted image 20260130163620.png",
     "Next.js/Pasted image 20260130163714.png",

@@ -11,14 +11,17 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Exem/01-Projects/차세대-대시보드/WebEnv 문제점.md",
-                "mode": "source",
-                "source": false
+                "file": "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
+                "viewState": {
+                  "x": 182.92798962948024,
+                  "y": 57.79541860272269,
+                  "zoom": -0.02811680994570835
+                }
               },
-              "icon": "lucide-file",
-              "title": "WebEnv 문제점"
+              "icon": "lucide-layout-dashboard",
+              "title": "전체 흐름"
             }
           }
         ]
@@ -244,8 +247,14 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/01-Projects/차세대-대시보드/webEnv-localStorage-교체-설명.excalidraw.md",
-    "Exem/01-Projects/차세대-대시보드/WebEnv 문제점.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.md",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
+    "Exem/01-Projects/차세대-대시보드/WebEnv/레거시WebEnv.md",
+    "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더.canvas",
+    "Exem/01-Projects/차세대-대시보드/위젯빌더",
+    "Exem/01-Projects/차세대-대시보드/WebEnv",
     "Exem/00-Inbox/README.md",
     "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
@@ -270,7 +279,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/커서 MDC - 컨벤션.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Vaultwarden.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/MFO 2512 릴리즈 테스트 환경에 도입.md",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Sentry/00-Sentry.md",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",
@@ -279,25 +287,20 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/NMAP 네트워크 스캔",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills/Figma 디자인 검증 스킬",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/Claude Code Skills",
-    "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구",
-    "Exem/ClickUp-마이그레이션/업무환경개선/NAS 구축/Harbor",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Next.js/Pasted image 20260130163620.png",
     "Next.js/Pasted image 20260130163714.png",
     "Next.js/Pasted image 20260130163636.png",
     "Next.js/Pasted image 20260130163626.png",
-    "Exem/01-Projects/차세대-대시보드/위젯 빌더.canvas",
-    "Exem/01-Projects/차세대-대시보드/위젯 생성 관리.canvas",
+    "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 생성 관리.canvas",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
     "Next.js/Pasted image 20260129102932.png",
     "Next.js/Pasted image 20260129102538.png",
     "Clean Code/category-theory-for-programmers/graph-to-category.excalidraw.png",
-    "Next.js/Pasted image 20260129080327.png",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Excalidraw/B.sori IA.canvas",
     "Untitled.canvas",
-    "Untitled 3.canvas",
-    "Untitled 1.canvas"
+    "Untitled 3.canvas"
   ]
 }

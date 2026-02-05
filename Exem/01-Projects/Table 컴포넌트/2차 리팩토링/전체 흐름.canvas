@@ -1,1 +1,9 @@
-{}
+{
+	"nodes":[
+		{"id":"4742a6fd592c91db","x":-800,"y":-480,"width":960,"height":920,"type":"file","file":"Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md"},
+		{"id":"28ae347f8ae839e7","x":300,"y":-480,"width":920,"height":920,"type":"file","file":"Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md"}
+	],
+	"edges":[
+		{"id":"d21bcfd73a49b544","fromNode":"4742a6fd592c91db","fromSide":"right","toNode":"28ae347f8ae839e7","toSide":"left"}
+	]
+}

@@ -39,21 +39,21 @@
             }
           },
           {
-            "id": "4b83ea013149e958",
+            "id": "6dcce99d099f4925",
             "type": "leaf",
             "state": {
               "type": "webviewer",
               "state": {
-                "url": "https://app.clickup.com/t/86ewa5x40",
-                "title": "[EXEM]PA>Report Configuration>Opration Templet Report 메일 발송 시 오류 발생 | #86ewa5x40",
+                "url": "https://app.clickup.com/t/86ewa2y63",
+                "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63",
                 "mode": "webview"
               },
               "icon": "globe-2",
-              "title": "[EXEM]PA>Report Configuration>Opration Templet Report 메일 발송 시 오류 발생 | #86ewa5x40"
+              "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -274,7 +274,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "4b83ea013149e958",
+  "active": "bed97e2a2e48c52f",
   "lastOpenFiles": [
     "Exem/01-Projects/레거시/TODO.md",
     "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",

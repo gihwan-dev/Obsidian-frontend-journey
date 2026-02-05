@@ -39,34 +39,6 @@
             }
           },
           {
-            "id": "fb0f2ff87c698208",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://app.clickup.com/t/86ewa43zp",
-                "title": "[EXEM]PA>Report Configuration>Long Term Templet Report 메일 발송 시 오류 발생 | #86ewa43zp",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "[EXEM]PA>Report Configuration>Long Term Templet Report 메일 발송 시 오류 발생 | #86ewa43zp"
-            }
-          },
-          {
-            "id": "996bc2d13e2eb47c",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://app.clickup.com/t/86ewcuczp",
-                "title": "[EXEM]PA > Analysis Report > Report Configuration > 메일 스케줄 비활성화 상태에서 메일이 전송됨 | #86ewcuczp",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "[EXEM]PA > Analysis Report > Report Configuration > 메일 스케줄 비활성화 상태에서 메일이 전송됨 | #86ewcuczp"
-            }
-          },
-          {
             "id": "b6ed920e122560fb",
             "type": "leaf",
             "state": {
@@ -109,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -330,7 +302,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "fb0f2ff87c698208",
+  "active": "bed97e2a2e48c52f",
   "lastOpenFiles": [
     "Exem/01-Projects/레거시/TODO.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",

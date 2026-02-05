@@ -7,6 +7,8 @@ kanban-plugin: board
 ## Backlog
 
 - [ ] AlertLog 최소 높이 주기
+- [ ] 버전 업데이트
+- [ ] features 리팩토링
 
 
 ## Doing

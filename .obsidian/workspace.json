@@ -15,8 +15,8 @@
               "state": {
                 "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 0,
+                  "x": -279.92999999999995,
+                  "y": -1.86,
                   "zoom": 0
                 }
               },
@@ -39,49 +39,21 @@
             }
           },
           {
-            "id": "b6ed920e122560fb",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://app.clickup.com/t/86ewa5x40",
-                "title": "[EXEM]PA>Report Configuration>Opration Templet Report 메일 발송 시 오류 발생 | #86ewa5x40",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "[EXEM]PA>Report Configuration>Opration Templet Report 메일 발송 시 오류 발생 | #86ewa5x40"
-            }
-          },
-          {
-            "id": "ddca69e4542afc35",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://app.clickup.com/t/86ewa59db",
-                "title": "[EXEM]PA>Report Configuration>Plan Change Templet Report 메일 발송 시 오류 발생 | #86ewa59db",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "[EXEM]PA>Report Configuration>Plan Change Templet Report 메일 발송 시 오류 발생 | #86ewa59db"
-            }
-          },
-          {
             "id": "7bf6102d31c04a56",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
+              "type": "markdown",
               "state": {
-                "url": "https://app.clickup.com/t/86ewa2y63",
-                "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63",
-                "mode": "webview"
+                "file": "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "globe-2",
-              "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63"
+              "icon": "lucide-file",
+              "title": "1. 함수를 이용한 추상화"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -302,11 +274,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bed97e2a2e48c52f",
+  "active": "7bf6102d31c04a56",
   "lastOpenFiles": [
-    "Exem/01-Projects/레거시/TODO.md",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
+    "Exem/01-Projects/레거시/TODO.md",
+    "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.png",
@@ -324,7 +297,6 @@
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더 리팩토링.md",
     "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
-    "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
     "CS/자바스크립트로 배우는 SICP",
     "CS",
     "Clean Code/category-theory-for-programmers/part-2/01-선언적-프로그래밍.md",

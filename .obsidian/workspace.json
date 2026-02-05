@@ -37,9 +37,79 @@
               "icon": "lucide-file",
               "title": "TODO"
             }
+          },
+          {
+            "id": "fb0f2ff87c698208",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://app.clickup.com/t/86ewa43zp",
+                "title": "[EXEM]PA>Report Configuration>Long Term Templet Report 메일 발송 시 오류 발생 | #86ewa43zp",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "[EXEM]PA>Report Configuration>Long Term Templet Report 메일 발송 시 오류 발생 | #86ewa43zp"
+            }
+          },
+          {
+            "id": "996bc2d13e2eb47c",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://app.clickup.com/t/86ewcuczp",
+                "title": "[EXEM]PA > Analysis Report > Report Configuration > 메일 스케줄 비활성화 상태에서 메일이 전송됨 | #86ewcuczp",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "[EXEM]PA > Analysis Report > Report Configuration > 메일 스케줄 비활성화 상태에서 메일이 전송됨 | #86ewcuczp"
+            }
+          },
+          {
+            "id": "b6ed920e122560fb",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://app.clickup.com/t/86ewa5x40",
+                "title": "[EXEM]PA>Report Configuration>Opration Templet Report 메일 발송 시 오류 발생 | #86ewa5x40",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "[EXEM]PA>Report Configuration>Opration Templet Report 메일 발송 시 오류 발생 | #86ewa5x40"
+            }
+          },
+          {
+            "id": "ddca69e4542afc35",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://app.clickup.com/t/86ewa59db",
+                "title": "[EXEM]PA>Report Configuration>Plan Change Templet Report 메일 발송 시 오류 발생 | #86ewa59db",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "[EXEM]PA>Report Configuration>Plan Change Templet Report 메일 발송 시 오류 발생 | #86ewa59db"
+            }
+          },
+          {
+            "id": "7bf6102d31c04a56",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://app.clickup.com/t/86ewa2y63",
+                "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -260,12 +330,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bed97e2a2e48c52f",
+  "active": "fb0f2ff87c698208",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/레거시/TODO.md",
-    "Exem/01-Projects/레거시",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
+    "Exem/01-Projects/README.md",
+    "Exem/01-Projects/레거시",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
@@ -296,8 +368,6 @@
     "Clean Code/category-theory-for-programmers/part-1/03-크고-작은-카테고리.md",
     "Clean Code/category-theory-for-programmers/part-1/02-타입과-함수.md",
     "Clean Code/category-theory-for-programmers/part-1/01-카테고리-합성의-본질.md",
-    "AI/AI에게 역할을 부여하면 응답 품질이 올라가는 이유.md",
-    "Exem/00-Inbox/클로드 100달러 사용시.md",
     "Next.js/Pasted image 20260203114100.png",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/01-Projects/차세대-대시보드/위젯빌더",

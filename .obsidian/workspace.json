@@ -11,20 +11,17 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "canvas",
               "state": {
-                "file": "Exem/01-Projects/DPM 대시보드/TODO.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
+                "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링.canvas",
+                "viewState": {
+                  "x": 174.50279043790755,
+                  "y": -12.322019007625878,
+                  "zoom": 0.29165827691555035
                 }
               },
-              "icon": "lucide-trello",
-              "title": "TODO"
+              "icon": "lucide-layout-dashboard",
+              "title": "2차 리팩토링"
             }
           }
         ]
@@ -98,7 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 478
+    "width": 458
   },
   "right": {
     "id": "02cd2af77be597d0",
@@ -250,6 +247,11 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
+    "Exem/01-Projects/Table 컴포넌트/Untitled.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링.canvas",
+    "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
+    "Exem/01-Projects/Table 컴포넌트/TODO.md",
+    "Exem/01-Projects/DPM 대시보드/TODO.md",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Exem/01-Projects/디자인-검증-자동화/TODO.md",
     "Exem/01-Projects/디자인-검증-자동화/README.md",
@@ -257,8 +259,6 @@
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.md",
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더 리팩토링.md",
-    "Exem/01-Projects/Table 컴포넌트/TODO.md",
-    "Exem/01-Projects/Table 컴포넌트/작업 방향.canvas",
     "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
     "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
     "CS/자바스크립트로 배우는 SICP",
@@ -281,8 +281,6 @@
     "Exem/00-Inbox/클로드 100달러 사용시.md",
     "Next.js/Pasted image 20260203114100.png",
     "Exem/01-Projects/차세대-대시보드/WebEnv/차세대 WebEnv 저장 구조.md",
-    "Exem/01-Projects/차세대-대시보드/WebEnv/차이점 비교.md",
-    "Exem/01-Projects/차세대-대시보드/WebEnv/WebEnv 문제점 - 현재 코드 기준.md",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/01-Projects/차세대-대시보드/위젯빌더",
     "Exem/01-Projects/차세대-대시보드/WebEnv",
@@ -303,7 +301,6 @@
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Excalidraw/B.sori IA.canvas",
-    "Untitled.canvas",
-    "Untitled 3.canvas"
+    "Untitled.canvas"
   ]
 }

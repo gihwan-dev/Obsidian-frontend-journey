@@ -13,18 +13,31 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링.canvas",
+                "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
                 "viewState": {
-                  "x": 174.50279043790755,
-                  "y": -12.322019007625878,
-                  "zoom": 0.29165827691555035
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "2차 리팩토링"
+              "title": "전체 흐름"
+            }
+          },
+          {
+            "id": "bed97e2a2e48c52f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "현 컴포넌트 구조 및 개선 이후 구조"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -245,13 +258,15 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7d08263bc23f330a",
+  "active": "bed97e2a2e48c52f",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/Untitled.md",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링.canvas",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
-    "Exem/01-Projects/Table 컴포넌트/TODO.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
+    "Exem/01-Projects/Table 컴포넌트/Untitled.md",
+    "Exem/01-Projects/Table 컴포넌트/TODO.md",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Exem/01-Projects/디자인-검증-자동화/TODO.md",
     "Exem/01-Projects/디자인-검증-자동화/README.md",
@@ -280,7 +295,6 @@
     "AI/AI에게 역할을 부여하면 응답 품질이 올라가는 이유.md",
     "Exem/00-Inbox/클로드 100달러 사용시.md",
     "Next.js/Pasted image 20260203114100.png",
-    "Exem/01-Projects/차세대-대시보드/WebEnv/차세대 WebEnv 저장 구조.md",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/01-Projects/차세대-대시보드/위젯빌더",
     "Exem/01-Projects/차세대-대시보드/WebEnv",
@@ -290,7 +304,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어 헬스 체크 상태 확인",
     "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS",
-    "Exem/ClickUp-마이그레이션/업무환경개선/NMAP 네트워크 스캔",
     "Next.js/Pasted image 20260130163620.png",
     "Next.js/Pasted image 20260130163714.png",
     "Next.js/Pasted image 20260130163636.png",

@@ -28,12 +28,14 @@
             "id": "bed97e2a2e48c52f",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md"
+                "file": "Exem/01-Projects/레거시/TODO.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "현 컴포넌트 구조 및 개선 이후 구조"
+              "icon": "lucide-file",
+              "title": "TODO"
             }
           }
         ],
@@ -260,8 +262,10 @@
   },
   "active": "bed97e2a2e48c52f",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
+    "Exem/01-Projects/레거시/TODO.md",
+    "Exem/01-Projects/레거시",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
@@ -303,7 +307,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어 헬스 체크 상태 확인",
-    "Exem/ClickUp-마이그레이션/업무환경개선/ExtJS",
     "Next.js/Pasted image 20260130163620.png",
     "Next.js/Pasted image 20260130163714.png",
     "Next.js/Pasted image 20260130163636.png",

@@ -7,3 +7,4 @@
 - [x] [PA>Report Configuration>Plan Change Templet Report 메일 발송 시 오류 발생](https://app.clickup.com/t/86ewa59db)
 - [x] [PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생](https://app.clickup.com/t/86ewa2y63)
 
+-- 팀장님께 전달하기 --

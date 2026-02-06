@@ -15,9 +15,9 @@
               "state": {
                 "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
                 "viewState": {
-                  "x": -279.92999999999995,
-                  "y": -1.86,
-                  "zoom": 0
+                  "x": 313.3132057780693,
+                  "y": -43.426419665349265,
+                  "zoom": -0.29644969344139094
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -38,8 +38,7 @@
               "title": "TODO"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -260,7 +259,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bed97e2a2e48c52f",
+  "active": "7d08263bc23f330a",
   "lastOpenFiles": [
     "Exem/01-Projects/레거시/TODO.md",
     "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",

@@ -11,17 +11,12 @@
             "id": "7d08263bc23f330a",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "excalidraw",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
-                "viewState": {
-                  "x": 210,
-                  "y": -20,
-                  "zoom": -0.1261212553133967
-                }
+                "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md"
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "전체 흐름"
+              "icon": "excalidraw-icon",
+              "title": "현 컴포넌트 구조 및 개선 이후 구조"
             }
           },
           {
@@ -261,9 +256,9 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
     "Untitled.base",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "Exem/01-Projects/레거시/TODO.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",

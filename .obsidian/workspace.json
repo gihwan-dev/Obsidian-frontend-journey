@@ -15,9 +15,9 @@
               "state": {
                 "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
                 "viewState": {
-                  "x": 313.3132057780693,
-                  "y": -43.426419665349265,
-                  "zoom": -0.29644969344139094
+                  "x": 210,
+                  "y": -20,
+                  "zoom": -0.1261212553133967
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -261,9 +261,10 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/01-Projects/레거시/TODO.md",
     "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
+    "Untitled.base",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
+    "Exem/01-Projects/레거시/TODO.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
@@ -305,7 +306,6 @@
     "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Exem/ClickUp-마이그레이션/업무환경개선/AI 도구/n8n",
     "Exem/ClickUp-마이그레이션/업무환경개선/Sentry",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어 헬스 체크 상태 확인",
     "Next.js/Pasted image 20260130163620.png",
     "Next.js/Pasted image 20260130163714.png",
     "Next.js/Pasted image 20260130163636.png",

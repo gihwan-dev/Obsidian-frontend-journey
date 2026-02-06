@@ -37,20 +37,6 @@
               "icon": "lucide-file",
               "title": "TODO"
             }
-          },
-          {
-            "id": "6dcce99d099f4925",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://app.clickup.com/t/86ewa2y63",
-                "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "[EXEM]PA>Report Configuration>Daily Templet Report 메일 발송 시 오류 발생 | #86ewa2y63"
-            }
           }
         ],
         "currentTab": 1

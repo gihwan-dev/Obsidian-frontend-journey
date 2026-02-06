@@ -15,9 +15,9 @@
               "state": {
                 "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
                 "viewState": {
-                  "x": 63.923414164558096,
-                  "y": 800.4198662761736,
-                  "zoom": -0.3903081045101488
+                  "x": 334.8630985915495,
+                  "y": 574.8630985915495,
+                  "zoom": -0.8946469998537715
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -247,22 +247,22 @@
   },
   "active": "7d08263bc23f330a",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/마일스톤.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.png",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
+    "Exem/01-Projects/Table 컴포넌트/TODO.md",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
     "Exem/01-Projects/레거시/TODO.md",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
     "Untitled.base",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.png",
     "Exem/01-Projects/README.md",
     "Exem/01-Projects/레거시",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링",
     "Exem/01-Projects/Table 컴포넌트/Untitled.md",
-    "Exem/01-Projects/Table 컴포넌트/TODO.md",
     "Exem/01-Projects/디자인-검증-자동화/TODO.md",
     "Exem/01-Projects/디자인-검증-자동화/README.md",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",

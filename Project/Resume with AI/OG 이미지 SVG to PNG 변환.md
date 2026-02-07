@@ -16,3 +16,18 @@
 ## 예상 효과
 - 소셜 미디어 공유 시 전문적인 미리보기 카드 표시
 - 채용담당자에게 링크를 보낼 때 첫인상 개선
+
+## 작업 로그
+
+### 2026-02-07
+**상태**: 완료
+
+**작업 내용**:
+- `og-image.svg`를 1200x630 PNG로 변환하여 `web/public/og-image.png` 추가
+- `Layout.astro`의 OpenGraph/Twitter 메타태그를 SVG → PNG 경로로 변경
+
+**변경 파일**:
+- `web/public/og-image.png` - 1200x630 PNG OG 이미지 추가
+- `web/src/layouts/Layout.astro` - og:image, twitter:image 경로를 og-image.png로 변경
+
+**PR**: [#40 fix: OG 이미지 SVG → PNG 변환으로 소셜 미리보기 호환성 개선](https://github.com/gihwan-dev/resume-with-ai/pull/40)

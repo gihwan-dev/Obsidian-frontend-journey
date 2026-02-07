@@ -15,16 +15,29 @@
               "state": {
                 "file": "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
                 "viewState": {
-                  "x": 334.8630985915495,
-                  "y": 574.8630985915495,
-                  "zoom": -0.8946469998537715
+                  "x": 435.21362249019654,
+                  "y": 302.43460452974995,
+                  "zoom": -0.45145647644996645
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "전체 흐름"
             }
+          },
+          {
+            "id": "9213c15b37976120",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -245,7 +258,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7d08263bc23f330a",
+  "active": "9213c15b37976120",
   "lastOpenFiles": [
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/마일스톤.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",

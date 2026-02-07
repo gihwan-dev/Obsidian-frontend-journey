@@ -11,8 +11,8 @@
 - [x] [[OG 이미지 SVG to PNG 변환]]
 - [x] [[Astro Hydration 전략 변경]]
 - [x] [[CSS 와일드카드 트랜지션 제거]]
-- [ ] [[IntersectionObserver 임계값 최적화]]
-- [ ] [[사고 과정 마크다운 렌더링 적용]]
+- [x] [[IntersectionObserver 임계값 최적화]]
+- [x] [[사고 과정 마크다운 렌더링 적용]]
 
 ---
 

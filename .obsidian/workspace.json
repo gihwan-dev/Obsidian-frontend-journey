@@ -28,12 +28,14 @@
             "id": "9213c15b37976120",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.7"
+                "file": "Project/Resume with AI/개선 TODO.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
+              "icon": "lucide-file",
+              "title": "개선 TODO"
             }
           }
         ],
@@ -260,6 +262,8 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
+    "Project/Resume with AI/GCP 예산 한도 설정.md",
+    "Project/Resume with AI/개선 TODO.md",
     "Project/Resume with AI/Sentry 에러 모니터링.md",
     "Project/Resume with AI/GA4 분석 이벤트 정비.md",
     "Project/Resume with AI/컨텍스트 인식 이력서.md",
@@ -279,8 +283,6 @@
     "Project/Resume with AI/CSS 와일드카드 트랜지션 제거.md",
     "Project/Resume with AI/Astro Hydration 전략 변경.md",
     "Project/Resume with AI/OG 이미지 SVG to PNG 변환.md",
-    "Project/Resume with AI/GCP 예산 한도 설정.md",
-    "Project/Resume with AI/개선 TODO.md",
     "Project/Resume with AI",
     "Project",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/마일스톤.md",

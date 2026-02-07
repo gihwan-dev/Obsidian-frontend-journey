@@ -7,7 +7,7 @@
 
 ## 🔴 즉시 (Quick Wins) — 30분~1일
 
-- [ ] [[GCP 예산 한도 설정]]
+- [x] [[GCP 예산 한도 설정]]
 - [ ] [[OG 이미지 SVG to PNG 변환]]
 - [ ] [[Astro Hydration 전략 변경]]
 - [ ] [[CSS 와일드카드 트랜지션 제거]]

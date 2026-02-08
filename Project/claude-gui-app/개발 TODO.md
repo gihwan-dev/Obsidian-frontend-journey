@@ -10,7 +10,7 @@
 
 > 목표: 앱이 뜨고, 터미널에 글자가 찍히는 것까지
 
-- [ ] [[Tauri v2 프로젝트 초기화]]
+- [x] [[Tauri v2 프로젝트 초기화]]
   - React + TypeScript + Vite 설정
   - Tauri v2 IPC 기본 구조 (invoke/emit/channel)
   - macOS 빌드 확인

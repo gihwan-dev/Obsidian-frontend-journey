@@ -25,3 +25,28 @@ Tauri v2 + React + TypeScript + Vite 기반 프로젝트 스캐폴딩을 완료�
 - Rust ↔ React 간 Tauri command 통신 기반 확보
 
 ## 작업 로그
+
+### 2026-02-08
+
+**구현 내용:**
+- tauri-template 기반으로 프로젝트 초기 셋업 완료 (React 19 + TypeScript strict + Vite 7 + Tauri v2)
+- tauri-specta IPC 기반 타입 안전 커맨드 구조, Zustand + TanStack Query 상태관리, i18n, shadcn/ui 등 프로덕션 인프라 구축
+- 템플릿 데모 아티팩트 정리: `greet` Rust 커맨드 제거, `validate_string_input` 미사용 유틸 제거, MainWindowContent 플레이스홀더 정리
+- `.prettierignore`에 `pnpm-lock.yaml`, `.agents/` 추가하여 format:check 통과
+
+**수정된 파일:**
+- `src-tauri/src/commands/preferences.rs` — `greet` 함수 + 미사용 import 제거
+- `src-tauri/src/bindings.rs` — `preferences::greet` 제거
+- `src-tauri/src/types.rs` — `validate_string_input` 제거
+- `src/lib/bindings.ts` — tauri-specta 자동 재생성
+- `src/components/layout/MainWindowContent.tsx` — 데모 텍스트 → "Ready" 플레이스홀더
+- `src/test/setup.ts` — `greet` mock 제거
+- `src/App.test.tsx` — 테스트 업데이트
+- `.prettierignore` — `pnpm-lock.yaml`, `.agents/` 추가
+
+**검증 결과:**
+- `pnpm typecheck` / `lint` / `ast:lint` / `format:check` — 모두 통과
+- `pnpm test:run` — 32 tests 전부 통과
+- `pnpm rust:clippy` — 경고 없음
+- `pnpm rust:test` — 4 passed
+- `pnpm build` — Vite 빌드 성공

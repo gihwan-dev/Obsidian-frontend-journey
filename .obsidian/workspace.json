@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/Resume with AI/개선 TODO.md",
+                "file": "Project/claude-gui-app/개발 TODO.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "개선 TODO"
+              "title": "개발 TODO"
             }
           }
         ],
@@ -262,8 +262,8 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
-    "Project/claude-gui-app/개발 TODO.md",
     "Project/Resume with AI/개선 TODO.md",
+    "Project/claude-gui-app/개발 TODO.md",
     "Project/Resume with AI/검색 성능 개선.md",
     "Project/claude-gui-app/docs/IMPLEMENTATION-SPEC.md",
     "Project/claude-gui-app/docs/SPEC.md",

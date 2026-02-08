@@ -21,9 +21,9 @@
   - WebGL 렌더러 적용 (Canvas 폴백)
   - fitAddon 리사이즈 처리 (호출 순서 주의: open → fit)
   - 터미널 폭 80-120컬럼 제한
-- [ ] [[Rust PTY Manager 기초 구현]]
+- [x] [[Rust PTY Manager 기초 구현]]
   - portable-pty 크레이트 통합
-  - tokio::spawn_blocking 비동기 래핑
+  - std::thread::spawn blocking I/O (tokio 불필요)
   - Tauri Channel을 통한 PTY ↔ xterm.js 스트리밍 연결
 - [ ] SQLite 데이터 저장소 초기화
   - rusqlite 크레이트 통합

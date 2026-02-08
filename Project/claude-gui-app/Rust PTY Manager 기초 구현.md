@@ -80,3 +80,36 @@ Rust에서 portable-pty 크레이트를 사용하여 가상 터미널(PTY) 생�
 **검증:**
 
 - `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, prettier, rust:fmt, clippy, 64/64 JS tests, 10/10 Rust tests)
+
+### 2026-02-08 버그 수정 및 테스트 강화
+
+**구현 내용:**
+
+- `usePty` 훅의 race condition 수정: `await ptySpawn()` 중 Exit 이벤트 도착 시 connected 상태로 덮어쓰는 버그
+- `TerminalPanel` 출력 버퍼링: writeRef 설정 전 도착한 PTY 출력이 유실되는 문제 해결
+- 인터랙티브 셸 spawn 시 login shell `-l` 플래그 추가 (셸 시작 파일 로드)
+- Rust 인터랙티브 셸 테스트 8개 + 프론트엔드 PTY 훅 테스트 10개 추가
+
+**수정 파일:**
+
+- `src/hooks/use-pty.ts` — `exitedRef` 가드로 race condition 방지, `channelRef`로 Channel GC 방지
+- `src/components/terminal/TerminalPanel.tsx` — `pendingOutputRef`로 출력 버퍼링 + flush 로직
+- `src-tauri/src/pty_manager.rs` — login shell `-l` 플래그, 테스트 헬퍼 2개 + 테스트 8개 추가
+
+**생성 파일:**
+
+- `src/hooks/use-pty.test.ts` — 프론트엔드 PTY 훅 테스트 10개 (spawn 상태 전환, 이벤트 처리, race condition 검증)
+
+**기술 결정:**
+
+- **`exitedRef` 가드 패턴**: spawn의 async/await 중 Channel 이벤트가 먼저 도착하는 race condition을 ref로 해결
+- **출력 버퍼링**: xterm.js Terminal 인스턴스 준비 전 PTY 출력을 배열에 버퍼링 후 일괄 전달
+- **login shell `-l` 플래그**: `CommandBuilder::new()`는 `is_default_prog=false`이므로 argv[0]에 `-` 접두사 미부여 → `-l` 플래그로 명시적 login shell 실행
+
+**미해결 사항:**
+
+- 실제 `pnpm tauri:dev` 런타임 동작 검증 필요 (테스트는 모두 통과하나 실제 앱 동작 미확인)
+
+**검증:**
+
+- `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, rust:fmt, clippy, 74/74 JS tests, 22/22 Rust tests)

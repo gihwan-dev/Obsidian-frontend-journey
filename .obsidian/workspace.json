@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/Resume with AI/개선 TODO.md",
+                "file": "Project/claude-gui-app/docs/SPEC.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "개선 TODO"
+              "title": "SPEC"
             }
           }
         ],
@@ -262,10 +262,14 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
+    "Project/claude-gui-app/README.md",
+    "Project/claude-gui-app/docs/SPEC.md",
+    "Project/Resume with AI/개선 TODO.md",
+    "Project/claude-gui-app/docs",
+    "Project/claude-gui-app",
     "Project/Resume with AI/검색 성능 개선.md",
     "Project/Resume with AI/사고 과정 마크다운 렌더링 적용.md",
     "Project/Resume with AI/GCP 예산 한도 설정.md",
-    "Project/Resume with AI/개선 TODO.md",
     "Project/Resume with AI/Sentry 에러 모니터링.md",
     "Project/Resume with AI/GA4 분석 이벤트 정비.md",
     "Project/Resume with AI/컨텍스트 인식 이력서.md",
@@ -288,10 +292,8 @@
     "Project/Resume with AI",
     "Project",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/마일스톤.md",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.png",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
     "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Untitled.base",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
@@ -305,9 +307,7 @@
     "Next.js/Pasted image 20260203114100.png",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
     "Exem/01-Projects/차세대-대시보드/위젯빌더",
-    "Exem/01-Projects/차세대-대시보드/WebEnv",
     "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.png",
-    "Exem/ClickUp-마이그레이션/업무환경개선/Infra 제어",
     "Next.js/Pasted image 20260130163620.png",
     "Next.js/Pasted image 20260130163714.png",
     "Next.js/Pasted image 20260130163636.png",

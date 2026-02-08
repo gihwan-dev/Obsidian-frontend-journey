@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/claude-gui-app/개발 TODO.md",
+                "file": "Project/claude-gui-app/docs/IMPLEMENTATION-SPEC.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "개발 TODO"
+              "title": "IMPLEMENTATION-SPEC"
             }
           }
         ],
@@ -263,6 +263,9 @@
   "active": "9213c15b37976120",
   "lastOpenFiles": [
     "Project/claude-gui-app/docs/SPEC.md",
+    "Project/claude-gui-app/개발 TODO.md",
+    "Project/claude-gui-app/docs/IMPLEMENTATION-SPEC.md",
+    "Project/claude-gui-app/기본 앱 레이아웃 & 네비게이션 셸.md",
     "Project/claude-gui-app/Claude 브랜드 테마 적용.md",
     "Project/claude-gui-app/알림 시스템 구현.md",
     "Project/claude-gui-app/키보드 단축키 & 커맨드 팔레트.md",
@@ -285,9 +288,6 @@
     "Project/claude-gui-app/멀티 세션 & 자동 포커스.md",
     "Project/claude-gui-app/세션별 설정 구현.md",
     "Project/claude-gui-app/Git Worktree 격리 시스템.md",
-    "Project/claude-gui-app/프로젝트 기반 세션 생성 관리 UI.md",
-    "Project/claude-gui-app/JSON 스트림 파싱 엔진.md",
-    "Project/claude-gui-app/Claude Code CLI 서브프로세스 연동.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",

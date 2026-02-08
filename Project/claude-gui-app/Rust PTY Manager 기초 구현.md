@@ -113,3 +113,61 @@ Rust에서 portable-pty 크레이트를 사용하여 가상 터미널(PTY) 생�
 **검증:**
 
 - `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, rust:fmt, clippy, 74/74 JS tests, 22/22 Rust tests)
+
+### 2026-02-08 StatusBar 동적 연결 상태 반영 및 진단 로깅
+
+**구현 내용:**
+
+- StatusBar가 항상 "연결 끊김"으로 하드코딩되던 문제 수정 — `useTerminalStore`의 `connectionStatus`/`sessionId`와 연동
+- Rust `channel.send()` 실패 시 에러 로깅 추가
+- 프론트엔드 Channel onmessage 및 TerminalPanel 데이터 파이프라인에 `console.debug` 진단 로깅 추가
+- PtyEvent JSON 직렬화 형태, Channel roundtrip, SpawnOptions 역직렬화, Rust JSON shape 매칭 테스트 추가
+
+**수정 파일:**
+
+- `src/components/layout/StatusBar.tsx` — `useTerminalStore`에서 연결 상태 읽어 동적 렌더링
+- `src/components/layout/StatusBar.test.tsx` — 상태별(connected/connecting/disconnected/error) 렌더링 테스트 보강
+- `locales/en.json`, `locales/ko.json` — `terminal.connecting`, `terminal.error` i18n 키 추가
+- `src-tauri/src/pty_manager.rs` — `channel.send()` 에러 로깅 + JSON 직렬화 검증 테스트 추가
+- `src/hooks/use-pty.ts` — Channel onmessage 진단 로깅(`debug()`) 추가
+- `src/hooks/use-pty.test.ts` — Rust serde JSON shape 매칭 테스트 3개 추가
+- `src/components/terminal/TerminalPanel.tsx` — 데이터 파이프라인 진단 로깅 추가
+
+**미해결 사항:**
+
+- ~~`logger.ts`의 destructured export에서 `this` 컨텍스트 유실~~ → 코드 리뷰에서 `.bind(logger)` 방식으로 수정 완료
+- 실제 `pnpm tauri:dev` 런타임 동작 검증 필요
+
+**검증:**
+
+- `pnpm check:all` — typecheck, lint, ast-grep, format, rust:fmt, clippy 통과 / JS 79/79, Rust 25/25 전부 통과
+
+### 2026-02-08 코드 리뷰 반영
+
+**구현 내용:**
+
+- Rust 테스트 2개 실패 수정 (PTY fd 소진으로 인한 `openpty` 에러)
+- `console.debug`/`console.error` → 프로젝트 `logger` 유틸리티로 교체
+- `TextEncoder`를 모듈 스코프 상수로 이동 (매 write 호출 시 재생성 방지)
+- `logger.ts`의 destructured export에 `.bind(logger)` 추가 (this 바인딩 보장)
+- `test_list_sessions`에서 누락된 세션 cleanup 추가
+
+**생성 파일:**
+
+- `src-tauri/.cargo/config.toml` — `RUST_TEST_THREADS=1` 설정 (PTY 테스트 직렬 실행)
+
+**수정 파일:**
+
+- `src/hooks/use-pty.ts` — `TextEncoder` 모듈 스코프 이동, `console.*` → `logger` 교체
+- `src/components/terminal/TerminalPanel.tsx` — `console.debug` → `debug()` logger 교체
+- `src/lib/logger.ts` — destructured export에 `.bind(logger)` 추가
+- `src-tauri/src/pty_manager.rs` — `test_list_sessions` 세션 cleanup 추가
+
+**기술 결정:**
+
+- **테스트 직렬 실행**: `test_session_limit`이 10개 PTY를 동시에 열어 병렬 테스트 시 시스템 PTY fd 소진 → `.cargo/config.toml`로 `RUST_TEST_THREADS=1` 설정
+- **모듈 스코프 TextEncoder**: `TextEncoder`는 stateless이므로 모듈 수준에서 한 번만 생성하여 재사용
+
+**검증:**
+
+- `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, rust:fmt, clippy, JS 79/79, Rust 25/25)

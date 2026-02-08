@@ -201,3 +201,46 @@ Rust에서 portable-pty 크레이트를 사용하여 가상 터미널(PTY) 생�
 **검증:**
 
 - `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, rust:fmt, clippy, JS 79/79, Rust 25/25)
+
+### 2026-02-08 코드 리뷰 반영 (3차) — 훅 분리, 에러 핸들링 강화, dead code 제거
+
+**구현 내용:**
+
+- TerminalPanel에서 PTY 연결/스폰 로직을 `usePtyConnection` 훅으로 추출 (127줄 → 60줄, ref 5개 → 0개)
+- `usePty` 훅의 `write`/`resize`에 `.catch()` 추가하여 unhandled promise rejection 방지
+- Rust `PtyManager.write()` 메서드에 Mutex blocking 위험 TODO 주석 추가 (다중 세션 시 고려사항)
+- reader thread의 의도적 detach 동작을 `PtySession` 필드 및 `kill()` 메서드에 주석으로 명시
+- 미사용 `use-line-buffer` 훅 및 테스트 삭제 (-195줄)
+
+**생성 파일:**
+
+- `src/hooks/use-pty-connection.ts` — PTY 연결 관리 훅 (auto-spawn, 출력 버퍼링, write/resize 래핑)
+
+**수정 파일:**
+
+- `src/components/terminal/TerminalPanel.tsx` — PTY 로직 제거, `usePtyConnection` 사용으로 단순화
+- `src/hooks/use-pty.ts` — `write`/`resize`에 `.catch()` 추가
+- `src-tauri/src/pty_manager.rs` — `write()` Mutex blocking TODO, reader thread detach 주석 추가
+- `src/components/terminal/TerminalPanel.test.tsx` — mock 경로 `use-pty` → `use-pty-connection` 변경
+- `src/components/layout/MainWindowContent.test.tsx` — mock 경로 변경
+
+**삭제 파일:**
+
+- `src/hooks/use-line-buffer.ts` — PTY 도입 후 미사용 (dead code)
+- `src/hooks/use-line-buffer.test.ts` — 위 파일의 테스트
+
+**기술 결정:**
+
+- **usePtyConnection 훅 추출**: TerminalPanel이 5개 ref + 5개 useEffect로 비대해졌으므로, PTY 연결 관심사를 분리하여 단일 책임 원칙 준수
+- **MAX_SPAWN_RETRIES 위치**: 컴포넌트 밖(usePtyConnection 모듈 스코프)으로 이동하여 렌더 시 재생성 방지
+- **use-line-buffer 삭제**: PTY 기반 실제 셸로 교체된 이후 어디에서도 import되지 않는 dead code
+
+**미해결 사항:**
+
+- 테스트 갭: Error 이벤트, kill(), unmount cleanup, SessionNotFound 처리 테스트 미작성
+- 실제 `pnpm tauri:dev` 런타임 동작 검증 필요
+- Mutex 단일 잠금 → 다중 세션 시 per-session lock 전환 고려
+
+**검증:**
+
+- `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, rust:fmt, clippy, JS 70/70, Rust 25/25)

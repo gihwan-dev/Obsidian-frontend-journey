@@ -171,3 +171,33 @@ Rust에서 portable-pty 크레이트를 사용하여 가상 터미널(PTY) 생�
 **검증:**
 
 - `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, rust:fmt, clippy, JS 79/79, Rust 25/25)
+
+### 2026-02-08 코드 리뷰 반영 (2차)
+
+**구현 내용:**
+
+- Rust reader thread EIO 조건에서 과도한 `ErrorKind::Other` 제거 — `raw_os_error() == Some(5)`만 체크
+- TerminalPanel spawn effect에서 `cols`/`rows` 의존성 제거 (resize 시 재spawn 방지), `getState()`로 최신 값 읽기
+- spawn 실패 시 최대 3회 재시도 제한 추가
+- `usePty` unmount cleanup에서 `sessionIdRef` null 처리로 double-kill 방지
+
+**수정 파일:**
+
+- `src-tauri/src/pty_manager.rs` — reader thread EIO 조건 축소 (`ErrorKind::Other` 제거)
+- `src/components/terminal/TerminalPanel.tsx` — spawn effect 의존성 정리, `MAX_SPAWN_RETRIES` 도입
+- `src/hooks/use-pty.ts` — unmount cleanup double-kill 방지
+
+**기술 결정:**
+
+- **EIO 조건 축소**: `ErrorKind::Other`는 EIO 외의 에러도 포함하므로 `raw_os_error() == Some(5)`만 체크하여 예상치 못한 에러가 정상 종료로 처리되는 것 방지
+- **spawn 의존성 정리**: `cols`/`rows` 변경 시 불필요한 재spawn 대신 resize 이벤트로 처리 (기존 resize effect가 담당)
+- **재시도 제한**: spawn 실패 무한 루프 방지를 위해 3회 상한 설정
+
+**미해결 사항:**
+
+- 테스트 갭: Error 이벤트, kill(), unmount cleanup, SessionNotFound 처리 테스트 미작성
+- 실제 `pnpm tauri:dev` 런타임 동작 검증 필요
+
+**검증:**
+
+- `pnpm check:all` 전체 통과 (typecheck, lint, ast-grep, format, rust:fmt, clippy, JS 79/79, Rust 25/25)

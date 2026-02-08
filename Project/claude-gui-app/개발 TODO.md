@@ -14,7 +14,7 @@
   - React + TypeScript + Vite 설정
   - Tauri v2 IPC 기본 구조 (invoke/emit/channel)
   - macOS 빌드 확인
-- [ ] [[기본 앱 레이아웃 & 네비게이션 셸]]
+- [x] [[기본 앱 레이아웃 & 네비게이션 셸]]
   - 사이드바 + 메인 영역 + 탭 구조
   - Zustand 상태 관리 초기 셋업
 - [ ] [[xterm.js 터미널 컴포넌트 통합]]

@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/DPM 대시보드/성능 이슈/TODO.md",
+                "file": "Exem/01-Projects/DPM 대시보드/성능 이슈/Deep Think 결과.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TODO"
+              "title": "Deep Think 결과"
             }
           }
         ],
@@ -260,8 +260,48 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "9213c15b37976120",
+  "floating": {
+    "id": "7cd94f02a73f61f0",
+    "type": "floating",
+    "children": [
+      {
+        "id": "f033aa7087638abd",
+        "type": "window",
+        "children": [
+          {
+            "id": "095e19b5abb9368a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ce1aab13577f8177",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://publish.obsidian.md/gihwan-dev/Exem/01-Projects/DPM+%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C/%EC%84%B1%EB%8A%A5+%EC%9D%B4%EC%8A%88/Deep+Think+%EA%B2%B0%EA%B3%BC",
+                    "title": "Deep Think 결과 - Gihwan-dev - Obsidian Publish",
+                    "mode": "webview"
+                  },
+                  "icon": "globe-2",
+                  "title": "Deep Think 결과 - Gihwan-dev - Obsidian Publish"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 2560,
+        "height": 1440,
+        "maximize": false,
+        "zoom": -0.5
+      }
+    ]
+  },
+  "active": "ce1aab13577f8177",
   "lastOpenFiles": [
+    "Exem/01-Projects/DPM 대시보드/성능 이슈/Deep Think 결과.md",
     "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/TODO.md",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
@@ -296,7 +336,6 @@
     "Project/claude-gui-app/스킬 사용 모니터링.md",
     "Project/claude-gui-app/컨텍스트 윈도우 시각화.md",
     "Project/claude-gui-app/토큰 비용 추적 & 예산 관리.md",
-    "Project/claude-gui-app/워크플로우 저장 공유 & 템플릿.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",

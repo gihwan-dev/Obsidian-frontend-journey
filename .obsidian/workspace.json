@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Deep think.md",
+                "file": "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/최종 계획.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deep think"
+              "title": "최종 계획"
             }
           }
         ],
@@ -262,8 +262,9 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Absolute + Flex 렌더링 전략.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Deep think.md",
+    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/최종 계획.md",
+    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Absolute + Flex 렌더링 전략.md",
     "Exem/01-Projects/Table 컴포넌트/성능 개선/측정 필요 리스트.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환",
     "Next.js/Pasted image 20260209173943.png",
@@ -303,7 +304,6 @@
     "Project/claude-gui-app/Claude 브랜드 테마 적용.md",
     "Project/claude-gui-app/알림 시스템 구현.md",
     "Project/claude-gui-app/키보드 단축키 & 커맨드 팔레트.md",
-    "Project/claude-gui-app/세션 히스토리.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",

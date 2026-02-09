@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/성능 개선/측정 필요 리스트.md",
+                "file": "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Deep think.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "측정 필요 리스트"
+              "title": "Deep think"
             }
           }
         ],
@@ -262,13 +262,16 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
+    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Absolute + Flex 렌더링 전략.md",
+    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Deep think.md",
+    "Exem/01-Projects/Table 컴포넌트/성능 개선/측정 필요 리스트.md",
+    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환",
     "Next.js/Pasted image 20260209173943.png",
     "Next.js/Pasted image 20260209173458.png",
     "Next.js/Pasted image 20260209172856.png",
     "Next.js/Pasted image 20260209172802.png",
     "Next.js/Pasted image 20260209172751.png",
     "Exem/01-Projects/Table 컴포넌트/성능 개선/파악한 성능 개선 필요 포인트.md",
-    "Exem/01-Projects/Table 컴포넌트/성능 개선/측정 필요 리스트.md",
     "Exem/01-Projects/DPM 대시보드/AlertLog 통합 스펙.md",
     "Next.js/Pasted image 20260209165915.png",
     "Next.js/Pasted image 20260209165749.png",
@@ -278,7 +281,6 @@
     "Exem/01-Projects/Table 컴포넌트/성능 개선/deep think.md",
     "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
-    "Next.js/Pasted image 20260209153237.png",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/Deep Think 결과.md",
     "Exem/01-Projects/Table 컴포넌트/성능 개선",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/TODO.md",
@@ -302,7 +304,6 @@
     "Project/claude-gui-app/알림 시스템 구현.md",
     "Project/claude-gui-app/키보드 단축키 & 커맨드 팔레트.md",
     "Project/claude-gui-app/세션 히스토리.md",
-    "Project/claude-gui-app/파일 트리 & 컨텍스트 관리 UI.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",
@@ -313,7 +314,6 @@
     "Exem/01-Projects/레거시",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링",
     "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
-    "CS/자바스크립트로 배우는 SICP",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Excalidraw/B.sori IA.canvas",

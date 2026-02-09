@@ -7,6 +7,8 @@ kanban-plugin: board
 ## Backlog
 
 - [ ] AlertLog 최소 높이 주기
+- [ ] AlertLog 기종별 스펙 차이 확인
+- [ ] AlertLog 관련 스펙 문서화 진행
 
 
 ## Doing

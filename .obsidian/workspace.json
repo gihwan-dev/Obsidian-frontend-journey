@@ -32,9 +32,9 @@
               "state": {
                 "file": "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
                 "viewState": {
-                  "x": 1281.7131112946156,
-                  "y": 1098.6953538749258,
-                  "zoom": -0.5628350061448909
+                  "x": 244.00522476370355,
+                  "y": 83.64041911597005,
+                  "zoom": 0.18863131757091553
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -265,13 +265,17 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
+    "Exem/01-Projects/DPM 대시보드/TODO.md",
+    "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
+    "Exem/01-Projects/DPM 대시보드/성능 이슈/Performance 분석 - 폴링.md",
+    "Exem/01-Projects/DPM 대시보드/성능 이슈/Performance 분석 - 리사이징.md",
+    "Exem/01-Projects/DPM 대시보드/성능 이슈/Live Metrics 분석.md",
+    "Exem/01-Projects/DPM 대시보드/성능 이슈",
     "Next.js/Pasted image 20260209124002.png",
     "Next.js/Pasted image 20260209123941.png",
     "Next.js/화면_기록_2026-02-06_오후_4.18.41.gif",
     "Next.js/화면_기록_2026-02-06_오후_4.16.56.gif",
     "Next.js/Pasted image 20260209113213.png",
-    "Exem/01-Projects/DPM 대시보드/TODO.md",
-    "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 생성 관리.canvas",
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더 리팩토링.md",
     "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더.canvas",
@@ -296,9 +300,6 @@
     "Project/claude-gui-app/토큰 비용 추적 & 예산 관리.md",
     "Project/claude-gui-app/워크플로우 저장 공유 & 템플릿.md",
     "Project/claude-gui-app/세션 간 컨텍스트 전달.md",
-    "Project/claude-gui-app/워크플로우 노드 타입 구현.md",
-    "Project/claude-gui-app/n8n 스타일 비주얼 노드 에디터.md",
-    "Project/claude-gui-app/사이클 관리 기능.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",
@@ -314,9 +315,7 @@
     "CS",
     "Next.js/Pasted image 20260203114100.png",
     "Exem/01-Projects/차세대-대시보드/WebEnv/webEnv-localStorage-교체-설명.excalidraw.png",
-    "Exem/01-Projects/차세대-대시보드/위젯빌더",
     "Exem/00-Inbox/webEnv-localStorage-교체-설명.excalidraw.png",
-    "Next.js/Pasted image 20260130163620.png",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",
     "Excalidraw/B.sori IA.canvas",

@@ -28,17 +28,14 @@
             "id": "9213c15b37976120",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
-                "viewState": {
-                  "x": 244.00522476370355,
-                  "y": 83.64041911597005,
-                  "zoom": 0.18863131757091553
-                }
+                "file": "Exem/01-Projects/DPM 대시보드/성능 이슈/TODO.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "2.9 작업 진행 내용"
+              "icon": "lucide-file",
+              "title": "TODO"
             }
           }
         ],
@@ -265,8 +262,9 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
-    "Exem/01-Projects/DPM 대시보드/TODO.md",
     "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
+    "Exem/01-Projects/DPM 대시보드/성능 이슈/TODO.md",
+    "Exem/01-Projects/DPM 대시보드/TODO.md",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/Performance 분석 - 폴링.md",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/Performance 분석 - 리사이징.md",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/Live Metrics 분석.md",
@@ -299,7 +297,6 @@
     "Project/claude-gui-app/컨텍스트 윈도우 시각화.md",
     "Project/claude-gui-app/토큰 비용 추적 & 예산 관리.md",
     "Project/claude-gui-app/워크플로우 저장 공유 & 템플릿.md",
-    "Project/claude-gui-app/세션 간 컨텍스트 전달.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",

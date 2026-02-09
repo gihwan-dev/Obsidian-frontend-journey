@@ -28,14 +28,17 @@
             "id": "9213c15b37976120",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Project/claude-gui-app/개발 TODO.md",
-                "mode": "preview",
-                "source": false
+                "file": "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
+                "viewState": {
+                  "x": -20,
+                  "y": 30,
+                  "zoom": -0.24892480641835818
+                }
               },
-              "icon": "lucide-file",
-              "title": "개발 TODO"
+              "icon": "lucide-layout-dashboard",
+              "title": "작업 진행 내용"
             }
           }
         ],
@@ -262,8 +265,17 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
-    "Project/Resume with AI/개선 TODO.md",
+    "Exem/01-Projects/DPM 대시보드/TODO.md",
+    "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
+    "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 생성 관리.canvas",
+    "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더 리팩토링.md",
+    "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더.canvas",
+    "Exem/01-Projects/ai-essence/TODO.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.png",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/초기 조사.md",
     "Project/claude-gui-app/개발 TODO.md",
+    "Project/Resume with AI/개선 TODO.md",
     "Project/Resume with AI/검색 성능 개선.md",
     "Project/claude-gui-app/docs/IMPLEMENTATION-SPEC.md",
     "Project/claude-gui-app/docs/SPEC.md",
@@ -282,25 +294,16 @@
     "Project/claude-gui-app/워크플로우 노드 타입 구현.md",
     "Project/claude-gui-app/n8n 스타일 비주얼 노드 에디터.md",
     "Project/claude-gui-app/사이클 관리 기능.md",
-    "Project/claude-gui-app/종료 조건 시스템.md",
-    "Project/claude-gui-app/루프 실행 엔진 & 자동 커밋.md",
-    "Project/claude-gui-app/세션 완료 후 자동 PR 생성.md",
-    "Project/claude-gui-app/체크포인트 Diff & 타임라인 뷰.md",
-    "Project/claude-gui-app/Git 기반 체크포인트 생성 롤백.md",
-    "Project/claude-gui-app/멀티 세션 & 자동 포커스.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",
     "Project",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/현 컴포넌트 구조 및 개선 이후 구조.png",
-    "Exem/01-Projects/DPM 대시보드/작업 진행 내용.canvas",
     "Untitled.base",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
     "Exem/01-Projects/레거시",
     "Exem/01-Projects/Table 컴포넌트/2차 리팩토링",
     "Exem/01-Projects/디자인-검증-자동화/아키텍쳐.png",
-    "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 빌더.canvas",
     "Exem/01-Projects/차세대-대시보드/WebEnv/전체 흐름.canvas",
     "CS/자바스크립트로 배우는 SICP",
     "CS",
@@ -312,7 +315,6 @@
     "Next.js/Pasted image 20260130163714.png",
     "Next.js/Pasted image 20260130163636.png",
     "Next.js/Pasted image 20260130163626.png",
-    "Exem/01-Projects/차세대-대시보드/위젯빌더/위젯 생성 관리.canvas",
     "Next.js/Pasted image 20260129102932.png",
     "Exem/차세대 대시보드/위젯 빌더.canvas",
     "Exem/차세대 대시보드/위젯 생성 관리.canvas",

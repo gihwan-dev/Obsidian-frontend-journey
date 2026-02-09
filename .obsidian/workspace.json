@@ -260,47 +260,9 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "floating": {
-    "id": "7cd94f02a73f61f0",
-    "type": "floating",
-    "children": [
-      {
-        "id": "f033aa7087638abd",
-        "type": "window",
-        "children": [
-          {
-            "id": "095e19b5abb9368a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ce1aab13577f8177",
-                "type": "leaf",
-                "state": {
-                  "type": "webviewer",
-                  "state": {
-                    "url": "https://publish.obsidian.md/gihwan-dev/Exem/01-Projects/DPM+%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C/%EC%84%B1%EB%8A%A5+%EC%9D%B4%EC%8A%88/Deep+Think+%EA%B2%B0%EA%B3%BC",
-                    "title": "Deep Think 결과 - Gihwan-dev - Obsidian Publish",
-                    "mode": "webview"
-                  },
-                  "icon": "globe-2",
-                  "title": "Deep Think 결과 - Gihwan-dev - Obsidian Publish"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 2560,
-        "height": 1440,
-        "maximize": false,
-        "zoom": -0.5
-      }
-    ]
-  },
-  "active": "ce1aab13577f8177",
+  "active": "0c81285cd13c3654",
   "lastOpenFiles": [
+    "Exem/01-Projects/Table 컴포넌트/성능 개선",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/Deep Think 결과.md",
     "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/TODO.md",

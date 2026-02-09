@@ -44,12 +44,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
+                "file": "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/TODO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. 함수를 이용한 추상화"
+              "title": "TODO"
             }
           }
         ],
@@ -276,11 +276,13 @@
   },
   "active": "0d681e05ecfa749a",
   "lastOpenFiles": [
+    "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/최종 계획.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/그룹 헤더 개선 방안.md",
-    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Absolute + Flex 렌더링 전략.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Deep think.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/TODO.md",
+    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Absolute + Flex 렌더링 전략.md",
+    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "Exem/01-Projects/Table 컴포넌트/성능 개선/측정 필요 리스트.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환",
     "Next.js/Pasted image 20260209173943.png",
@@ -316,13 +318,10 @@
     "Project/Resume with AI/검색 성능 개선.md",
     "Project/claude-gui-app/docs/IMPLEMENTATION-SPEC.md",
     "Project/claude-gui-app/docs/SPEC.md",
-    "Project/claude-gui-app/기본 앱 레이아웃 & 네비게이션 셸.md",
-    "Project/claude-gui-app/Claude 브랜드 테마 적용.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",
     "Project",
-    "Exem/01-Projects/Table 컴포넌트/2차 리팩토링/전체 흐름.canvas",
     "Untitled.base",
     "Exem/01-Projects/Table 컴포넌트/1차 리팩토링.canvas",
     "Exem/01-Projects/레거시",

@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/성능 개선/측정 필요 리스트.md",
+                "file": "Exem/01-Projects/Table 컴포넌트/성능 개선/deep think.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "측정 필요 리스트"
+              "title": "deep think"
             }
           }
         ],
@@ -262,8 +262,9 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
-    "Exem/01-Projects/Table 컴포넌트/성능 개선/파악한 성능 개선 필요 포인트.md",
     "Exem/01-Projects/Table 컴포넌트/성능 개선/측정 필요 리스트.md",
+    "Exem/01-Projects/Table 컴포넌트/성능 개선/deep think.md",
+    "Exem/01-Projects/Table 컴포넌트/성능 개선/파악한 성능 개선 필요 포인트.md",
     "Exem/01-Projects/DPM 대시보드/성능 이슈/Deep Think 결과.md",
     "Exem/01-Projects/Table 컴포넌트/성능 개선",
     "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
@@ -298,7 +299,6 @@
     "Project/claude-gui-app/파일 트리 & 컨텍스트 관리 UI.md",
     "Project/claude-gui-app/설정 관리 GUI.md",
     "Project/claude-gui-app/스킬 사용 모니터링.md",
-    "Project/claude-gui-app/컨텍스트 윈도우 시각화.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",

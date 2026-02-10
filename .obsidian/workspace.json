@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/최종 계획.md",
+                "file": "Exem/00-Inbox/클로드 사용량 분석.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "최종 계획"
+              "title": "클로드 사용량 분석"
             }
           },
           {
@@ -276,10 +276,12 @@
   },
   "active": "9213c15b37976120",
   "lastOpenFiles": [
+    "Next.js/Pasted image 20260210110645.png",
+    "Next.js/Pasted image 20260210110636.png",
+    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/최종 계획.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Absolute + Flex 렌더링 전략.md",
     "Exem/00-Inbox/클로드 사용량 분석.md",
     "Next.js/Pasted image 20260210103631.png",
-    "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/최종 계획.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/TODO.md",
     "Exem/01-Projects/Table 컴포넌트/3차 구조 전환/Deep think.md",
     "CS/자바스크립트로 배우는 SICP/1. 함수를 이용한 추상화.md",
@@ -297,7 +299,6 @@
     "Next.js/Pasted image 20260209165915.png",
     "Next.js/Pasted image 20260209165749.png",
     "Next.js/Pasted image 20260209165616.png",
-    "Next.js/Pasted image 20260209165514.png",
     "Exem/01-Projects/Table 컴포넌트/성능 개선/deep think.md",
     "Exem/01-Projects/DPM 대시보드/2.9 작업 진행 내용.canvas",
     "Exem/01-Projects/DPM 대시보드/TODO.md",
@@ -318,7 +319,6 @@
     "Project/Resume with AI/개선 TODO.md",
     "Project/Resume with AI/검색 성능 개선.md",
     "Project/claude-gui-app/docs/IMPLEMENTATION-SPEC.md",
-    "Project/claude-gui-app/docs/SPEC.md",
     "Project/claude-gui-app/docs",
     "Project/claude-gui-app",
     "Project/Resume with AI",

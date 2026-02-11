@@ -6,3 +6,6 @@
 
 # Ignore Smart Environment folder
 .smart-env
+
+# Ignore large video files
+*.mov

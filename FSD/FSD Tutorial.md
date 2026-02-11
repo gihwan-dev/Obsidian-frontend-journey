@@ -2262,4 +2262,3 @@ export default ArticleEditPage;
 이제 끝났다. 이제 다음과 같은 화면을 볼 수 있다.
 
 ![[Pasted image 20250210090952.png]]
-

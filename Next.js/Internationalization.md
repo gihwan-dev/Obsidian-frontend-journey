@@ -148,4 +148,4 @@ export default function Root({ children, params }) {
 }
 ```
 
-#Nextjs 
+#Nextjs

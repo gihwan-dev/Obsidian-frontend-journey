@@ -54,4 +54,4 @@ export const runtime = 'edge'; // 'nodejs' (default) | 'edge'
 
 만약 런타임 변수가 설정되지 않는다면 기본으로 `nodejs` 런타임이 사용된다.
 
-#Nextjs 
+#Nextjs

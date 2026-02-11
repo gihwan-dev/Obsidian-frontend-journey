@@ -90,4 +90,3 @@ for (let num of range) {
 이전에 가장 빠른 순회문은 무엇일까?에 대해 궁금증이 생겨 적은 글이다. 속도에 대한 부분 뿐만 아니라, 각 루프의 차이에 대해서 기술해 두었다.
 
 <iframe width="100%" height="800px" src="https://velog.io/@koreanthuglife/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%97%90%EC%84%9C-%EA%B0%80%EC%9E%A5-%EB%B9%A0%EB%A5%B8-%EB%B0%98%EB%B3%B5%EB%AC%B8-feat.-for...of-for...in-forEach-for"/>
-

@@ -46,4 +46,4 @@ Next.js 에서 라우트는 정적 또는 동적으로 렌더될 수 있다.
 
 한 레이아웃 또는 페이지에서의 모든 `fetch` 요청에 관한 설정은 segment config 객체를 통해 설정할 수 있다.
 
-#Nextjs 
+#Nextjs

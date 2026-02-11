@@ -266,4 +266,3 @@ function Person(name) {
 
 ## 참조
 [[Prototype drawing]]
-

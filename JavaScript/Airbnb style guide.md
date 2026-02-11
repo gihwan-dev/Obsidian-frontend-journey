@@ -582,4 +582,3 @@ const isJedi = getProp('jedi');
 ```js
 const superPoser = new SuperPower();
 ```
-

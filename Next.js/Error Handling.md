@@ -132,4 +132,4 @@ export default GlobalError;
 
 `next dev` 를 실행할 때 `error` 는 직렬화 되어 서버 컴포넌트에서 클라이언트 `error.js` 파일로 전달 될 것이다. 하지만 프로덕션에서는 에러 메세지가 `.digets(에러 메시지의 hash를 포함하는)` 와 함께 `error` 에 전달 될 것이다.
 
-#Nextjs 
+#Nextjs

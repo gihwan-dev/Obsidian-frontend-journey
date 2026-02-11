@@ -48,4 +48,3 @@ Blink와 V8은 웹 오디오, 데이터 베이스, GC 등을 다루기 위해 �
 스레드간의 통신을 위해서, PostTask API 기반의 메세지 패싱을 사용해야 한다. 다만 이러한 공유 메모리 프로그래밍은 성능을 위해 꼭 필요한 경우가 아니라면 권장하지 않는다.
 
 **![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcc1r9S3EIpDf5-ygdYcwlEAOz-7GhZWFeHxy55E-fqNPW5EF7bu0KdW5qGV0EVqVsikXZLe4IKexErr7s3-6bM6RZ3T3iMrZqoSUEM6TKXZ0vqm16YLEMjpBflF10QinKk0CAuZk1OJC6LcnrhN_gRk30?key=Et97q4nHQxscz-mVQ1bXfw)
-

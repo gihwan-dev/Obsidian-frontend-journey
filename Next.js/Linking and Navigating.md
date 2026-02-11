@@ -215,4 +215,4 @@ Prefetching 은 한 라우트를 방문하기 전에 백그라운드에서 prelo
 ## Focus and Scroll Management
 기본적으로 Next.js 는 네비게이션에서 변경된 세그먼트를 보여주기위해 스크롤된다.
 
-#Nextjs 
+#Nextjs

@@ -17,4 +17,3 @@
  <number> ::= <digit> | <letter>
  <integer> ::= <number> | <number><integer>
 ```
-

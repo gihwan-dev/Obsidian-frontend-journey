@@ -10,4 +10,3 @@ SGML은 많은 응용이 가능하도록 다양한 마크업 구문을 제공한
 	<ITALICS>this</ITALICS>
 </QUOTE>
 ```
-

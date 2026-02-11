@@ -281,4 +281,4 @@ export default async function Page() {
 ```
 
 ---
-#Nextjs 
+#Nextjs

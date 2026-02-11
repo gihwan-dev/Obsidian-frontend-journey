@@ -13,4 +13,3 @@ https://developer.mozilla.org/ko/docs/Web/Performance/How_browsers_work
 https://d2.naver.com/helloworld/9274593
 [Accelerated Rendering in Chrome](https://web.dev/articles/speed-layers#introducing_layers)
 [How brosser works](https://taligarsiel.com/Projects/howbrowserswork1.htm#Resources)
-

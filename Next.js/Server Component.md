@@ -441,4 +441,4 @@ export async function DashboardPage() {
 
 대신 데이터를 소비하는 컴포넌트마다 데이터 fetching 을 위치시키는것을 추천한다. 서버 컴포넌트에서는 fetch 요청의 중복이 자동으로 제거되므로, 각 루트 세그먼트는 중복없이 정확히 필요한 데이터만 요청할 수 있다. Next.js는 `fetch` 캐쉬로부터 같은 값을 읽는다.([[Caching Data]])
 
-#Nextjs 
+#Nextjs

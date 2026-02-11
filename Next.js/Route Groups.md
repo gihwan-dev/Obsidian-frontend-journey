@@ -36,4 +36,4 @@ Route groups 은 폴더명을 괄호로 감싸서 만들 수 있다: `(folderNam
     - 라우트 그룹 안의 라우트는 같은 URL 경로를 가지면 안된다.
     - 여러 루트 레이아웃으로의 navigating은 full page load를 동반한다. 물론 여러 루트 레이아웃들 사이의 navigating에게만 적용된다.
 
-#Nextjs 
+#Nextjs

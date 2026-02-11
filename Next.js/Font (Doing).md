@@ -86,4 +86,4 @@ const inter = Inter({ subsets: ['latin'] })
 
 ## Using Multiple Fonts
 
-#Nextjs 
+#Nextjs

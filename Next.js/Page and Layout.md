@@ -148,4 +148,4 @@ export default function Page() {
     
     루트 레이아웃에 `<title>` 또는 `<meta>` 와 같은 `<head>` 태그를 수동으로 추가해서는 안된다. 대신에 **Metadata API** 를 사용해서 다루어야 한다.
 
-#Nextjs 
+#Nextjs

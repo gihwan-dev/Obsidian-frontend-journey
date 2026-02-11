@@ -100,4 +100,4 @@ export default Layout;
 
 위 화면을 보게 된다.
 
-#Nextjs 
+#Nextjs

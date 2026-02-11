@@ -520,4 +520,4 @@ Actions는 엘리먼트의 `action` 프로퍼티를 통해 정의된다. 주로 
 
 `redirect`, `revalidatePate`, 또는 `revalidateTag` 를 호출하거나 데이터를 변형시키는 서버 액션을 의미한다.
 
-#Nextjs 
+#Nextjs

@@ -312,4 +312,4 @@ export const preferredRegion = 'auto';
 ```
 
 
-#Nextjs 
+#Nextjs

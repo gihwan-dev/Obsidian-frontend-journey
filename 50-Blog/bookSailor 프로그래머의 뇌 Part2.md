@@ -11,7 +11,6 @@ tags:
 description: 프로그래머의뇌 Part2 내용 정리
 ---
 
-## Table of contents
 
 ## Chapter 5 코드를 더 깊이 있게 이해하기
 

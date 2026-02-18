@@ -14,8 +14,6 @@ description: 이번 개인 프로젝트에 `GraphQL`과 `Relay`를 적용하기 
 
 깃허브에서 인증을 하는 방식은 `Github App` 과 `Github OAuth` 가 있다. 이 포스팅에서는 특히 `Github App`에 대해서 알아보도록 하겠다.
 
-## Table of contents
-
 ## Github App
 
 `Github App`은 `Github`의 기능과 상호 작용하고 확장하기 위해 사용할 수 있다. `Github App`의 일반적인 사용 사례는 다음과 같다.

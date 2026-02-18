@@ -12,7 +12,6 @@ tags:
 description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter9 요약본입니다.
 ---
 
-## Table of contents
 
 ## 패턴 2: 추상화 벽
 

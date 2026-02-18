@@ -11,7 +11,7 @@ tags:
 description: 프로그래머의뇌 Part1 내용 정리
 ---
 
-## Table of contents
+
 
 ## Chapter 1 코딩 중 겪는 혼란에 대한 이해
 

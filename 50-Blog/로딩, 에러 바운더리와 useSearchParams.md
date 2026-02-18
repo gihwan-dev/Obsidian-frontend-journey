@@ -14,8 +14,6 @@ description: 이번 앱을 개발하며 에러 바운더리와 서스펜스 바�
 
 이번에 깃허브 대시보드 앱을 개발하기로 마음먹었고, 내가 가진 역량을 모두 쏟아 내보자고 생각하게 되었다. 그 중에서도 에러, 로딩 상태를 확실하게 관리하기로 했고 `ErrorBoundary` 와 `SuspenseBoundary`를 적극 활용 해봤다.
 
-## Table of contents
-
 ## ErrorBoundary
 
 `error.js`를 통해 에러 관리를 할 수 있겠지만, 각 컴포넌트에 맞게 에러를 좀 더 세부적으로 관리하고 싶었다.

@@ -12,7 +12,6 @@ tags:
 description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter8 요약본입니다.
 ---
 
-## Table of contents
 
 ## 소프트웨어 설계란 무엇인가?
 

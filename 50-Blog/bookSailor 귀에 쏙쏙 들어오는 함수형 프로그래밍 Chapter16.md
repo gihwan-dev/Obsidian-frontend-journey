@@ -12,7 +12,6 @@ tags:
 description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter16 요약본입니다.
 ---
 
-## Table of contents
 
 ## 좋은 타임라인의 원칙
 

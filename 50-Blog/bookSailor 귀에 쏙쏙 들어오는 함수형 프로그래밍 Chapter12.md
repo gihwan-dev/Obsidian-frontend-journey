@@ -12,7 +12,6 @@ tags:
 description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter12 요약본입니다.
 ---
 
-## Table of contents
 
 이번 장에서는 함수형 도구 `reduce`, `map`, `filter` 에 대해서 배웠다.
 

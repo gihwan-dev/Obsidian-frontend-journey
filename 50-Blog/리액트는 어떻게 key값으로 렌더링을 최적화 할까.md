@@ -11,7 +11,6 @@ tags:
 description: 리액트는 어떻게 key값으로 렌더링을 최적화 하는지 궁금해 분석해본 글입니다.
 ---
 
-## Table of contents
 
 ## 리액트의 diffing 알고리즘
 

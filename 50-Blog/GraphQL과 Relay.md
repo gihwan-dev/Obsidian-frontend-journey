@@ -14,7 +14,6 @@ description: 이번 개인 프로젝트에 `GraphQL`과 `Relay`를 적용하기 
 
 `Relay`는 리액트에서 `GraphQL` 요청을 관리해 주는 라이브러리다. 물론 `React` 이외에서도 사용할 수 있으나 기능에 제한이 있다.
 
-## Table of contents
 
 ## 특징
 

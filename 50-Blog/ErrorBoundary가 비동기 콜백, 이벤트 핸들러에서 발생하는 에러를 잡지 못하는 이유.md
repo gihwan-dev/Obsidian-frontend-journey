@@ -12,7 +12,6 @@ tags:
 description: 에러바운더리가 비동기, 이벤트 핸들러에서 에러를 잡지 못하는 이유에 대해 deep dive 해보았습니다.
 ---
 
-## Table of contents
 
 ## ErrorBoundary 란?
 

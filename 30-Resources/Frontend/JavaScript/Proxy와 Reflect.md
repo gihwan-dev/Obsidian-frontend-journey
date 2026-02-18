@@ -46,13 +46,13 @@ Proxy는 특수 객체다. 프로퍼티가 없다. `handler`가 비어있으면 
 |`[[Delete]]`|`deleteProperty`|`delete` 연산자가 동작할 때|
 |`[[Call]]`|`apply`|함수를 호출할 때|
 |`[[Construct]]`|`construct`|`new` 연산자가 동작할 때|
-|`[[GetPrototypeOf]]`|`getPrototypeOf`|[Object.getPrototypeOf](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)|
-|`[[SetPrototypeOf]]`|`setPrototypeOf`|[Object.setPrototypeOf](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)|
-|`[[IsExtensible]]`|`isExtensible`|[Object.isExtensible](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/isExtensible)|
-|`[[PreventExtensions]]`|`preventExtensions`|[Object.preventExtensions](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/preventExtensions)|
-|`[[DefineOwnProperty]]`|`defineProperty`|[Object.defineProperty](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/defineProperty), [Object.defineProperties](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/defineProperties)|
-|`[[GetOwnProperty]]`|`getOwnPropertyDescriptor`|[Object.getOwnPropertyDescriptor](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor), `for..in`, `Object.keys/values/entries`|
-|`[[OwnPropertyKeys]]`|`ownKeys`|[Object.getOwnPropertyNames](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames), [Object.getOwnPropertySymbols](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols), `for..in`, `Object/keys/values/entries`|
+|`[[GetPrototypeOf]]`|`getPrototypeOf`|[Object.getPrototypeOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)|
+|`[[SetPrototypeOf]]`|`setPrototypeOf`|[Object.setPrototypeOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)|
+|`[[IsExtensible]]`|`isExtensible`|[Object.isExtensible](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)|
+|`[[PreventExtensions]]`|`preventExtensions`|[Object.preventExtensions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)|
+|`[[DefineOwnProperty]]`|`defineProperty`|[Object.defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), [Object.defineProperties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties)|
+|`[[GetOwnProperty]]`|`getOwnPropertyDescriptor`|[Object.getOwnPropertyDescriptor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor), `for..in`, `Object.keys/values/entries`|
+|`[[OwnPropertyKeys]]`|`ownKeys`|[Object.getOwnPropertyNames](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames), [Object.getOwnPropertySymbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols), `for..in`, `Object/keys/values/entries`|
 
 > [!Note] 규칙
 >

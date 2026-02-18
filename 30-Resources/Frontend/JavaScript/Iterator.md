@@ -83,7 +83,7 @@ for (let num of range) {
 }
 ```
 
-이터레이터란 시퀀스를 정의하고 종료시와 반환값을 잠재적으로 정의하는 객체다. 두 개의 속성( `value`, `done` )을 반환하는 next() 메서드를 사용해 [이터레이터 프로토콜](https://developer.mozilla.org/ko/docs/Web/30-Resources/Frontend/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)을 구현해야 한다.
+이터레이터란 시퀀스를 정의하고 종료시와 반환값을 잠재적으로 정의하는 객체다. 두 개의 속성( `value`, `done` )을 반환하는 next() 메서드를 사용해 [이터레이터 프로토콜](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)을 구현해야 한다.
 
 ## 다양한 순회 방식의 차이점
 

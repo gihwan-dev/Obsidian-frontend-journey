@@ -7,7 +7,7 @@ https://taligarsiel.com/Projects/howbrowserswork1.htm#Style_Computation
 https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work
 https://web.dev/articles/howbrowserswork?hl=ko
 https://www.w3.org/TR/CSS2/box.html
-https://developer.mozilla.org/ko/docs/Web/30-Resources/30-Resources/Frontend/General/CSS/float
+https://developer.mozilla.org/ko/docs/Web/CSS/float
 https://chromium.googlesource.com/chromium/src/+/main/docs/process_model_and_site_isolation.md
 https://developer.mozilla.org/ko/docs/Web/Performance/How_browsers_work
 https://d2.naver.com/helloworld/9274593

@@ -1,4 +1,4 @@
-> [원문](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Inheritance_and_the_prototype_chain)
+> [원문](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 프로그래밍에서 _inheritance_(상속)는 부모로부터 자식에게 특성을 전달하여 새로운 코드가 기존 코드의 기능을 재사용하고 확장할 수 있게 하는 것을 의미합니다. JavaScript는 객체를 사용하여 상속을 구현합니다. 각 객체는 _prototype_(프로토타입)이라 불리는 다른 객체에 대한 내부 링크를 가지고 있습니다. 이 프로토타입 객체도 자신만의 프로토타입을 가지며, 이는 `null`을 프로토타입으로 가진 객체에 도달할 때까지 계속됩니다. 정의에 따르면, `null`은 프로토타입을 가지지 않으며 이 **prototype chain**(프로토타입 체인)의 최종 링크 역할을 합니다. 프로토타입 체인의 어떤 멤버든 변경하거나 심지어 런타임에 프로토타입을 교체하는 것도 가능하므로, 정적 디스패칭(static dispatching)과 같은 개념은 JavaScript에 존재하지 않습니다.
 

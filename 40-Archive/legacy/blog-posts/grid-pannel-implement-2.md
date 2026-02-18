@@ -156,7 +156,7 @@ export const addMouseMoveEvent = ({
 1. 실제 보여지는 그리드 패널 위에 가상의 그리드 패널을 추가한다.
 2. 가상의 그리드 패널에 `grid-area` 스타일을 이용해서 행과 열의 시작과 끝 값으로 위젯을 정해진 위치에 추가한다.
 
-[`grid-area`에 대한 정보](https://developer.mozilla.org/en-US/docs/Web/30-Resources/30-Resources/Frontend/General/CSS/grid-area)
+[`grid-area`에 대한 정보](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area)
 
 ### 가상 그리드 패널 추가
 

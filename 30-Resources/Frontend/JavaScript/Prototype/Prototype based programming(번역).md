@@ -244,7 +244,7 @@ bobby.woof() // output is 'Bobby woofs!'
 
 [2] Lieberman, H. (1986). Using Prototypical Objects to Implement Shared Behavior in Object Oriented Systems. Retrieved from [http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html](http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html)
 
-[3] Mozilla. (2018). Inheritance and the prototype chain. Retrieved from [https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Inheritance_and_the_prototype_chain)
+[3] Mozilla. (2018). Inheritance and the prototype chain. Retrieved from [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 [4] Atchley, D. (2015). Understanding Prototypes, Delegation & Composition. Retrieved from [https://www.datchley.name/understanding-prototypes-delegation-composition/](https://www.datchley.name/understanding-prototypes-delegation-composition/)
 
@@ -252,7 +252,7 @@ bobby.woof() // output is 'Bobby woofs!'
 
 [6] Bruni, C. (2017). Fast Properties in V8. Retrieved from [https://v8project.blogspot.com/2017/08/fast-properties.html](https://v8project.blogspot.com/2017/08/fast-properties.html)
 
-[7] Mozilla. (2018). Classes. Retrieved from [https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Classes](https://developer.mozilla.org/en-US/docs/Web/30-Resources/Frontend/JavaScript/Reference/Classes)
+[7] Mozilla. (2018). Classes. Retrieved from [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 [8] Bevacqua, N. (2015). ES6 Classes in Depth. Retrieved from [https://ponyfoo.com/articles/es6-classes-in-depth](https://ponyfoo.com/articles/es6-classes-in-depth)
 

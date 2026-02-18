@@ -1,0 +1,171 @@
+# Migration Report (2026-02-18)
+
+## Summary
+- Moved directories: 29
+- Moved files: 556
+- Updated text files (path replacement): 34
+- 이미지저장소 referenced -> _assets: 205
+- 이미지저장소 unreferenced -> 40-Archive/legacy/assets: 41
+- Move conflicts handled: 0
+
+## Directory Moves
+- `AI` -> `30-Resources/AI`
+- `Prompt Engineering` -> `30-Resources/AI/Prompt-Engineering`
+- `3D` -> `30-Resources/Graphics/3D`
+- `Algorithm` -> `30-Resources/Computer-Science/Algorithms`
+- `Browser` -> `30-Resources/Frontend/Browser`
+- `CSS` -> `30-Resources/Frontend/CSS`
+- `Clean Code` -> `30-Resources/Software-Engineering/Clean-Code`
+- `DB` -> `30-Resources/Data/Database`
+- `Design` -> `30-Resources/Design`
+- `Design System` -> `30-Resources/Frontend/Design-System`
+- `Excalidraw` -> `30-Resources/Visual/Excalidraw`
+- `FSD` -> `30-Resources/Frontend/Architecture/FSD`
+- `Frontend` -> `30-Resources/Frontend/General`
+- `HTML` -> `30-Resources/Frontend/HTML`
+- `JavaScript` -> `30-Resources/Frontend/JavaScript`
+- `Javascript Prototype` -> `30-Resources/Frontend/JavaScript/Prototype`
+- `Network` -> `30-Resources/Computer-Science/Network`
+- `React.js` -> `30-Resources/Frontend/Frameworks/React`
+- `Rust` -> `30-Resources/Languages/Rust`
+- `Rust-wasm` -> `30-Resources/Languages/Rust/Rust-wasm`
+- `Tanstack Table` -> `30-Resources/Frontend/Libraries/TanStack-Table`
+- `Test` -> `30-Resources/Software-Engineering/Testing`
+- `TypeScript` -> `30-Resources/Frontend/TypeScript`
+- `Vue` -> `30-Resources/Frontend/Frameworks/Vue`
+- `W3C Recommendation` -> `30-Resources/Web-Standards/W3C-Recommendation`
+- `데이터 시각화` -> `30-Resources/Data/Data-Visualization`
+- `번역글` -> `30-Resources/Reading/Translations`
+- `함수형프로그래밍` -> `30-Resources/Computer-Science/Functional-Programming`
+- `이전 블로그 글들` -> `40-Archive/legacy/blog-posts`
+
+## Notes
+- Next.js: `.md` moved to `30-Resources/Frontend/Frameworks/Next.js`, non-md attachments moved to `_assets`.
+- `attachmentFolderPath` set to `_assets`; `daily-notes.folder` set to `00-Inbox/Daily`.
+
+## Conflicts / Exceptions
+- None
+
+## File Moves (sample, first 120)
+- `Next.js/Pasted image 20250504132033.png` -> `_assets/Pasted image 20250504132033.png`
+- `Next.js/Pasted image 20260211074959.png` -> `_assets/Pasted image 20260211074959.png`
+- `Next.js/Images.md` -> `30-Resources/Frontend/Frameworks/Next.js/Images.md`
+- `Next.js/Pasted image 20250504151225.png` -> `_assets/Pasted image 20250504151225.png`
+- `Next.js/Pasted image 20260130163714.png` -> `_assets/Pasted image 20260130163714.png`
+- `Next.js/Pasted image 20260129102538.png` -> `_assets/Pasted image 20260129102538.png`
+- `Next.js/Pasted image 20250506150226.png` -> `_assets/Pasted image 20250506150226.png`
+- `Next.js/Pasted image 20250201121514.png` -> `_assets/Pasted image 20250201121514.png`
+- `Next.js/Pasted image 20250212215731.png` -> `_assets/Pasted image 20250212215731.png`
+- `Next.js/Pasted image 20250203083900.png` -> `_assets/Pasted image 20250203083900.png`
+- `Next.js/Pasted image 20250803210144.png` -> `_assets/Pasted image 20250803210144.png`
+- `Next.js/Pasted image 20250215145441.png` -> `_assets/Pasted image 20250215145441.png`
+- `Next.js/Pasted image 20250503173619.png` -> `_assets/Pasted image 20250503173619.png`
+- `Next.js/Pasted image 20250303172835.png` -> `_assets/Pasted image 20250303172835.png`
+- `Next.js/Pasted image 20260209145844.png` -> `_assets/Pasted image 20260209145844.png`
+- `Next.js/Pasted image 20251119075756.png` -> `_assets/Pasted image 20251119075756.png`
+- `Next.js/Pasted image 20250504130037.png` -> `_assets/Pasted image 20250504130037.png`
+- `Next.js/Pasted image 20250201122236.png` -> `_assets/Pasted image 20250201122236.png`
+- `Next.js/Pasted image 20250211093056.png` -> `_assets/Pasted image 20250211093056.png`
+- `Next.js/Pasted image 20250725131241.png` -> `_assets/Pasted image 20250725131241.png`
+- `Next.js/Pasted image 20250211092200.png` -> `_assets/Pasted image 20250211092200.png`
+- `Next.js/Pasted image 20250725131137.png` -> `_assets/Pasted image 20250725131137.png`
+- `Next.js/Pasted image 20260209150454.png` -> `_assets/Pasted image 20260209150454.png`
+- `Next.js/Pasted image 20250727004734.png` -> `_assets/Pasted image 20250727004734.png`
+- `Next.js/Pasted image 20260209145701.png` -> `_assets/Pasted image 20260209145701.png`
+- `Next.js/Pasted image 20250916071915.png` -> `_assets/Pasted image 20250916071915.png`
+- `Next.js/Pasted image 20260212124817.png` -> `_assets/Pasted image 20260212124817.png`
+- `Next.js/Pasted image 20250211093256.png` -> `_assets/Pasted image 20250211093256.png`
+- `Next.js/Pasted image 20250211092149.png` -> `_assets/Pasted image 20250211092149.png`
+- `Next.js/Pasted image 20250503171554.png` -> `_assets/Pasted image 20250503171554.png`
+- `Next.js/Pasted image 20250413145624.png` -> `_assets/Pasted image 20250413145624.png`
+- `Next.js/Pasted image 20250508193648.png` -> `_assets/Pasted image 20250508193648.png`
+- `Next.js/Pasted image 20250201121258.png` -> `_assets/Pasted image 20250201121258.png`
+- `Next.js/Pasted image 20250413145744.png` -> `_assets/Pasted image 20250413145744.png`
+- `Next.js/Pasted image 20250504153801.png` -> `_assets/Pasted image 20250504153801.png`
+- `Next.js/Pasted image 20250218082916.png` -> `_assets/Pasted image 20250218082916.png`
+- `Next.js/Pasted image 20250211092954.png` -> `_assets/Pasted image 20250211092954.png`
+- `Next.js/Pasted image 20260209172802.png` -> `_assets/Pasted image 20260209172802.png`
+- `Next.js/Pasted image 20260212115832.png` -> `_assets/Pasted image 20260212115832.png`
+- `Next.js/Pasted image 20251119075816.png` -> `_assets/Pasted image 20251119075816.png`
+- `Next.js/Pasted image 20260210142322.png` -> `_assets/Pasted image 20260210142322.png`
+- `Next.js/Pasted image 20250201123259.png` -> `_assets/Pasted image 20250201123259.png`
+- `Next.js/Edge and Node.js Runtimes.md` -> `30-Resources/Frontend/Frameworks/Next.js/Edge and Node.js Runtimes.md`
+- `Next.js/Pasted image 20260203114100.png` -> `_assets/Pasted image 20260203114100.png`
+- `Next.js/Pasted image 20250503173347.png` -> `_assets/Pasted image 20250503173347.png`
+- `Next.js/Pasted image 20260209165749.png` -> `_assets/Pasted image 20260209165749.png`
+- `Next.js/Pasted image 20251119075751.png` -> `_assets/Pasted image 20251119075751.png`
+- `Next.js/Pasted image 20250803205003.png` -> `_assets/Pasted image 20250803205003.png`
+- `Next.js/Pasted image 20260209172751.png` -> `_assets/Pasted image 20260209172751.png`
+- `Next.js/Pasted image 20250201120355.png` -> `_assets/Pasted image 20250201120355.png`
+- `Next.js/이후(간략).mov` -> `_assets/이후(간략).mov`
+- `Next.js/Pasted image 20250201121507.png` -> `_assets/Pasted image 20250201121507.png`
+- `Next.js/Pasted image 20250727005604.png` -> `_assets/Pasted image 20250727005604.png`
+- `Next.js/Pasted image 20260122104758.png` -> `_assets/Pasted image 20260122104758.png`
+- `Next.js/Pasted image 20251119075803.png` -> `_assets/Pasted image 20251119075803.png`
+- `Next.js/Pasted image 20260209165402.png` -> `_assets/Pasted image 20260209165402.png`
+- `Next.js/Pasted image 20260129102932.png` -> `_assets/Pasted image 20260129102932.png`
+- `Next.js/Pasted image 20250201121659.png` -> `_assets/Pasted image 20250201121659.png`
+- `Next.js/Pasted image 20260210103631.png` -> `_assets/Pasted image 20260210103631.png`
+- `Next.js/Pasted image 20250201122346.png` -> `_assets/Pasted image 20250201122346.png`
+- `Next.js/Pasted image 20250504123437 1.png` -> `_assets/Pasted image 20250504123437 1.png`
+- `Next.js/Pasted image 20251119075815.png` -> `_assets/Pasted image 20251119075815.png`
+- `Next.js/Pasted image 20250201121317.png` -> `_assets/Pasted image 20250201121317.png`
+- `Next.js/Pasted image 20260209165616.png` -> `_assets/Pasted image 20260209165616.png`
+- `Next.js/Pasted image 20250201123312.png` -> `_assets/Pasted image 20250201123312.png`
+- `Next.js/Pasted image 20250203083939.png` -> `_assets/Pasted image 20250203083939.png`
+- `Next.js/Pasted image 20250217081900.png` -> `_assets/Pasted image 20250217081900.png`
+- `Next.js/Pasted image 20250201120343.png` -> `_assets/Pasted image 20250201120343.png`
+- `Next.js/Pasted image 20260209173458.png` -> `_assets/Pasted image 20260209173458.png`
+- `Next.js/Pasted image 20250803192448.png` -> `_assets/Pasted image 20250803192448.png`
+- `Next.js/Pasted image 20250725130833.png` -> `_assets/Pasted image 20250725130833.png`
+- `Next.js/Pasted image 20250803210801.png` -> `_assets/Pasted image 20250803210801.png`
+- `Next.js/Pasted image 20250217082549.png` -> `_assets/Pasted image 20250217082549.png`
+- `Next.js/Pasted image 20260122115326.png` -> `_assets/Pasted image 20260122115326.png`
+- `Next.js/Pasted image 20250503155235.png` -> `_assets/Pasted image 20250503155235.png`
+- `Next.js/Pasted image 20251119075800.png` -> `_assets/Pasted image 20251119075800.png`
+- `Next.js/Pasted image 20250508192829.png` -> `_assets/Pasted image 20250508192829.png`
+- `Next.js/Pasted image 20250503160729.png` -> `_assets/Pasted image 20250503160729.png`
+- `Next.js/Pasted image 20250504132745.png` -> `_assets/Pasted image 20250504132745.png`
+- `Next.js/Pasted image 20260209150350.png` -> `_assets/Pasted image 20260209150350.png`
+- `Next.js/Pasted image 20250504122525.png` -> `_assets/Pasted image 20250504122525.png`
+- `Next.js/Pasted image 20250504135717.png` -> `_assets/Pasted image 20250504135717.png`
+- `Next.js/Pasted image 20250201121615.png` -> `_assets/Pasted image 20250201121615.png`
+- `Next.js/Pasted image 20250503154602.png` -> `_assets/Pasted image 20250503154602.png`
+- `Next.js/Pasted image 20250201123228.png` -> `_assets/Pasted image 20250201123228.png`
+- `Next.js/Pasted image 20250215144304.png` -> `_assets/Pasted image 20250215144304.png`
+- `Next.js/Pasted image 20250503173518.png` -> `_assets/Pasted image 20250503173518.png`
+- `Next.js/Pasted image 20250201121211.png` -> `_assets/Pasted image 20250201121211.png`
+- `Next.js/Pasted image 20260209124002.png` -> `_assets/Pasted image 20260209124002.png`
+- `Next.js/Pasted image 20250804085335.png` -> `_assets/Pasted image 20250804085335.png`
+- `Next.js/Pasted image 20250212200808.png` -> `_assets/Pasted image 20250212200808.png`
+- `Next.js/Pasted image 20250201115349.png` -> `_assets/Pasted image 20250201115349.png`
+- `Next.js/Pasted image 20250504151455.png` -> `_assets/Pasted image 20250504151455.png`
+- `Next.js/Pasted image 20250413144016.png` -> `_assets/Pasted image 20250413144016.png`
+- `Next.js/Pasted image 20260212124645.png` -> `_assets/Pasted image 20260212124645.png`
+- `Next.js/Pasted image 20250503153839.png` -> `_assets/Pasted image 20250503153839.png`
+- `Next.js/Pasted image 20250210090952.png` -> `_assets/Pasted image 20250210090952.png`
+- `Next.js/Pasted image 20250201121402.png` -> `_assets/Pasted image 20250201121402.png`
+- `Next.js/Pasted image 20250214223741.png` -> `_assets/Pasted image 20250214223741.png`
+- `Next.js/Pasted image 20250804085042.png` -> `_assets/Pasted image 20250804085042.png`
+- `Next.js/Pasted image 20250217080925.png` -> `_assets/Pasted image 20250217080925.png`
+- `Next.js/Pasted image 20260212115854.png` -> `_assets/Pasted image 20260212115854.png`
+- `Next.js/Pasted image 20250803173229.png` -> `_assets/Pasted image 20250803173229.png`
+- `Next.js/Pasted image 20250304091956.png` -> `_assets/Pasted image 20250304091956.png`
+- `Next.js/Pasted image 20250201120332.png` -> `_assets/Pasted image 20250201120332.png`
+- `Next.js/Pasted image 20250725125718.png` -> `_assets/Pasted image 20250725125718.png`
+- `Next.js/Pasted image 20250201120441.png` -> `_assets/Pasted image 20250201120441.png`
+- `Next.js/Pasted image 20250413144001.png` -> `_assets/Pasted image 20250413144001.png`
+- `Next.js/Pasted image 20251030072204.png` -> `_assets/Pasted image 20251030072204.png`
+- `Next.js/Pasted image 20250201121429.png` -> `_assets/Pasted image 20250201121429.png`
+- `Next.js/Middleware.md` -> `30-Resources/Frontend/Frameworks/Next.js/Middleware.md`
+- `Next.js/이후(칼럼 드래그 앤 드롭).gif` -> `_assets/이후(칼럼 드래그 앤 드롭).gif`
+- `Next.js/Pasted image 20250504152946.png` -> `_assets/Pasted image 20250504152946.png`
+- `Next.js/Caching Data.md` -> `30-Resources/Frontend/Frameworks/Next.js/Caching Data.md`
+- `Next.js/Pasted image 20260209145954.png` -> `_assets/Pasted image 20260209145954.png`
+- `Next.js/Pasted image 20250803210525.png` -> `_assets/Pasted image 20250803210525.png`
+- `Next.js/Pasted image 20250211093344.png` -> `_assets/Pasted image 20250211093344.png`
+- `Next.js/Revalidating.md` -> `30-Resources/Frontend/Frameworks/Next.js/Revalidating.md`
+- `Next.js/Pasted image 20250201121411.png` -> `_assets/Pasted image 20250201121411.png`
+- `Next.js/Pasted image 20260210142433.png` -> `_assets/Pasted image 20260210142433.png`
+- ... 436 more entries omitted
+

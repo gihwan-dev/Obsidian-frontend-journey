@@ -5,6 +5,7 @@ title: bookSailor | 프로그래머의 뇌 Part1
 slug: book-study-programmers-brain-part-1
 featured: false
 draft: false
+published: "2024-09-15T05:11:59.373Z"
 tags:
   - bookSailor
   - study

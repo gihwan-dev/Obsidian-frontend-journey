@@ -5,6 +5,7 @@ title: Do Cookies Expires? Expiration and Session Cookies Explained(번역)
 slug: how-browser-manage-cookie
 featured: true
 draft: false
+published: "2024-09-17T07:25:40.973Z"
 tags:
   - browser
   - cookie

@@ -5,6 +5,7 @@ title: CORS 문제 해결하기
 slug: about-cors
 featured: true
 draft: false
+published: "2024-05-20T07:29:07.121Z"
 tags:
   - development
   - cors

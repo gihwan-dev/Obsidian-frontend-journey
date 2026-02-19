@@ -5,6 +5,7 @@ title: bookSailor | 프로그래머의 뇌 Part4
 slug: book-study-programmers-brain-part-4
 featured: false
 draft: false
+published: "2024-10-06T12:06:43.115Z"
 tags:
   - bookSailor
   - study

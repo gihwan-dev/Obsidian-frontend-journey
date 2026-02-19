@@ -5,6 +5,7 @@ title: 리액트는 어떻게 동작할까? - chapter 1
 slug: how-works-react-deep-dive
 featured: true
 draft: false
+published: "2024-10-04T11:00:40.050Z"
 tags:
   - react
   - deep

@@ -5,6 +5,7 @@ title: ErrorBoundary가 비동기 콜백, 이벤트 핸들러에서 발생하는
 slug: deep-dive-into-react-error-boundary
 featured: true
 draft: false
+published: "2024-06-24T04:43:18.010Z"
 tags:
   - study
   - deep-dive

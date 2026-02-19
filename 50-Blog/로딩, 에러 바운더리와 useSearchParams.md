@@ -5,6 +5,7 @@ title: 로딩, 에러 바운더리와 useSearchParams
 slug: error-resolve
 featured: true
 draft: false
+published: "2024-05-21T09:11:54.130Z"
 tags:
   - development
   - error

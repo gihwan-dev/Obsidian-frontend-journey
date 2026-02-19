@@ -5,6 +5,7 @@ title: Rust를 공부하며 배운점 (with JS)
 slug: what-i-learn-with-rust
 featured: true
 draft: false
+published: "2024-08-29T13:42:34.320Z"
 tags:
   - rust
   - javascript

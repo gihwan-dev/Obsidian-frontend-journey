@@ -5,6 +5,7 @@ title: GraphQL과 Relay
 slug: graphql-relay
 featured: false
 draft: false
+published: "2024-05-15T05:13:58.008Z"
 tags:
   - development
   - graphql

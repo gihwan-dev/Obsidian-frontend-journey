@@ -41,3 +41,11 @@
 - `20-Areas`: 커리어/업무 영역별로 지속 관리하는 책임 범위
 - `30-Resources`: 프론트엔드 중심 개념, 레퍼런스, 번역/학습 노트
 - `50-Blog`: 외부 공유 가능한 글을 통합 관리하는 발행 허브
+
+## Blog 날짜 정렬 자동화
+- 스크립트: `scripts/sync-blog-published-and-index.mjs`
+- 목적:
+  - `50-Blog` 글 frontmatter에 `published` 값을 통일/보정
+  - `published` 최신순 인덱스 파일 `50-Blog/00-블로그-인덱스.md` 생성
+- 실행:
+  - `node scripts/sync-blog-published-and-index.mjs`

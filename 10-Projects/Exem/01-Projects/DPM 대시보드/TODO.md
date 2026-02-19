@@ -6,18 +6,20 @@ kanban-plugin: board
 
 ## Backlog
 
-- [ ] 행 순서 변경 기능 추가
+- [ ] 검토 및 마무리 ^p1ocwf
+- [ ] 버그 재현
 
 
 ## Doing
 
-- [ ] [[AlertLog Detail UI 개선]]
 
 
 ## Done
 
 - [ ] 테이블 마이그레이션
+- [ ] [[AlertLog Detail UI 개선]]
 - [ ] AlertLog 기종별 스펙 차이 확인
+- [ ] 행 순서 변경 기능 추가
 - [ ] AlertLog 최소 높이 주기
 - [ ] [Alert Log 개선](https://app.clickup.com/t/86euk20vc)
 - [ ] 리팩토링

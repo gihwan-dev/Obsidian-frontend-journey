@@ -1,7 +1,7 @@
 ---
 id: ACH-20260213-001
 createdAt: 2026-02-15
-updatedAt: 2026-02-15
+updatedAt: 2026-02-19
 company: Exem
 project: Table 컴포넌트
 role: Unknown
@@ -11,9 +11,14 @@ evidenceScore: 4
 tags: [architecture, reliability, table-component]
 sources:
   - 10-Projects/Exem/01-Projects/Table 컴포넌트/설계/아키텍쳐 변경 - 20260213.md
+  - 00-Inbox/Daily/2026-02-12.md
 evidenceSnippets:
   - source: 10-Projects/Exem/01-Projects/Table 컴포넌트/설계/아키텍쳐 변경 - 20260213.md
     quote: "`ColumnResizePolicy` Feature가 TanStack Table 확장 지점에 추가되면서 리사이즈 계산의 중심이 정책 모듈로 이동했다."
+  - source: 00-Inbox/Daily/2026-02-12.md
+    quote: "컬럼 리사이즈 정책을 `우측 캐스케이드 + Flex Basis` 단방향 모델로 고정하고, 왼쪽 컬럼 불변 원칙을 유지하기로 결정했다."
+  - source: 00-Inbox/Daily/2026-02-12.md
+    quote: "Table 리사이즈 정책이 코드/테스트/문서에서 같은 모델로 정렬되어 회귀 원인 추적이 쉬워졌다."
 openQuestions:
   - 적용 전/후 리사이즈 실패율 또는 사용자 오류 재현률은 어떻게 변했는가?
   - 다단 그룹 헤더 환경에서 히트박스 개선의 체감 지표(재시도 횟수, 조작 시간)는 있는가?
@@ -34,6 +39,7 @@ ColumnResizePolicy 도입으로 리사이즈 계산을 정책 모듈로 분리�
 ## Results
 - 리사이즈 세션 수명주기와 one-way 폭 분배 규칙이 별도 경계로 정리됐다.
 - 다단 그룹 헤더에서 핸들 높이/히트박스 처리 일관성을 확보할 수 있는 구조로 전환됐다.
+- 코드/테스트/문서 기준을 단일 모델로 정렬해 회귀 원인 추적이 쉬워졌다.
 
 ## Evidence
 - 10-Projects/Exem/01-Projects/Table 컴포넌트/설계/아키텍쳐 변경 - 20260213.md

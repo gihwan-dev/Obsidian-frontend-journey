@@ -12,6 +12,7 @@ kanban-plugin: board
 
 ## Doing
 
+- [ ] 패키지 버전 업데이트
 
 
 ## Done

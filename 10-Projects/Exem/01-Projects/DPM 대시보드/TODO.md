@@ -6,17 +6,17 @@ kanban-plugin: board
 
 ## Backlog
 
-- [ ] 검토 및 마무리 ^p1ocwf
 - [ ] 버그 재현
 
 
 ## Doing
 
-- [ ] 패키지 버전 업데이트
+- [ ] 검토 및 마무리 ^p1ocwf
 
 
 ## Done
 
+- [ ] 패키지 버전 업데이트
 - [ ] 테이블 마이그레이션
 - [ ] [[AlertLog Detail UI 개선]]
 - [ ] AlertLog 기종별 스펙 차이 확인

@@ -222,7 +222,7 @@ The palette relies on alpha channels for the glass effect. Values below assume a
 
 **Key Elements:**
 - **Sidebar Profile:** Top-left. 48px avatar circle with pulsing ring border (Green=Idle, Purple=Thinking). Name: "Glass-01".
-- **Thinking Level Slider:** Vertical slider in sidebar. Range 1-5. Visual: Frosted track, glowing cyan thumb. Label: "Depth: Deep".
+- **Thinking Level Slider:** Vertical slider in sidebar. Range 1-3 (Quick / Standard / Deep). Visual: Frosted track, glowing cyan thumb. Label: "Depth: Deep".
 - **Parallel Thinking Tabs:** Located inside the chat stream.
     - **Container:** Horizontal flex row.
     - **Tab:** `160px` x `120px` glass card.
@@ -333,4 +333,3 @@ The palette relies on alpha channels for the glass effect. Values below assume a
 2.  **[Screen 2] Deep Think Overlay:** Implements the complex data visualization and `D2Coding` typography hierarchy.
 3.  **[Screen 4] Code/Artifact:** focused on the syntax highlighting and "IDE-lite" features.
 4.  **[Screen 3] Settings:** Standard form elements styled to match the glass aesthetic.
-

@@ -143,7 +143,7 @@
 
 에이전트들은 코드를 작성하거나 결론을 내리기 전에, MCP를 통해 제공된 도구들을 자율적으로 활용하여 정보의 공백을 메웁니다.
 
-- **지식 베이스 탐색:** 프로젝트의 전반적인 구조나 히스토리를 파악하기 위해, 단순한 로컬 파일 읽기를 넘어 GitHub에 호스팅된 Obsidian 볼트(Vault) 같은 지식 관리 시스템의 마크다운 문서를 직접 조회하고 검색하는 도구를 활용하여 초기 가설의 정확도를 높입니다.
+- **지식 베이스 탐색:** v1에서는 **프로젝트 루트 내부의 코드/문서/히스토리**를 우선 탐색하여 초기 가설의 정확도를 높입니다. (외부 검색/원격 지식베이스는 vNext)
     
 - **환경 분석:** `npm list`, `git status` 등의 명령어를 실행하여 현재 프로젝트의 의존성과 상태를 스스로 파악합니다.
     
@@ -184,9 +184,9 @@
 Deep Think의 Thought Tree는 **모델이 출력한 텍스트를 파싱해서 만들지 않습니다.** Rust 오케스트레이터가 발행하는 **실행 이벤트(Execution Trace)** 를 기반으로 FE가 트리를 구성합니다.
 
 - **Reasoning 원문 비저장/비노출:** 워커는 Chain-of-thought 원문 대신, 단계별 1~2줄 `progress summary` 또는 최종 `thought summary`만 남깁니다.
-- **Tool 이벤트는 사실 기반:** `tool.started` → `tool.stdout|tool.stderr` → `tool.finished`로 기록하여, “무엇을 실행했고 무엇이 나왔는지”가 재현 가능하게 남습니다.
-- **idempotent 적용:** 이벤트에는 `runId/workerId/seq`를 포함해 중복/역순 수신에도 UI 상태가 망가지지 않게 합니다.
-- **Cancel 규칙:** `cancel_run` 또는 워커별 Stop 시, 해당 워커(및 tool child process)를 OS 레벨로 중단(TERM→KILL)하고 `cancelling`→`canceled` 이벤트로 상태를 확정합니다.
+- **Tool 이벤트는 사실 기반:** “시작 → (출력/진행)* → 종료” 형태로 기록하여, “무엇을 실행했고 무엇이 나왔는지”가 재현 가능하게 남습니다.
+- **idempotent 적용:** 이벤트에는 `runId/workerId/seq` 같은 식별자/순서를 포함해 중복/역순 수신에도 UI 상태가 망가지지 않게 합니다.
+- **Cancel 규칙:** `cancel_run` 또는 워커별 Stop 시, 해당 워커(및 하위 작업)를 OS 레벨로 중단하고 상태를 `cancelling`→`canceled`로 확정합니다.
 
 ---
 

@@ -67,53 +67,41 @@ v1에서는 백엔드가 다음 Tool을 **표준 인터페이스(MCP)** 로 제�
   - `fs.apply_patch` (쓰기 작업의 기본 경로)
 - **shell**
   - `shell.run` (allowlist + timeout + streaming)
-  - `shell.cancel` (toolCallId 기반 child process kill)
+  - `shell.cancel` (진행 중인 실행 중단)
 - **git** (선택: v1 포함 권장)
   - `git.status` / `git.diff` / `git.log` (또는 `shell.run` allowlist로 대체)
 
 **Project Root Sandbox (v1 필수):**
-- 모든 path는 `realpath`로 canonicalize 후, **프로젝트 루트 하위인지 검사**합니다.
-- symlink로 루트 밖을 가리키는 경우도 차단합니다.
-- `shell.run`은 `cwd=projectRoot` 고정 + 명령 allowlist로 제한합니다. (`rm`, `sudo`, 네트워크 설치/전송 계열 등은 기본 금지)
+- 모든 경로/작업은 **프로젝트 루트 하위로만 제한**합니다. (경로 탈출 및 symlink escape 차단)
+- `shell.run`은 `cwd=projectRoot` 고정 + 명령 allowlist/timeout/output cap으로 제한합니다. (위험/네트워크 계열 기본 금지)
 
 ### C. 이벤트 정규화 & 라우팅 (`Event Normalizer`)
 
 프론트엔드는 모델의 원문(Chain-of-thought)을 파싱하지 않고, 백엔드가 발행하는 이벤트 스트림만 소비합니다.
 
-**권장 이벤트 최소 스키마(예시):**
+**권장 이벤트 최소 필드:**
+- `runId`, `workerId`
+- `seq` (run 단위 단조 증가; 중복/역순 수신에도 idempotent 적용)
+- `type` (assistant stream / tool lifecycle / run state 등)
+- `payload` (type별 데이터)
 
-```json
-{
-  "runId": "run_123",
-  "workerId": "worker_a",
-  "seq": 42,
-  "ts": "2026-02-20T12:34:56.789Z",
-  "type": "tool.stdout",
-  "payload": {
-    "toolCallId": "tool_999",
-    "text": "stdout line..."
-  }
-}
-```
-
-- `seq`는 run 단위 단조 증가로 **중복/역순 수신에도 idempotent** 하게 적용할 수 있게 합니다.
-- Tool 실행은 `tool.started` → `tool.stdout|tool.stderr`(0..n) → `tool.finished`로 표현합니다.
+Tool 실행은 “시작 → (출력/진행)* → 종료”로 이벤트를 분리하여, UI가 안정적으로 상태를 재구성할 수 있게 합니다.
 
 ### D. 병렬 에이전트 오케스트레이션 (`Multi-Agent Orchestrator`)
 
 Deep Think는 "Run(질문 1회)" 안에서 다수 워커를 병렬로 돌리고, 마지막에 Judge가 병합합니다.
 
 - **Run/Worker 모델:** `runId` 아래 `workerId`(A/B/C…)를 고정하고, 워커별 이벤트를 분리해 수집합니다.
-- **Actor 권장:** `Arc<Mutex<HashMap<...>>>` 대신 워커당 Task(Actor) + `mpsc`로 상태를 캡슐화하면, `Mutex`를 잡은 채 `await`하는 데드락을 피하기 쉽습니다.
+- **Actor 권장:** 공유 락을 크게 잡기보다, 워커별 Task(Actor)로 상태를 캡슐화하면 데드락을 피하고 수명이 명확해집니다.
 - **Judge 단계:** 워커 결과(요약 + 증거 + 실패 원인)를 모아 Judge 워커에 전달해 최종 요약/병합을 생성합니다.
 
 ### E. Cancel / 타임아웃 / 예산 (`Cancellation & Budgeting`)
 
 v1 Cancel은 “프로토콜 지원 여부”와 무관하게 **OS 레벨 중단**을 기본으로 둡니다.
 
-- `cancel_run(runId)` → 해당 run의 **모든 워커 프로세스 kill(TERM→KILL)** → 상태를 `cancelling`→`canceled`로 확정 이벤트 발행
-- `shell.run` 등 Tool 실행도 `toolCallId -> child process`를 추적해 함께 kill
-- Tool별 `timeout_ms`를 기본 제공하고, timeout 시 `tool.finished(timedOut=true)`로 정리합니다.
+- `cancel_run(runId)` → 해당 run의 모든 워커/하위 작업을 중단(graceful terminate → force kill) → 상태를 `cancelling`→`canceled`로 확정 이벤트 발행
+- Tool 실행도 함께 중단할 수 있도록 추적합니다.
+- Tool별 timeout을 기본 제공하고, timeout 시 정리 이벤트를 남깁니다.
 
 ```mermaid
 sequenceDiagram
@@ -133,8 +121,8 @@ sequenceDiagram
   BE-->>UI: agent_update(events)
 
   UI->>BE: invoke cancel_run(runId)
-  BE->>P: SIGTERM → SIGKILL
-  BE->>W: SIGTERM → SIGKILL
+  BE->>P: terminate
+  BE->>W: terminate
   BE-->>UI: run.cancelling → run.canceled
 ```
 

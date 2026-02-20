@@ -2,6 +2,8 @@
 
 위키나 협업 툴에 바로 붙여넣어 활용하실 수 있도록, UI/UX 설계 명세서를 작성해 드립니다.
 
+https://stitch.withgoogle.com/projects/9780979268607718145
+
 ---
 
 # 데스크탑 AI 채팅 앱 UI/UX 설계 명세서

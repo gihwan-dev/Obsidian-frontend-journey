@@ -5,8 +5,7 @@ class ASTEvaluation(Scene):
         # 폰트 설정 (Mac 환경의 경우 맑은 고딕이나 AppleGothic 등 지원되는 폰트 사용)
         font_name = "AppleGothic"
 
-        # 1. 상단 타이틀
-        title = Text("ABSTRACT SYNTAX TREE", font=font_name, font_size=24, color=LIGHT_GREY, letter_spacing=0.2)
+        title = Text("ABSTRACT SYNTAX TREE", font=font_name, font_size=24, color=LIGHT_GREY)
         title.to_edge(UP, buff=0.5)
         
         # 2. 표현식 (수식)

@@ -7,6 +7,7 @@ kanban-plugin: board
 ## Backlog
 
 - [ ] 버그 재현
+- [ ] 초기 locationInfo 의 no-content 응답시 에러 발생하는 상황 수정
 
 
 ## Doing

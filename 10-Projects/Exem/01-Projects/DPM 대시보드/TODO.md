@@ -6,8 +6,8 @@ kanban-plugin: board
 
 ## Backlog
 
+- [ ] 검토 및 마무리 ^p1ocwf
 - [ ] 버그 재현
-- [ ] 초기 locationInfo 의 no-content 응답시 에러 발생하는 상황 수정
 - [ ] AlertLog 기본적으로 전체, 인스턴스 선택 콤보박스 만들어서 인스턴스 Alert 칼럼 클릭해서 들어가면 콤보박스 값을 해당 인스턴스로(서비스 단위도 고민)
 - [ ] AlertLog 창에서 히스토리  토글 두고 히스토리 그리드로(M5 스펙 참고)
 	
@@ -17,7 +17,7 @@ kanban-plugin: board
 
 ## Doing
 
-- [ ] 검토 및 마무리 ^p1ocwf
+- [ ] 초기 locationInfo 의 no-content 응답시 에러 발생하는 상황 수정
 
 
 ## Done

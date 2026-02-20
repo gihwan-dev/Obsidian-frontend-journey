@@ -179,6 +179,15 @@
 - **Thought Summary 생성:** 최종 답변과 함께, Judge 에이전트가 어떤 워커의 아이디어를 왜 채택했고 어떤 과정을 거쳤는지 요약한 텍스트를 생성하여 프론트엔드의 '사고 과정' UI에 전달합니다.
     
 
+## 7. Execution Trace (Thought Tree) 이벤트 모델
+
+Deep Think의 Thought Tree는 **모델이 출력한 텍스트를 파싱해서 만들지 않습니다.** Rust 오케스트레이터가 발행하는 **실행 이벤트(Execution Trace)** 를 기반으로 FE가 트리를 구성합니다.
+
+- **Reasoning 원문 비저장/비노출:** 워커는 Chain-of-thought 원문 대신, 단계별 1~2줄 `progress summary` 또는 최종 `thought summary`만 남깁니다.
+- **Tool 이벤트는 사실 기반:** `tool.started` → `tool.stdout|tool.stderr` → `tool.finished`로 기록하여, “무엇을 실행했고 무엇이 나왔는지”가 재현 가능하게 남습니다.
+- **idempotent 적용:** 이벤트에는 `runId/workerId/seq`를 포함해 중복/역순 수신에도 UI 상태가 망가지지 않게 합니다.
+- **Cancel 규칙:** `cancel_run` 또는 워커별 Stop 시, 해당 워커(및 tool child process)를 OS 레벨로 중단(TERM→KILL)하고 `cancelling`→`canceled` 이벤트로 상태를 확정합니다.
+
 ---
 
 이렇게 FE, BE, 에이전트 워크플로우까지 총 3개의 설계 문서가 모두 완성되었습니다. 관심사를 철저히 분리해 두었기 때문에, 앞으로 실제 코드를 구현하실 때 각 문서를 지침서 삼아 헷갈림 없이 개발을 진행하실 수 있을 것입니다.

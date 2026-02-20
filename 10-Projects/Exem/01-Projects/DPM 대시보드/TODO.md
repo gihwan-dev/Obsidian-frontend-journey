@@ -13,6 +13,7 @@ kanban-plugin: board
 	
 	Note: 히스토리는 클라이언트 메모리에서 데이터를 쌓고, Log는 실시간성
 - [ ] Clear 기능
+- [ ] 현재 AlertLog는 실시간 데이터인지? History 로그 만들어야 할거 같은데 이거는 어떻게 하는지?
 
 
 ## Doing

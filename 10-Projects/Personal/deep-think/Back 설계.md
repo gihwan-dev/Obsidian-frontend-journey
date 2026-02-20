@@ -6,7 +6,7 @@
 
 ## 1. 개요 및 기술 스택
 
-이 백엔드는 Tauri 프레임워크 기반의 Rust 환경에서 동작하며, 로컬 CLI 에이전트(Codex, Claude Code)의 실행 상태를 관리하고 프론트엔드와 통신하는 **MCP(Model Context Protocol) 클라이언트이자 오케스트레이터**입니다.
+이 백엔드는 Tauri 프레임워크 기반의 Rust 환경에서 동작하며, 로컬 CLI 에이전트(Codex, Claude Code)의 실행 상태를 관리하고 프론트엔드와 통신하는 **MCP(Model Context Protocol) 기반 Tool 서버이자 오케스트레이터**입니다.
 
 - **코어 언어:** Rust
     
@@ -21,42 +21,128 @@
 
 ## 2. 핵심 모듈 및 아키텍처
 
-### A. 프로비저닝 및 프로세스 매니저 (`Process Manager`)
+이 프로젝트의 핵심 결정은 **"에이전트(LLM 실행기)와 도구 실행을 분리"**하는 것입니다.
 
-CLI 도구들을 단순한 텍스트 I/O가 아닌, 독립적인 MCP 서버(백그라운드 프로세스)로 띄우고 생명주기를 관리합니다.
+- Codex/Claude Code는 "추론/결정/도구 호출"만 수행합니다.
+- 실제 파일/쉘/Git 작업은 Rust 백엔드가 제공하는 **기본 제공 Tool**로만 수행합니다.
+- 프론트엔드는 Rust가 발행하는 **Execution Trace 이벤트**로 Thought Tree를 구성합니다. (모델 텍스트 파싱 금지)
 
-- **비동기 실행:** `tokio::process::Command`를 사용하여 에이전트 프로세스를 Non-blocking으로 실행합니다.
-    
-- **파이프 연결:** `Stdio::piped()`를 통해 프로세스의 `stdin`, `stdout`을 Rust와 연결하여 JSON-RPC 메시지가 오가는 통로를 확보합니다.
-    
-- **Graceful Shutdown:** 사용자가 앱을 종료하거나 에이전트를 전환할 때, 좀비 프로세스나 메모리 누수가 발생하지 않도록 하위 프로세스들을 안전하게 종료(Kill)합니다.
-    
+```mermaid
+flowchart LR
+  UI["React UI"] <-->|"invoke / event"| BE["Tauri Rust Backend"]
 
-### B. MCP 클라이언트 및 JSON-RPC 라우터 (`Protocol Handler`)
+  subgraph BE["Backend"]
+    ORCH["Run Orchestrator"]
+    AD["Agent Driver<br/>(Codex / Claude)"]
+    TOOLS["MCP Tool Server<br/>(deepthink-tools)"]
+    REG["Tool Registry + Policy<br/>(root sandbox, allowlist, timeout)"]
+  end
 
-정규식을 이용한 텍스트 파싱의 불안정성을 제거하고, 오직 구조화된 프로토콜 통신만 담당합니다.
+  UI -->|"send_message / cancel_run"| ORCH
+  ORCH --> AD
+  AD -->|"stream output"| ORCH
 
-- **타입 정의 (Entities):** MCP 스펙에 맞춘 Request, Response, Notification 타입들을 `serde` 구조체로 엄격하게 정의합니다.
-    
-- **비동기 메시지 루프:** Tokio의 비동기 채널(`mpsc`)과 스트림 읽기를 활용해, 에이전트의 `stdout`에서 들어오는 JSON 데이터를 끊임없이 수신하고 역직렬화합니다.
-    
-- **메시지 라우팅:** 들어온 JSON의 `id`나 `method`를 분석하여 이것이 사용자의 질문에 대한 응답인지, 아니면 에이전트가 스스로 도구를 실행하겠다고 알리는 상태 알림(Notification)인지 구분합니다.
-    
+  AD <-->|"MCP tools/list + tools/call"| TOOLS
+  TOOLS --> REG
+  REG --> OS["OS (fs / processes / git)"]
 
-### C. 병렬 에이전트 동기화 (Multi-Agent Sync)
+  ORCH -->|"AgentEvent stream"| UI
+```
 
-'Deep Think' 모방을 위해 프론트엔드가 요구하는 '다중 에이전트 병렬 실행'을 인프라 레벨에서 지원합니다.
+### A. 에이전트 프로세스 매니저 (`Agent Runner / Driver`)
 
-- **다중 세션 관리:** `Arc<Mutex<HashMap<SessionId, McpClient>>>` 형태로 여러 워커(Worker) 에이전트의 상태를 스레드 안전하게 관리합니다.
-    
-- **비동기 조인:** `tokio::join!` 또는 `tokio::spawn`을 통해 3개의 에이전트를 동시에 실행시키고, 각자의 I/O 스트림이 메인 스레드를 블로킹하지 않도록 독립적으로 처리합니다.
-    
+Codex, Claude Code를 **워커 프로세스**로 실행하고, 출력 스트림을 파싱해 이벤트로 정규화합니다.
 
-### D. Tauri IPC 인터페이스 (`Event Broadcaster`)
+- **비동기 실행:** `tokio::process::Command`로 워커를 Non-blocking 실행합니다.
+- **stdout/stderr 드레이닝:** 버퍼가 차서 멈추는 문제를 막기 위해 둘 다 지속적으로 비웁니다.
+- **스트리밍 파싱:** 가능하면 CLI가 제공하는 JSON 스트리밍 포맷(JSONL/stream-json 등)을 사용하고, 불가하면 최소한 라인 프레이밍을 강제합니다.
+- **Graceful Shutdown:** 앱 종료/Cancel 시 워커를 안전하게 종료(TERM→KILL)합니다.
+
+### B. 기본 제공 Tool 서버 (`DeepThink Tools MCP Server`)
+
+v1에서는 백엔드가 다음 Tool을 **표준 인터페이스(MCP)** 로 제공합니다. 워커는 이 Tool만 사용할 수 있고, 백엔드가 정책을 집행합니다.
+
+- **fs**
+  - `fs.read` / `fs.list` / `fs.search`
+  - `fs.apply_patch` (쓰기 작업의 기본 경로)
+- **shell**
+  - `shell.run` (allowlist + timeout + streaming)
+  - `shell.cancel` (toolCallId 기반 child process kill)
+- **git** (선택: v1 포함 권장)
+  - `git.status` / `git.diff` / `git.log` (또는 `shell.run` allowlist로 대체)
+
+**Project Root Sandbox (v1 필수):**
+- 모든 path는 `realpath`로 canonicalize 후, **프로젝트 루트 하위인지 검사**합니다.
+- symlink로 루트 밖을 가리키는 경우도 차단합니다.
+- `shell.run`은 `cwd=projectRoot` 고정 + 명령 allowlist로 제한합니다. (`rm`, `sudo`, 네트워크 설치/전송 계열 등은 기본 금지)
+
+### C. 이벤트 정규화 & 라우팅 (`Event Normalizer`)
+
+프론트엔드는 모델의 원문(Chain-of-thought)을 파싱하지 않고, 백엔드가 발행하는 이벤트 스트림만 소비합니다.
+
+**권장 이벤트 최소 스키마(예시):**
+
+```json
+{
+  "runId": "run_123",
+  "workerId": "worker_a",
+  "seq": 42,
+  "ts": "2026-02-20T12:34:56.789Z",
+  "type": "tool.stdout",
+  "payload": {
+    "toolCallId": "tool_999",
+    "text": "stdout line..."
+  }
+}
+```
+
+- `seq`는 run 단위 단조 증가로 **중복/역순 수신에도 idempotent** 하게 적용할 수 있게 합니다.
+- Tool 실행은 `tool.started` → `tool.stdout|tool.stderr`(0..n) → `tool.finished`로 표현합니다.
+
+### D. 병렬 에이전트 오케스트레이션 (`Multi-Agent Orchestrator`)
+
+Deep Think는 "Run(질문 1회)" 안에서 다수 워커를 병렬로 돌리고, 마지막에 Judge가 병합합니다.
+
+- **Run/Worker 모델:** `runId` 아래 `workerId`(A/B/C…)를 고정하고, 워커별 이벤트를 분리해 수집합니다.
+- **Actor 권장:** `Arc<Mutex<HashMap<...>>>` 대신 워커당 Task(Actor) + `mpsc`로 상태를 캡슐화하면, `Mutex`를 잡은 채 `await`하는 데드락을 피하기 쉽습니다.
+- **Judge 단계:** 워커 결과(요약 + 증거 + 실패 원인)를 모아 Judge 워커에 전달해 최종 요약/병합을 생성합니다.
+
+### E. Cancel / 타임아웃 / 예산 (`Cancellation & Budgeting`)
+
+v1 Cancel은 “프로토콜 지원 여부”와 무관하게 **OS 레벨 중단**을 기본으로 둡니다.
+
+- `cancel_run(runId)` → 해당 run의 **모든 워커 프로세스 kill(TERM→KILL)** → 상태를 `cancelling`→`canceled`로 확정 이벤트 발행
+- `shell.run` 등 Tool 실행도 `toolCallId -> child process`를 추적해 함께 kill
+- Tool별 `timeout_ms`를 기본 제공하고, timeout 시 `tool.finished(timedOut=true)`로 정리합니다.
+
+```mermaid
+sequenceDiagram
+  participant UI as React UI
+  participant BE as Rust Backend
+  participant W as Worker Process
+  participant T as Tool Server
+  participant P as Tool Child Process
+
+  UI->>BE: invoke send_message(runId, prompt)
+  BE->>W: spawn worker + start
+  W-->>BE: assistant.delta (stream)
+  W->>T: tools/call shell.run(...)
+  T->>P: spawn
+  P-->>T: stdout/stderr stream
+  T-->>BE: tool.* events
+  BE-->>UI: agent_update(events)
+
+  UI->>BE: invoke cancel_run(runId)
+  BE->>P: SIGTERM → SIGKILL
+  BE->>W: SIGTERM → SIGKILL
+  BE-->>UI: run.cancelling → run.canceled
+```
+
+### F. Tauri IPC 인터페이스 (`Event Broadcaster`)
 
 Rust 백엔드에서 정제된 상태와 데이터를 프론트엔드(React)로 밀어 넣습니다.
 
-- **명령 수신 (Commands):** 프론트엔드에서 호출하는 `invoke` 명령(예: `send_message`, `cancel_generation`)을 받아 MCP 규격에 맞게 변환 후 해당 에이전트의 `stdin`으로 전송합니다.
+- **명령 수신 (Commands):** 프론트엔드에서 호출하는 `invoke` 명령(예: `send_message`, `cancel_run`)을 run/worker 실행 요청으로 변환하고, 워커 프로세스를 시작하거나 Cancel을 트리거합니다.
     
 - **상태 브로드캐스팅 (Events):** 백엔드에서 에이전트의 상태 변화(생각 중, 도구 실행 중, 스트리밍 토큰 생성)가 감지되면, 즉시 `app_handle.emit_all("agent_update", payload)`를 통해 프론트엔드로 이벤트를 발송(Push)합니다.
     
@@ -67,26 +153,27 @@ Rust 백엔드에서 정제된 상태와 데이터를 프론트엔드(React)로 
     
 2. **[Tauri Command]** Rust 백엔드가 `invoke`를 통해 메시지 수신.
     
-3. **[오케스트레이션]** Rust가 여러 개의 워커 에이전트(MCP 서버)에 동시에 처리 요청(JSON-RPC 송신).
+3. **[오케스트레이션]** Rust가 run을 만들고 여러 워커 프로세스를 병렬로 실행.
     
-4. **[비동기 수신]** 각 워커가 내부적으로 추론(Reasoning) 및 도구 실행 후 `stdout`으로 JSON 상태 스트림 방출.
+4. **[도구 호출]** 워커는 필요 시 MCP Tool Server로 `tools/call`을 수행(파일 읽기, 테스트 실행 등).
     
-5. **[파싱 및 변환]** Rust의 Tokio 루프가 이를 수신하여 프론트엔드가 소비하기 쉬운 `AgentEvent` 구조체로 역직렬화.
+5. **[비동기 수신]** 워커 출력 스트림 + Tool 이벤트를 수신하여 `AgentEvent`로 정규화.
     
 6. **[Tauri Event]** `emit_all`을 통해 프론트엔드로 상태 즉각 푸시.
     
-7. **[UI 업데이트]** Jotai 스토어가 이벤트를 구독하여 '생각 트리'와 '터미널 뷰' 렌더링.
+7. **[UI 업데이트]** 프론트(Jotai)가 이벤트를 구독하여 Thought Tree/Terminal/Worker 탭을 렌더링.
     
 
 ## 4. 안정성 및 에러 핸들링
 
 - **데드락 방지:** 프로세스의 `stdout`과 `stderr` 버퍼가 꽉 차서 애플리케이션이 멈추는 것을 방지하기 위해 버퍼 비우기를 철저히 관리합니다.
     
-- **실행 권한 샌드박싱 (옵션):** MCP를 통해 도구(Tool) 실행 요청이 들어올 때, 특정 디렉토리 범위를 벗어나거나 위험한 명령어(`rm -rf` 등)가 포함되어 있는지 Rust 단에서 1차적으로 필터링할 수 있는 미들웨어를 둡니다.
+- **실행 권한 샌드박싱 (v1 필수):** Tool 실행은 반드시 프로젝트 루트 기준으로 제한하며, `shell.run`은 allowlist/timeout/output cap을 둡니다.
+- **백프레셔:** 이벤트 폭주 시 UI 프레임 드랍을 막기 위해, `tool.stdout`는 라인 단위로 배치하거나(예: 16ms/50ms) 길이를 제한(truncation)합니다.
     
 
 ---
 
 이제 인프라를 담당하는 BE 문서까지 완성되었습니다. 백엔드가 이 구조대로 구축된다면, 그 위에서 에이전트들이 마음껏 날뛸 수 있을 것입니다.
 
-마지막으로 딥씽크의 진정한 핵심, AI의 뇌를 어떻게 조율할지 정의하는 **에이전트 워크플로우(AI 오케스트레이션 및 MoA)** 설계 문서를 이어서 작성해 드릴까요?
+이 문서 기준으로 다음 구현 단계에서는 **Tool 서버 + 이벤트 스키마 + Cancel**을 먼저 고정하면, FE/UI는 안정적으로 따라올 수 있습니다.

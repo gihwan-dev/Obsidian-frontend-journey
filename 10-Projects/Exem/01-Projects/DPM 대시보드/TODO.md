@@ -17,13 +17,13 @@ kanban-plugin: board
 
 ## Doing
 
-- [ ] 초기 locationInfo 의 no-content 응답시 에러 발생하는 상황 수정
 - [ ] AlertLog 기본적으로 전체, 인스턴스 선택 콤보박스 만들어서 인스턴스 Alert 칼럼 클릭해서 들어가면 콤보박스 값을 해당 인스턴스로(서비스 단위도 고민)
 
 
 ## Done
 
 - [ ] 패키지 버전 업데이트
+- [ ] 초기 locationInfo 의 no-content 응답시 에러 발생하는 상황 수정
 - [ ] 테이블 마이그레이션
 - [ ] [[AlertLog Detail UI 개선]]
 - [ ] AlertLog 기종별 스펙 차이 확인

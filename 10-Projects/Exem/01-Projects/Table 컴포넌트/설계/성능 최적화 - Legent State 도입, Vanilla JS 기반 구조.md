@@ -15,4 +15,7 @@
 **대량 데이터 스크롤시**
 ![[화면 기록 2026-02-23 오후 3.58.11.gif]]
 
-## After
+## After - Legend State
+
+## After - Vanilla JS
+

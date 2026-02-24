@@ -18,4 +18,3 @@
 ## After - Legend State
 
 ## After - Vanilla JS
-

@@ -100,31 +100,31 @@
 **Additional Keys (Feature-Specific)**
 기본 값 외에 기능별로 저장되는 키들입니다.
 
-| Key | Category | Usage / Source |
-| --- | --- | --- |
-| `SOUND` | `USER` | 알람 사운드 설정 (`config/view/config_myoptions.js`, `common/RTMDataManager.js`) |
-| `JSON_RTM_ALARM_PUSH_OPTION` | `USER` | 알람 푸시 옵션 (`config/view/config_myoptions.js`) |
-| `JSON_RTM_REFRESH_LOCKTREE` | `USER` | Lock Tree 갱신 옵션 (`config/view/config_myoptions.js`) |
-| `RTM_JUMP_PA_VIEW` | `USER` | RTM에서 PA로 점프 옵션 (`config/view/config_myoptions.js`) |
-| `RTM_CLICK_CHANGE_VIEW` | `USER` | 클릭 시 뷰 변경 옵션 (`config/view/config_myoptions.js`) |
-| `PA_MAINTAIN_SEARCH_OPTION` | `USER` | PA 검색 유지 옵션 (`config/view/config_myoptions.js`) |
-| `RTM_ALERT_SERVER_OPTION` | `USER` | 서버 알람 옵션 (`config/view/config_myoptions.js`) |
-| `JSON_RTM_VIEW.TASK_LABEL` | `USER` | 작업 라벨 설정 (`config/view/config_myoptions.js`) |
-| `JSON_USER_COLORS` | `USER` | 사용자 컬러 팔레트 (`RTM/Frame/ChartConfig.js`) |
-| `JSON_USER_RATIO_LIST` | `RTM` | 사용자 Ratio 리스트 (`common/Stat.js`) |
-| `JSON_RTM_FRAME.TRENDCHARTFRAME_OPTOIN` | `RTM` | TrendChart 인스턴스별 옵션 (`common/RTMDataManager.js`, `RTM/Frame/ChartConfig.js`) |
-| `JSON_RTM_DEFAULT_TREND_CHART` | `RTM` | TrendChart 저장 옵션 (`common/RTMDataManager.js`) |
-| `RTM_GROUPNAME_TYPE` | `RTM` | 그룹명 타입 설정 (`RTM/Frame/GroupNavStatus.js`) |
-| `JSON_RTM_CONNECTION_LIST` | `RTM` | 인스턴스 트리 상태 저장 (`RTM/Frame/DatabaseList.js`) |
-| `JSON_SCRIPT_MANAGER_RTM` | `RTM` | Script Manager 개인 스크립트 (`RTM/tools/ScriptManagerNew.js`) |
-| `JSON_SCRIPT_MANAGER_RTM_COMMON` | `RTM` | Script Manager 공용 스크립트 (`RTM/tools/ScriptManagerNew.js`) |
-| `RTM_STAT_FAV_LIST` | `RTM` | RTM 통계 즐겨찾기 (`10-Projects/Exem/EditStatFavList.js`) |
-| `PA_STAT_FAV_LIST` | `PA` | PA 통계 즐겨찾기 (`10-Projects/Exem/EditStatFavListPA.js`) |
-| `JSON_PA_DAILY_ENVIR` | `PA` | PA 일간 트렌드 설정 (`PA/view/src/LongTermTrendSrc.js`) |
-| `JSON_PA_COMPARISON_TREND_INFO` | `PA` | PA 비교 트렌드 설정 (`PA/view/src/ComparisonTrendOneMinSrc.js`, `PA/view/src/ComparisonTrendTenMinSrc.js`) |
-| `JSON_PA_EXA_TEN_MIN_TREND` | `PA` | Exa 10분 트렌드 설정 (`PA/view/racExa/performanceTrend/exa/tenMin/index.js`) |
-| `USE_DOMAIN_INDEX` | `COMMON` | SQL List 도메인 인덱스 사용 여부 (`PA/view/src/SQLListSrc.js`) |
-| `ACCESS_PRIVILEGE_INFO` | `COMMON` | 사용자별 RTM/PA 접근 권한 (`10-Projects/Exem/config/CommonUserFrame.js`, `common/DataModule.js`) |
+| Key                                     | Category | Usage / Source                                                                                      |
+| --------------------------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| `SOUND`                                 | `USER`   | 알람 사운드 설정 (`config/view/config_myoptions.js`, `common/RTMDataManager.js`)                           |
+| `JSON_RTM_ALARM_PUSH_OPTION`            | `USER`   | 알람 푸시 옵션 (`config/view/config_myoptions.js`)                                                        |
+| `JSON_RTM_REFRESH_LOCKTREE`             | `USER`   | Lock Tree 갱신 옵션 (`config/view/config_myoptions.js`)                                                 |
+| `RTM_JUMP_PA_VIEW`                      | `USER`   | RTM에서 PA로 점프 옵션 (`config/view/config_myoptions.js`)                                                 |
+| `RTM_CLICK_CHANGE_VIEW`                 | `USER`   | 클릭 시 뷰 변경 옵션 (`config/view/config_myoptions.js`)                                                    |
+| `PA_MAINTAIN_SEARCH_OPTION`             | `USER`   | PA 검색 유지 옵션 (`config/view/config_myoptions.js`)                                                     |
+| `RTM_ALERT_SERVER_OPTION`               | `USER`   | 서버 알람 옵션 (`config/view/config_myoptions.js`)                                                        |
+| `JSON_RTM_VIEW.TASK_LABEL`              | `USER`   | 작업 라벨 설정 (`config/view/config_myoptions.js`)                                                        |
+| `JSON_USER_COLORS`                      | `USER`   | 사용자 컬러 팔레트 (`RTM/Frame/ChartConfig.js`)                                                             |
+| `JSON_USER_RATIO_LIST`                  | `RTM`    | 사용자 Ratio 리스트 (`common/Stat.js`)                                                                    |
+| `JSON_RTM_FRAME.TRENDCHARTFRAME_OPTOIN` | `RTM`    | TrendChart 인스턴스별 옵션 (`common/RTMDataManager.js`, `RTM/Frame/ChartConfig.js`)                        |
+| `JSON_RTM_DEFAULT_TREND_CHART`          | `RTM`    | TrendChart 저장 옵션 (`common/RTMDataManager.js`)                                                       |
+| `RTM_GROUPNAME_TYPE`                    | `RTM`    | 그룹명 타입 설정 (`RTM/Frame/GroupNavStatus.js`)                                                           |
+| `JSON_RTM_CONNECTION_LIST`              | `RTM`    | 인스턴스 트리 상태 저장 (`RTM/Frame/DatabaseList.js`)                                                         |
+| `JSON_SCRIPT_MANAGER_RTM`               | `RTM`    | Script Manager 개인 스크립트 (`RTM/tools/ScriptManagerNew.js`)                                            |
+| `JSON_SCRIPT_MANAGER_RTM_COMMON`        | `RTM`    | Script Manager 공용 스크립트 (`RTM/tools/ScriptManagerNew.js`)                                            |
+| `RTM_STAT_FAV_LIST`                     | `RTM`    | RTM 통계 즐겨찾기 (`10-Projects/Exem/EditStatFavList.js`)                                                 |
+| `PA_STAT_FAV_LIST`                      | `PA`     | PA 통계 즐겨찾기 (`10-Projects/Exem/EditStatFavListPA.js`)                                                |
+| `JSON_PA_DAILY_ENVIR`                   | `PA`     | PA 일간 트렌드 설정 (`PA/view/src/LongTermTrendSrc.js`)                                                    |
+| `JSON_PA_COMPARISON_TREND_INFO`         | `PA`     | PA 비교 트렌드 설정 (`PA/view/src/ComparisonTrendOneMinSrc.js`, `PA/view/src/ComparisonTrendTenMinSrc.js`) |
+| `JSON_PA_EXA_TEN_MIN_TREND`             | `PA`     | Exa 10분 트렌드 설정 (`PA/view/racExa/performanceTrend/exa/tenMin/index.js`)                              |
+| `USE_DOMAIN_INDEX`                      | `COMMON` | SQL List 도메인 인덱스 사용 여부 (`PA/view/src/SQLListSrc.js`)                                                |
+| `ACCESS_PRIVILEGE_INFO`                 | `COMMON` | 사용자별 RTM/PA 접근 권한 (`10-Projects/Exem/config/CommonUserFrame.js`, `common/DataModule.js`)            |
 
 **Dynamic Key Patterns**
 고정 키 외에 런타임에 생성되는 패턴입니다.

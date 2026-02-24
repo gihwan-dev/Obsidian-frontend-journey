@@ -131,26 +131,26 @@ WebEnv는 서버 사이드 key-value 저장소로, `PATCH /api/v1/config/web-env
 
 **Instance 객체 구조** (`src/services/oracle/entities/instance/model/instance.type.ts`):
 
-| 필드 | 타입 |
-| --- | --- |
-| `instanceId` | `number` |
-| `instanceKey` | `string` |
-| `instanceName` | `string` |
-| `businessName` | `string` |
-| `status` | `'RUNNING'` \| `'SHUTDOWN'` \| `'UNKNOWN'` |
-| `dbType` | `'ORACLE'` \| `'TIBERO'` \| ... |
-| `dbVersion` | `string` |
-| `osType` | `'WINDOWS'` \| `'LINUX'` |
-| `port` | `number` |
-| `sid` | `string?` |
-| `serviceName` | `string?` |
-| `rac` | `string[]` |
-| `pdb` | `string[]` |
-| `instanceGroupIds` | `number[]` |
-| `dbUser` | `string?` |
-| `service` | `boolean` |
-| `host` | `string?` |
-| `hostName` | `string?` |
+| 필드                 | 타입                                         |
+| ------------------ | ------------------------------------------ |
+| `instanceId`       | `number`                                   |
+| `instanceKey`      | `string`                                   |
+| `instanceName`     | `string`                                   |
+| `businessName`     | `string`                                   |
+| `status`           | `'RUNNING'` \| `'SHUTDOWN'` \| `'UNKNOWN'` |
+| `dbType`           | `'ORACLE'` \| `'TIBERO'` \| ...            |
+| `dbVersion`        | `string`                                   |
+| `osType`           | `'WINDOWS'` \| `'LINUX'`                   |
+| `port`             | `number`                                   |
+| `sid`              | `string?`                                  |
+| `serviceName`      | `string?`                                  |
+| `rac`              | `string[]`                                 |
+| `pdb`              | `string[]`                                 |
+| `instanceGroupIds` | `number[]`                                 |
+| `dbUser`           | `string?`                                  |
+| `service`          | `boolean`                                  |
+| `host`             | `string?`                                  |
+| `hostName`         | `string?`                                  |
 
 - **슬라이스 구현**: `src/entities/dashboard/model/slices/dashboardWidgetStateSlice.ts`
 

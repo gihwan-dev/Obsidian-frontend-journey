@@ -83,7 +83,7 @@ claude-gui-app/
 
 ## Documentation
 
-- [제품 스펙 문서 (v1)](./docs/SPEC.md)
+- [제품 스펙 문서 (v1)](SPEC.md)
 
 ## License
 

@@ -225,4 +225,4 @@
 
 ---
 
-*참조: [구현 스펙 문서](./docs/IMPLEMENTATION-SPEC.md)*
+*참조: [구현 스펙 문서](IMPLEMENTATION-SPEC.md)*

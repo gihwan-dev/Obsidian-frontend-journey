@@ -129,14 +129,14 @@
 **Dynamic Key Patterns**
 고정 키 외에 런타임에 생성되는 패턴입니다.
 
-| Pattern | Category | Description | Source |
-| --- | --- | --- | --- |
-| `JSON_RTM_<ClassName>_LAYER_<index>` | `RTM` | 도킹 뷰 레이아웃 JSON | `10-Projects/Exem/DockContainer.js` |
-| `RTM_<ClassName>_LAYER_INDEX` | `RTM` | 도킹 뷰 레이아웃 선택 인덱스 | `10-Projects/Exem/DockContainer.js` |
-| `RTM_IMG_<VIEWCLASS>_<index>` | `IMAGE` | 저장 이미지 데이터 | `RTM/view/BaseView.js` |
-| `RTM_SAVE_TITLE_<VIEWCLASS>_<index>` | `IMAGE` | 저장 이미지 제목 | `RTM/view/BaseView.js` |
-| `<gridName>` | `RTM` or `PA` | 그리드 컬럼 레이아웃 | `10-Projects/Exem/BaseGrid.js` |
-| `<gridName>_FILTER` | `RTM` or `PA` | 그리드 필터 상태 | `10-Projects/Exem/BaseGrid.js` |
+| Pattern                              | Category      | Description      | Source                              |
+| ------------------------------------ | ------------- | ---------------- | ----------------------------------- |
+| `JSON_RTM_<ClassName>_LAYER_<index>` | `RTM`         | 도킹 뷰 레이아웃 JSON   | `10-Projects/Exem/DockContainer.js` |
+| `RTM_<ClassName>_LAYER_INDEX`        | `RTM`         | 도킹 뷰 레이아웃 선택 인덱스 | `10-Projects/Exem/DockContainer.js` |
+| `RTM_IMG_<VIEWCLASS>_<index>`        | `IMAGE`       | 저장 이미지 데이터       | `RTM/view/BaseView.js`              |
+| `RTM_SAVE_TITLE_<VIEWCLASS>_<index>` | `IMAGE`       | 저장 이미지 제목        | `RTM/view/BaseView.js`              |
+| `<gridName>`                         | `RTM` or `PA` | 그리드 컬럼 레이아웃      | `10-Projects/Exem/BaseGrid.js`      |
+| `<gridName>_FILTER`                  | `RTM` or `PA` | 그리드 필터 상태        | `10-Projects/Exem/BaseGrid.js`      |
 
 **Notes**
 `JSON_` 접두사는 JSON 문자열을 의미하며, `common/WebEnv.js`에서 파싱되어 `isJSON: true`로 저장됩니다. `RTM`/`PA` 카테고리는 `db_id`가 있으면 인스턴스 범위로, 없으면 유저 범위로 저장됩니다.

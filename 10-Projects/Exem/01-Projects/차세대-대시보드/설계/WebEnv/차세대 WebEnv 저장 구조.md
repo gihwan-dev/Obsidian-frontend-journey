@@ -158,17 +158,17 @@ WebEnv는 서버 사이드 key-value 저장소로, `PATCH /api/v1/config/web-env
 
 사용자 저장 위젯 템플릿. `WidgetTemplate[]` 배열.
 
-| 필드 | 타입 | 설명 |
-| --- | --- | --- |
-| `templateId` | `string` | 템플릿 식별자 |
-| `title` | `string` | 템플릿 제목 |
-| `description?` | `string` | 설명 |
-| `tags` | `string[]` | 태그 배열 |
-| `source` | `'system'` \| `'user'` | 출처 |
-| `payload.widgetType` | `WidgetType` | 위젯 유형 |
-| `payload.widgetTitle` | `string` | 위젯 제목 |
-| `payload.widgetLayout` | `{ w, h }` | 기본 크기 |
-| `payload.widgetState` | `WidgetStatePayload` | 위젯 상태 (instanceList 포함) |
+| 필드                     | 타입                     | 설명                      |
+| ---------------------- | ---------------------- | ----------------------- |
+| `templateId`           | `string`               | 템플릿 식별자                 |
+| `title`                | `string`               | 템플릿 제목                  |
+| `description?`         | `string`               | 설명                      |
+| `tags`                 | `string[]`             | 태그 배열                   |
+| `source`               | `'system'` \| `'user'` | 출처                      |
+| `payload.widgetType`   | `WidgetType`           | 위젯 유형                   |
+| `payload.widgetTitle`  | `string`               | 위젯 제목                   |
+| `payload.widgetLayout` | `{ w, h }`             | 기본 크기                   |
+| `payload.widgetState`  | `WidgetStatePayload`   | 위젯 상태 (instanceList 포함) |
 
 - **슬라이스 구현**: `src/entities/dashboard/model/slices/dashboardWidgetTemplateSlice.ts`
 

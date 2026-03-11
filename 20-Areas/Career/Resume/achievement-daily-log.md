@@ -9,3 +9,4 @@ date | mode | cards_created | cards_updated | sources_scanned | candidates | top
 2026-03-04 | DAILY | 1 | 1 | 9 | 2 | production-delivery,reliability,feature-flag,tenant-isolation,architecture,dashboard-layout-resize | 6
 2026-03-05 | DAILY | 0 | 2 | 5 | 2 | production-delivery,feature-flag,tenant-isolation,architecture,dashboard-layout-resize | 7
 2026-03-09 | DAILY | 1 | 0 | 3 | 1 | architecture,api-diff,dx-automation,mcp | 3
+2026-03-11 | DAILY | 1 | 0 | 1 | 1 | dx-automation,orchestration,reliability,architecture-decision | 3

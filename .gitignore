@@ -9,3 +9,6 @@
 
 # Ignore large video files
 *.mov
+
+# Ignore local Exem workspace
+10-Projects/Exem/

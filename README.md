@@ -49,3 +49,5 @@
   - `published` 최신순 인덱스 파일 `50-Blog/00-블로그-인덱스.md` 생성
 - 실행:
   - `node scripts/sync-blog-published-and-index.mjs`
+
+

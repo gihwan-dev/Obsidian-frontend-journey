@@ -1,3 +1,19 @@
+---
+author: Gihwan-dev
+pubDatetime: 2026-03-12T23:44:07.000Z
+title: "엑셈인의 AI 활용기 - 혼자 개발하지만, AI와 팀처럼 일합니다"
+slug: frontend-ai-worktree-multi-agent
+featured: true
+draft: false
+published: "2026-03-12T23:44:07.000Z"
+tags:
+  - ai
+  - worktree
+  - multi-agent
+  - frontend
+description: 프론트엔드 개발자인 제가 워크트리와 멀티 에이전트를 중심으로 최근 AI를 활용하는 방식을 정리한 글입니다.
+---
+
 요즘 저는 하나의 프로젝트를 여러 작업 공간으로 나눠 두고, 각 공간에서 AI에게 서로 다른 일을 맡깁니다. 
 
 ![[Pasted image 20260323110557.png]]

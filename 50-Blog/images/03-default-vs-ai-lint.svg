@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="'Pretendard', 'Noto Sans KR', sans-serif">
+  <defs>
+    <linearGradient id="defaultBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#94a3b8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#fafafa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">기본값 vs AI 린트 설정 비교</text>
+
+  <!-- Legend -->
+  <rect x="260" y="56" width="14" height="14" rx="3" fill="url(#defaultBar)"/>
+  <text x="280" y="68" font-size="12" fill="#64748b">기본값</text>
+  <rect x="380" y="56" width="14" height="14" rx="3" fill="url(#aiBar)"/>
+  <text x="400" y="68" font-size="12" fill="#4f46e5" font-weight="600">AI 린트 설정</text>
+
+  <g transform="translate(60, 90)">
+    <!-- Row 1: Cognitive Complexity -->
+    <text x="0" y="18" font-size="13" font-weight="600" fill="#374151">인지 복잡도</text>
+    <text x="0" y="34" font-size="10" fill="#9ca3af">noExcessiveCognitiveComplexity</text>
+    <!-- Default bar: 15 -->
+    <rect x="220" y="6" width="300" height="18" rx="4" fill="url(#defaultBar)" opacity="0.7"/>
+    <text x="530" y="20" font-size="12" font-weight="600" fill="#64748b">15</text>
+    <!-- AI bar: 8 -->
+    <rect x="220" y="28" width="160" height="18" rx="4" fill="url(#aiBar)"/>
+    <text x="390" y="42" font-size="12" font-weight="700" fill="#4f46e5">8</text>
+    <!-- Reduction -->
+    <text x="680" y="30" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">-47%</text>
+
+    <!-- Divider -->
+    <line x1="0" y1="58" x2="680" y2="58" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Row 2: Function Length -->
+    <g transform="translate(0, 70)">
+      <text x="0" y="18" font-size="13" font-weight="600" fill="#374151">함수 길이</text>
+      <text x="0" y="34" font-size="10" fill="#9ca3af">noExcessiveLinesPerFunction</text>
+      <rect x="220" y="6" width="250" height="18" rx="4" fill="url(#defaultBar)" opacity="0.7"/>
+      <text x="480" y="20" font-size="12" font-weight="600" fill="#64748b">50줄</text>
+      <rect x="220" y="28" width="175" height="18" rx="4" fill="url(#aiBar)"/>
+      <text x="405" y="42" font-size="12" font-weight="700" fill="#4f46e5">35줄</text>
+      <text x="680" y="30" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">-30%</text>
+    </g>
+
+    <line x1="0" y1="128" x2="680" y2="128" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Row 3: File Length -->
+    <g transform="translate(0, 140)">
+      <text x="0" y="18" font-size="13" font-weight="600" fill="#374151">파일 길이</text>
+      <text x="0" y="34" font-size="10" fill="#9ca3af">noExcessiveLinesPerFile</text>
+      <rect x="220" y="6" width="300" height="18" rx="4" fill="url(#defaultBar)" opacity="0.7"/>
+      <text x="530" y="20" font-size="12" font-weight="600" fill="#64748b">300줄</text>
+      <rect x="220" y="28" width="220" height="18" rx="4" fill="url(#aiBar)"/>
+      <text x="450" y="42" font-size="12" font-weight="700" fill="#4f46e5">220줄</text>
+      <text x="680" y="30" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">-27%</text>
+    </g>
+
+    <line x1="0" y1="198" x2="680" y2="198" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Row 4: Max Params -->
+    <g transform="translate(0, 210)">
+      <text x="0" y="18" font-size="13" font-weight="600" fill="#374151">파라미터 수</text>
+      <text x="0" y="34" font-size="10" fill="#9ca3af">useMaxParams</text>
+      <rect x="220" y="6" width="200" height="18" rx="4" fill="url(#defaultBar)" opacity="0.7"/>
+      <text x="430" y="20" font-size="12" font-weight="600" fill="#64748b">4개</text>
+      <rect x="220" y="28" width="150" height="18" rx="4" fill="url(#aiBar)"/>
+      <text x="380" y="42" font-size="12" font-weight="700" fill="#4f46e5">3개</text>
+      <text x="680" y="30" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">-25%</text>
+    </g>
+
+    <line x1="0" y1="268" x2="680" y2="268" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Row 5: Cyclomatic Complexity (ESLint) -->
+    <g transform="translate(0, 280)">
+      <text x="0" y="18" font-size="13" font-weight="600" fill="#374151">순환 복잡도</text>
+      <text x="0" y="34" font-size="10" fill="#9ca3af">ESLint complexity</text>
+      <rect x="220" y="6" width="400" height="18" rx="4" fill="url(#defaultBar)" opacity="0.7"/>
+      <text x="630" y="20" font-size="12" font-weight="600" fill="#64748b">20</text>
+      <rect x="220" y="28" width="140" height="18" rx="4" fill="url(#aiBar)"/>
+      <text x="370" y="42" font-size="12" font-weight="700" fill="#4f46e5">7</text>
+      <text x="680" y="30" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">-65%</text>
+    </g>
+
+    <line x1="0" y1="338" x2="680" y2="338" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Row 6: Duplication -->
+    <g transform="translate(0, 350)">
+      <text x="0" y="18" font-size="13" font-weight="600" fill="#374151">중복 허용치</text>
+      <text x="0" y="34" font-size="10" fill="#9ca3af">jscpd threshold</text>
+      <rect x="220" y="6" width="100" height="18" rx="4" fill="url(#defaultBar)" opacity="0.7"/>
+      <text x="330" y="20" font-size="12" font-weight="600" fill="#64748b">5~10%</text>
+      <rect x="220" y="28" width="30" height="18" rx="4" fill="url(#aiBar)"/>
+      <text x="260" y="42" font-size="12" font-weight="700" fill="#4f46e5">3%</text>
+      <text x="680" y="30" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626">-40~70%</text>
+    </g>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="505" text-anchor="middle" font-size="12" fill="#9ca3af" font-style="italic">기본값보다 훨씬 공격적으로 낮춰서, AI가 처음부터 작게 쪼개도록 강제</text>
+</svg>

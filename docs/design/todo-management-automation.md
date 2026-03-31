@@ -46,7 +46,7 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 | Whether the root board is read-only/navigation-only or supports task mutations | resolved | User wants it to be a read-only/navigation hub in v1 |
 | How the root hub decides which project boards are in scope | resolved | User wants root-hub-driven explicit scope, not wider-vault discovery |
 | Whether project onboarding is explicit registration or implied by a standard project pattern | resolved | User prefers standard-pattern-based onboarding, not explicit registration |
-| What exact project pattern counts as onboarded | open | Repo evidence does not show a concrete project template yet |
+| What exact project pattern counts as onboarded | open | Strong candidate found: project-root direct-child `TODO.md`, but needs user validation |
 | Whether add/remove should operate on kanban columns only or generic checklist items too | open | Need user intent confirmation |
 
 ## Current System Model
@@ -57,7 +57,7 @@ The vault is organized as an Obsidian knowledge base, not a conventional applica
 - other kanban notes such as `Untitled Kanban.md`
 - daily notes that link to project TODO notes
 
-The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. That keeps editing close to the work context and avoids duplicate task ownership, but the pattern itself is not yet concrete in the repository and now becomes the central contract.
+The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. Repository evidence suggests the strongest candidate pattern is a project folder with a direct child `TODO.md` kanban board, while deeper `TODO.md` files represent sub-scope boards that the root hub should ignore. This keeps editing close to the work context and avoids duplicate task ownership, but the pattern still needs explicit confirmation.
 
 ## Alternatives Considered
 
@@ -121,6 +121,7 @@ Not defined yet because the exact onboarding pattern for project boards is still
 | 6 | frame | Root board is read-only/navigation-only in v1 | This avoids conflicting state with project-owned kanbans. |
 | 7 | frame | Root hub scope should come from explicitly onboarded project boards | The user wants the root hub to be the read boundary and expects a setup procedure. |
 | 8 | frame | Standard project pattern is preferred over explicit registration for onboarding | The user wants pattern-based onboarding rather than a separate registration step. |
+| 9 | frame | Recommended onboarding signal is a project-root direct-child `TODO.md` | Real project folders repeatedly use that shape, while nested `TODO.md` files appear to be sub-boards. |
 
 ## Assumption Ledger
 
@@ -139,12 +140,15 @@ Not defined yet because the exact onboarding pattern for project boards is still
 | 11 | Project onboarding may be an ongoing lifecycle, not just one-time bootstrap | likely | User mention of root setup plus Socratic-partner review | no |
 | 12 | Standard project structure should be enough to treat a project board as onboarded | likely | User answer in turn 8 | no |
 | 13 | The repository does not currently expose a concrete project template that defines onboarding | verified | Searched `10-Projects/Exem/05-Templates` and sampled project paths | no |
+| 14 | A project-root direct-child `TODO.md` is the best current onboarding signal | likely | Observed in `Exem/01-Projects/*/TODO.md` and `Personal/Codex 멀티 에이전트 모니터링/TODO.md` | no |
+| 15 | Nested `TODO.md` files under project subfolders should be treated as local sub-boards, not root-hub entries | likely | Observed nested `개발/.../TODO.md` boards under existing projects | no |
+| 16 | Nonstandard top-level board names like `Untitled Kanban.md` should stay out of root-hub scope until standardized | likely | `AI Setup/Untitled Kanban.md` is an outlier against the repeated `TODO.md` pattern | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| What exact structure should count as the standard onboarded project pattern? | Needs user intent | User to clarify |
+| Should v1 define onboarded projects as folders with a direct child `TODO.md`, excluding nested `TODO.md` and nonstandard board names until they are normalized? | Needs user validation | User to confirm |
 | Which task formats are officially supported in v1? | Needed to define mutation rules | User to clarify |
 
 ## Quality Gate Result

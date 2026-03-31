@@ -1,7 +1,7 @@
 # Design: TODO Management Automation for Obsidian Vault
 
 > Mode: feature
-> Status: frame
+> Status: system-model
 > Created: 2026-03-31
 
 ## Purpose / Big Picture
@@ -35,6 +35,7 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 ### Success Criteria
 
 - [ ] The canonical TODO source is defined clearly enough that add/remove actions cannot target the wrong note by default.
+- [ ] The canonical board schema is defined clearly enough that all active project boards can be normalized to it.
 - [ ] The hourly briefing has a defined scope, input set, and output format.
 - [ ] The skill set is minimal but complete for the agreed first release.
 
@@ -50,7 +51,7 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 | What exact project pattern counts as onboarded | resolved | User accepted `project folder + direct-child TODO.md` as the canonical active pattern |
 | Whether existing projects should be normalized into the chosen pattern | resolved | User prefers establishing the structure once and cleaning projects up in one pass |
 | Whether the one-time cleanup includes only active project boards or also archives/local sub-boards | resolved | User wants archives excluded, but active non-archived boards standardized broadly |
-| What exact fixed column set and ordering should all canonical active project boards be migrated to | open | Needed after user chose large-scale normalization of active boards |
+| What exact fixed column set and ordering should all canonical active project boards be migrated to | resolved | User chose `Backlog -> Todo -> Doing -> Done` as the fixed v1 schema |
 
 ## Current System Model
 
@@ -61,6 +62,13 @@ The vault is organized as an Obsidian knowledge base, not a conventional applica
 - daily notes that link to project TODO notes
 
 The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. That pattern is now: a non-archived active project folder with a direct child `TODO.md` kanban board as its primary board, while deeper `TODO.md` files remain local sub-boards. The user also prefers a one-time cleanup to align existing non-archived projects with that pattern, while excluding archived areas from the migration. Active outlier boards should not remain unsupported; they should be migrated into the same canonical board schema.
+
+The canonical v1 primary-board schema is fixed to:
+
+- `Backlog`
+- `Todo`
+- `Doing`
+- `Done`
 
 ## Alternatives Considered
 
@@ -104,13 +112,13 @@ The current direction is that each project kanban owns its own tasks. The root b
 
 ## Validation Plan
 
-- [ ] Confirm the exact fixed column set and ordering for canonical active project boards.
+- [ ] Confirm whether task cards stay plain checklist items or gain structured metadata.
 - [ ] Confirm whether the hourly briefing is per-project or vault-wide.
 - [ ] Compare the proposed skill set against the confirmed workflow and check for missing lifecycle actions.
 
 ## Rollback Strategy
 
-Not defined yet because the exact canonical board schema for active project boards is still undecided.
+Not defined yet because the exact task-card model for active project boards is still undecided.
 
 ## Decision Log
 
@@ -131,6 +139,8 @@ Not defined yet because the exact canonical board schema for active project boar
 | 13 | frame | Next gating decision is the canonical end-state for active work | Cleanup scope is set, but the normalized target shape is still not fully fixed. |
 | 14 | frame | Canonical active pattern is `project folder + direct-child TODO.md` primary board | The user explicitly accepted that normalized target shape. |
 | 15 | frame | Active outlier boards should be migrated into the canonical system, not left unsupported | The user wants large-scale cleanup across active projects rather than a narrow supported subset. |
+| 16 | frame | Canonical v1 board schema is `Backlog -> Todo -> Doing -> Done` | The user accepted the exact fixed column set and ordering for active project boards. |
+| 17 | system-model | Move focus from board discovery to task-card model | Project/root structure and primary board schema are now constrained enough to model task shape itself. |
 
 ## Assumption Ledger
 
@@ -158,12 +168,13 @@ Not defined yet because the exact canonical board schema for active project boar
 | 20 | Active non-archived boards may be normalizable to one primary-board pattern without losing critical workflow distinctions | likely | Repo evidence plus socratic-partner review | no |
 | 21 | The canonical active onboarding signal is a non-archived project folder with a direct-child `TODO.md` | verified | User answer in turn 12 plus repo evidence | no |
 | 22 | Active outlier boards should be normalized into the canonical system instead of being treated as unsupported | verified | User answer in turn 13 | no |
+| 23 | The canonical active board schema for v1 is `Backlog -> Todo -> Doing -> Done` | verified | User answer in turn 14 | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| What exact fixed column set and ordering should every non-archived active project's primary `TODO.md` be migrated to in v1? | Needed to make cleanup and skills deterministic | User to clarify |
+| Should v1 task cards remain plain checklist lines, or do they need extra structured fields such as priority, due date, or owner? | Needed to define board syntax and briefing depth | User to clarify |
 
 ## Quality Gate Result
 

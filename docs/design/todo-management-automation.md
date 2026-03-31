@@ -45,7 +45,8 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 | Whether briefing should cover one project or the whole vault | open | Need user intent confirmation |
 | Whether the root board is read-only/navigation-only or supports task mutations | resolved | User wants it to be a read-only/navigation hub in v1 |
 | How the root hub decides which project boards are in scope | resolved | User wants root-hub-driven explicit scope, not wider-vault discovery |
-| Whether project onboarding is explicit registration or implied by a standard project pattern | open | Need user intent confirmation |
+| Whether project onboarding is explicit registration or implied by a standard project pattern | resolved | User prefers standard-pattern-based onboarding, not explicit registration |
+| What exact project pattern counts as onboarded | open | Repo evidence does not show a concrete project template yet |
 | Whether add/remove should operate on kanban columns only or generic checklist items too | open | Need user intent confirmation |
 
 ## Current System Model
@@ -56,7 +57,7 @@ The vault is organized as an Obsidian knowledge base, not a conventional applica
 - other kanban notes such as `Untitled Kanban.md`
 - daily notes that link to project TODO notes
 
-The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to explicitly onboarded project boards and may provide overview information. That keeps editing close to the work context and avoids duplicate task ownership, but makes onboarding lifecycle and project membership central design concerns.
+The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. That keeps editing close to the work context and avoids duplicate task ownership, but the pattern itself is not yet concrete in the repository and now becomes the central contract.
 
 ## Alternatives Considered
 
@@ -94,19 +95,19 @@ The current direction is that each project kanban owns its own tasks. The root b
 
 | Risk | Impact | Likelihood | Mitigation |
 |------|--------|------------|------------|
-| Project membership in the root hub is underspecified | Briefings and overview become noisy, incomplete, or stale | high | Define whether onboarding is explicit registration or implied by a standard pattern |
+| The onboarding project pattern is underspecified | Briefings and overview become noisy, incomplete, or stale | high | Define the exact structural contract for onboarded project boards |
 | Briefing scans too broadly | Noisy summaries that users ignore | medium | Constrain briefing scope explicitly |
 | Mixed kanban/checklist formats | Add/remove behavior becomes inconsistent | medium | Choose supported formats for v1 |
 
 ## Validation Plan
 
-- [ ] Confirm whether new projects join the root hub through explicit registration or by following a standard pattern.
+- [ ] Confirm the exact structural pattern that makes a project board onboarded.
 - [ ] Confirm whether the hourly briefing is per-project or vault-wide.
 - [ ] Compare the proposed skill set against the confirmed workflow and check for missing lifecycle actions.
 
 ## Rollback Strategy
 
-Not defined yet because the onboarding rule for new project boards is still undecided.
+Not defined yet because the exact onboarding pattern for project boards is still undecided.
 
 ## Decision Log
 
@@ -119,6 +120,7 @@ Not defined yet because the onboarding rule for new project boards is still unde
 | 5 | frame | Vault-wide SSOT is dropped in favor of project-owned task boards plus a root index | The user decided each project kanban should own tasks and the root should hold links only. |
 | 6 | frame | Root board is read-only/navigation-only in v1 | This avoids conflicting state with project-owned kanbans. |
 | 7 | frame | Root hub scope should come from explicitly onboarded project boards | The user wants the root hub to be the read boundary and expects a setup procedure. |
+| 8 | frame | Standard project pattern is preferred over explicit registration for onboarding | The user wants pattern-based onboarding rather than a separate registration step. |
 
 ## Assumption Ledger
 
@@ -135,12 +137,14 @@ Not defined yet because the onboarding rule for new project boards is still unde
 | 9 | The root board should remain read-only in v1 | verified | User answer in turn 6 | no |
 | 10 | Explicitly onboarded project boards define the root hub read boundary | likely | User answer in turn 7 plus Socratic-partner review | no |
 | 11 | Project onboarding may be an ongoing lifecycle, not just one-time bootstrap | likely | User mention of root setup plus Socratic-partner review | no |
+| 12 | Standard project structure should be enough to treat a project board as onboarded | likely | User answer in turn 8 | no |
+| 13 | The repository does not currently expose a concrete project template that defines onboarding | verified | Searched `10-Projects/Exem/05-Templates` and sampled project paths | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| Should new projects join the root hub through explicit registration or by following a standard project pattern? | Needs user intent | User to clarify |
+| What exact structure should count as the standard onboarded project pattern? | Needs user intent | User to clarify |
 | Which task formats are officially supported in v1? | Needed to define mutation rules | User to clarify |
 
 ## Quality Gate Result

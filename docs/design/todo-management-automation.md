@@ -52,6 +52,8 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 | Whether existing projects should be normalized into the chosen pattern | resolved | User prefers establishing the structure once and cleaning projects up in one pass |
 | Whether the one-time cleanup includes only active project boards or also archives/local sub-boards | resolved | User wants archives excluded, but active non-archived boards standardized broadly |
 | What exact fixed column set and ordering should all canonical active project boards be migrated to | resolved | User chose `Backlog -> Todo -> Doing -> Done` as the fixed v1 schema |
+| Whether v1 task cards need structured metadata | resolved | User chose plain checklist lines rather than priority/due-date/owner fields |
+| Whether v1 must explicitly support moving tasks between status columns | resolved | User wants direct task movement supported by the agent |
 
 ## Current System Model
 
@@ -69,6 +71,16 @@ The canonical v1 primary-board schema is fixed to:
 - `Todo`
 - `Doing`
 - `Done`
+
+The canonical v1 task-card format is a plain markdown checklist line such as `- [ ] 작업명`.
+
+Supported v1 task actions now include:
+
+- add a checklist task
+- remove a checklist task
+- move a checklist task between status columns
+
+In v1, `move` means changing a task's column within the same project's primary `TODO.md`. Reassigning work across projects is modeled as `remove from A + add to B`, not as a single move action.
 
 ## Alternatives Considered
 
@@ -140,6 +152,11 @@ Not defined yet because the exact task-card model for active project boards is s
 | 14 | frame | Canonical active pattern is `project folder + direct-child TODO.md` primary board | The user explicitly accepted that normalized target shape. |
 | 15 | frame | Active outlier boards should be migrated into the canonical system, not left unsupported | The user wants large-scale cleanup across active projects rather than a narrow supported subset. |
 | 16 | frame | Canonical v1 board schema is `Backlog -> Todo -> Doing -> Done` | The user accepted the exact fixed column set and ordering for active project boards. |
+| 17 | system-model | Canonical v1 task cards are plain checklist lines | The user rejected structured metadata and chose the simplest task representation. |
+| 18 | system-model | Direct task movement is part of the supported v1 action surface | The user wants the agent to support status changes explicitly, not leave them manual. |
+| 19 | system-model | Current evidence favors board-local move semantics over cross-project transfer | Project ownership is local to each canonical board, and no active cross-project transfer workflow was found in repo evidence. |
+| 20 | system-model | V1 move is same-project-only; cross-project reassignment is modeled as remove plus add | The user accepted board-local move semantics and rejected a dedicated cross-project move. |
+| 21 | system-model | The main unresolved recurring behavior is the hourly briefing contract | Editing actions are bounded; briefing scope still changes the automation surface materially. |
 | 17 | system-model | Move focus from board discovery to task-card model | Project/root structure and primary board schema are now constrained enough to model task shape itself. |
 
 ## Assumption Ledger
@@ -169,12 +186,18 @@ Not defined yet because the exact task-card model for active project boards is s
 | 21 | The canonical active onboarding signal is a non-archived project folder with a direct-child `TODO.md` | verified | User answer in turn 12 plus repo evidence | no |
 | 22 | Active outlier boards should be normalized into the canonical system instead of being treated as unsupported | verified | User answer in turn 13 | no |
 | 23 | The canonical active board schema for v1 is `Backlog -> Todo -> Doing -> Done` | verified | User answer in turn 14 | no |
+| 24 | The canonical v1 task-card model is a plain checklist line with no extra metadata | verified | User answer in turn 15 | no |
+| 25 | V1 must explicitly support moving tasks between columns | verified | User answer in turn 16 | no |
+| 26 | V1 `move` probably means changing a task's column within one project's `TODO.md`, not transferring ownership across boards | likely | Docs-researcher review plus current system model | no |
+| 27 | V1 cross-project reassignment should be modeled as `remove from A + add to B`, not a single move action | verified | User answer in turn 17 | no |
+| 28 | Setup and normalization are likely bounded prerequisites; the bigger recurring open behavior is briefing scope | likely | Socratic-partner review after edit behaviors were constrained | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| Should v1 task cards remain plain checklist lines, or do they need extra structured fields such as priority, due date, or owner? | Needed to define board syntax and briefing depth | User to clarify |
+| Should v1 `move` mean only changing a task’s column inside the same project’s `TODO.md`, with cross-project reassignment handled as `remove from A + add to B` instead of a single move? | resolved | User accepted same-project-only move semantics for v1 |
+| Should the hourly TODO briefing scan only one current project's canonical `TODO.md`, or all active canonical project boards? | Needed to bound the recurring automation surface | User to clarify |
 
 ## Quality Gate Result
 

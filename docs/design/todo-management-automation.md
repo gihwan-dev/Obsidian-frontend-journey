@@ -12,20 +12,23 @@ This design defines how to manage project TODO items inside this Obsidian vault 
 
 ### Goal
 
-Define a minimal but complete TODO-management workflow for this vault that can add, remove, and summarize project TODOs reliably.
+Define a minimal but complete TODO-management workflow for this vault that can add, remove, and summarize project TODOs reliably without creating duplicate authorities across root and project boards.
 
 ### Constraints
 
 - The source of truth should remain inside this Obsidian vault.
-- V1 should use a root-level TODO note as the SSOT candidate unless later evidence disproves it.
 - Existing TODO representations are already distributed across project notes, kanban notes, and daily-note references.
 - The workflow should allow task state to be updated where the user is already working, not only from a detached central list.
+- Project kanban notes should own their own task lists.
+- The root board should link to project-owned task boards rather than duplicate their task state.
+- The root board in v1 should remain read-only and navigation-oriented.
 - This session is design-only; no production automation or skill code is being written yet.
 
 ### Non-goals
 
 - Reorganizing the entire vault information architecture.
 - Designing a generic task system for every markdown note in the vault.
+- Enforcing a single vault-wide task SSOT if that breaks project-local workflow.
 
 ### Success Criteria
 
@@ -37,9 +40,10 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 
 | Gap | Status | Resolution |
 |-----|--------|------------|
-| Which note format is the canonical TODO source | resolved | User prefers a root-level TODO as SSOT candidate |
+| Which note format is the canonical TODO source | resolved | Canonical ownership is per-project kanban, not a vault-wide root TODO |
 | Whether briefing should cover one project or the whole vault | open | Need user intent confirmation |
-| Whether project kanban edits mutate the root SSOT or remain independently authoritative | open | Need user intent confirmation |
+| Whether the root board is read-only/navigation-only or supports task mutations | resolved | User wants it to be a read-only/navigation hub in v1 |
+| How the root hub decides which project boards are in scope | open | Need user intent confirmation |
 | Whether add/remove should operate on kanban columns only or generic checklist items too | open | Need user intent confirmation |
 
 ## Current System Model
@@ -50,7 +54,7 @@ The vault is organized as an Obsidian knowledge base, not a conventional applica
 - other kanban notes such as `Untitled Kanban.md`
 - daily notes that link to project TODO notes
 
-The current direction is to introduce a root-level TODO note as the canonical write surface. The user also wants kanban notes to support direct state changes in context. That means the real design question is whether those kanban interactions edit the same canonical task entity or maintain separate task state.
+The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards and may provide overview information. That keeps editing close to the work context and avoids duplicate task ownership, but makes project onboarding and read scope central design concerns.
 
 ## Alternatives Considered
 
@@ -61,39 +65,46 @@ The current direction is to introduce a root-level TODO note as the canonical wr
 - Weaknesses: Requires explicit per-project mapping and conventions.
 - Trade-offs: Simpler automation in exchange for stricter structure.
 
-### Alternative B: Vault-wide task search
+### Alternative B: Root-level vault SSOT
 
-- Description: Skills search all markdown notes for unchecked tasks and infer the relevant target note.
-- Strengths: Flexible, works with current scattered structure.
-- Weaknesses: Higher ambiguity, higher risk of wrong edits, harder removals.
-- Trade-offs: Lower upfront structure in exchange for lower reliability.
+- Description: A root TODO owns the canonical task state for the whole vault.
+- Strengths: Single control point, simpler global briefing logic.
+- Weaknesses: Conflicts with in-context project management and creates detached workflow.
+- Trade-offs: Strong global consistency in exchange for weaker project-local ergonomics.
+
+### Alternative C: Root board as project index
+
+- Description: Project kanbans own tasks; the root board links to them and optionally summarizes them.
+- Strengths: Preserves local workflow and avoids duplicate task ownership.
+- Weaknesses: Root board may become a weak dashboard unless its read scope is constrained clearly.
+- Trade-offs: Better local usability in exchange for less centralized control.
 
 ## Chosen Direction
 
-**Selected**: Tentative direction: root-level TODO SSOT with in-context kanban interaction
+**Selected**: Tentative direction: project-owned kanbans plus read-only root index board
 
-**Why**: The user explicitly wants an SSOT TODO at the root, while also wanting task state changes to happen from kanban notes where work is managed.
+**Why**: The user explicitly rejected a vault-wide SSOT as impractical and wants project kanbans to remain the task owners.
 
 **Rejected alternatives**:
-- Project-local canonical TODO files: rejected for now because the user prefers one vault-level SSOT.
+- Root-level vault SSOT: rejected because it conflicts with in-context project task management.
 
 ## Risks / Failure Modes
 
 | Risk | Impact | Likelihood | Mitigation |
 |------|--------|------------|------------|
-| Root TODO exists but local kanban notes store independent state | Conflicting task states and duplicate edits | high | Decide whether kanban edits mutate canonical tasks or remain separate |
+| Root hub reads from an undefined set of boards | Briefings and overview become noisy or incomplete | high | Decide whether scope is explicit onboarding or vault-wide discovery |
 | Briefing scans too broadly | Noisy summaries that users ignore | medium | Constrain briefing scope explicitly |
 | Mixed kanban/checklist formats | Add/remove behavior becomes inconsistent | medium | Choose supported formats for v1 |
 
 ## Validation Plan
 
-- [ ] Confirm whether kanban interactions edit canonical root tasks or maintain separate local task records.
+- [ ] Confirm whether the root hub reads only onboarded project boards or scans the wider vault.
 - [ ] Confirm whether the hourly briefing is per-project or vault-wide.
 - [ ] Compare the proposed skill set against the confirmed workflow and check for missing lifecycle actions.
 
 ## Rollback Strategy
 
-Not defined yet because the writing surface and mutation scope are still undecided.
+Not defined yet because the root hub's read scope is still undecided.
 
 ## Decision Log
 
@@ -103,6 +114,8 @@ Not defined yet because the writing surface and mutation scope are still undecid
 | 2 | charter | First gating question targets canonical write surface | Distributed TODO locations make add/remove design unsafe until one write target is constrained. |
 | 3 | frame | Root-level TODO is the tentative SSOT direction | The user explicitly wants a root TODO as the single source of truth. |
 | 4 | frame | In-context kanban updates are a required workflow property | The user does not want task state management to be forced through a detached central list. |
+| 5 | frame | Vault-wide SSOT is dropped in favor of project-owned task boards plus a root index | The user decided each project kanban should own tasks and the root should hold links only. |
+| 6 | frame | Root board is read-only/navigation-only in v1 | This avoids conflicting state with project-owned kanbans. |
 
 ## Assumption Ledger
 
@@ -113,14 +126,16 @@ Not defined yet because the writing surface and mutation scope are still undecid
 | 3 | A reliable automation needs one clear source of truth per scope | likely | Repo evidence plus design inference | no |
 | 4 | The requested work is best classified as feature design | verified | User request, mode playbook, charter review | yes turn 2 |
 | 5 | V1 should probably constrain writes to one canonical task artifact instead of supporting every existing task location | likely | Socratic-partner review plus repo evidence | no |
-| 6 | The root-level TODO should become the canonical write surface for v1 | likely | User answer in turn 3 | no |
-| 7 | Direct manipulation in project kanban and SSOT can coexist only if both reference the same underlying task entity | likely | User answer in turn 4 plus Socratic-partner review | no |
+| 6 | The root-level TODO should become the canonical write surface for v1 | rejected | User reversed this in turn 5 | yes turn 5 |
+| 7 | Direct manipulation in project kanban and SSOT can coexist only if both reference the same underlying task entity | rejected | User chose separate project-owned task lists instead | yes turn 5 |
+| 8 | The root board should be modeled as an index or overview, not a global task owner | likely | User answer in turn 5 plus Socratic-partner review | no |
+| 9 | The root board should remain read-only in v1 | verified | User answer in turn 6 | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| Should kanban edits mutate canonical root tasks or separate local task records? | Needs user intent | User to clarify |
+| Should the root hub read only onboarded project boards or scan the wider vault? | Needs user intent | User to clarify |
 | Which task formats are officially supported in v1? | Needed to define mutation rules | User to clarify |
 
 ## Quality Gate Result

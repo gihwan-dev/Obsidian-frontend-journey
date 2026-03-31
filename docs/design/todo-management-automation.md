@@ -22,6 +22,7 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 - Project kanban notes should own their own task lists.
 - The root board should link to project-owned task boards rather than duplicate their task state.
 - The root board in v1 should remain read-only and navigation-oriented.
+- The root hub should read only explicitly onboarded project boards rather than scanning the wider vault.
 - This session is design-only; no production automation or skill code is being written yet.
 
 ### Non-goals
@@ -43,7 +44,8 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 | Which note format is the canonical TODO source | resolved | Canonical ownership is per-project kanban, not a vault-wide root TODO |
 | Whether briefing should cover one project or the whole vault | open | Need user intent confirmation |
 | Whether the root board is read-only/navigation-only or supports task mutations | resolved | User wants it to be a read-only/navigation hub in v1 |
-| How the root hub decides which project boards are in scope | open | Need user intent confirmation |
+| How the root hub decides which project boards are in scope | resolved | User wants root-hub-driven explicit scope, not wider-vault discovery |
+| Whether project onboarding is explicit registration or implied by a standard project pattern | open | Need user intent confirmation |
 | Whether add/remove should operate on kanban columns only or generic checklist items too | open | Need user intent confirmation |
 
 ## Current System Model
@@ -54,7 +56,7 @@ The vault is organized as an Obsidian knowledge base, not a conventional applica
 - other kanban notes such as `Untitled Kanban.md`
 - daily notes that link to project TODO notes
 
-The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards and may provide overview information. That keeps editing close to the work context and avoids duplicate task ownership, but makes project onboarding and read scope central design concerns.
+The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to explicitly onboarded project boards and may provide overview information. That keeps editing close to the work context and avoids duplicate task ownership, but makes onboarding lifecycle and project membership central design concerns.
 
 ## Alternatives Considered
 
@@ -92,19 +94,19 @@ The current direction is that each project kanban owns its own tasks. The root b
 
 | Risk | Impact | Likelihood | Mitigation |
 |------|--------|------------|------------|
-| Root hub reads from an undefined set of boards | Briefings and overview become noisy or incomplete | high | Decide whether scope is explicit onboarding or vault-wide discovery |
+| Project membership in the root hub is underspecified | Briefings and overview become noisy, incomplete, or stale | high | Define whether onboarding is explicit registration or implied by a standard pattern |
 | Briefing scans too broadly | Noisy summaries that users ignore | medium | Constrain briefing scope explicitly |
 | Mixed kanban/checklist formats | Add/remove behavior becomes inconsistent | medium | Choose supported formats for v1 |
 
 ## Validation Plan
 
-- [ ] Confirm whether the root hub reads only onboarded project boards or scans the wider vault.
+- [ ] Confirm whether new projects join the root hub through explicit registration or by following a standard pattern.
 - [ ] Confirm whether the hourly briefing is per-project or vault-wide.
 - [ ] Compare the proposed skill set against the confirmed workflow and check for missing lifecycle actions.
 
 ## Rollback Strategy
 
-Not defined yet because the root hub's read scope is still undecided.
+Not defined yet because the onboarding rule for new project boards is still undecided.
 
 ## Decision Log
 
@@ -116,6 +118,7 @@ Not defined yet because the root hub's read scope is still undecided.
 | 4 | frame | In-context kanban updates are a required workflow property | The user does not want task state management to be forced through a detached central list. |
 | 5 | frame | Vault-wide SSOT is dropped in favor of project-owned task boards plus a root index | The user decided each project kanban should own tasks and the root should hold links only. |
 | 6 | frame | Root board is read-only/navigation-only in v1 | This avoids conflicting state with project-owned kanbans. |
+| 7 | frame | Root hub scope should come from explicitly onboarded project boards | The user wants the root hub to be the read boundary and expects a setup procedure. |
 
 ## Assumption Ledger
 
@@ -130,12 +133,14 @@ Not defined yet because the root hub's read scope is still undecided.
 | 7 | Direct manipulation in project kanban and SSOT can coexist only if both reference the same underlying task entity | rejected | User chose separate project-owned task lists instead | yes turn 5 |
 | 8 | The root board should be modeled as an index or overview, not a global task owner | likely | User answer in turn 5 plus Socratic-partner review | no |
 | 9 | The root board should remain read-only in v1 | verified | User answer in turn 6 | no |
+| 10 | Explicitly onboarded project boards define the root hub read boundary | likely | User answer in turn 7 plus Socratic-partner review | no |
+| 11 | Project onboarding may be an ongoing lifecycle, not just one-time bootstrap | likely | User mention of root setup plus Socratic-partner review | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| Should the root hub read only onboarded project boards or scan the wider vault? | Needs user intent | User to clarify |
+| Should new projects join the root hub through explicit registration or by following a standard project pattern? | Needs user intent | User to clarify |
 | Which task formats are officially supported in v1? | Needed to define mutation rules | User to clarify |
 
 ## Quality Gate Result

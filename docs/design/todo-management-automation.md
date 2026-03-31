@@ -47,10 +47,10 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 | Whether the root board is read-only/navigation-only or supports task mutations | resolved | User wants it to be a read-only/navigation hub in v1 |
 | How the root hub decides which project boards are in scope | resolved | User wants root-hub-driven explicit scope, not wider-vault discovery |
 | Whether project onboarding is explicit registration or implied by a standard project pattern | resolved | User prefers standard-pattern-based onboarding, not explicit registration |
-| What exact project pattern counts as onboarded | open | Strong candidate found: project-root direct-child `TODO.md`, but needs user validation |
+| What exact project pattern counts as onboarded | resolved | User accepted `project folder + direct-child TODO.md` as the canonical active pattern |
 | Whether existing projects should be normalized into the chosen pattern | resolved | User prefers establishing the structure once and cleaning projects up in one pass |
 | Whether the one-time cleanup includes only active project boards or also archives/local sub-boards | resolved | User wants archives excluded, but active non-archived boards standardized broadly |
-| Whether add/remove should operate on kanban columns only or generic checklist items too | open | Need user intent confirmation |
+| What exact fixed column set and ordering should all canonical active project boards be migrated to | open | Needed after user chose large-scale normalization of active boards |
 
 ## Current System Model
 
@@ -60,7 +60,7 @@ The vault is organized as an Obsidian knowledge base, not a conventional applica
 - other kanban notes such as `Untitled Kanban.md`
 - daily notes that link to project TODO notes
 
-The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. Repository evidence suggests the strongest candidate pattern is a project folder with a direct child `TODO.md` kanban board, while deeper `TODO.md` files represent sub-scope boards that the root hub should ignore. The user also prefers a one-time cleanup to align existing non-archived projects with that pattern, while excluding archived areas from the migration.
+The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. That pattern is now: a non-archived active project folder with a direct child `TODO.md` kanban board as its primary board, while deeper `TODO.md` files remain local sub-boards. The user also prefers a one-time cleanup to align existing non-archived projects with that pattern, while excluding archived areas from the migration. Active outlier boards should not remain unsupported; they should be migrated into the same canonical board schema.
 
 ## Alternatives Considered
 
@@ -98,19 +98,19 @@ The current direction is that each project kanban owns its own tasks. The root b
 
 | Risk | Impact | Likelihood | Mitigation |
 |------|--------|------------|------------|
-| The onboarding project pattern is underspecified | Briefings and overview become noisy, incomplete, or stale | high | Define the exact structural contract for onboarded project boards |
+| The canonical board column schema is underspecified | Migration, add/remove, and briefing behavior become inconsistent | high | Define the exact fixed column set and ordering for primary project boards |
 | Briefing scans too broadly | Noisy summaries that users ignore | medium | Constrain briefing scope explicitly |
 | Mixed kanban/checklist formats | Add/remove behavior becomes inconsistent | medium | Choose supported formats for v1 |
 
 ## Validation Plan
 
-- [ ] Confirm the exact structural pattern that makes a project board onboarded.
+- [ ] Confirm the exact fixed column set and ordering for canonical active project boards.
 - [ ] Confirm whether the hourly briefing is per-project or vault-wide.
 - [ ] Compare the proposed skill set against the confirmed workflow and check for missing lifecycle actions.
 
 ## Rollback Strategy
 
-Not defined yet because the exact onboarding pattern for project boards is still undecided.
+Not defined yet because the exact canonical board schema for active project boards is still undecided.
 
 ## Decision Log
 
@@ -129,6 +129,8 @@ Not defined yet because the exact onboarding pattern for project boards is still
 | 11 | frame | Cleanup scope may extend beyond already-standard active project boards | The user said they want to clean up all of it, not just the clearly standard pieces. |
 | 12 | frame | Archives are excluded from cleanup, but active nested and nonstandard boards are in scope | The user wants archived items left alone and the rest standardized. |
 | 13 | frame | Next gating decision is the canonical end-state for active work | Cleanup scope is set, but the normalized target shape is still not fully fixed. |
+| 14 | frame | Canonical active pattern is `project folder + direct-child TODO.md` primary board | The user explicitly accepted that normalized target shape. |
+| 15 | frame | Active outlier boards should be migrated into the canonical system, not left unsupported | The user wants large-scale cleanup across active projects rather than a narrow supported subset. |
 
 ## Assumption Ledger
 
@@ -154,13 +156,14 @@ Not defined yet because the exact onboarding pattern for project boards is still
 | 18 | “Clean up all of it” may include archives and local-only boards unless explicitly excluded | likely | User answer in turn 10 plus socratic-partner review | no |
 | 19 | Archived project/task areas should remain outside v1 normalization | verified | User answer in turn 11 | no |
 | 20 | Active non-archived boards may be normalizable to one primary-board pattern without losing critical workflow distinctions | likely | Repo evidence plus socratic-partner review | no |
+| 21 | The canonical active onboarding signal is a non-archived project folder with a direct-child `TODO.md` | verified | User answer in turn 12 plus repo evidence | no |
+| 22 | Active outlier boards should be normalized into the canonical system instead of being treated as unsupported | verified | User answer in turn 13 | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| After cleanup, should active projects still be allowed to keep nested local TODO boards, or should each project be flattened to one canonical active `TODO.md` at the project root? | Needs user constraint | User to clarify |
-| Which task formats are officially supported in v1? | Needed to define mutation rules | User to clarify |
+| What exact fixed column set and ordering should every non-archived active project's primary `TODO.md` be migrated to in v1? | Needed to make cleanup and skills deterministic | User to clarify |
 
 ## Quality Gate Result
 

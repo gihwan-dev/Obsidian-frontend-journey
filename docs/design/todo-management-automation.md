@@ -23,6 +23,7 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 - The root board should link to project-owned task boards rather than duplicate their task state.
 - The root board in v1 should remain read-only and navigation-oriented.
 - The root hub should read only explicitly onboarded project boards rather than scanning the wider vault.
+- The design may include a one-time normalization pass to bring existing projects into the agreed pattern.
 - This session is design-only; no production automation or skill code is being written yet.
 
 ### Non-goals
@@ -47,6 +48,8 @@ Define a minimal but complete TODO-management workflow for this vault that can a
 | How the root hub decides which project boards are in scope | resolved | User wants root-hub-driven explicit scope, not wider-vault discovery |
 | Whether project onboarding is explicit registration or implied by a standard project pattern | resolved | User prefers standard-pattern-based onboarding, not explicit registration |
 | What exact project pattern counts as onboarded | open | Strong candidate found: project-root direct-child `TODO.md`, but needs user validation |
+| Whether existing projects should be normalized into the chosen pattern | resolved | User prefers establishing the structure once and cleaning projects up in one pass |
+| Whether the one-time cleanup includes only active project boards or also archives/local sub-boards | resolved | User wants archives excluded, but active non-archived boards standardized broadly |
 | Whether add/remove should operate on kanban columns only or generic checklist items too | open | Need user intent confirmation |
 
 ## Current System Model
@@ -57,7 +60,7 @@ The vault is organized as an Obsidian knowledge base, not a conventional applica
 - other kanban notes such as `Untitled Kanban.md`
 - daily notes that link to project TODO notes
 
-The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. Repository evidence suggests the strongest candidate pattern is a project folder with a direct child `TODO.md` kanban board, while deeper `TODO.md` files represent sub-scope boards that the root hub should ignore. This keeps editing close to the work context and avoids duplicate task ownership, but the pattern still needs explicit confirmation.
+The current direction is that each project kanban owns its own tasks. The root board is no longer the vault-wide task SSOT; it is a read-only higher-level surface that links to project boards considered onboarded by following a standard project pattern. Repository evidence suggests the strongest candidate pattern is a project folder with a direct child `TODO.md` kanban board, while deeper `TODO.md` files represent sub-scope boards that the root hub should ignore. The user also prefers a one-time cleanup to align existing non-archived projects with that pattern, while excluding archived areas from the migration.
 
 ## Alternatives Considered
 
@@ -122,6 +125,10 @@ Not defined yet because the exact onboarding pattern for project boards is still
 | 7 | frame | Root hub scope should come from explicitly onboarded project boards | The user wants the root hub to be the read boundary and expects a setup procedure. |
 | 8 | frame | Standard project pattern is preferred over explicit registration for onboarding | The user wants pattern-based onboarding rather than a separate registration step. |
 | 9 | frame | Recommended onboarding signal is a project-root direct-child `TODO.md` | Real project folders repeatedly use that shape, while nested `TODO.md` files appear to be sub-boards. |
+| 10 | frame | Existing projects should be normalized once into the agreed pattern | The user prefers setting the structure once and cleaning projects up in one pass. |
+| 11 | frame | Cleanup scope may extend beyond already-standard active project boards | The user said they want to clean up all of it, not just the clearly standard pieces. |
+| 12 | frame | Archives are excluded from cleanup, but active nested and nonstandard boards are in scope | The user wants archived items left alone and the rest standardized. |
+| 13 | frame | Next gating decision is the canonical end-state for active work | Cleanup scope is set, but the normalized target shape is still not fully fixed. |
 
 ## Assumption Ledger
 
@@ -143,12 +150,16 @@ Not defined yet because the exact onboarding pattern for project boards is still
 | 14 | A project-root direct-child `TODO.md` is the best current onboarding signal | likely | Observed in `Exem/01-Projects/*/TODO.md` and `Personal/Codex 멀티 에이전트 모니터링/TODO.md` | no |
 | 15 | Nested `TODO.md` files under project subfolders should be treated as local sub-boards, not root-hub entries | likely | Observed nested `개발/.../TODO.md` boards under existing projects | no |
 | 16 | Nonstandard top-level board names like `Untitled Kanban.md` should stay out of root-hub scope until standardized | likely | `AI Setup/Untitled Kanban.md` is an outlier against the repeated `TODO.md` pattern | no |
+| 17 | A one-time cleanup can be part of v1 rather than deferred indefinitely | likely | User answer in turn 9 | no |
+| 18 | “Clean up all of it” may include archives and local-only boards unless explicitly excluded | likely | User answer in turn 10 plus socratic-partner review | no |
+| 19 | Archived project/task areas should remain outside v1 normalization | verified | User answer in turn 11 | no |
+| 20 | Active non-archived boards may be normalizable to one primary-board pattern without losing critical workflow distinctions | likely | Repo evidence plus socratic-partner review | no |
 
 ## Open Questions
 
 | Question | Reason | Owner / Next Step |
 |----------|--------|-------------------|
-| Should v1 define onboarded projects as folders with a direct child `TODO.md`, excluding nested `TODO.md` and nonstandard board names until they are normalized? | Needs user validation | User to confirm |
+| After cleanup, should active projects still be allowed to keep nested local TODO boards, or should each project be flattened to one canonical active `TODO.md` at the project root? | Needs user constraint | User to clarify |
 | Which task formats are officially supported in v1? | Needed to define mutation rules | User to clarify |
 
 ## Quality Gate Result

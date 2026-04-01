@@ -13,3 +13,4 @@ date | mode | cards_created | cards_updated | sources_scanned | candidates | top
 2026-03-21 | DAILY | 1 | 0 | 1 | 1 | architecture,test-hardening,frontend-refactoring,reliability | 2
 2026-03-23 | DAILY | 2 | 0 | 4 | 2 | observability,reliability,ci-cd,release-ops,tracing | 4
 2026-03-29 | DAILY | 2 | 0 | 5 | 2 | dx-automation,reliability,test-ops,workflow-control | 4
+2026-04-01 | DAILY | 1 | 0 | 2 | 1 | architecture-decision,dx-automation,todo-governance,obsidian | 2

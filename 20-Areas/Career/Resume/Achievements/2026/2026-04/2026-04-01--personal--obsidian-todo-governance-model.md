@@ -1,7 +1,7 @@
 ---
 id: ACH-20260401-001
 createdAt: 2026-04-01
-updatedAt: 2026-04-01
+updatedAt: 2026-04-02
 company: Personal
 project: Obsidian TODO Management Automation
 role: Unknown
@@ -11,10 +11,13 @@ evidenceScore: 4
 tags: [architecture-decision, dx-automation, todo-governance, obsidian]
 sources:
   - 00-Inbox/Daily/2026-03-31.md
+  - 00-Inbox/Daily/2026-04-01.md
   - docs/design/todo-management-automation.md
 evidenceSnippets:
   - source: 00-Inbox/Daily/2026-03-31.md
     quote: "루트 보드는 읽기 전용 허브로 두는 방향이 문서로 남았다."
+  - source: 00-Inbox/Daily/2026-04-01.md
+    quote: "프로젝트 소유 보드와 읽기 전용 루트 허브로 정리"
   - source: docs/design/todo-management-automation.md
     quote: "Project kanban notes should own their own task lists."
   - source: docs/design/todo-management-automation.md
@@ -36,10 +39,12 @@ Obsidian vault의 TODO 운영 구조를 프로젝트 소유 보드와 읽기 전
 - 활성 프로젝트의 canonical pattern을 `project folder + direct-child TODO.md`로 좁혀 자동화의 읽기/쓰기 경계를 명확히 했다.
 - v1 기본 보드 스키마를 `Backlog -> Todo -> Doing -> Done`과 체크리스트 카드 형식으로 고정했다.
 - 동일 프로젝트 내부 이동만 `move`로 지원하고, 프로젝트 간 이동은 `remove + add`로 분리해 책임 경계를 정리했다.
+- 기본 보드 스키마와 프로젝트 간 이동 규칙을 함께 정리해 브리핑과 자동화가 같은 운영 계약을 따르도록 맞췄다.
 
 ## Results
 - TODO 자동화가 어떤 보드를 읽고 수정해야 하는지에 대한 기준이 문서 수준에서 명확해졌다.
 - 루트 허브와 프로젝트 보드 사이의 중복 소유를 피하는 운영 모델이 정리됐다.
+- 브리핑과 자동화가 같은 보드 운영 계약을 따르도록 기준이 보강됐다.
 - 정량 효과는 아직 근거가 없어 후속 계측이 필요하다.
 
 ## Evidence

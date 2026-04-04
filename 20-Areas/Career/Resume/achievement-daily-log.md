@@ -16,3 +16,4 @@ date | mode | cards_created | cards_updated | sources_scanned | candidates | top
 2026-04-01 | DAILY | 1 | 0 | 2 | 1 | architecture-decision,dx-automation,todo-governance,obsidian | 2
 2026-04-02 | DAILY | 1 | 1 | 1 | 2 | dx-automation,workflow-design,parallel-execution,todo-governance,obsidian | 4
 2026-04-03 | DAILY | 2 | 1 | 1 | 3 | dx-automation,workflow-design,durable-execution,kubernetes,postgresql,ci-cd | 7
+2026-04-04 | DAILY | 0 | 2 | 1 | 2 | durable-execution,workflow-design,multi-agent,parallel-execution,reliability | 7

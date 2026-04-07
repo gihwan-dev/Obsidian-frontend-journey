@@ -18,3 +18,4 @@ date | mode | cards_created | cards_updated | sources_scanned | candidates | top
 2026-04-03 | DAILY | 2 | 1 | 1 | 3 | dx-automation,workflow-design,durable-execution,kubernetes,postgresql,ci-cd | 7
 2026-04-04 | DAILY | 0 | 2 | 1 | 2 | durable-execution,workflow-design,multi-agent,parallel-execution,reliability | 7
 2026-04-05 | DAILY | 1 | 1 | 1 | 2 | dx-automation,reliability,workflow-design,operations | 8
+2026-04-07 | DAILY | 0 | 1 | 1 | 1 | durable-execution,reliability,workflow-design,operations | 4

@@ -1,5 +1,0 @@
-- [ ] 대시보드 버그 있었던거(고객사 피쳐 플래그 삭제) 내용 추가
-- http://gitlab.exem.xyz/fe1/maxgauge-dashboard/-/merge_requests/52
--  http://gitlab.exem.xyz/fe1/maxgauge-dashboard/-/merge_requests/50
-- [ ] 시각적 피드백을 사람처럼 수용할 수 없어 적절한 색상을 사용하지 않는다거나 하는 디자인 관련 문제가 자주 발생
-- http://gitlab.exem.xyz/fe1/maxgauge-dashboard/-/merge_requests/69

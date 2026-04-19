@@ -180,14 +180,28 @@ observer.observe(observerTarget, { childList: true, subtree: true });
  * body.theme-dark 여부에 맞춰 <img src>를 toggle하고, 404 시 기본 .svg 로 폴백.
  */
 (function initExcalidrawThemeSwap() {
-  const SVG_RE = /\.excalidraw(\.light|\.dark)?\.svg(\?|$)/;
-  const isExcalidrawImg = (img) => SVG_RE.test(img.getAttribute("src") || "");
+  // 파일명이 *.excalidraw.md 면 export가 *.excalidraw.(light|dark).svg,
+  // 파일명이 일반 *.md 면 export가 *.(light|dark).svg — 두 패턴 모두 대응.
+  const EXCALIDRAW_PATTERN = /\.excalidraw(\.light|\.dark)?\.svg(\?|$)/;
+  const GENERIC_PATTERN = /\.(light|dark)\.svg(\?|$)/;
 
-  const toVariant = (src, variant) =>
-    src.replace(
-      /\.excalidraw(\.light|\.dark)?\.svg(\?|$)/,
-      variant ? `.excalidraw.${variant}.svg$2` : ".excalidraw.svg$2"
+  const isExcalidrawImg = (img) => {
+    const src = img.getAttribute("src") || "";
+    return EXCALIDRAW_PATTERN.test(src) || GENERIC_PATTERN.test(src);
+  };
+
+  const toVariant = (src, variant) => {
+    if (EXCALIDRAW_PATTERN.test(src)) {
+      return src.replace(
+        /\.excalidraw(\.light|\.dark)?\.svg(\?|$)/,
+        variant ? `.excalidraw.${variant}.svg$2` : ".excalidraw.svg$2"
+      );
+    }
+    return src.replace(
+      /(\.light|\.dark)?\.svg(\?|$)/,
+      variant ? `.${variant}.svg$2` : ".svg$2"
     );
+  };
 
   const swap = () => {
     const dark = document.body.classList.contains("theme-dark");

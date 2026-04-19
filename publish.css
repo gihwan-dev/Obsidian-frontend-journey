@@ -252,6 +252,16 @@ h1.page-header::before,
   background: linear-gradient(180deg, var(--ax1), var(--ax2)) !important;
 }
 
+/* page-header는 Publish가 padding/border 구조를 다르게 주므로
+   top/bottom 0으로 박스 전체 높이를 꽉 채워 텍스트와 정확히 정렬 */
+.markdown-preview-view h1.page-header::before,
+.mod-header h1.page-header::before,
+h1.page-header::before {
+  top: 0 !important;
+  bottom: 0 !important;
+  height: auto !important;
+}
+
 .markdown-preview-view h3 {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 1.22em;

@@ -8,6 +8,48 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap");
 
+/* ---------- 0. Scrollbar (overlay on hover) ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover,
+*:focus-within {
+  scrollbar-color: color-mix(in srgb, currentColor 25%, transparent) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background-color 0.25s ease;
+}
+
+*:hover > ::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb,
+:hover::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--tx3, #9CA0B0) 35%, transparent);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--tx2, #6C6F85) 55%, transparent);
+  background-clip: padding-box;
+}
+
 /* ---------- 1. Color tokens ---------- */
 .theme-light {
   --bg1: #EFF1F5;
@@ -262,9 +304,8 @@ div.site-body-left-column {
   border-right: 1px solid var(--ui1);
 }
 
-/* 다크 모드에서 본문(bg1)과 사이드바(bg3)의 레이어 차이를 명확히 */
-.theme-dark div.site-body-left-column,
-.theme-dark div.site-body-right-column {
+/* 다크 모드에서 좌측 사이드바만 한 단계 더 어두운 레이어로, 우측은 투명 유지 */
+.theme-dark div.site-body-left-column {
   background-color: var(--bg3);
   border-color: color-mix(in srgb, var(--ui1) 70%, transparent);
 }
@@ -634,52 +675,10 @@ a.site-body-left-column-site-name::after {
   box-shadow: var(--card-shadow);
 }
 
-.graph-view-container {
-  background-color: var(--bg2);
-  border: 1px solid var(--ui1);
-  border-radius: 8px;
-  padding: 0.5em 0.75em;
-  margin-bottom: 3em;
-  box-shadow: var(--card-shadow);
-}
-
-.graph-view-container text,
-.graph-view text,
-svg.graph-view text {
-  font-size: 0.7rem;
-  fill: var(--tx2);
-}
-
-/* 라이트 모드에서 그래프/TOC가 다크 톤으로 남아있는 문제 강제 오버라이드 */
-.theme-light .graph-view-container,
-.theme-light .graph-view-container svg,
-.theme-light svg.graph-view {
-  background-color: var(--bg2) !important;
-}
-
-.theme-light .graph-view-container text,
-.theme-light .graph-view text,
-.theme-light svg.graph-view text {
-  fill: var(--tx1) !important;
-}
-
-.theme-light .graph-view-container circle,
-.theme-light .graph-view circle,
-.theme-light svg.graph-view circle {
-  fill: var(--ax1) !important;
-  stroke: var(--ax1) !important;
-}
-
-.theme-light .graph-view-container line,
-.theme-light .graph-view line,
-.theme-light svg.graph-view line {
-  stroke: var(--ui2) !important;
-}
-
-.theme-light div.site-body-right-column .tree-item,
-.theme-light div.site-body-right-column .markdown-preview-section {
-  background-color: transparent !important;
-  color: var(--tx1) !important;
+/* Canvas 그래프 자체는 테마 변경이 CSS로 반영되지 않아 숨기고, publish.js가
+   "연결된 노트" 카드를 같은 자리에 주입한다 */
+.graph-view-outer {
+  display: none !important;
 }
 
 /* ---------- 13. Home page (index.md) ---------- */
@@ -938,13 +937,158 @@ div.site-footer a:hover {
   color: var(--ax1);
 }
 
-/* ---------- 15. Responsive ---------- */
-/* 1300px 이하 — 우측 그래프/TOC 패널이 본문을 가리지 않도록 숨김 */
-@media (max-width: 1300px) {
-  div.site-body-right-column {
+/* ---------- 15. Right column (sticky, replaces canvas graph area) ---------- */
+.site-body-right-column {
+  position: sticky !important;
+  top: 0 !important;
+  width: 320px !important;
+  height: 100vh !important;
+  background: transparent !important;
+  padding: 24px 16px !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  border-left: none !important;
+}
+
+.site-body-right-column-inner {
+  width: 100% !important;
+}
+
+@media (max-width: 1100px) {
+  .site-body-right-column {
     display: none !important;
   }
 }
+
+/* ---------- 16. Right-column card system (--gh-*) ---------- */
+.theme-light {
+  --gh-card-bg: #FAFAFA;
+  --gh-card-border: rgba(0, 0, 0, 0.08);
+  --gh-muted: #6B6E85;
+  --gh-text: #2B2E3F;
+  --gh-accent: #D97757;
+  --gh-accent-hover: #B8553C;
+}
+
+.theme-dark {
+  --gh-card-bg: #1A1D29;
+  --gh-card-border: rgba(255, 255, 255, 0.08);
+  --gh-muted: #A0A4B8;
+  --gh-text: #E5E7EF;
+  --gh-accent: #D97757;
+  --gh-accent-hover: #F0A583;
+}
+
+/* "On this page" TOC — 카드화 */
+.outline-view-outer {
+  background: var(--gh-card-bg) !important;
+  border: 1px solid var(--gh-card-border) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-top: 16px !important;
+  color: var(--gh-text) !important;
+}
+
+.outline-view-outer a {
+  color: var(--gh-text) !important;
+  text-decoration: none;
+}
+
+.outline-view-outer a:hover {
+  color: var(--gh-accent) !important;
+}
+
+/* 연결된 노트 카드 (publish.js가 주입) */
+.gh-related {
+  background: var(--gh-card-bg);
+  border: 1px solid var(--gh-card-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.gh-related-title {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gh-muted);
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  border: none;
+  padding: 0;
+}
+
+.gh-related-title::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gh-accent);
+}
+
+.gh-section-label {
+  font-size: 10px;
+  color: var(--gh-muted);
+  letter-spacing: 0.5px;
+  margin: 10px 0 6px;
+  opacity: 0.8;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.gh-section-label:first-of-type {
+  margin-top: 0;
+}
+
+.gh-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  margin-bottom: 5px;
+  background: transparent;
+  border: 1px solid var(--gh-card-border);
+  border-left: 3px solid var(--gh-accent);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--gh-text);
+  text-decoration: none;
+  background-image: none;
+  transition: transform 0.15s ease, border-left-color 0.15s ease, background 0.15s ease;
+}
+
+.gh-card:hover {
+  transform: translateX(3px);
+  border-left-color: var(--gh-accent-hover);
+  background: color-mix(in srgb, var(--gh-accent) 8%, transparent);
+  color: var(--gh-text);
+}
+
+.gh-card-arrow {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--gh-muted);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.gh-card:hover .gh-card-arrow {
+  color: var(--gh-accent);
+  transform: translateX(2px);
+}
+
+.gh-empty {
+  font-size: 12px;
+  color: var(--gh-muted);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* ---------- 17. Responsive ---------- */
 
 @media (max-width: 720px) {
   .markdown-preview-view,

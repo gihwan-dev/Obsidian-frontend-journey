@@ -1179,3 +1179,25 @@ div.site-footer a:hover {
     min-width: 0;
   }
 }
+
+/* ---------- 18. Excalidraw SVG ---------- */
+/* embedType="SVG" + autoExportLightAndDark=true 로 생성된 다이어그램 표시용.
+   publish.js의 initExcalidrawDarkSwap 가 .excalidraw-svg 클래스를 주입. */
+.markdown-preview-view img.excalidraw-svg,
+.markdown-preview-view img[src*=".excalidraw."][src$=".svg"],
+.markdown-preview-view img[src*=".excalidraw."][src*=".svg?"] {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.4em auto;
+}
+
+.theme-dark .markdown-preview-view img.excalidraw-svg,
+.theme-dark .markdown-preview-view img[src*=".excalidraw."][src$=".svg"],
+.theme-dark .markdown-preview-view img[src*=".excalidraw."][src*=".svg?"] {
+  filter: none;
+}

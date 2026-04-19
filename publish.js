@@ -171,3 +171,42 @@ observer.observe(observerTarget, { childList: true, subtree: true });
 
   install();
 })();
+
+/*
+ * Excalidraw SVG 다크 스왑
+ * Obsidian Excalidraw 플러그인 embedType="SVG" + autoExportLightAndDark=true 전제.
+ * Publish가 <img alt="파일명.svg" src=".../파일명.excalidraw.svg">로 렌더한 이미지를
+ * body.theme-dark 일 때 같은 경로의 *.excalidraw.dark.svg 로 스왑한다.
+ * 다크 파일이 없으면 라이트로 자동 폴백.
+ */
+(function initExcalidrawDarkSwap() {
+  const isExcalidrawImg = (img) =>
+    /\.excalidraw(\.dark)?\.svg(\?|$)/.test(img.getAttribute("src") || "");
+
+  const toLight = (src) => src.replace(/\.dark\.svg(\?|$)/, ".svg$1");
+  const toDark = (src) => src.replace(/(?<!\.dark)\.svg(\?|$)/, ".dark.svg$1");
+
+  const swap = () => {
+    const dark = document.body.classList.contains("theme-dark");
+    document.querySelectorAll("img").forEach((img) => {
+      if (!isExcalidrawImg(img)) return;
+      const cur = img.getAttribute("src");
+      const next = dark ? toDark(cur) : toLight(cur);
+      if (cur === next) return;
+      img.setAttribute("src", next);
+      img.onerror = () => {
+        if (dark) img.setAttribute("src", toLight(cur));
+      };
+      img.classList.add("excalidraw-svg");
+    });
+  };
+
+  swap();
+  window.publish?.on?.("navigated", () => setTimeout(swap, 50));
+
+  const themeObserver = new MutationObserver(swap);
+  themeObserver.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+})();

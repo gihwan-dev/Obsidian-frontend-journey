@@ -19,31 +19,26 @@ cssclass: home
 ## 무엇부터 보면 좋을까요
 
 <div class="cards">
-
 <div class="card">
 <h3>📝 글 모음</h3>
 <p>66개의 학습 기록과 번역 글. 최신순으로 정렬되어 있습니다.</p>
 <p><a href="/50-Blog/00-블로그-인덱스">전체 글 보기</a></p>
 </div>
-
 <div class="card">
 <h3>🧩 아키텍처 · 설계</h3>
 <p>정책과 메커니즘의 분리, 추상화 전략을 리액트로 풀어봅니다.</p>
 <p><a href="/50-Blog/리액트에서-언제-어떤-추상화-전략을-사용해야-할까">추상화 전략 들여다보기</a></p>
 </div>
-
 <div class="card">
 <h3>⚛️ React 심화</h3>
 <p>Context, Portal, Suspense — 라이브러리를 뜯어보며 이해하기.</p>
 <p><a href="/50-Blog/React의-Context-API-뜯어보기">Context API 뜯어보기</a></p>
 </div>
-
 <div class="card">
 <h3>🧹 클린 코드</h3>
 <p>읽히는 코드와 유지보수의 감각. 직관 중심의 실전 가이드.</p>
 <p><a href="/50-Blog/가장-직관적인-클린코드-가이드">클린코드 가이드</a></p>
 </div>
-
 </div>
 
 ## 최근 · 추천 글
@@ -58,9 +53,3 @@ cssclass: home
 <li><span class="date">2025-07-07</span> <a href="/50-Blog/가장-직관적인-클린코드-가이드">직관적인 클린코드 가이드</a></li>
 <li><span class="date">2025-03-15</span> <a href="/50-Blog/Suspense와-ErrorBoundary는-한끗-차이다">Suspense와 ErrorBoundary는 한끗 차이다</a></li>
 </ul>
-
-<div class="home-footer">
-<a href="https://velog.io/@koreanthuglife">Velog</a>
-<a href="https://github.com/Gihwan-dev">GitHub</a>
-<a href="/50-Blog/00-블로그-인덱스">모든 글 보기</a>
-</div>

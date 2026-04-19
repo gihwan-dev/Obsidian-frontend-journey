@@ -736,10 +736,6 @@ a.site-body-left-column-site-name::after {
   padding: 2.8em 0 2.2em;
   margin-bottom: 2.2em;
   border-bottom: none;
-  background-image: linear-gradient(90deg, var(--ax1), var(--ax2) 30%, transparent 80%);
-  background-size: 100% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
 }
 
 .markdown-preview-view .hero .greeting {
@@ -757,13 +753,19 @@ a.site-body-left-column-site-name::after {
   font-weight: 800;
   line-height: 1.25;
   margin: 0 0 0.5em;
-  padding: 0;
-  border: none;
-  background: linear-gradient(135deg, var(--tx1) 0%, var(--ax1) 60%, var(--ax2) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  padding: 0 !important;
+  border: none !important;
+  background: linear-gradient(135deg, var(--tx1) 0%, var(--ax1) 60%, var(--ax2) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
   letter-spacing: -0.02em;
+}
+
+/* 범용 h1 accent bar가 hero 내부까지 적용돼서 빈 작대기만 남던 문제 방지 */
+.markdown-preview-view .hero h1::before {
+  display: none !important;
 }
 
 .markdown-preview-view .hero .tagline {
@@ -800,10 +802,15 @@ a.site-body-left-column-site-name::after {
   margin: 1.8em 0 2.8em;
 }
 
-/* Obsidian Publish markdown 파서가 .cards 내부에 빈 <p>/<br>를 끼워넣는 케이스 방어 */
+/* Obsidian Publish 파서가 .card 를 .el-div 로 래핑해 grid 자식 관계를 끊는 경우 대응.
+   display: contents 로 .el-div 를 DOM 레이아웃에서 투명하게 만들어 .card 가 .cards 의
+   직계 자식처럼 grid 에 배치되도록 한다. */
+.markdown-preview-view .cards .el-div {
+  display: contents;
+}
+
 .markdown-preview-view .cards > p:empty,
-.markdown-preview-view .cards > br,
-.markdown-preview-view .cards > :not(.card) {
+.markdown-preview-view .cards > br {
   display: none !important;
 }
 
@@ -830,13 +837,18 @@ a.site-body-left-column-site-name::after {
 
 .markdown-preview-view .card h3 {
   font-family: "Pretendard Variable", sans-serif;
-  margin: 0 0 0.4em;
-  font-size: 1.05em;
+  margin: 0 0 0.55em;
+  font-size: 1.18em;
   font-weight: 600;
+  line-height: 1.35;
   color: var(--tx1);
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   border: none;
   padding: 0;
+}
+
+.markdown-preview-view .card h3::before {
+  display: none !important;
 }
 
 .markdown-preview-view .card p {
@@ -891,11 +903,12 @@ a.site-body-left-column-site-name::after {
 
 .markdown-preview-view .recent-posts .date {
   color: var(--tx3);
-  font-size: 0.82em;
+  opacity: 0.75;
+  font-size: 0.8em;
   font-variant-numeric: tabular-nums;
   font-family: "JetBrains Mono", ui-monospace, monospace;
   flex-shrink: 0;
-  min-width: 6.5em;
+  min-width: 8em;
 }
 
 .markdown-preview-view .recent-posts a.internal-link {

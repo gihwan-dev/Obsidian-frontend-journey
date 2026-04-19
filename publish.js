@@ -1,222 +1,42 @@
-const clickToEnlarge = "Click and hold to enlarge. SHIFT + wheel to zoom. ESC to reset.";
-const clickToCollapse = "ESC to reset. Click and hold to collapse. SHIFT + wheel to zoom";
+/*
+ * gihwan-dev / Obsidian Publish custom script
+ * 홈 페이지(index.md) 히어로 상단에 시간대별 인사말을 주입한다.
+ * Publish는 SPA-like navigation이라 MutationObserver로 라우팅 변화에 대응.
+ */
 
-//check if in iFrame - if yes the page is assumed to be an embedded frame
-if(window.self !== window.top) {
-  const elements = [
-    "div.site-body-right-column",
-    "div.site-body-left-column",
-    "div.site-header",
-    "div.site-footer"
-  ];
-  elements.forEach(x=>{
-    document.querySelectorAll(x).forEach(div=>{
-      div.style.display = "none";
-    });
-  });
-}
+const getGreeting = () => {
+  const h = new Date().getHours();
+  if (h < 5)  return "늦은 밤, 오늘도 수고 많으셨어요.";
+  if (h < 12) return "좋은 아침입니다.";
+  if (h < 18) return "오후도 차분히 이어가세요.";
+  if (h < 22) return "저녁, 오늘 하루 고생하셨습니다.";
+  return "늦은 밤, 오늘도 수고 많으셨어요.";
+};
 
-const baseUrl = `${window.location.origin}/`;
+const isHomePage = () => {
+  const path = location.pathname.replace(/\/+$/, "");
+  return (
+    path === "" ||
+    path === "/" ||
+    path.endsWith("/index") ||
+    path.endsWith("/gihwan-dev")
+  );
+};
 
-const [isDesktop, isMobile, isTablet] = (()=>{
-  const userAgent = navigator.userAgent;
-  const mobileKeywords = ['Mobile', 'Android', 'iPhone', 'iPad', 'Windows Phone'];
+const injectGreeting = () => {
+  if (!isHomePage()) return;
 
-  const isMobile = mobileKeywords.some(keyword => userAgent.includes(keyword));
-  const isTablet = /iPad/i.test(userAgent) || (isMobile && !/Mobile/i.test(userAgent));
-  const isDesktop = !isMobile && !isTablet;
+  const hero = document.querySelector(".markdown-preview-view .hero");
+  if (!hero) return;
+  if (hero.querySelector(".greeting")) return;
 
-  return [isDesktop, isMobile, isTablet];
-})();
+  const greeting = document.createElement("div");
+  greeting.className = "greeting";
+  greeting.textContent = getGreeting();
+  hero.insertBefore(greeting, hero.firstChild);
+};
 
-const addNavigationToDiv = (container) => {
-  const svgElement = container?.querySelector('.excalidraw-svg');
-  if(!svgElement) return;
-  container.addClass("excalidraw-svg");
-  svgElement.removeAttribute("width");
-  svgElement.removeAttribute("height");
-  
-  if(!isDesktop) return;
-  
-  const textDiv = document.createElement('div');
-  textDiv.className = 'text';
-  textDiv.textContent = clickToEnlarge;
-  container.appendChild(textDiv);
+injectGreeting();
 
-  let isEnlarged = false;
-  let timeout = null;
-  let isReadyToPan = false;
-  let isPanning = false;
-  let zoomLevel = 1;
-  let panX = 0;
-  let panY = 0;
-  let pinchStartDistance = 0;
-  let panStartX = 0;
-  let panStartY = 0;
-
-  const clearEnlargeTimeout = () => {
-    if(timeout) clearTimeout(timeout);
-    timeout = null;
-  }
-
-  const enablePointerEvents = (val) => {
-    svgElement.querySelectorAll("a").forEach(el=>{
-      el.style.pointerEvents = val ? "all" : "none";
-    });
-  }
-
-  const applyTransform = () => {
-    svgElement.style.transform = `scale(${zoomLevel}) translate(${panX}px, ${panY}px)`;
-    clearEnlargeTimeout();
-  };
-
-  //Wheel zoom
-  svgElement.addEventListener('wheel', (event) => {
-    if(!event.shiftKey ) return;
-    if (event.deltaY > 0) {
-    zoomLevel -= zoomLevel > 4 
-	  ? (zoomLevel > 6 
-	    ? (zoomLevel > 10 ? 0.4 : 0.3)
-		: 0.2) 
-	  : 0.1;
-    } else {
-    zoomLevel += zoomLevel > 4 
-	  ? (zoomLevel > 6 
-	    ? (zoomLevel > 10 ? 0.4 : 0.3)
-		: 0.2) 
-	  : 0.1;
-    }
-    applyTransform();
-  });
-
-  // Panning
-  svgElement.addEventListener('mousedown', (event) => {
-    isReadyToPan = true;
-    panStartX = event.clientX;
-    panStartY = event.clientY;
-  });
-
-  svgElement.addEventListener('mousemove', (event) => {
-    const deltaX = event.clientX - panStartX;
-    const deltaY = event.clientY - panStartY;
-    const distance = Math.sqrt(deltaX**2+deltaY**2);
-    if (isReadyToPan && (distance > 20)) {
-      if(!isPanning) {
-        enablePointerEvents(false);
-        isPanning = true;
-      }
-      panX += deltaX/zoomLevel;
-      panY += deltaY/zoomLevel;
-      panStartX = event.clientX;
-      panStartY = event.clientY;
-
-      applyTransform();
-    }
-  });
-
-  svgElement.addEventListener('mouseup', () => {
-    enablePointerEvents(true);
-    isPanning = false;
-    isReadyToPan = false;
-  });
-
-  svgElement.addEventListener('mouseleave', () => {
-    enablePointerEvents(true);
-    isPanning = false;
-    isReadyToPan = false;
-  });
-
-  //abort on Escape
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      enablePointerEvents(true);
-      isEnlarged = false;
-      isPanning = false;
-      isReadyToPan = false;
-      container.classList.remove("enlarged");
-      textDiv.textContent = clickToEnlarge;
-      zoomLevel = 1;
-      panX = 0;
-      panY = 0;
-      applyTransform();
-    }
-  });
- 
-
-  //Enlarge on long click
-  svgElement.addEventListener('mouseup', () => clearEnlargeTimeout());
-  svgElement.addEventListener('mousedown', () => {
-    timeout = setTimeout(()=> {
-      timeout = null;
-      if(isPanning) return;
-      isReadyToPan = false;
-      if (isEnlarged) {
-        // Collapse the image
-        container.classList.remove("enlarged");
-        textDiv.textContent = clickToEnlarge;
-      } else {
-        // Enlarge the image
-        container.addClass("enlarged");
-        textDiv.textContent = clickToCollapse;
-      }
-      isEnlarged = !isEnlarged;
-    },1000);
-  });
-
-  applyTransform();
-}
-
-const processIMG = (img) => {
-  const svgURL = img.src;
-  const container = img.parentElement;
-
-  fetch(svgURL)
-    .then((response) => {
-      if (response.ok) {
-        return response.text();
-      }
-      throw new Error('Failed to fetch SVG');
-    })
-    .then((svgContent) => {    
-      svgContainer = document.createElement('div');
-      svgContainer.innerHTML = svgContent;
-      svgContainer.querySelectorAll(`a[href^="obsidian://open?vault="`).forEach(el=>{
-        el.setAttribute("href",unescape(el.getAttribute("href").replace(/.*&file=/,baseUrl).replaceAll(" ","+")));
-      });
-      svgContainer.querySelectorAll(`iframe[src^="obsidian://open?vault="`).forEach(el=>{
-        el.setAttribute("src",unescape(el.getAttribute("src").replace(/.*&file=/,baseUrl).replaceAll(" ","+")));
-      });
-      container.removeChild(img);
-      container.appendChild(svgContainer);
-      addNavigationToDiv(svgContainer);
-      
-    })
-    .catch((error) => {
-      console.error('Error: ' + error);
-    });
-}
-
-const addImgMutationObserver = () => {
-  const targetElement = document.body;
-  const handleImgAddition = (mutationsList, observer) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-    mutation.addedNodes.forEach(node => {
-      if (node instanceof Element && node.querySelector(`img[alt$=".svg"]`)) {
-        processIMG(node.querySelector(`img[alt$=".svg"]`));
-      };
-        });
-      }
-    }
-  }
-  const observer = new MutationObserver(handleImgAddition);
-  const config = { childList: true, subtree: true };
-  observer.observe(targetElement, config);
-}
-
-//process images after loading
-document.body.querySelectorAll(`img[alt$=".svg"`).forEach(img => {
-  processIMG(img);
-});
-
-addImgMutationObserver();
+const heroObserver = new MutationObserver(() => injectGreeting());
+heroObserver.observe(document.body, { childList: true, subtree: true });

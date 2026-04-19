@@ -109,9 +109,18 @@ body,
   font-size: 16.5px;
   line-height: 1.78;
   color: var(--tx1);
-  max-width: 72ch;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+}
+
+/* 한글 줄바꿈 규칙 — 모든 블록 요소에 상속 */
+.markdown-preview-view,
+.markdown-preview-view p,
+.markdown-preview-view li,
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .markdown-preview-view h1,
@@ -193,10 +202,6 @@ div.site-body-right-column {
 
 div.site-body-left-column {
   border-right: 1px solid var(--ui1);
-}
-
-div.site-body-right-column {
-  border-left: 1px solid var(--ui1);
 }
 
 a.site-body-left-column-site-name {
@@ -743,7 +748,6 @@ div.site-footer a:hover {
   .markdown-preview-view,
   .published-container .markdown-preview-view {
     font-size: 15.5px;
-    padding: 1.5rem 1rem 3rem;
   }
 
   .markdown-preview-view .hero {

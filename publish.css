@@ -128,16 +128,25 @@ body,
   padding: 0 1.5rem;
 }
 
-/* 한글 줄바꿈 규칙 — 모든 블록 요소에 상속 */
+/* 한글 줄바꿈 — 본문 텍스트는 어절 단위 유지 */
 .markdown-preview-view,
 .markdown-preview-view p,
-.markdown-preview-view li,
+.markdown-preview-view li {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 헤딩은 normal + break-word — 라틴 단어(README 등)가 글자 단위로 쪼개지지 않도록 */
 .markdown-preview-view h1,
 .markdown-preview-view h2,
 .markdown-preview-view h3,
-.markdown-preview-view h4 {
-  word-break: keep-all;
-  overflow-wrap: break-word;
+.markdown-preview-view h4,
+.markdown-rendered h1,
+.markdown-rendered h2,
+h1.page-header,
+h2.page-header {
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
 }
 
 .markdown-preview-view h1,
@@ -164,17 +173,25 @@ h1.page-header {
 
 .markdown-preview-view h2,
 .markdown-rendered h2 {
-  font-size: 1.5em;
-  margin: 1.8em 0 0.6em;
+  font-size: 1.6em;
+  margin: 1.9em 0 0.7em;
+  padding-bottom: 0.35em;
+  background-image: linear-gradient(90deg, var(--ax1), var(--ax2));
+  background-size: 64px 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
 }
 
 .markdown-preview-view h3 {
   font-family: "Pretendard Variable", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.22em;
   font-weight: 600;
   color: var(--tx1);
   margin: 1.6em 0 0.5em;
   letter-spacing: -0.01em;
+  padding-left: 0.7em;
+  border-left: 3px solid var(--ax3);
+  line-height: 1.35;
 }
 
 .markdown-preview-view h4 {
@@ -192,7 +209,7 @@ h1.page-header {
 }
 
 .markdown-preview-view p {
-  margin-block: 1.2em;
+  margin-block: 1em;
 }
 
 .markdown-preview-view strong {
@@ -402,19 +419,24 @@ a.site-body-left-column-site-name::after {
   border: none;
 }
 
-/* Language label */
+/* Language label (pill style, accent color) */
 .markdown-preview-view pre[class*="language-"]::before {
   content: attr(data-lang);
   position: absolute;
-  top: 0.5em;
-  right: 0.9em;
-  font-size: 0.7em;
+  top: 0.55em;
+  right: 0.75em;
+  font-size: 0.66em;
   font-weight: 700;
-  font-family: "Pretendard Variable", sans-serif;
-  color: var(--tx3);
+  font-family: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  color: var(--ax3);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  padding: 0.25em 0.65em;
+  background-color: color-mix(in srgb, var(--ax3) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ax3) 35%, transparent);
+  border-radius: 999px;
   pointer-events: none;
+  line-height: 1;
 }
 
 /* Fallback labels when data-lang is absent */
@@ -441,13 +463,12 @@ a.site-body-left-column-site-name::after {
 
 /* Inline code */
 .markdown-preview-view :not(pre) > code {
-  background-color: color-mix(in srgb, var(--tx4) 12%, var(--bg1));
-  color: var(--tx4);
-  padding: 0.12em 0.42em;
+  background-color: color-mix(in srgb, var(--ax1) 9%, var(--bg2));
+  color: var(--tx1);
+  padding: 0.14em 0.42em;
   border-radius: 4px;
   font-size: 0.88em;
   font-family: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
-  border: 1px solid color-mix(in srgb, var(--tx4) 20%, transparent);
   word-break: break-word;
 }
 
@@ -629,11 +650,47 @@ svg.graph-view text {
   fill: var(--tx2);
 }
 
+/* 라이트 모드에서 그래프/TOC가 다크 톤으로 남아있는 문제 강제 오버라이드 */
+.theme-light .graph-view-container,
+.theme-light .graph-view-container svg,
+.theme-light svg.graph-view {
+  background-color: var(--bg2) !important;
+}
+
+.theme-light .graph-view-container text,
+.theme-light .graph-view text,
+.theme-light svg.graph-view text {
+  fill: var(--tx1) !important;
+}
+
+.theme-light .graph-view-container circle,
+.theme-light .graph-view circle,
+.theme-light svg.graph-view circle {
+  fill: var(--ax1) !important;
+  stroke: var(--ax1) !important;
+}
+
+.theme-light .graph-view-container line,
+.theme-light .graph-view line,
+.theme-light svg.graph-view line {
+  stroke: var(--ui2) !important;
+}
+
+.theme-light div.site-body-right-column .tree-item,
+.theme-light div.site-body-right-column .markdown-preview-section {
+  background-color: transparent !important;
+  color: var(--tx1) !important;
+}
+
 /* ---------- 13. Home page (index.md) ---------- */
 .markdown-preview-view .hero {
   padding: 2.8em 0 2.2em;
-  border-bottom: 1px solid var(--ui1);
   margin-bottom: 2.2em;
+  border-bottom: none;
+  background-image: linear-gradient(90deg, var(--ax1), var(--ax2) 30%, transparent 80%);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
 }
 
 .markdown-preview-view .hero .greeting {
@@ -882,6 +939,13 @@ div.site-footer a:hover {
 }
 
 /* ---------- 15. Responsive ---------- */
+/* 1300px 이하 — 우측 그래프/TOC 패널이 본문을 가리지 않도록 숨김 */
+@media (max-width: 1300px) {
+  div.site-body-right-column {
+    display: none !important;
+  }
+}
+
 @media (max-width: 720px) {
   .markdown-preview-view,
   .published-container .markdown-preview-view {

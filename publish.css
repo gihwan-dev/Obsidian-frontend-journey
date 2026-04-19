@@ -231,21 +231,25 @@ h1.page-header {
 }
 
 /* 헤딩 좌측 세로 accent bar — 그라데이션 (브랜드 포인트)
-   top/bottom을 em 절대값이 아닌 padding-bottom + border-bottom만 비워
-   제목이 1줄이든 2줄이든 전체 높이를 자연스럽게 꽉 채우도록 */
+   Publish가 .mod-header h1.page-header::before에 height: 68px 고정 장식을 넣어서
+   specificity 동률이 되도록 .mod-header / .published-container 조건을 묶고,
+   height: auto !important로 기본 고정값을 무효화해 top/bottom이 먹도록 한다 */
 .markdown-preview-view h1::before,
 .markdown-rendered h1::before,
 h1.page-header::before,
+.mod-header h1.page-header::before,
+.published-container h1.page-header::before,
 .markdown-preview-view h2::before,
 .markdown-rendered h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.1em;
-  bottom: calc(0.4em + 1px);
-  width: 4px;
-  border-radius: 2px;
-  background: linear-gradient(180deg, var(--ax1), var(--ax2));
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.25em !important;
+  bottom: calc(0.4em + 1px) !important;
+  height: auto !important;
+  width: 4px !important;
+  border-radius: 2px !important;
+  background: linear-gradient(180deg, var(--ax1), var(--ax2)) !important;
 }
 
 .markdown-preview-view h3 {

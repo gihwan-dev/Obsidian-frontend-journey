@@ -10,1252 +10,148 @@ tags: [excalidraw]
 # Excalidraw Data
 
 ## Text Elements
-추상화의 방향 — 내려오는가, 길어 올리는가 ^GG3goMJY
+추상화의 방향 — 내려오는가, 길어 올리는가 ^OwUMmzbd
 
-플라톤 — 이데아에서 내려온다 ^TKbTxBzL
+플라톤 — 이데아에서 내려온다 ^REtTOb1F
 
 이데아 (形相)
-완벽한 원형 · 아름다움 자체 · 원 자체 ^E7-IJQtZ
+완벽한 원형 · 아름다움 자체 · 원 자체 ^CGVHCI67
 
 감각의 잡음을 걷어내며
-원형에 가까워진다 ^L94GfQ7Y
+원형에 가까워진다 ^6RP2Rb0g
 
-둥근 바퀴 ^MRezm6cI
+둥근 바퀴 ^64xVmP2e
 
-동전 ^hYY02o94
+동전 ^s8Ozn38u
 
-물방울 ^lOGr1suq
+물방울 ^sQ6XCONm
 
 추상화 = 찾아가는 일
-정답이 먼저 있고, 우리는 거기에 가까워진다. ^RK7wXMPN
+정답이 먼저 있고, 우리는 거기에 가까워진다. ^cuRhIXZW
 
-아리스토텔레스 — 경험에서 길어 올린다 ^JUhNhiwP
+아리스토텔레스 — 경험에서 길어 올린다 ^8mQQUEIX
 
-둥근 바퀴 ^9GqOWuQa
+둥근 바퀴 ^ipCxeSom
 
-동전 ^1SYOfxUi
+동전 ^kOTKPBGq
 
-물방울 ^mVaMEBZ5
+물방울 ^NbtnPw1p
 
 불필요한 속성을
 하나씩 벗겨냄
-(aphairesis) ^r1u1CjOo
+(aphairesis) ^mVrZ7jgF
 
 공통된 형상
-원 · 원형성 — 사물 안에 내재 ^PAXE4vco
+원 · 원형성 — 사물 안에 내재 ^auuy8E6I
 
 추상화 = 길어 올리는 일
-충분히 겪은 뒤에 비로소 올라온다. ^SIagvoDM
+충분히 겪은 뒤에 비로소 올라온다. ^MNrctOAp
 
 %%
 ## Drawing
-```json
-{
-  "type": "excalidraw",
-  "version": 2,
-  "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.0",
-  "elements": [
-    {
-      "version": 1,
-      "versionNonce": 255808013,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "seed": 686087737,
-      "groupIds": [],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "GG3goMJYJUXWLpNh",
-      "type": "text",
-      "x": 320,
-      "y": -50,
-      "width": 337,
-      "height": 36,
-      "fontSize": 22,
-      "fontFamily": 1,
-      "text": "추상화의 방향 — 내려오는가, 길어 올리는가",
-      "textAlign": "center",
-      "verticalAlign": "top",
-      "baseline": 18,
-      "containerId": null,
-      "originalText": "추상화의 방향 — 내려오는가, 길어 올리는가",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1753981655,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "#d0ebff",
-      "seed": 210564254,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "C0RRnq_7Z-GevJsD",
-      "type": "rectangle",
-      "x": 20,
-      "y": 20,
-      "width": 460,
-      "height": 560
-    },
-    {
-      "version": 1,
-      "versionNonce": 1882215315,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "transparent",
-      "seed": 1384686814,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "TKbTxBzLFhGWMF6q",
-      "type": "text",
-      "x": 40,
-      "y": 34,
-      "width": 188,
-      "height": 31,
-      "fontSize": 18,
-      "fontFamily": 1,
-      "text": "플라톤 — 이데아에서 내려온다",
-      "textAlign": "center",
-      "verticalAlign": "top",
-      "baseline": 15,
-      "containerId": null,
-      "originalText": "플라톤 — 이데아에서 내려온다",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 901870437,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "#ffffff",
-      "seed": 1211181042,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "E7-IJQtZGE4BsrcP",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "7EHboidT4gNEEo4O",
-      "type": "rectangle",
-      "x": 80,
-      "y": 80,
-      "width": 340,
-      "height": 120
-    },
-    {
-      "version": 1,
-      "versionNonce": 980962683,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "transparent",
-      "seed": 1448055024,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "E7-IJQtZGE4BsrcP",
-      "type": "text",
-      "x": 80,
-      "y": 80,
-      "width": 340,
-      "height": 120,
-      "fontSize": 16,
-      "fontFamily": 1,
-      "text": "이데아 (形相)\n완벽한 원형 · 아름다움 자체 · 원 자체",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 13,
-      "containerId": "7EHboidT4gNEEo4O",
-      "originalText": "이데아 (形相)\n완벽한 원형 · 아름다움 자체 · 원 자체",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1282634460,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "transparent",
-      "seed": 2063025722,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "DHF6qFG0ZJ61u6gS",
-      "type": "arrow",
-      "x": 150,
-      "y": 215,
-      "width": 0,
-      "height": 180,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          180
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": null,
-      "endBinding": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "version": 1,
-      "versionNonce": 1685955116,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "transparent",
-      "seed": 2066350849,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "GC991EerFgVACaaL",
-      "type": "arrow",
-      "x": 240,
-      "y": 215,
-      "width": 0,
-      "height": 180,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          180
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": null,
-      "endBinding": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "version": 1,
-      "versionNonce": 2001837736,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "transparent",
-      "seed": 1796058885,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "fYpNW9QOjuLX8FUi",
-      "type": "arrow",
-      "x": 330,
-      "y": 215,
-      "width": 0,
-      "height": 180,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          180
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": null,
-      "endBinding": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "version": 1,
-      "versionNonce": 478733529,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "transparent",
-      "seed": 1015724395,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "L94GfQ7Y6tAZHmag",
-      "type": "text",
-      "x": 180,
-      "y": 285,
-      "width": 106,
-      "height": 41,
-      "fontSize": 13,
-      "fontFamily": 1,
-      "text": "감각의 잡음을 걷어내며\n원형에 가까워진다",
-      "textAlign": "center",
-      "verticalAlign": "top",
-      "baseline": 11,
-      "containerId": null,
-      "originalText": "감각의 잡음을 걷어내며\n원형에 가까워진다",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1906473186,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "dashed",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#868e96",
-      "backgroundColor": "#ffffff",
-      "seed": 157696882,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "MRezm6cI1CWmT4iH",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "dwwXbGutuh8KZjHB",
-      "type": "rectangle",
-      "x": 100,
-      "y": 410,
-      "width": 100,
-      "height": 60
-    },
-    {
-      "version": 1,
-      "versionNonce": 722454016,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#868e96",
-      "backgroundColor": "transparent",
-      "seed": 985302550,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "MRezm6cI1CWmT4iH",
-      "type": "text",
-      "x": 100,
-      "y": 410,
-      "width": 100,
-      "height": 60,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "둥근 바퀴",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 11,
-      "containerId": "dwwXbGutuh8KZjHB",
-      "originalText": "둥근 바퀴",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1686652869,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "dashed",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#868e96",
-      "backgroundColor": "#ffffff",
-      "seed": 1895511582,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "hYY02o94PAY2Q9wk",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "H9k2yBAftwqFXADu",
-      "type": "rectangle",
-      "x": 220,
-      "y": 410,
-      "width": 100,
-      "height": 60
-    },
-    {
-      "version": 1,
-      "versionNonce": 1035200468,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#868e96",
-      "backgroundColor": "transparent",
-      "seed": 954734505,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "hYY02o94PAY2Q9wk",
-      "type": "text",
-      "x": 220,
-      "y": 410,
-      "width": 100,
-      "height": 60,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "동전",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 11,
-      "containerId": "H9k2yBAftwqFXADu",
-      "originalText": "동전",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1206891275,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "dashed",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#868e96",
-      "backgroundColor": "#ffffff",
-      "seed": 1475658721,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "lOGr1suqeA5XAagb",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "KIhTJKnsrJgq9kRW",
-      "type": "rectangle",
-      "x": 340,
-      "y": 410,
-      "width": 100,
-      "height": 60
-    },
-    {
-      "version": 1,
-      "versionNonce": 1551252664,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#868e96",
-      "backgroundColor": "transparent",
-      "seed": 1722962858,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "lOGr1suqeA5XAagb",
-      "type": "text",
-      "x": 340,
-      "y": 410,
-      "width": 100,
-      "height": 60,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "물방울",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 11,
-      "containerId": "KIhTJKnsrJgq9kRW",
-      "originalText": "물방울",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 264184122,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "seed": 201584600,
-      "groupIds": [
-        "grp_plato"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "RK7wXMPN7unD_4R3",
-      "type": "text",
-      "x": 40,
-      "y": 490,
-      "width": 227,
-      "height": 44,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "추상화 = 찾아가는 일\n정답이 먼저 있고, 우리는 거기에 가까워진다.",
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 11,
-      "containerId": null,
-      "originalText": "추상화 = 찾아가는 일\n정답이 먼저 있고, 우리는 거기에 가까워진다.",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1463303286,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "#fff4e6",
-      "seed": 2092269105,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "7y8wVBbSs9ZhXu5I",
-      "type": "rectangle",
-      "x": 500,
-      "y": 20,
-      "width": 460,
-      "height": 560
-    },
-    {
-      "version": 1,
-      "versionNonce": 735478463,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 424016984,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "JUhNhiwPPbLwypAo",
-      "type": "text",
-      "x": 520,
-      "y": 34,
-      "width": 244,
-      "height": 31,
-      "fontSize": 18,
-      "fontFamily": 1,
-      "text": "아리스토텔레스 — 경험에서 길어 올린다",
-      "textAlign": "center",
-      "verticalAlign": "top",
-      "baseline": 15,
-      "containerId": null,
-      "originalText": "아리스토텔레스 — 경험에서 길어 올린다",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 268882269,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "#ffffff",
-      "seed": 393992635,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "9GqOWuQa_E_R375z",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "IQ7RzqjbrEqu8L1J",
-      "type": "rectangle",
-      "x": 540,
-      "y": 440,
-      "width": 100,
-      "height": 60
-    },
-    {
-      "version": 1,
-      "versionNonce": 1396322278,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 1859992129,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "9GqOWuQa_E_R375z",
-      "type": "text",
-      "x": 540,
-      "y": 440,
-      "width": 100,
-      "height": 60,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "둥근 바퀴",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 11,
-      "containerId": "IQ7RzqjbrEqu8L1J",
-      "originalText": "둥근 바퀴",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 2096311648,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "#ffffff",
-      "seed": 772946291,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "1SYOfxUiV-bn2LK9",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "8o1vmwOJEYLmOj58",
-      "type": "rectangle",
-      "x": 660,
-      "y": 440,
-      "width": 100,
-      "height": 60
-    },
-    {
-      "version": 1,
-      "versionNonce": 1747523584,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 2051917383,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "1SYOfxUiV-bn2LK9",
-      "type": "text",
-      "x": 660,
-      "y": 440,
-      "width": 100,
-      "height": 60,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "동전",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 11,
-      "containerId": "8o1vmwOJEYLmOj58",
-      "originalText": "동전",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 817293332,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "#ffffff",
-      "seed": 1157452798,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "mVaMEBZ5_-kHlIk4",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "9HPkGfUvqcLYksIw",
-      "type": "rectangle",
-      "x": 780,
-      "y": 440,
-      "width": 100,
-      "height": 60
-    },
-    {
-      "version": 1,
-      "versionNonce": 2088973520,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 834537678,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "mVaMEBZ5_-kHlIk4",
-      "type": "text",
-      "x": 780,
-      "y": 440,
-      "width": 100,
-      "height": 60,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "물방울",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 11,
-      "containerId": "9HPkGfUvqcLYksIw",
-      "originalText": "물방울",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1105937343,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 1433880711,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "4PaxxnjNi-F3UyNP",
-      "type": "arrow",
-      "x": 590,
-      "y": 435,
-      "width": 0,
-      "height": 180,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          -180
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": null,
-      "endBinding": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "version": 1,
-      "versionNonce": 746892810,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 1018725416,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "6hH1RDLfXfFtWouG",
-      "type": "arrow",
-      "x": 710,
-      "y": 435,
-      "width": 0,
-      "height": 180,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          -180
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": null,
-      "endBinding": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "version": 1,
-      "versionNonce": 712347472,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 692979279,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "6U2zlZoSwYAZyjVQ",
-      "type": "arrow",
-      "x": 830,
-      "y": 435,
-      "width": 0,
-      "height": 180,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          -180
-        ]
-      ],
-      "lastCommittedPoint": null,
-      "startBinding": null,
-      "endBinding": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow"
-    },
-    {
-      "version": 1,
-      "versionNonce": 273984633,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 926200228,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "r1u1CjOo_JhsDzbT",
-      "type": "text",
-      "x": 615,
-      "y": 310,
-      "width": 106,
-      "height": 58,
-      "fontSize": 13,
-      "fontFamily": 1,
-      "text": "불필요한 속성을\n하나씩 벗겨냄\n(aphairesis)",
-      "textAlign": "center",
-      "verticalAlign": "top",
-      "baseline": 11,
-      "containerId": null,
-      "originalText": "불필요한 속성을\n하나씩 벗겨냄\n(aphairesis)",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 1447655029,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 3,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "#ffffff",
-      "seed": 879738580,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "PAXE4vcoh2rbnDrO",
-          "type": "text"
-        }
-      ],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "vR7628QInwv7UaJq",
-      "type": "rectangle",
-      "x": 560,
-      "y": 90,
-      "width": 340,
-      "height": 120
-    },
-    {
-      "version": 1,
-      "versionNonce": 717288930,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#b5651d",
-      "backgroundColor": "transparent",
-      "seed": 1243288700,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "PAXE4vcoh2rbnDrO",
-      "type": "text",
-      "x": 560,
-      "y": 90,
-      "width": 340,
-      "height": 120,
-      "fontSize": 16,
-      "fontFamily": 1,
-      "text": "공통된 형상\n원 · 원형성 — 사물 안에 내재",
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "baseline": 13,
-      "containerId": "vR7628QInwv7UaJq",
-      "originalText": "공통된 형상\n원 · 원형성 — 사물 안에 내재",
-      "lineHeight": 1.25
-    },
-    {
-      "version": 1,
-      "versionNonce": 169625346,
-      "isDeleted": false,
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "seed": 1193496376,
-      "groupIds": [
-        "grp_aristotle"
-      ],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1776601272295,
-      "link": null,
-      "locked": false,
-      "id": "SIagvoDMktKTRJgr",
-      "type": "text",
-      "x": 520,
-      "y": 520,
-      "width": 174,
-      "height": 44,
-      "fontSize": 14,
-      "fontFamily": 1,
-      "text": "추상화 = 길어 올리는 일\n충분히 겪은 뒤에 비로소 올라온다.",
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 11,
-      "containerId": null,
-      "originalText": "추상화 = 길어 올리는 일\n충분히 겪은 뒤에 비로소 올라온다.",
-      "lineHeight": 1.25
-    }
-  ],
-  "appState": {
-    "theme": "light",
-    "viewBackgroundColor": "#ffffff",
-    "currentItemStrokeColor": "#1e1e1e",
-    "currentItemBackgroundColor": "transparent",
-    "currentItemFillStyle": "solid",
-    "currentItemStrokeWidth": 2,
-    "currentItemStrokeStyle": "solid",
-    "currentItemRoughness": 1,
-    "currentItemOpacity": 100,
-    "currentItemFontFamily": 1,
-    "currentItemFontSize": 20,
-    "currentItemTextAlign": "left",
-    "currentItemStartArrowhead": null,
-    "currentItemEndArrowhead": "arrow",
-    "gridSize": null
-  },
-  "files": {}
-}
+```compressed-json
+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
 ```
 %%

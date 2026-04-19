@@ -173,31 +173,40 @@ observer.observe(observerTarget, { childList: true, subtree: true });
 })();
 
 /*
- * Excalidraw SVG 다크 스왑
- * Obsidian Excalidraw 플러그인 embedType="SVG" + autoExportLightAndDark=true 전제.
- * Publish가 <img alt="파일명.svg" src=".../파일명.excalidraw.svg">로 렌더한 이미지를
- * body.theme-dark 일 때 같은 경로의 *.excalidraw.dark.svg 로 스왑한다.
- * 다크 파일이 없으면 라이트로 자동 폴백.
+ * Excalidraw SVG 테마 스왑
+ * 플러그인이 생성하는 파일 명명 패턴:
+ * - autoExportLightAndDark=true  → *.excalidraw.light.svg + *.excalidraw.dark.svg
+ * - autoExportLightAndDark=false → *.excalidraw.svg (단일)
+ * body.theme-dark 여부에 맞춰 <img src>를 toggle하고, 404 시 기본 .svg 로 폴백.
  */
-(function initExcalidrawDarkSwap() {
-  const isExcalidrawImg = (img) =>
-    /\.excalidraw(\.dark)?\.svg(\?|$)/.test(img.getAttribute("src") || "");
+(function initExcalidrawThemeSwap() {
+  const SVG_RE = /\.excalidraw(\.light|\.dark)?\.svg(\?|$)/;
+  const isExcalidrawImg = (img) => SVG_RE.test(img.getAttribute("src") || "");
 
-  const toLight = (src) => src.replace(/\.dark\.svg(\?|$)/, ".svg$1");
-  const toDark = (src) => src.replace(/(?<!\.dark)\.svg(\?|$)/, ".dark.svg$1");
+  const toVariant = (src, variant) =>
+    src.replace(
+      /\.excalidraw(\.light|\.dark)?\.svg(\?|$)/,
+      variant ? `.excalidraw.${variant}.svg$2` : ".excalidraw.svg$2"
+    );
 
   const swap = () => {
     const dark = document.body.classList.contains("theme-dark");
     document.querySelectorAll("img").forEach((img) => {
       if (!isExcalidrawImg(img)) return;
-      const cur = img.getAttribute("src");
-      const next = dark ? toDark(cur) : toLight(cur);
-      if (cur === next) return;
-      img.setAttribute("src", next);
-      img.onerror = () => {
-        if (dark) img.setAttribute("src", toLight(cur));
-      };
       img.classList.add("excalidraw-svg");
+
+      const cur = img.getAttribute("src");
+      const target = toVariant(cur, dark ? "dark" : "light");
+      if (cur === target) return;
+
+      img.setAttribute("src", target);
+      img.onerror = () => {
+        const plain = toVariant(cur, "");
+        if (img.getAttribute("src") !== plain) {
+          img.onerror = null;
+          img.setAttribute("src", plain);
+        }
+      };
     });
   };
 

@@ -1181,11 +1181,15 @@ div.site-footer a:hover {
 }
 
 /* ---------- 18. Excalidraw SVG ---------- */
-/* embedType="SVG" + autoExportLightAndDark=true 로 생성된 다이어그램 표시용.
-   publish.js의 initExcalidrawDarkSwap 가 .excalidraw-svg 클래스를 주입. */
+/* 플러그인이 만드는 3가지 파일명 패턴을 모두 커버:
+   - *.excalidraw.svg       (autoExportLightAndDark=false)
+   - *.excalidraw.light.svg (라이트 전용)
+   - *.excalidraw.dark.svg  (다크 전용)
+   publish.js 의 initExcalidrawThemeSwap 이 .excalidraw-svg 클래스를 주입. */
 .markdown-preview-view img.excalidraw-svg,
-.markdown-preview-view img[src*=".excalidraw."][src$=".svg"],
-.markdown-preview-view img[src*=".excalidraw."][src*=".svg?"] {
+.markdown-preview-view img[src*=".excalidraw.svg"],
+.markdown-preview-view img[src*=".excalidraw.light.svg"],
+.markdown-preview-view img[src*=".excalidraw.dark.svg"] {
   border: none;
   box-shadow: none;
   border-radius: 0;
@@ -1197,7 +1201,8 @@ div.site-footer a:hover {
 }
 
 .theme-dark .markdown-preview-view img.excalidraw-svg,
-.theme-dark .markdown-preview-view img[src*=".excalidraw."][src$=".svg"],
-.theme-dark .markdown-preview-view img[src*=".excalidraw."][src*=".svg?"] {
+.theme-dark .markdown-preview-view img[src*=".excalidraw.svg"],
+.theme-dark .markdown-preview-view img[src*=".excalidraw.light.svg"],
+.theme-dark .markdown-preview-view img[src*=".excalidraw.dark.svg"] {
   filter: none;
 }

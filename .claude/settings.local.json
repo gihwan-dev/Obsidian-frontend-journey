@@ -8,7 +8,14 @@
       "Bash(curl -sS \"https://gist.githubusercontent.com/zsviczian/0bb31aa2d08ba689c14158e82cbbda5a/raw/publish.css\")",
       "Bash(grep \"svg$\")",
       "Bash(grep -E \"\\\\.\\(svg|png\\)$\")",
-      "Bash(grep -E \"\\\\.\\(svg|png|md\\)$\")"
+      "Bash(grep -E \"\\\\.\\(svg|png|md\\)$\")",
+      "Bash(git -C \"/Users/choegihwan/Documents/Projects/Obsidian-frontend-journey\" status --short)",
+      "Bash(git -C \"/Users/choegihwan/Documents/Projects/Obsidian-frontend-journey\" log --oneline -8)",
+      "Bash(git -C \"/Users/choegihwan/Documents/Projects/Obsidian-frontend-journey\" diff HEAD -- publish.js publish.css)",
+      "Bash(git -C \"/Users/choegihwan/Documents/Projects/Obsidian-frontend-journey\" log origin/main..HEAD --oneline)",
+      "Bash(git -C \"/Users/choegihwan/Documents/Projects/Obsidian-frontend-journey\" show --stat 951b45c)",
+      "Bash(git -C \"/Users/choegihwan/Documents/Projects/Obsidian-frontend-journey\" show --stat c410fd3)",
+      "Bash(git -C \"/Users/choegihwan/Documents/Projects/Obsidian-frontend-journey\" push origin main)"
     ]
   }
 }

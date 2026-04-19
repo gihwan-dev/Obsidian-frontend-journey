@@ -800,6 +800,13 @@ a.site-body-left-column-site-name::after {
   margin: 1.4em 0 2.6em;
 }
 
+/* Obsidian Publish markdown 파서가 .cards 내부에 빈 <p>/<br>를 끼워넣는 케이스 방어 */
+.markdown-preview-view .cards > p:empty,
+.markdown-preview-view .cards > br,
+.markdown-preview-view .cards > :not(.card) {
+  display: none !important;
+}
+
 @media (max-width: 720px) {
   .markdown-preview-view .cards {
     grid-template-columns: 1fr;

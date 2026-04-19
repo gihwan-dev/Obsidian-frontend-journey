@@ -796,8 +796,8 @@ a.site-body-left-column-site-name::after {
 .markdown-preview-view .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.4em 0 2.6em;
+  gap: 1.5rem;
+  margin: 1.8em 0 2.8em;
 }
 
 /* Obsidian Publish markdown 파서가 .cards 내부에 빈 <p>/<br>를 끼워넣는 케이스 방어 */

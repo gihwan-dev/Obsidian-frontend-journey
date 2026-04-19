@@ -230,7 +230,9 @@ h1.page-header {
   background: none !important;
 }
 
-/* 헤딩 좌측 세로 accent bar — 그라데이션 (브랜드 포인트) */
+/* 헤딩 좌측 세로 accent bar — 그라데이션 (브랜드 포인트)
+   top/bottom을 em 절대값이 아닌 padding-bottom + border-bottom만 비워
+   제목이 1줄이든 2줄이든 전체 높이를 자연스럽게 꽉 채우도록 */
 .markdown-preview-view h1::before,
 .markdown-rendered h1::before,
 h1.page-header::before,
@@ -239,8 +241,8 @@ h1.page-header::before,
   content: "";
   position: absolute;
   left: 0;
-  top: 0.22em;
-  bottom: 0.45em;
+  top: 0.1em;
+  bottom: calc(0.4em + 1px);
   width: 4px;
   border-radius: 2px;
   background: linear-gradient(180deg, var(--ax1), var(--ax2));

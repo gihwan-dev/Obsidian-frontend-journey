@@ -160,13 +160,17 @@ body,
   font-size: 16.5px;
   line-height: 1.75;
   color: var(--tx1);
+  max-width: 780px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* 본문 한 줄 길이 제한 — 한/영 혼용 기준 45~75자 */
 .markdown-preview-sizer,
 .published-container .markdown-preview-sizer {
-  max-width: 780px;
-  margin: 0 auto;
+  max-width: 780px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding: 0 1.5rem;
 }
 
@@ -540,17 +544,18 @@ a.site-body-left-column-site-name::after {
   transition: color 0.2s ease;
 }
 
+/* 외부 링크: background-image 기법 대신 text-decoration 사용
+   (Publish가 외부 링크 아이콘을 background-image로 주입해 덮어쓰이는 문제 방지) */
 .markdown-preview-view a:not(.internal-link):not(.tag) {
-  background-image: linear-gradient(var(--ax1), var(--ax1));
-  background-size: 0 1.5px;
-  background-position: 0 calc(100% - 1px);
-  background-repeat: no-repeat;
-  transition: background-size 0.25s ease-out, color 0.2s ease;
-  padding-bottom: 1px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
 }
 
 .markdown-preview-view a:not(.internal-link):not(.tag):hover {
-  background-size: 100% 1.5px;
+  text-decoration-color: var(--ax1);
   color: var(--ax2);
 }
 

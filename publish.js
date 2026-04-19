@@ -76,7 +76,8 @@ const run = () => {
 run();
 
 const observer = new MutationObserver(run);
-observer.observe(document.body, { childList: true, subtree: true });
+const observerTarget = document.querySelector(".published-container") ?? document.body;
+observer.observe(observerTarget, { childList: true, subtree: true });
 
 /*
  * "연결된 노트" 카드 — canvas 그래프를 대체
@@ -106,21 +107,26 @@ observer.observe(document.body, { childList: true, subtree: true });
     return frag;
   };
 
+  let tries = 0;
+  const MAX_TRIES = 40;
+
   const render = () => {
     document.querySelector(".gh-related")?.remove();
 
     const g = window.publish?.graph;
     if (!g?.renderer?.nodes?.length) {
-      setTimeout(render, 150);
+      if (tries++ < MAX_TRIES) setTimeout(render, 150);
       return;
     }
 
     const current = g.currentFilepath;
     const me = g.renderer.nodes.find((n) => n.id === current);
     if (!me) {
-      setTimeout(render, 150);
+      if (tries++ < MAX_TRIES) setTimeout(render, 150);
       return;
     }
+
+    tries = 0;
 
     const siteSlug = window.publish?.site?.slug || "";
     const toTitle = (id) => id.replace(/\.md$/, "").split("/").pop();
@@ -156,7 +162,10 @@ observer.observe(document.body, { childList: true, subtree: true });
       setTimeout(install, 100);
       return;
     }
-    window.publish.on("navigated", () => setTimeout(render, 50));
+    window.publish.on("navigated", () => {
+      tries = 0;
+      setTimeout(render, 50);
+    });
     render();
   };
 

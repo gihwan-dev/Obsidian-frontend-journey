@@ -1020,8 +1020,8 @@ div.site-footer a:hover {
   --gh-card-border: rgba(0, 0, 0, 0.08);
   --gh-muted: #6B6E85;
   --gh-text: #2B2E3F;
-  --gh-accent: #D97757;
-  --gh-accent-hover: #B8553C;
+  --gh-accent: var(--ax1);
+  --gh-accent-hover: var(--ax2);
 }
 
 .theme-dark {
@@ -1029,8 +1029,8 @@ div.site-footer a:hover {
   --gh-card-border: rgba(255, 255, 255, 0.08);
   --gh-muted: #A0A4B8;
   --gh-text: #E5E7EF;
-  --gh-accent: #D97757;
-  --gh-accent-hover: #F0A583;
+  --gh-accent: var(--ax1);
+  --gh-accent-hover: var(--ax2);
 }
 
 /* "On this page" TOC — 카드화 */

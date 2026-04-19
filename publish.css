@@ -36,7 +36,7 @@
   --c-quote:    #8839EF;
   --c-abstract: #179299;
 
-  --paper-tint: rgba(223, 142, 29, 0.035);
+  --paper-tint: rgba(223, 142, 29, 0.07);
   --card-shadow: 0 1px 3px rgba(76, 79, 105, 0.06), 0 4px 12px rgba(76, 79, 105, 0.04);
   --card-shadow-hover: 0 6px 24px rgba(30, 102, 245, 0.12);
 }
@@ -68,7 +68,7 @@
   --c-quote:    #CA9EE6;
   --c-abstract: #81C8BE;
 
-  --paper-tint: rgba(242, 213, 207, 0.03);
+  --paper-tint: rgba(242, 213, 207, 0.06);
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
   --card-shadow-hover: 0 6px 24px rgba(140, 170, 238, 0.18);
 }
@@ -89,6 +89,15 @@
   --text-accent-hover: var(--ax2);
   --interactive-accent: var(--ax1);
   --interactive-accent-hover: var(--ax2);
+
+  /* Publish 설정의 사용자 지정 글꼴 값이 깨져 내려오는 경우를 막기 위한 명시적 오버라이드 */
+  --font-text-theme: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "Cascadia Code", "SF Mono", ui-monospace, monospace;
+  --font-text: var(--font-text-theme);
+  --font-monospace: var(--font-monospace-theme);
+  --h1-font: "Noto Serif KR", "IBM Plex Serif", serif;
+  --h2-font: "Noto Serif KR", "IBM Plex Serif", serif;
+  --page-title-font: "Noto Serif KR", "IBM Plex Serif", serif;
 }
 
 /* ---------- 2. Typography ---------- */
@@ -107,8 +116,16 @@ body,
 .markdown-preview-view,
 .published-container .markdown-preview-view {
   font-size: 16.5px;
-  line-height: 1.78;
+  line-height: 1.7;
   color: var(--tx1);
+}
+
+/* 본문 한 줄 길이 제한 — 한/영 혼용 기준 45~75자 */
+.markdown-preview-sizer,
+.published-container .markdown-preview-sizer {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 /* 한글 줄바꿈 규칙 — 모든 블록 요소에 상속 */
@@ -124,22 +141,29 @@ body,
 }
 
 .markdown-preview-view h1,
-.markdown-preview-view h2 {
-  font-family: "Noto Serif KR", "IBM Plex Serif", "Pretendard Variable", serif;
+.markdown-preview-view h2,
+.markdown-rendered h1,
+.markdown-rendered h2,
+h1.page-header,
+h2.page-header {
+  font-family: "Noto Serif KR", "IBM Plex Serif", serif !important;
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.3;
   color: var(--tx1);
 }
 
-.markdown-preview-view h1 {
+.markdown-preview-view h1,
+.markdown-rendered h1,
+h1.page-header {
   font-size: 2.0em;
   margin: 1.6em 0 0.6em;
   padding-bottom: 0.35em;
   border-bottom: 1px solid var(--ui1);
 }
 
-.markdown-preview-view h2 {
+.markdown-preview-view h2,
+.markdown-rendered h2 {
   font-size: 1.5em;
   margin: 1.8em 0 0.6em;
 }
@@ -163,7 +187,7 @@ body,
 
 .markdown-preview-view p,
 .markdown-preview-view li {
-  line-height: 1.78;
+  line-height: 1.7;
   color: var(--tx1);
 }
 
@@ -179,18 +203,19 @@ body,
 
 .markdown-preview-view hr {
   border: none;
-  border-top: 1px dashed var(--ui2);
-  margin: 2.5em 0;
+  border-top: 1px solid color-mix(in srgb, var(--ui3) 40%, transparent);
+  margin: 2.5em auto;
+  width: 5em;
 }
 
 /* ---------- 3. Paper texture background ---------- */
 body,
 .published-container {
   background-image:
-    radial-gradient(var(--paper-tint) 1px, transparent 1px),
-    radial-gradient(var(--paper-tint) 1px, transparent 1px);
-  background-size: 40px 40px, 40px 40px;
-  background-position: 0 0, 20px 20px;
+    radial-gradient(var(--paper-tint) 0.8px, transparent 0.8px),
+    radial-gradient(var(--paper-tint) 0.8px, transparent 0.8px);
+  background-size: 28px 28px, 28px 28px;
+  background-position: 0 0, 14px 14px;
   background-attachment: fixed;
 }
 
@@ -211,7 +236,7 @@ a.site-body-left-column-site-name {
   font-size: 1.1rem;
   color: var(--tx1);
   letter-spacing: -0.01em;
-  padding: 1.25rem 1rem 0.25rem;
+  padding: 1.5rem 1.25rem 0.5rem;
   text-decoration: none;
   border-bottom: none;
 }
@@ -529,13 +554,28 @@ a.site-body-left-column-site-name::after {
 }
 
 /* ---------- 12. Backlinks / graph ---------- */
-.backlink-pane .tree-item,
-.graph-view-container {
+.backlink-pane .tree-item {
   background-color: var(--bg2);
   border: 1px solid var(--ui1);
   border-radius: 8px;
   padding: 0.5em 0.75em;
   box-shadow: var(--card-shadow);
+}
+
+.graph-view-container {
+  background-color: var(--bg2);
+  border: 1px solid var(--ui1);
+  border-radius: 8px;
+  padding: 0.5em 0.75em;
+  margin-bottom: 3em;
+  box-shadow: var(--card-shadow);
+}
+
+.graph-view-container text,
+.graph-view text,
+svg.graph-view text {
+  font-size: 0.7rem;
+  fill: var(--tx2);
 }
 
 /* ---------- 13. Home page (index.md) ---------- */
@@ -555,9 +595,9 @@ a.site-body-left-column-site-name::after {
 }
 
 .markdown-preview-view .hero h1 {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Serif KR", serif !important;
   font-size: 2.5em;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
   margin: 0 0 0.5em;
   padding: 0;
@@ -731,7 +771,9 @@ a.site-body-left-column-site-name::after {
 div.site-footer {
   color: var(--tx3);
   border-top: 1px solid var(--ui1);
-  background-color: var(--bg2);
+  background-color: color-mix(in srgb, var(--bg2) 88%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   font-size: 0.85em;
 }
 

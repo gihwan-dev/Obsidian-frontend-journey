@@ -20,3 +20,7 @@ date | mode | cards_created | cards_updated | sources_scanned | candidates | top
 2026-04-05 | DAILY | 1 | 1 | 1 | 2 | dx-automation,reliability,workflow-design,operations | 8
 2026-04-07 | DAILY | 0 | 1 | 1 | 1 | durable-execution,reliability,workflow-design,operations | 4
 2026-04-09 | DAILY | 0 | 1 | 1 | 1 | workflow-control,reliability,intent-routing,concurrency | 4
+2026-04-11 | DAILY | 2 | 0 | 4 | 2 | reliability,ci-cd,test-ops,dx-automation,cost-reduction,pnpm | 4
+2026-04-14 | DAILY | 3 | 0 | 4 | 3 | dx-automation,multi-agent,table-component,storybook,browser-test | 6
+2026-04-15 | DAILY | 0 | 3 | 1 | 3 | dx-automation,multi-agent,table-component,storybook,browser-test | 9
+2026-04-16 | DAILY | 2 | 1 | 9 | 3 | dx-automation,gitlab,table-component,fine-grained-reactivity,performance-benchmark,self-improvement | 10

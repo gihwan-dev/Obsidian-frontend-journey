@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(curl -sS \"https://gist.githubusercontent.com/zsviczian/0bb31aa2d08ba689c14158e82cbbda5a/raw/publish.js\")",
+      "Bash(curl -sS \"https://gist.githubusercontent.com/zsviczian/0bb31aa2d08ba689c14158e82cbbda5a/raw/publish.css\")"
+    ]
+  }
+}

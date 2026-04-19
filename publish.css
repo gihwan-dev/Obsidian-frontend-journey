@@ -106,7 +106,7 @@ body,
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
                "Apple SD Gothic Neo", "Segoe UI", Roboto, sans-serif;
   font-feature-settings: "ss03", "ss04", "cv11";
-  letter-spacing: 0.005em;
+  letter-spacing: 0;
   word-break: keep-all;
   overflow-wrap: break-word;
   color: var(--tx1);
@@ -116,7 +116,7 @@ body,
 .markdown-preview-view,
 .published-container .markdown-preview-view {
   font-size: 16.5px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--tx1);
 }
 
@@ -157,8 +157,8 @@ h2.page-header {
 .markdown-rendered h1,
 h1.page-header {
   font-size: 2.0em;
-  margin: 1.6em 0 0.6em;
-  padding-bottom: 0.35em;
+  margin: 1.4em 0 1em;
+  padding-bottom: 0.4em;
   border-bottom: 1px solid var(--ui1);
 }
 
@@ -187,8 +187,12 @@ h1.page-header {
 
 .markdown-preview-view p,
 .markdown-preview-view li {
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--tx1);
+}
+
+.markdown-preview-view p {
+  margin-block: 1.2em;
 }
 
 .markdown-preview-view strong {
@@ -203,9 +207,21 @@ h1.page-header {
 
 .markdown-preview-view hr {
   border: none;
-  border-top: 1px solid color-mix(in srgb, var(--ui3) 40%, transparent);
-  margin: 2.5em auto;
-  width: 5em;
+  height: 0;
+  margin: 2.8em auto;
+  text-align: center;
+  overflow: visible;
+  background: none;
+}
+
+.markdown-preview-view hr::before {
+  content: "· · ·";
+  display: inline-block;
+  color: var(--tx3);
+  font-size: 1.2em;
+  letter-spacing: 0.5em;
+  line-height: 1;
+  padding-left: 0.4em;
 }
 
 /* ---------- 3. Paper texture background ---------- */
@@ -229,35 +245,68 @@ div.site-body-left-column {
   border-right: 1px solid var(--ui1);
 }
 
+/* 다크 모드에서 본문(bg1)과 사이드바(bg3)의 레이어 차이를 명확히 */
+.theme-dark div.site-body-left-column,
+.theme-dark div.site-body-right-column {
+  background-color: var(--bg3);
+  border-color: color-mix(in srgb, var(--ui1) 70%, transparent);
+}
+
 a.site-body-left-column-site-name {
   display: block;
   font-family: "Noto Serif KR", serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--tx1);
-  letter-spacing: -0.01em;
-  padding: 1.5rem 1.25rem 0.5rem;
+  letter-spacing: -0.015em;
+  padding: 1.5rem 1.25rem 0.75rem;
   text-decoration: none;
   border-bottom: none;
+  position: relative;
+}
+
+a.site-body-left-column-site-name::before {
+  content: "{ }";
+  display: inline-block;
+  font-family: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--ax1);
+  margin-right: 0.5em;
+  letter-spacing: -0.08em;
+  opacity: 0.85;
 }
 
 a.site-body-left-column-site-name::after {
-  content: "Frontend · 학습 기록";
+  content: "#frontend   #learning-log";
   display: block;
-  font-family: "Pretendard Variable", sans-serif;
-  font-weight: 400;
-  font-size: 0.78rem;
-  color: var(--tx2);
-  margin-top: 0.3rem;
-  letter-spacing: 0.03em;
+  font-family: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 0.72rem;
+  color: var(--ax1);
+  margin-top: 0.55rem;
+  letter-spacing: 0.02em;
+  opacity: 0.78;
+  white-space: pre;
 }
 
 /* Tree items (nav links) */
 .nav-file-title,
 .nav-folder-title {
-  color: var(--tx2);
   border-radius: 6px;
-  transition: background-color 0.12s ease, color 0.12s ease;
+  font-size: 0.88rem;
+  transition: background-color 0.12s ease, color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.nav-folder-title {
+  color: var(--tx1);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.nav-file-title {
+  color: var(--tx2);
+  font-weight: 400;
 }
 
 .nav-file-title:hover,
@@ -268,8 +317,10 @@ a.site-body-left-column-site-name::after {
 
 .nav-file-title.is-active,
 .nav-file-title.is-active .nav-file-title-content {
-  color: var(--ax1);
-  background-color: color-mix(in srgb, var(--ax1) 10%, var(--bg2));
+  color: var(--ax1) !important;
+  background-color: color-mix(in srgb, var(--ax1) 14%, var(--bg2));
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 var(--ax1);
 }
 
 /* ---------- 5. Callouts ---------- */
@@ -775,6 +826,51 @@ div.site-footer {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   font-size: 0.85em;
+}
+
+/* 커스텀 푸터 (publish.js에서 주입) */
+.custom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  padding: 0.7em 1.5em;
+  border-bottom: 1px solid var(--ui1);
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 0.82rem;
+  color: var(--tx2);
+}
+
+.custom-footer-copy {
+  font-family: "Noto Serif KR", serif;
+  letter-spacing: 0.02em;
+}
+
+.custom-footer-links {
+  display: inline-flex;
+  gap: 1em;
+}
+
+.custom-footer-links a {
+  color: var(--ax1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+  background-image: none;
+  border: none;
+  padding: 0;
+}
+
+.custom-footer-links a:hover {
+  color: var(--ax2);
+}
+
+@media (max-width: 720px) {
+  .custom-footer {
+    padding: 0.6em 1em;
+    font-size: 0.78rem;
+  }
 }
 
 div.site-footer a {

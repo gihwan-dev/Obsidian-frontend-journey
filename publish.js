@@ -1,6 +1,7 @@
 /*
  * gihwan-dev / Obsidian Publish custom script
- * 홈 페이지(index.md) 히어로 상단에 시간대별 인사말을 주입한다.
+ * - 홈 페이지(index.md) 히어로 상단에 시간대별 인사말을 주입
+ * - 사이트 하단에 커스텀 푸터(브랜딩 + 소셜 링크) 주입
  * Publish는 SPA-like navigation이라 MutationObserver로 라우팅 변화에 대응.
  */
 
@@ -36,7 +37,43 @@ const injectGreeting = () => {
   hero.insertBefore(greeting, hero.firstChild);
 };
 
-injectGreeting();
+const injectCustomFooter = () => {
+  const footer = document.querySelector("div.site-footer");
+  if (!footer || footer.querySelector(".custom-footer")) return;
 
-const heroObserver = new MutationObserver(() => injectGreeting());
-heroObserver.observe(document.body, { childList: true, subtree: true });
+  const custom = document.createElement("div");
+  custom.className = "custom-footer";
+
+  const copy = document.createElement("span");
+  copy.className = "custom-footer-copy";
+  copy.textContent = "© 2026 gihwan-dev · Frontend Journey";
+
+  const links = document.createElement("span");
+  links.className = "custom-footer-links";
+
+  const link = (href, label) => {
+    const a = document.createElement("a");
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = label;
+    return a;
+  };
+
+  links.appendChild(link("https://github.com/Gihwan-dev", "GitHub"));
+  links.appendChild(link("https://velog.io/@koreanthuglife", "Velog"));
+
+  custom.appendChild(copy);
+  custom.appendChild(links);
+  footer.insertBefore(custom, footer.firstChild);
+};
+
+const run = () => {
+  injectGreeting();
+  injectCustomFooter();
+};
+
+run();
+
+const observer = new MutationObserver(run);
+observer.observe(document.body, { childList: true, subtree: true });

@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter13 요약본입니다.
+description: 함수형 도구를 연결해 체인을 만드는 두 가지 방법, 스트림 결합을 이용한 최적화, 체이닝 디버깅 팁과 pluck 같은 유틸 함수까지 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter13]
 ---
 
 

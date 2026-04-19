@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter16 요약본입니다.
+description: 좋은 타임라인의 원칙을 복습하고, 큐를 동시성 기본형으로 활용해 공유 자원에 접근하는 비동기 이벤트의 실행 순서를 보장하는 방법을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter16]
 ---
 
 

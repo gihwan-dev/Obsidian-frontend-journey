@@ -11,6 +11,8 @@ tags:
   - cookie
   - state
 description: 브라우저에서 쿠키를 어떻게 관리하는지 알기 위해 찾아보다 발견하게된 RFC를 번역해 보았습니다.
+aliases:
+  - "Do Cookies Expires Expiration and Session Cookies Explained(번역)"
 ---
 
 

@@ -10,8 +10,10 @@ published: "2023-04-28T05:13:18.079Z"
 updated: "2026-02-17T14:50:34.584Z"
 tags:
   - "nextjs"
-description: "Next.js를 잘 사용하기 위해서는 javascript, react와 관련된 개발 개념들에 대해 잘 알고 있을 필요가 있다.React에 대해 알고 있으니 From React to Next.js에서 시작하도록 한다.React는 앱을 만들고 구조화 하는 방식에 대한 해결"
+description: "Next.js가 React 앱을 구조화하고 최적화하는 방식을 컴파일, 번들링, 코드 분할, 사전 렌더링(SSR/SSG), 데이터 페칭 관점에서 정리했다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "Next.js 작동 방식"
 ---
 
 # 소개

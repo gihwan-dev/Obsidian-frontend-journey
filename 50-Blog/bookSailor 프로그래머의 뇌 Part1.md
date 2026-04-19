@@ -9,7 +9,8 @@ published: "2024-09-15T05:11:59.373Z"
 tags:
   - bookSailor
   - study
-description: 프로그래머의뇌 Part1 내용 정리
+description: 코드 이해를 방해하는 세 가지 혼란(지식·정보·처리 능력 부족), 청크와 표식으로 빠르게 코드를 분석하는 방법, 그리고 프로그래밍 문법을 LTM에 오래 기억시키는 학습 전략을 정리했습니다.
+aliases: [bookSailor 프로그래머의 뇌 Part1]
 ---
 
 

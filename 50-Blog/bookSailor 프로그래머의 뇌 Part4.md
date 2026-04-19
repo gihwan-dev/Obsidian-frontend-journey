@@ -9,7 +9,9 @@ published: "2024-10-06T12:06:43.115Z"
 tags:
   - bookSailor
   - study
-description: 프로그래머의뇌 Part4 내용 정리
+description: 작업 중단이 생산성에 미치는 영향과 코드베이스 특성 조사에 대해 생각해본 프로그래머의 뇌 Part4 독서 노트.
+aliases:
+  - bookSailor 프로그래머의 뇌 Part4
 ---
 
 ## 작업의 중단에 대해

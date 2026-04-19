@@ -11,6 +11,8 @@ tags:
   - cors
   - http
 description: Github OAuth를 진행하며 CORS 이슈를 만났는데 어떻게 해결했는 지에 대해 적어봤습니다!
+aliases:
+  - "CORS 문제 해결하기"
 ---
 
 Github OAuth를 사용해 인증을 하는 도중 `CORS` 이슈를 만나게 되었습니다. 늘 만나 왔던 에러이지만 제대로 정리해 본 경험이 없다는 생각이 들어 제대로 한 번 정리해보자 생각해 포스팅 하게 되었습니다.

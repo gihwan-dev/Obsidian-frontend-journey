@@ -11,7 +11,8 @@ updated: "2026-02-18T05:00:29.353Z"
 tags:
   - "React"
   - "TanStack Table"
-description: "Tanstack Table 기반의 테이블 컴포넌트를 개선해 보았습니다."
+description: "Tanstack Table 기반 테이블 컴포넌트를 개선하며 제어/비제어 API 분리, <table> 태그 한계 극복, 불필요한 내부 상태 제거로 600개 테스트와 함께 재설계한 과정을 정리했습니다."
+aliases: [Tanstack Table 기반 데이터 그리드 개선하기]
 importedAt: "2026-02-18T07:28:49.893Z"
 ---
 

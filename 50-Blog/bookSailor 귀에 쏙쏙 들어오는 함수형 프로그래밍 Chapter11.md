@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter11 요약본입니다.
+description: 일급 값, 일급 함수, 고차 함수 개념을 정리하고 함수를 리턴하는 함수(팩토리)로 공통 로직을 래핑해 재사용하는 패턴을 다룹니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter11]
 ---
 
 

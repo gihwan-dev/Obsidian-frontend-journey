@@ -10,7 +10,9 @@ tags:
   - development
   - github
   - auth
-description: 이번 개인 프로젝트에 `GraphQL`과 `Relay`를 적용하기 위해 개념을 공부했던 내용을 정리했습니다.
+description: Github App과 OAuth의 차이를 살펴보고, Github App을 등록하고 사용자 액세스 토큰을 발급받아 연동하는 과정을 정리했다.
+aliases:
+  - "Github App 개발하기"
 ---
 
 깃허브에서 인증을 하는 방식은 `Github App` 과 `Github OAuth` 가 있다. 이 포스팅에서는 특히 `Github App`에 대해서 알아보도록 하겠다.

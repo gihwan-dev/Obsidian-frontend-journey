@@ -13,6 +13,8 @@ tags:
   - "frontend"
 description: "Dialog, Modal, Sheet의 차이점에 대해서 알고 계신가요!"
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "Dialog Modal Sheet의 차이 알고 사용하기"
 ---
 
 회사에서 새로운 신규 프로젝트를 진행하고 있고, 프로젝트 관련 스크럼을 진행하다 공용 컴포넌트 Sheet에 대한 얘기가 나왔다.

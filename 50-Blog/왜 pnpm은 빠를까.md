@@ -10,7 +10,9 @@ tags:
   - study
   - deep-dive
   - pnpm
-description: 늘 사용하는 패키지 매니저 pnpm이 어떻게 빠르게 동작할 수 있는지 알아봤습니다.
+description: 늘 사용하는 패키지 매니저 pnpm이 어떻게 빠르게 동작할 수 있는지, content-addressable store와 hard-link, 병렬 설치 파이프라인을 중심으로 분석해 보았습니다.
+aliases:
+  - 왜 pnpm은 빠를까
 ---
 
 항상 사용하던 패키지 매니저에 대해 너무 모르지 않나? 하는 생각이 들었고 분석해 보기로 했다.

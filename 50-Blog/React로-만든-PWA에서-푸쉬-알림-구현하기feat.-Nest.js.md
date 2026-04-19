@@ -10,8 +10,10 @@ published: "2024-01-11T15:02:55.941Z"
 updated: "2026-02-03T04:03:58.680Z"
 tags:
   - "React"
-description: "현재 PWA 로 프로젝트 하나를 진행하고 있다. 진행하면서 push notifaction을 사용해야 할 일이 생겨 정리해두고자 한다.PWA 빌드 방법은 따로 설명하지 않겠다.웹앱에서 서비스 워커는 푸시 알림을 가능하게 해는 중요한 부분이다. 백그라운드에서 동작하며 네트"
+description: "React로 만든 PWA에서 서비스 워커, Firebase Cloud Messaging, Nest.js 서버를 이용해 푸시 알림을 주고받는 과정을 정리했다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "React로 만든 PWA에서 푸쉬 알림 구현하기(feat. Nest.js)"
 ---
 
 현재 PWA 로 프로젝트 하나를 진행하고 있다. 진행하면서 `push notifaction`을 사용해야 할 일이 생겨 정리해두고자 한다.

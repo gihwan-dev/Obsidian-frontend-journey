@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter14 요약본입니다.
+description: 객체를 다루는 함수형 도구를 살펴보고, 필드명을 명시적 인자로 드러내는 리팩터링과 조회·변경·설정을 한 번에 처리하는 update() 패턴을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter14]
 ---
 
 

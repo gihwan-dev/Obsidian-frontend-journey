@@ -9,7 +9,9 @@ published: "2024-09-29T11:50:25.800Z"
 tags:
   - bookSailor
   - study
-description: 프로그래머의뇌 Part3 내용 정리
+description: 명명 규칙과 코드 스멜이 인지 부하에 어떤 영향을 주는지, 그리고 복잡한 문제 해결력을 키우는 학습 전략을 정리한 프로그래머의 뇌 Part3 독서 노트.
+aliases:
+  - bookSailor 프로그래머의 뇌 Part3
 ---
 
 ## 명명을 잘 하는 방법

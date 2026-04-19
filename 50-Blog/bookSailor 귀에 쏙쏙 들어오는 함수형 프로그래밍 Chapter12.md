@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter12 요약본입니다.
+description: 함수형 프로그래밍의 핵심 도구인 map, filter, reduce를 이터러블 자료구조에도 쓸 수 있도록 직접 구현해보며 각 도구의 동작 원리를 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter12]
 ---
 
 

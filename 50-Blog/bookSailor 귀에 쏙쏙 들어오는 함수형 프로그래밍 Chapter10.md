@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter10 요약본입니다.
+description: 함수 이름에 있는 암묵적 인자의 코드 냄새를 드러내고, 함수 본문을 콜백으로 바꿔 중복된 함수를 리팩터링하는 방법을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter10]
 ---
 
 

@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter8 요약본입니다.
+description: 소프트웨어를 계층으로 구성하는 계층형 설계 기법과 네 가지 설계 패턴(직접 구현, 추상화 벽, 작은 인터페이스, 편리한 계층), 3단계 줌 레벨로 설계 감각을 키우는 방법을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter8]
 ---
 
 

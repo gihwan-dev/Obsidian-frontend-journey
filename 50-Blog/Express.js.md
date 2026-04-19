@@ -10,8 +10,10 @@ published: "2023-04-05T12:35:38.977Z"
 updated: "2026-02-10T21:00:21.829Z"
 tags:
   - "express.js"
-description: "Express 공식 문서를 번역하며 이해해보자!Node.js를 이미 설치했다고 가정하고 시작한다. 애플리케이션을 만들 폴더를 만들자.npm init를 이용해서 package.json을 생성하자많은 내용을 물어볼텐데 지금은 다음을 제외하고는 그냥 넘기면 된다.app.js"
+description: "Express 공식 문서를 번역하며 Node.js 애플리케이션 구조, 라우팅, 미들웨어, 템플릿 엔진 등을 단계별로 정리했다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "Express.js"
 ---
 
 # Express.js 공식 문서 번역!
@@ -188,7 +190,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 https://expressjs.com/en/starter/examples.html
 여기서 확인 가능하다. github페이지이고 간단한 예제들이 있다.
 
-# Express 가이드
+## Express 가이드
 ## Routing
 라우팅은 클라이언트의 요청에 endpoints에서 어떻게 응답하는지를 말한다.
 

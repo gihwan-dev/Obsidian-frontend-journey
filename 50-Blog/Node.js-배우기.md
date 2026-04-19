@@ -10,8 +10,10 @@ published: "2023-04-04T12:58:05.020Z"
 updated: "2026-02-09T04:19:32.320Z"
 tags:
   - "node.js"
-description: "공식 문서 번역 및 정리https&#x3A;//nodejs.dev/en/learn/differences-between-nodejs-and-the-browser/위 코드를 실행하기 위해서 이 파일을 server.js로 저장하고 커맨드에서 node sever.js를 실행하"
+description: "Node.js 공식 문서를 번역하며 HTTP 서버, 비동기 처리, 이벤트 루프, 파일 시스템, REPL, 환경 변수 등 핵심 개념을 정리했다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "Node.js 배우기"
 ---
 
 # Node.js
@@ -260,7 +262,7 @@ npx(Node Package Execute)는 전역으로 타입스크립트를 설치하지 않
 - FoalTs
 등등...
 
-# Asynchronous Work
+## Asynchronous Work
 
 ## Asynchronous flow control
 자바스크립튼 control flow는 callback handling의 모든것이다. 개발을 도와줄 전략을 알려준다.
@@ -489,7 +491,7 @@ sendOneMillionEmailsOnly();
 ```
 각각이 자신만의 이점이 있고 사용성이 있다. 가장 중요한것은 콜백과 오퍼레이션을 모듈화 하는 것이다.
 
-# JavaScript 비동기 프로그래밍과 콜백
+## JavaScript 비동기 프로그래밍과 콜백
 
 ## 프로그래밍 언어에서 비동기성
 컴퓨터는 비동기적으로 디자인되었다.
@@ -593,7 +595,7 @@ window.addEventListener('load', () => {
 ```
 위 코드는 겨우 4-level의 코드다. 하지만 보기에 난잡하다. ES6의 시작과 함께 자바스크립트는 콜백을 사용하지 않는 비동기 features를 소개했다. Promise와 Async/Await 이다.
 
-# Understanding process.nextTick()
+## Understanding process.nextTick()
 Node.js event loop 이해하기 위해 노력한것처럼, process.nextTick()또한 알아야할 중요한 부분이다. event loop는 항상 순환하는데, 우리는 이것을 a tick이라고 부른다.
 > gpt에 물어본 결과....
 A tick은 모든 페이즈를 도는것을 의미하는것이 아닌, 특정한 페이즈의 큐에서 하나 또는 그 이상의 작업을 진행하는것을 의미한다.
@@ -633,7 +635,7 @@ Running before the timeout => number 3
 The timeout running last => number4
 ```
 
-# Discover JavaScript Timers
+## Discover JavaScript Timers
 자바스크립트 코드를 쓸때 함수의 실행을 미루고 싶을 때가 있을 것이다. setTimeout과 setInterval을 어떻게 사용하는지 알아보자.
 
 ## setTimeout()
@@ -730,7 +732,7 @@ setTimeout(myFunction, 1000);
 ![](https://velog.velcdn.com/images/koreanthuglife/post/26b385d2-0d79-476d-aafd-deabe3b7ae65/image.png)
 이처럼 실행될 것이다.
 
-# Understanding setImmediate()
+## Understanding setImmediate()
 Node.js의 setImmediate 함수는 event loop와 특별한 방식으로 소통한다.
 
 우리가 어떤 코드를 비동기적으로 실행하고 싶을때, 하지만 최대한 빠르게 실행시키고 싶을때 사용할수 있는 하나의 옵션이 바로 setImmediate() 함수이다.
@@ -756,7 +758,7 @@ setTimeout, setImmediate 콜백은 macrotask queue에 추가된다.
 
 위 예제는 start() 함수를 먼저 호출하고 process.nextTick queue에 있는 foo()를 호출 이후 promises microtask queue를 실행 bar를 출력하고 zoo()를 process.nextTick queue에 추가한다. 그 후 방금 추가된 zoo()를 호출하고 마지막으로 macrotask queue의 baz()를 호출한다.
 
-# The Node.js Event emitter
+## The Node.js Event emitter
 자바스크립트와 함께 브라우저에 일한다면 유저와 얼마나 많이 event를 통해 상호작용하는지 잘 알것이다.
 
 백엔드 사이드인 Node.js에서는 events module을 이용해 비슷한 시스템을 제공한다.
@@ -804,7 +806,7 @@ EventEmitter 객체는 다른 여러 메소드를 통해 사용할 수 있다.
 - removeListener() / off(): 이벤트 리스너를 이벤트로부터 제거한다.
 - removeAllListeners(): 이벤트로부터 모든 리스너를 제거한다.
 
-# Node.js file stats
+## Node.js file stats
 Node.js를 이용해서 파일의 구체적인 정보를 어떻게 얻을 수 있을까?
 
 모든 파일은 Node.js를 사용해서 조사할 수 있는 details를 가진다. fs모듈의 stat()메소드를 통해 확인할 수 있다.
@@ -872,7 +874,7 @@ async function example() {
 example();
 ```
 
-# Node.js File Paths
+## Node.js File Paths
 Node.js에서 파일경로를 다루는 방법을 알아본다.
 모든 파일들은 경로를가진다.
 
@@ -923,7 +925,7 @@ path.normalize('/users/joe/..//test.txt'); // '/users/test.txt'
 ```
 하지만 resolve() 나 normalize 둘 다 실제로 경로가 존재하는지는 확인하지 않는다. 그저 실질적인 경로를 계산해 반환할 뿐이다.
 
-# Working with file descriptors in Node.js
+## Working with file descriptors in Node.js
 > Descriptor란?
 오브젝트의 프로퍼티의 특징을 말해주는 객체이다. 공부하는 걸 추천한다. value, writable, enumerable, configurable의 프로퍼티를 가지며 이 값에 따라 어떤 객체의 속성이 바뀐다.
 
@@ -976,7 +978,7 @@ async function example() {
 example();
 ```
 
-# Reading files with Node.js
+## Reading files with Node.js
 Node.js에서 파일을 읽는 가장 간단한 방법은 **fs.readFile()**을 사용하는 것이다. 파일 경로를 인수로 넘겨주고 콜백함수를 정의해주면 된다.
 ```javascript
 const fs = require('fs');
@@ -1018,7 +1020,7 @@ exapmle();
 
 이 말은 큰 용량의 파일은 메모리에 영향을 줄 수 있다는 말이다.
 
-# Writing files with Node.js
+## Writing files with Node.js
 ## writing a file
 Node.js에서 파일을 쓰는 가장 쉬운 방법은 **fs.writeFile()**이다.
 ```javascript
@@ -1085,7 +1087,7 @@ async function example() {
 example();
 ```
 
-# Working with folders in Node.js
+## Working with folders in Node.js
 ## Check if a folder exists
 **fs.access()** 또는 **fsPromises.access()**를 통해ㅔ 폴더가 존재하고 Node.js가 접근할 수 있는지 확인할 수 있다.
 
@@ -1192,7 +1194,7 @@ async function example() {
 }
 ```
 
-# Run Node.js scripts from the command line
+## Run Node.js scripts from the command line
 **node** 커맨드를 통해 전역으로 Node.js 프로그램을 실행하는 것이 가장 흔한 방식이다.
 
 만약 **app.js**라는 애플리케이션을 실행하고 싶다면
@@ -1216,7 +1218,7 @@ npm i -g nodemon
 npm i --save-dev nodemon
 ```
 
-# How to read environment variables from Node.js
+## How to read environment variables from Node.js
 Node.js의 **process** 코어 모듈은 프로세스가 시작될 때 설정된 환경변수를 제공한다.
 
 다음은 app.js를 USER_ID 와 USER_KET를 세팅해서 실행하는 방법이다.
@@ -1249,7 +1251,7 @@ process.env.USER_ID;
 process.env.USER_KEY;
 process.env.NODE_ENV;
 ```
-# How to use the Node.js REPL
+## How to use the Node.js REPL
 REPL은 Read-Evaluate-Print-Loop 의 줄임말로 Node.js의 features를 탐색하는 좋은 방법이다.
 
 **node** 커맨드는 Node.js 스크립트를 실행시키는 하나의 커맨드다.
@@ -1273,7 +1275,7 @@ false
 > 
 ```
 
-# Output to the command line using Node.js
+## Output to the command line using Node.js
 
 Node.js console을 통해 형식을 지정해 로깅할 수 있다.
 ```javascript

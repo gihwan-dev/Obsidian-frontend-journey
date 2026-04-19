@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter15 요약본입니다.
+description: 타임라인 다이어그램으로 액션의 실행 순서를 시각화하고, 좋은 타임라인의 원칙과 자바스크립트 단일 스레드 환경에서의 타임라인 단순화 방법을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter15]
 ---
 
 

@@ -12,8 +12,10 @@ tags:
   - "next.js"
   - "react.js"
   - "웹개발"
-description: "SSR이랑 RSC랑 뭔가 관계가 있을거 같고.... 비슷하지 않나... 싶고...... 그래요.....?"
+description: "React Server Component와 Server-Side Rendering은 이름은 비슷해 보여도 서로 다른 개념이다. RSC의 등장 배경, 동작 방식, 장단점을 SSR과 비교해 정리했다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "SSR과 RSC는 전혀 다르다"
 ---
 
 # RSC란?
@@ -206,7 +208,7 @@ function Photo(props) {
 2. 브라우저 API를 사용할 수 없다.
 3. 동적 인터랙션이 안된다.
 
-# 그럼 SSR은 뭘까?
+## 그럼 SSR은 뭘까?
 
 나도 처음엔 몰랐다. `SSR` 이 `RSC` 를 기반으로 동작하는거라 혼자 생각했다.
 
@@ -241,7 +243,7 @@ function Photo(props) {
 
 `RSC`는 그저 서버에서 실행되는 `SSR`에서 좀 더 많은 일을 효율적으로 할 수 있게 해주는 리액트의 컴포넌트다. `SSR`과 `RSC`는 전혀 관계가 없다. React 공식문서에 `Server APIs` 섹션을 보면 다양한 `Server API`가 있는데 거기 `renderToString` 메서드가 있다. 오히려 이게 리액트를 `SSR`로 렌더링 하는데 더 큰 관련이 있다.
 
-# 결론
+## 결론
 
 이처럼 **RSC**와 **SSR**은 전혀 다른 개념이다. Next.js 13에서는 `app` 디렉토리의 등장과 함께 모든 컴포넌���가 기본적으로 `RSC`로 동작하게 되었다. 이는 `Next.js` 가 `SSR, SSG` 에서 더 많은 일들을 할 수 있게 해 주었다. `pages` 에서는 어떤지 잘 모르겠다.
 
@@ -251,7 +253,7 @@ function Photo(props) {
 
 ---
 
-# 참고 자료
+## 참고 자료
 [rfcs/text/0188-server-components.md at main · reactjs/rfcs](https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md)
 [Understanding React Server Components – Vercel](https://vercel.com/blog/understanding-react-server-components)
 [Introducing Zero-Bundle-Size React Server Components – React](https://react.dev/blog/2020/12/21/data-fetching-with-react-server-components)

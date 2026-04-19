@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter9 요약본입니다.
+description: 세부 구현을 감추는 추상화 벽, 작은 인터페이스, 편리한 계층 패턴을 통해 계층형 설계를 확장하는 방법과 호출 그래프로 계층 구조를 해석하는 방법을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter9]
 ---
 
 

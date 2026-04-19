@@ -10,8 +10,10 @@ published: "2025-03-24T14:33:03.924Z"
 updated: "2026-02-15T18:45:34.277Z"
 tags:
   - "React"
-description: "createPortal은 어떻게 동작할까?"
+description: "React의 createPortal이 DOM 상 다른 위치에 렌더링되면서도 React 트리의 컨텍스트와 이벤트 버블링을 유지하는 원리를, 렌더/커밋 페이즈 내부 구현을 따라가며 정리했다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "React의 createPortal 뜯어보기"
 ---
 
 ## createPortal은 어떻게 동작할까? 

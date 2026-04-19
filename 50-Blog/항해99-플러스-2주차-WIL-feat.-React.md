@@ -13,8 +13,10 @@ tags:
   - "리액트"
   - "항해99"
   - "항해플러스"
-description: "이번 2주차에서는 제법 깊게 공부하는 시간을 가졌다. 첫번째로 ESM과 CJS의 실행 로직 차이로 인해서 발생하는 인스턴스 생성 속도의 차이에 대해서 결국 원인을 밝혀낼 수 있었다.두번째로 간소하게 리액트의 핵심 로직을 구현해 보는 시간을 가졌다. (render와 ho"
+description: "항해99 플러스 2주차 WIL에서 발표 준비로 파고든 React Fiber의 구조와 beginWork, completeWork, commitWork까지 이어지는 렌더링/커밋 단계를 정리한 글입니다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - 항해99 플러스 2주차 WIL (feat. React)
 ---
 
 이번 2주차에서는 제법 깊게 공부하는 시간을 가졌다. 

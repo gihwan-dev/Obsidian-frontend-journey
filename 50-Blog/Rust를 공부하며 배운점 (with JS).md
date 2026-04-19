@@ -10,6 +10,8 @@ tags:
   - rust
   - javascript
 description: Rust를 공부하며 자바스크립트를 대할때 어떻게 해야할지 배운점들에 대해 요약했습니다.
+aliases:
+  - "Rust를 공부하며 배운점 (with JS)"
 ---
 
 

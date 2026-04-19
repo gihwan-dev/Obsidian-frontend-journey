@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter17 요약본입니다.
+description: 병렬로 실행되는 콜백들이 모두 끝나기를 기다리는 '컷' 개념을 다이어그램과 함께 살펴보고, Promise.all과의 관계까지 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter17]
 ---
 
 

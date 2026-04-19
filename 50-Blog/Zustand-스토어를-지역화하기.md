@@ -11,7 +11,8 @@ updated: "2026-02-15T12:59:50.996Z"
 tags:
   - "React"
   - "zustand"
-description: "스토어를 안전하게 다루는 방법을 소개합니다!"
+description: "스토어를 안전하게 다루는 방법을 소개합니다! Context API와 Zustand의 차이, 전역 스토어의 3가지 문제점, 그리고 Provider 마운트 시점에 초기화되는 '지역화된 스토어' 패턴으로 이를 해결하는 방법을 다룹니다."
+aliases: [Zustand 스토어를 지역화하기]
 importedAt: "2026-02-18T07:28:49.893Z"
 ---
 

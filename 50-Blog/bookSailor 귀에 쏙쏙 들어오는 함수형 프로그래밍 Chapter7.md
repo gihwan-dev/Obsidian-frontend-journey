@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter7 요약본입니다.
+description: 신뢰할 수 없는 코드와 안전하게 데이터를 주고받기 위한 방어적 복사 기법과 구현 방법(Lodash, JSON 직렬화, structuredClone)을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter7]
 ---
 
 북 스터디에서 진행중인 `귀에 쏙쏙 들어오는 함수형 프로그래밍`을 읽고 정리한 후 느낀점을 간략하게 적어 보았습니다.

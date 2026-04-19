@@ -9,7 +9,9 @@ published: "2024-09-22T06:09:37.146Z"
 tags:
   - bookSailor
   - study
-description: 프로그래머의뇌 Part2 내용 정리
+description: 코드를 더 깊이 있게 이해하기 위한 변수 프레임워크, 정신 모델, 그리고 두 번째 프로그래밍 언어 학습 전략을 정리한 프로그래머의 뇌 Part2 독서 노트.
+aliases:
+  - bookSailor 프로그래머의 뇌 Part2
 ---
 
 

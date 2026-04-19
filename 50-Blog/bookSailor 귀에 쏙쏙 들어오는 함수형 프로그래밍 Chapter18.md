@@ -10,7 +10,8 @@ tags:
   - bookSailor
   - fp
   - study
-description: 현재 진행중인 귀에 쏙쏙 들어오는 함수형 프로그래밍 북 스터디 Chapter18 요약본입니다.
+description: 함수형 사고가 자연스럽게 적용되는 반응형 아키텍처와 어니언 아키텍처(인터랙션·도메인·언어 계층)의 핵심 개념을 정리했습니다.
+aliases: [bookSailor 귀에 쏙쏙 들어오는 함수형 프로그래밍 Chapter18]
 ---
 
 

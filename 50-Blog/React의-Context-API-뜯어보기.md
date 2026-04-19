@@ -12,6 +12,8 @@ tags:
   - "React"
 description: "Context API는 어떻게 동작할까? 렌더링 시나리오를 통해 내부 동작을 알아보자."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "React의 Context API 뜯어보기"
 ---
 
 React 개발자라면 누구나 한 번쯤은 `Cotext API`를 사용해 봤을 것이다. 하지만 많은 개발자들이 `Context API`를 단순히 상태 관리 도구로 생각하고 있는 경우가 많다. 오늘은 이에 대해 얘기하고, **Context API의 진짜 목적과 내부 구현**을 파헤쳐 보려 한다.

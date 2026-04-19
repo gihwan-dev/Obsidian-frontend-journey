@@ -10,8 +10,10 @@ published: "2025-03-15T08:37:33.839Z"
 updated: "2026-02-16T20:25:52.730Z"
 tags:
   - "React"
-description: "Suspense, ErrorBoundary와 useQuery, useSusepense 쿼리의 동작 특성을 파악해보자"
+description: "Suspense, ErrorBoundary와 useQuery, useSuspenseQuery의 동작 특성을 리액트 내부 구현을 따라가며 비교하고, useQuery의 중복 요청이 왜 발생하는지 정리했다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - "Suspense와 ErrorBoundary는 한끗 차이다"
 ---
 
 최근 회사에서 차세대 프로젝트를 진행하고 있다. 그러던 중 회사 동료가 이런 질문을 했다.

@@ -14,11 +14,13 @@ tags:
   - "프론트엔드"
   - "항해99"
   - "항해플러스"
-description: "포트폴리오 사이트에 SEO를 적용해 보았습니다! SEO를 잘 아시는 분들은 꼭 댓글로 추가 사항 알려주세요!"
+description: "Next.js 포트폴리오 사이트에 favicon, robots.txt, sitemap, metadata, JSON-LD까지 단계별로 SEO를 적용한 경험을 정리한 글입니다."
 importedAt: "2026-02-18T07:28:49.893Z"
+aliases:
+  - 포트폴리오 사이트에 SEO 적용하기 Next.js
 ---
 
-# SEO
+## SEO
 최근 포트폴리오 사이트를 개발중입니다. 다음 사이트에서 제 포트폴리오를 확인할 수 있습니다...! 아직 컨텐츠를 추가하지 않아서 비어있긴 하지만... 곧 추가 예정입니다!
 https://portfolio.gihwan-dev.com
 
@@ -283,7 +285,7 @@ export default async function ProjectDetailPage({ params }: ParamsProps) {
   );
 }
 ```
-# 결론
+## 결론
 여기까지가 제가 현재까지 작업한 SEO 작업 입니다! 후에 좀 더 추가할 사항이 생긴다면 계속해서 추가하겠습니다. 혹시나 더 아시는 SEO 팁이 있다면 알려주세요!
 
 ---

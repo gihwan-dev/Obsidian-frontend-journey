@@ -219,3 +219,120 @@ observer.observe(observerTarget, { childList: true, subtree: true });
     attributeFilter: ["class"],
   });
 })();
+
+/*
+ * Excalidraw 다이어그램 라이트박스
+ * img.excalidraw-svg 를 클릭하면 전체화면 오버레이로 확대.
+ * 휠 → 포인터 중심 줌, 드래그 → 팬, 더블클릭 → 리셋, ESC/배경 클릭 → 닫기.
+ * 다이어그램 전용이라 블로그 내 일반 이미지는 건드리지 않음.
+ */
+(function initExcalidrawLightbox() {
+  const MIN = 0.5;
+  const MAX = 8;
+
+  let current = null;
+
+  const close = () => {
+    if (!current) return;
+    current.overlay.remove();
+    document.removeEventListener("keydown", current.onKey);
+    current = null;
+  };
+
+  const open = (src) => {
+    close();
+
+    const overlay = document.createElement("div");
+    overlay.className = "gh-lightbox";
+
+    const img = document.createElement("img");
+    img.className = "gh-lightbox-img";
+    img.src = src;
+    img.draggable = false;
+
+    const hint = document.createElement("div");
+    hint.className = "gh-lightbox-hint";
+    hint.textContent = "휠 줌 · 드래그 이동 · 더블클릭 리셋 · ESC/배경 클릭 닫기";
+
+    overlay.append(img, hint);
+    document.body.append(overlay);
+
+    let scale = 1;
+    let tx = 0;
+    let ty = 0;
+    let dragging = false;
+    let startX = 0;
+    let startY = 0;
+
+    const apply = () => {
+      img.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+    };
+
+    overlay.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+        const rect = img.getBoundingClientRect();
+        const cx = e.clientX - (rect.left + rect.width / 2);
+        const cy = e.clientY - (rect.top + rect.height / 2);
+        const delta = e.deltaY > 0 ? 1 / 1.12 : 1.12;
+        const next = Math.min(MAX, Math.max(MIN, scale * delta));
+        const ratio = next / scale;
+        tx = cx - (cx - tx) * ratio;
+        ty = cy - (cy - ty) * ratio;
+        scale = next;
+        apply();
+      },
+      { passive: false }
+    );
+
+    img.addEventListener("pointerdown", (e) => {
+      dragging = true;
+      startX = e.clientX - tx;
+      startY = e.clientY - ty;
+      img.setPointerCapture(e.pointerId);
+    });
+    img.addEventListener("pointermove", (e) => {
+      if (!dragging) return;
+      tx = e.clientX - startX;
+      ty = e.clientY - startY;
+      apply();
+    });
+    const endDrag = (e) => {
+      dragging = false;
+      if (e.pointerId != null && img.hasPointerCapture(e.pointerId)) {
+        img.releasePointerCapture(e.pointerId);
+      }
+    };
+    img.addEventListener("pointerup", endDrag);
+    img.addEventListener("pointercancel", endDrag);
+
+    img.addEventListener("dblclick", (e) => {
+      e.stopPropagation();
+      scale = 1;
+      tx = 0;
+      ty = 0;
+      apply();
+    });
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) close();
+    });
+
+    const onKey = (e) => {
+      if (e.key === "Escape") close();
+    };
+    document.addEventListener("keydown", onKey);
+
+    current = { overlay, onKey };
+  };
+
+  document.addEventListener("click", (e) => {
+    const img = e.target.closest && e.target.closest("img.excalidraw-svg");
+    if (!img) return;
+    e.preventDefault();
+    open(img.getAttribute("src"));
+  });
+
+  window.publish?.on?.("navigated", close);
+})();
